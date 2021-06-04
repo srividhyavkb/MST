@@ -1,0 +1,171 @@
+17:37:59.784 [main] INFO  TestLoginLogout - ******STARTING TEST LOGIN LOGOUT******
+17:37:59.836 [main] INFO  TestLoginLogout - Starting QA site validation
+17:38:03.160 [main] INFO  TestLoginLogout - QA site launch is successful
+17:38:19.923 [main] INFO  TestLoginLogout - Pop up closed
+17:38:36.255 [main] INFO  TestLoginLogout - Menu button clicked
+17:38:51.971 [main] INFO  TestLoginLogout - Login option selected
+17:39:19.817 [main] INFO  TestLoginLogout - User name entered
+17:39:45.604 [main] INFO  TestLoginLogout - Password entered
+17:39:58.626 [main] INFO  TestLoginLogout - Sign in button clicked
+17:40:19.967 [main] INFO  TestLoginLogout - Menu button clicked
+17:40:32.509 [main] INFO  TestLoginLogout - Logout button clicked
+17:40:36.769 [main] INFO  TestLoginLogout - Login header displayed
+18:19:41.854 [main] INFO  TestLoginLogout - ******STARTING TEST LOGIN LOGOUT******
+18:19:43.203 [main] INFO  TestLoginLogout - Starting QA site validation
+18:19:48.917 [main] INFO  TestLoginLogout - QA site launch is successful, Site Name : https://qa3.chilis.com/
+18:20:03.996 [main] INFO  TestLoginLogout - Pop up closed
+18:20:19.640 [main] INFO  TestLoginLogout - Menu button clicked
+18:20:36.665 [main] INFO  TestLoginLogout - Login option selected
+18:21:05.294 [main] INFO  TestLoginLogout - User name (512) 212-1212 entered
+18:21:30.609 [main] INFO  TestLoginLogout - Password Brinkers@2021 entered
+18:21:43.244 [main] INFO  TestLoginLogout - Sign in button clicked
+18:22:03.126 [main] INFO  TestLoginLogout - Menu button clicked
+18:22:16.808 [main] INFO  TestLoginLogout - Logout button clicked
+18:22:19.930 [main] INFO  TestLoginLogout - Login header displayed
+18:37:47.617 [main] INFO  TestLoginLogout - ******STARTING TEST LOGIN LOGOUT******
+18:37:48.572 [main] INFO  TestLoginLogout - Starting QA site validation
+18:37:53.867 [main] INFO  TestLoginLogout - QA site launch is successful, Site Name : https://qa3.chilis.com/
+18:38:11.581 [main] INFO  TestLoginLogout - Pop up closed
+18:38:26.889 [main] INFO  TestLoginLogout - Menu button clicked
+18:38:43.302 [main] INFO  TestLoginLogout - Login option selected
+18:39:12.946 [main] INFO  TestLoginLogout - User name (512) 212-1212 entered
+18:39:38.671 [main] INFO  TestLoginLogout - Password Brinkers@2021 entered
+18:39:52.869 [main] INFO  TestLoginLogout - Sign in button clicked
+18:40:15.701 [main] INFO  TestLoginLogout - Menu button clicked
+18:40:28.578 [main] INFO  TestLoginLogout - Logout button clicked
+18:40:31.800 [main] INFO  TestLoginLogout - Login header displayed
+19:16:18.501 [main] INFO  TestLoginLogout - ******STARTING TEST LOGIN LOGOUT******
+19:16:19.743 [main] INFO  TestLoginLogout - Starting QA site validation
+19:16:34.822 [main] ERROR TestLoginLogout - QA site launch failed
+19:16:34.823 [main] ERROR TestLoginLogout - Expected condition failed: waiting for presence of element located by: By.className: close-btn (tried for 15 second(s) with 500 milliseconds interval)
+19:28:48.442 [main] INFO  TestLocationSearch - ******STARTING TEST LOCATION SEARCH******
+19:28:50.211 [main] INFO  TestLocationSearch - Starting QA site validation
+19:28:55.762 [main] INFO  TestLocationSearch - QA site launch is successful, Site Name : https://qa3.chilis.com/
+19:29:13.050 [main] INFO  TestLocationSearch - Pop up closed
+19:29:28.686 [main] INFO  TestLocationSearch - Menu button clicked
+19:29:44.663 [main] INFO  TestLocationSearch - Location option selected
+19:30:06.051 [main] INFO  TestLocationSearch - Restaurant location Addison, TX 75001, USA entered
+19:30:21.539 [main] INFO  TestLocationSearch - Search button clicked
+19:30:35.754 [main] INFO  TestLocationSearch - Restaurant name CHILI'S RESTAURANTS IN ADDISON, TEXAS is displayed
+20:15:59.698 [main] INFO  TestRewards - ******STARTING TEST REWARDS******
+20:16:01.484 [main] INFO  TestRewards - Starting QA site validation
+20:16:04.300 [main] INFO  TestRewards - QA site launch is successful, Site Name : https://qa3.chilis.com/
+20:16:09.493 [main] INFO  TestRewards - Pop up closed
+20:16:14.093 [main] INFO  TestRewards - Menu button clicked
+20:16:18.701 [main] INFO  TestRewards - Login option selected
+20:16:26.573 [main] INFO  TestRewards - User name (512) 212-1212 entered
+20:16:32.923 [main] INFO  TestRewards - Password Brinkers@2021 entered
+20:16:35.291 [main] INFO  TestRewards - Sign in button clicked
+20:16:45.427 [main] INFO  TestRewards - Displayed rewards count obtained : 2
+20:16:46.443 [main] INFO  TestRewards - Actual rewards count obtained
+20:16:47.467 [main] INFO  TestRewards - Reward Titles :
+20:16:50.747 [main] INFO  TestRewards - 3 FOR $10 EXCLUSIVE
+20:16:52.387 [main] INFO  TestRewards - FREE CHIPS & SALSA OR NON-ALCOHOLIC BEVERAGE
+20:16:52.387 [main] INFO  TestRewards - Reward Titles displayed
+20:24:21.846 [main] INFO  TestRewards - ******STARTING TEST REWARDS******
+20:24:22.790 [main] INFO  TestRewards - Starting QA site validation
+20:24:29.905 [main] INFO  TestRewards - QA site launch is successful, Site Name : https://qa3.chilis.com/
+20:24:48.346 [main] INFO  TestRewards - Pop up closed
+20:25:04.425 [main] INFO  TestRewards - Menu button clicked
+20:25:22.243 [main] INFO  TestRewards - Login option selected
+20:25:50.287 [main] INFO  TestRewards - User name (512) 212-1212 entered
+20:26:16.616 [main] INFO  TestRewards - Password Brinkers@2021 entered
+20:26:29.416 [main] INFO  TestRewards - Sign in button clicked
+20:26:49.479 [main] INFO  TestRewards - Displayed rewards count obtained : 2
+20:26:53.164 [main] INFO  TestRewards - Actual rewards count obtained
+20:26:56.446 [main] INFO  TestRewards - Reward Titles :
+20:27:03.826 [main] INFO  TestRewards - 3 FOR $10 EXCLUSIVE
+20:27:09.142 [main] INFO  TestRewards - FREE CHIPS & SALSA OR NON-ALCOHOLIC BEVERAGE
+20:27:09.142 [main] INFO  TestRewards - Reward Titles displayed
+20:28:34.328 [main] INFO  TestLoginLogout - ******STARTING TEST LOGIN LOGOUT******
+20:28:34.412 [main] INFO  TestLoginLogout - Starting QA site validation
+20:28:36.696 [main] INFO  TestLoginLogout - QA site launch is successful, Site Name : https://qa3.chilis.com/
+20:28:41.702 [main] INFO  TestLoginLogout - Pop up closed
+20:28:46.529 [main] INFO  TestLoginLogout - Menu button clicked
+20:28:51.654 [main] INFO  TestLoginLogout - Login option selected
+20:28:59.835 [main] INFO  TestLoginLogout - User name (512) 212-1212 entered
+20:29:06.698 [main] INFO  TestLoginLogout - Password Brinkers@2021 entered
+20:29:09.047 [main] INFO  TestLoginLogout - Sign in button clicked
+20:29:20.617 [main] INFO  TestLoginLogout - Menu button clicked
+20:29:23.286 [main] INFO  TestLoginLogout - Logout button clicked
+20:29:29.325 [main] INFO  TestLoginLogout - Login header displayed : LOG IN
+20:30:06.958 [main] INFO  TestLocationSearch - ******STARTING TEST LOCATION SEARCH******
+20:30:07.031 [main] INFO  TestLocationSearch - Starting QA site validation
+20:30:09.054 [main] INFO  TestLocationSearch - QA site launch is successful, Site Name : https://qa3.chilis.com/
+20:30:13.146 [main] INFO  TestLocationSearch - Pop up closed
+20:30:17.965 [main] INFO  TestLocationSearch - Menu button clicked
+20:30:22.979 [main] INFO  TestLocationSearch - Location option selected
+20:30:28.109 [main] INFO  TestLocationSearch - Restaurant location Addison, TX 75001, USA entered
+20:30:33.223 [main] INFO  TestLocationSearch - Search button clicked
+20:30:41.514 [main] INFO  TestLocationSearch - Restaurant name CHILI'S RESTAURANTS IN ADDISON, TEXAS is displayed
+20:43:37.271 [main] INFO  TestFavouriteItems - ******STARTING TEST CHILIS FAVOURITE ITEMS******
+20:43:38.296 [main] INFO  TestFavouriteItems - Starting QA site validation
+20:43:40.582 [main] INFO  TestFavouriteItems - QA site launch is successful, Site Name : https://qa3.chilis.com/
+20:43:45.086 [main] INFO  TestFavouriteItems - Pop up closed
+20:43:50.102 [main] INFO  TestFavouriteItems - Menu button clicked
+20:43:54.926 [main] INFO  TestFavouriteItems - Login option selected
+20:44:02.910 [main] INFO  TestFavouriteItems - User name (512) 212-1212 entered
+20:44:09.766 [main] INFO  TestFavouriteItems - Password Brinkers@2021 entered
+20:44:12.326 [main] INFO  TestFavouriteItems - Sign in button clicked
+20:44:24.406 [main] INFO  TestFavouriteItems - Menu button clicked
+20:44:29.830 [main] INFO  TestFavouriteItems - Menu Option selected
+20:44:37.414 [main] INFO  TestFavouriteItems - Chillis favourite Items : 
+20:44:40.078 [main] INFO  TestFavouriteItems - Oldtimer with Cheese
+20:44:44.582 [main] INFO  TestFavouriteItems - Original Full Order Ribs
+20:44:48.886 [main] INFO  TestFavouriteItems - Mix & Match Fajitas
+20:44:53.099 [main] INFO  TestFavouriteItems - Crispy Honey-Chipotle Chicken Crispers
+20:44:58.019 [main] INFO  TestFavouriteItems - Smokehouse Combo
+20:45:00.251 [main] INFO  TestFavouriteItems - All chilis favourite items obtained
+23:41:52.440 [main] INFO  TestUpdateAccount - ******STARTING TEST UPDATE ACCOUNT******
+23:41:53.489 [main] INFO  TestUpdateAccount - Starting QA site validation
+23:41:56.447 [main] INFO  TestUpdateAccount - QA site launch is successful, Site Name : https://qa3.chilis.com/
+23:42:00.570 [main] INFO  TestUpdateAccount - Pop up closed
+23:42:05.159 [main] INFO  TestUpdateAccount - Menu button clicked
+23:42:10.140 [main] INFO  TestUpdateAccount - Login option selected
+23:42:17.916 [main] INFO  TestUpdateAccount - User name (512) 212-1212 entered
+23:42:24.347 [main] INFO  TestUpdateAccount - Password Brinkers@2021 entered
+23:42:27.150 [main] INFO  TestUpdateAccount - Sign in button clicked
+23:42:39.126 [main] INFO  TestUpdateAccount - Menu button clicked
+23:42:45.921 [main] INFO  TestUpdateAccount - My Account option selected
+23:42:51.867 [main] INFO  TestUpdateAccount - First Name before update obtained as : Rashggh56
+23:42:54.084 [main] INFO  TestUpdateAccount - Last Name before update obtained as : Sudhir33
+23:42:57.814 [main] INFO  TestUpdateAccount - Email before update obtained as : somnath344.baul@brinker.com
+23:43:01.235 [main] INFO  TestUpdateAccount - Zip Code before update obtained as : 75008
+23:43:10.975 [main] INFO  TestUpdateAccount - Last Name updated with : Sarkar1
+23:43:17.572 [main] INFO  TestUpdateAccount - Email updated with : somnath.baul@brinker.com
+23:43:23.322 [main] INFO  TestUpdateAccount - Consent checked
+23:43:25.429 [main] INFO  TestUpdateAccount - Update button clicked
+23:43:33.763 [main] INFO  TestUpdateAccount - Success message obtained as : Account successfully updated
+23:43:36.030 [main] INFO  TestUpdateAccount - First Name after update obtained as : Rashggh56
+23:43:39.387 [main] INFO  TestUpdateAccount - Last Name after update obtained as : Sarkar1
+23:43:42.690 [main] INFO  TestUpdateAccount - Email after update obtained as : somnath.baul@brinker.com
+23:43:45.962 [main] INFO  TestUpdateAccount - Zip Code after update obtained as : 75008
+23:43:48.021 [main] INFO  TestUpdateAccount - First Name after update obtained as : Rashggh56
+23:51:50.225 [main] INFO  TestUpdateAccount - ******STARTING TEST UPDATE ACCOUNT******
+23:51:51.181 [main] INFO  TestUpdateAccount - Starting QA site validation
+23:51:55.123 [main] INFO  TestUpdateAccount - QA site launch is successful, Site Name : https://qa3.chilis.com/
+23:51:59.703 [main] INFO  TestUpdateAccount - Pop up closed
+23:52:04.368 [main] INFO  TestUpdateAccount - Menu button clicked
+23:52:09.329 [main] INFO  TestUpdateAccount - Login option selected
+23:52:19.093 [main] ERROR TestUpdateAccount - Could not enter user name
+23:52:19.093 [main] ERROR TestUpdateAccount - unknown error (An unknown server-side error occurred. status='false'. Failed to complete internal method: 'elementSendText args: [WEB, xpath=(//*[cmd:equalsIgnoreCase(@nodeName,'input')][@id='username'])[1], 0, ]', details: )  (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+Build info: version: '3.12.0', revision: '7c6e0b3', time: '2018-05-08T14:04:26.12Z'
+System info: host: 'LAPTOP-2HJFJ1OT', ip: '192.168.29.229', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_281'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {appBuildVersion: , appReleaseVersion: , appiumVersion: 1.8.0, applicationClearData: false, autoAcceptAlerts: false, autoDismissAlerts: false, autoGrantPermissions: false, autoWebview: false, browserName: Chromium, cloudViewLink: https://cloud.seetest.io:44..., commandTimeouts: 120000, desired: {browserName: Chromium, deviceQuery: @os='android' and @version=..., platformName: Android, testName: Quick Start Android Browser...}, device.category: PHONE, device.majorVersion: 8, device.manufacture: samsung, device.model: SM-G930F, device.name: samsung Galaxy S7 IO IL 086, device.os: Android, device.screenSize: 1080x1920, device.serialNumber: 98866742375a394e33, device.version: 8.0.0, deviceQuery: @os='android' and @version=..., deviceUDID: 98866742375a394e33, dontGoHomeOnQuit: false, dontStopAppOnReset: false, ehmPrefixUrl: /agent-6292135, ehmUrl: https://cloud.seetest.io:44..., fullReset: false, gridNodePort: 7805, install.only.for.update: false, installOnlyForUpdate: false, instrumentApp: false, javascriptEnabled: true, keystorePath: ~/.android/debug.keystore, locationServicesAuthorized: false, newSessionWaitTimeout: 600.0, noReset: false, platform: ANDROID, platformName: Android, projectName: , reportDirectory: reports, reportFormat: xml, reportTestId: 1043.0, reportUrl: https://cloud.seetest.io:44..., reservationDuration: 240.0, takeScreenshots: true, test.type: Mobile, testName: Quick Start Android Browser..., udid: 98866742375a394e33, useKeystore: false, waitForDeviceTimeout: 120000.0}
+Session ID: CLOUD-SID:2021-05-26_14-21-21-9eb148e3-dfe6-427e-a1d5-ad76b242779c
+23:56:22.122 [main] INFO  TestUpdateAccount - ******STARTING TEST UPDATE ACCOUNT******
+23:56:23.087 [main] INFO  TestUpdateAccount - Starting QA site validation
+23:56:25.229 [main] INFO  TestUpdateAccount - QA site launch is successful, Site Name : https://qa3.chilis.com/
+23:56:29.486 [main] INFO  TestUpdateAccount - Pop up closed
+23:56:34.514 [main] INFO  TestUpdateAccount - Menu button clicked
+23:56:39.450 [main] INFO  TestUpdateAccount - Login option selected
+23:56:48.711 [main] ERROR TestUpdateAccount - Could not enter user name
+23:56:48.711 [main] ERROR TestUpdateAccount - unknown error (An unknown server-side error occurred. status='false'. Failed to complete internal method: 'elementSendText args: [WEB, xpath=(//*[cmd:equalsIgnoreCase(@nodeName,'input')][@id='username'])[1], 0, ]', details: )  (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+Build info: version: '3.12.0', revision: '7c6e0b3', time: '2018-05-08T14:04:26.12Z'
+System info: host: 'LAPTOP-2HJFJ1OT', ip: '192.168.29.229', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_281'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {appBuildVersion: , appReleaseVersion: , appiumVersion: 1.8.0, applicationClearData: false, autoAcceptAlerts: false, autoDismissAlerts: false, autoGrantPermissions: false, autoWebview: false, browserName: Chromium, cloudViewLink: https://cloud.seetest.io:44..., commandTimeouts: 120000, desired: {browserName: Chromium, deviceQuery: @os='android' and @version=..., platformName: Android, testName: Quick Start Android Browser...}, device.category: PHONE, device.majorVersion: 8, device.manufacture: samsung, device.model: SM-G930F, device.name: samsung Galaxy S7 IO IL 086, device.os: Android, device.screenSize: 1080x1920, device.serialNumber: 98866742375a394e33, device.version: 8.0.0, deviceQuery: @os='android' and @version=..., deviceUDID: 98866742375a394e33, dontGoHomeOnQuit: false, dontStopAppOnReset: false, ehmPrefixUrl: /agent-6292135, ehmUrl: https://cloud.seetest.io:44..., fullReset: false, gridNodePort: 7806, install.only.for.update: false, installOnlyForUpdate: false, instrumentApp: false, javascriptEnabled: true, keystorePath: ~/.android/debug.keystore, locationServicesAuthorized: false, newSessionWaitTimeout: 600.0, noReset: false, platform: ANDROID, platformName: Android, projectName: , reportDirectory: reports, reportFormat: xml, reportTestId: 1044.0, reportUrl: https://cloud.seetest.io:44..., reservationDuration: 240.0, takeScreenshots: true, test.type: Mobile, testName: Quick Start Android Browser..., udid: 98866742375a394e33, useKeystore: false, waitForDeviceTimeout: 120000.0}
+Session ID: CLOUD-SID:2021-05-26_14-25-55-f636ca39-bd53-4a3d-8f96-17d1a2327db3

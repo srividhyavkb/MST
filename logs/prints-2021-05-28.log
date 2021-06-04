@@ -1,0 +1,390 @@
+01:00:30.924 [main] INFO  TestAddMyVisit - ******STARTING TEST ADD MY VISIT******
+01:00:31.949 [main] INFO  TestAddMyVisit - Starting QA site validation
+01:00:34.458 [main] INFO  TestAddMyVisit - QA site launch is successful, Site Name : https://qa3.chilis.com/
+01:00:40.192 [main] INFO  TestAddMyVisit - Pop up closed
+01:00:45.414 [main] INFO  TestAddMyVisit - Menu button clicked
+01:00:51.251 [main] INFO  TestAddMyVisit - Login option selected
+01:01:01.796 [main] INFO  TestAddMyVisit - User name (512) 212-1212 entered
+01:01:09.488 [main] INFO  TestAddMyVisit - Password Brinkers@2021 entered
+01:01:11.976 [main] INFO  TestAddMyVisit - Sign in button clicked
+01:01:30.068 [main] INFO  TestAddMyVisit - Add my visit button clicked
+01:01:43.647 [main] INFO  TestAddMyVisit - Restaurant location entered as : Addison, TX 75001, USA
+01:01:58.118 [main] INFO  TestAddMyVisit - Chilis location selected as : Addison - 4500 Beltline Rd., Dallas, TX 75001
+01:02:06.436 [main] INFO  TestAddMyVisit - Visit month selected as :April
+01:08:16.150 [main] INFO  TestAddMyVisit - ******STARTING TEST ADD MY VISIT******
+01:08:17.096 [main] INFO  TestAddMyVisit - Starting QA site validation
+01:08:24.686 [main] INFO  TestAddMyVisit - QA site launch is successful, Site Name : https://qa3.chilis.com/
+01:08:44.446 [main] INFO  TestAddMyVisit - Pop up closed
+01:09:00.831 [main] INFO  TestAddMyVisit - Menu button clicked
+01:09:18.443 [main] INFO  TestAddMyVisit - Login option selected
+01:09:49.163 [main] INFO  TestAddMyVisit - User name (512) 212-1212 entered
+01:10:16.607 [main] INFO  TestAddMyVisit - Password Brinkers@2021 entered
+01:10:30.123 [main] INFO  TestAddMyVisit - Sign in button clicked
+01:10:59.512 [main] INFO  TestAddMyVisit - Add my visit button clicked
+01:11:42.420 [main] INFO  TestAddMyVisit - Restaurant location entered as : Addison, TX 75001, USA
+01:12:12.524 [main] INFO  TestAddMyVisit - Chilis location selected as : Addison - 4500 Beltline Rd., Dallas, TX 75001
+01:12:32.960 [main] INFO  TestAddMyVisit - Visit month selected as :April
+01:19:09.831 [main] INFO  TestAddMyVisit - ******STARTING TEST ADD MY VISIT******
+01:19:11.164 [main] INFO  TestAddMyVisit - Starting QA site validation
+01:19:13.600 [main] INFO  TestAddMyVisit - QA site launch is successful, Site Name : https://qa3.chilis.com/
+01:19:18.103 [main] INFO  TestAddMyVisit - Pop up closed
+01:19:23.326 [main] INFO  TestAddMyVisit - Menu button clicked
+01:19:28.242 [main] INFO  TestAddMyVisit - Login option selected
+01:19:36.246 [main] INFO  TestAddMyVisit - User name (512) 212-1212 entered
+01:19:44.010 [main] INFO  TestAddMyVisit - Password Brinkers@2021 entered
+01:19:46.672 [main] INFO  TestAddMyVisit - Sign in button clicked
+01:19:54.387 [main] ERROR TestAddMyVisit - Add my visit button click failed
+01:19:54.388 [main] ERROR TestAddMyVisit - no such element (An element could not be located on the page using the given search parameters (XPATH='//button[text()='Add My Visit']'))  (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.12.0', revision: '7c6e0b3', time: '2018-05-08T14:04:26.12Z'
+System info: host: 'LAPTOP-2HJFJ1OT', ip: '192.168.225.168', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_281'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {appBuildVersion: , appReleaseVersion: , appiumVersion: 1.8.0, applicationClearData: false, autoAcceptAlerts: false, autoDismissAlerts: false, autoGrantPermissions: false, autoWebview: false, browserName: Chromium, cloudViewLink: https://cloud.seetest.io:44..., commandTimeouts: 120000, desired: {browserName: Chromium, deviceQuery: @os='android' and @version=..., platformName: Android, testName: Quick Start Android Browser...}, device.category: PHONE, device.majorVersion: 8, device.manufacture: samsung, device.model: SM-G930F, device.name: samsung Galaxy S7 IO IL 086, device.os: Android, device.screenSize: 1080x1920, device.serialNumber: 98866742375a394e33, device.version: 8.0.0, deviceQuery: @os='android' and @version=..., deviceUDID: 98866742375a394e33, dontGoHomeOnQuit: false, dontStopAppOnReset: false, ehmPrefixUrl: /agent-6292135, ehmUrl: https://cloud.seetest.io:44..., fullReset: false, gridNodePort: 7843, install.only.for.update: false, installOnlyForUpdate: false, instrumentApp: false, javascriptEnabled: true, keystorePath: ~/.android/debug.keystore, locationServicesAuthorized: false, newSessionWaitTimeout: 600.0, noReset: false, platform: ANDROID, platformName: Android, projectName: , reportDirectory: reports, reportFormat: xml, reportTestId: 1086.0, reportUrl: https://cloud.seetest.io:44..., reservationDuration: 240.0, takeScreenshots: true, test.type: Mobile, testName: Quick Start Android Browser..., udid: 98866742375a394e33, useKeystore: false, waitForDeviceTimeout: 120000.0}
+Session ID: CLOUD-SID:2021-05-27_15-48-39-0466bbf3-9501-4887-b3ba-4b12420491d3
+*** Element info: {Using=xpath, value=//button[text()='Add My Visit']}
+01:21:19.894 [main] INFO  TestAddMyVisit - ******STARTING TEST ADD MY VISIT******
+01:21:20.966 [main] INFO  TestAddMyVisit - Starting QA site validation
+01:21:23.247 [main] INFO  TestAddMyVisit - QA site launch is successful, Site Name : https://qa3.chilis.com/
+01:21:28.014 [main] INFO  TestAddMyVisit - Pop up closed
+01:21:33.441 [main] INFO  TestAddMyVisit - Menu button clicked
+01:21:39.174 [main] INFO  TestAddMyVisit - Login option selected
+01:21:48.187 [main] INFO  TestAddMyVisit - User name (512) 212-1212 entered
+01:21:55.872 [main] INFO  TestAddMyVisit - Password Brinkers@2021 entered
+01:21:58.837 [main] INFO  TestAddMyVisit - Sign in button clicked
+01:22:13.376 [main] INFO  TestAddMyVisit - Add my visit button clicked
+01:22:27.815 [main] INFO  TestAddMyVisit - Restaurant location entered as : Addison, TX 75001, USA
+01:22:41.536 [main] INFO  TestAddMyVisit - Chilis location selected as : Addison - 4500 Beltline Rd., Dallas, TX 75001
+01:22:49.831 [main] INFO  TestAddMyVisit - Visit month selected as :April
+01:25:44.606 [main] INFO  TestAddMyVisit - ******STARTING TEST ADD MY VISIT******
+01:25:45.620 [main] INFO  TestAddMyVisit - Starting QA site validation
+01:25:48.316 [main] INFO  TestAddMyVisit - QA site launch is successful, Site Name : https://qa3.chilis.com/
+01:25:53.539 [main] INFO  TestAddMyVisit - Pop up closed
+01:25:59.069 [main] INFO  TestAddMyVisit - Menu button clicked
+01:26:04.803 [main] INFO  TestAddMyVisit - Login option selected
+01:26:14.345 [main] ERROR TestAddMyVisit - Could not enter user name
+01:26:14.346 [main] ERROR TestAddMyVisit - unknown error (An unknown server-side error occurred. status='false'. Failed to complete internal method: 'elementSendText args: [WEB, xpath=(//*[cmd:equalsIgnoreCase(@nodeName,'input')][@id='username'])[1], 0, ]', details: )  (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+Build info: version: '3.12.0', revision: '7c6e0b3', time: '2018-05-08T14:04:26.12Z'
+System info: host: 'LAPTOP-2HJFJ1OT', ip: '192.168.225.168', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_281'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {appBuildVersion: , appReleaseVersion: , appiumVersion: 1.8.0, applicationClearData: false, autoAcceptAlerts: false, autoDismissAlerts: false, autoGrantPermissions: false, autoWebview: false, browserName: Chromium, cloudViewLink: https://cloud.seetest.io:44..., commandTimeouts: 120000, desired: {browserName: Chromium, deviceQuery: @os='android' and @version=..., platformName: Android, testName: Quick Start Android Browser...}, device.category: PHONE, device.majorVersion: 8, device.manufacture: samsung, device.model: SM-G930F, device.name: samsung Galaxy S7 IO IL 086, device.os: Android, device.screenSize: 1080x1920, device.serialNumber: 98866742375a394e33, device.version: 8.0.0, deviceQuery: @os='android' and @version=..., deviceUDID: 98866742375a394e33, dontGoHomeOnQuit: false, dontStopAppOnReset: false, ehmPrefixUrl: /agent-6292135, ehmUrl: https://cloud.seetest.io:44..., fullReset: false, gridNodePort: 7845, install.only.for.update: false, installOnlyForUpdate: false, instrumentApp: false, javascriptEnabled: true, keystorePath: ~/.android/debug.keystore, locationServicesAuthorized: false, newSessionWaitTimeout: 600.0, noReset: false, platform: ANDROID, platformName: Android, projectName: , reportDirectory: reports, reportFormat: xml, reportTestId: 1088.0, reportUrl: https://cloud.seetest.io:44..., reservationDuration: 240.0, takeScreenshots: true, test.type: Mobile, testName: Quick Start Android Browser..., udid: 98866742375a394e33, useKeystore: false, waitForDeviceTimeout: 120000.0}
+Session ID: CLOUD-SID:2021-05-27_15-55-15-712d6c2f-000c-4d3c-a073-f248fbf954bb
+01:27:11.407 [main] INFO  TestAddMyVisit - ******STARTING TEST ADD MY VISIT******
+01:27:12.523 [main] INFO  TestAddMyVisit - Starting QA site validation
+01:27:14.872 [main] INFO  TestAddMyVisit - QA site launch is successful, Site Name : https://qa3.chilis.com/
+01:27:20.580 [main] INFO  TestAddMyVisit - Pop up closed
+01:27:25.700 [main] INFO  TestAddMyVisit - Menu button clicked
+01:27:31.539 [main] INFO  TestAddMyVisit - Login option selected
+01:27:40.445 [main] INFO  TestAddMyVisit - User name (512) 212-1212 entered
+01:27:48.432 [main] INFO  TestAddMyVisit - Password Brinkers@2021 entered
+01:27:51.301 [main] INFO  TestAddMyVisit - Sign in button clicked
+01:28:06.879 [main] INFO  TestAddMyVisit - Add my visit button clicked
+01:28:20.791 [main] INFO  TestAddMyVisit - Restaurant location entered as : Addison, TX 75001, USA
+01:28:34.821 [main] INFO  TestAddMyVisit - Chilis location selected as : Addison - 4500 Beltline Rd., Dallas, TX 75001
+01:28:43.218 [main] INFO  TestAddMyVisit - Visit month selected as :April
+01:31:33.378 [main] INFO  TestAddMyVisit - ******STARTING TEST ADD MY VISIT******
+01:31:34.392 [main] INFO  TestAddMyVisit - Starting QA site validation
+01:31:37.107 [main] INFO  TestAddMyVisit - QA site launch is successful, Site Name : https://qa3.chilis.com/
+01:31:42.420 [main] INFO  TestAddMyVisit - Pop up closed
+01:31:47.861 [main] INFO  TestAddMyVisit - Menu button clicked
+01:31:53.581 [main] INFO  TestAddMyVisit - Login option selected
+01:32:02.593 [main] INFO  TestAddMyVisit - User name (512) 212-1212 entered
+01:32:10.272 [main] INFO  TestAddMyVisit - Password Brinkers@2021 entered
+01:32:13.446 [main] INFO  TestAddMyVisit - Sign in button clicked
+01:32:19.201 [main] ERROR TestAddMyVisit - Add my visit button click failed
+01:32:19.202 [main] ERROR TestAddMyVisit - no such element (An element could not be located on the page using the given search parameters (XPATH='//button[text()='Add My Visit']'))  (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.12.0', revision: '7c6e0b3', time: '2018-05-08T14:04:26.12Z'
+System info: host: 'LAPTOP-2HJFJ1OT', ip: '192.168.225.168', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_281'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {appBuildVersion: , appReleaseVersion: , appiumVersion: 1.8.0, applicationClearData: false, autoAcceptAlerts: false, autoDismissAlerts: false, autoGrantPermissions: false, autoWebview: false, browserName: Chromium, cloudViewLink: https://cloud.seetest.io:44..., commandTimeouts: 120000, desired: {browserName: Chromium, deviceQuery: @os='android' and @version=..., platformName: Android, testName: Quick Start Android Browser...}, device.category: PHONE, device.majorVersion: 8, device.manufacture: samsung, device.model: SM-G930F, device.name: samsung Galaxy S7 IO IL 086, device.os: Android, device.screenSize: 1080x1920, device.serialNumber: 98866742375a394e33, device.version: 8.0.0, deviceQuery: @os='android' and @version=..., deviceUDID: 98866742375a394e33, dontGoHomeOnQuit: false, dontStopAppOnReset: false, ehmPrefixUrl: /agent-6292135, ehmUrl: https://cloud.seetest.io:44..., fullReset: false, gridNodePort: 7847, install.only.for.update: false, installOnlyForUpdate: false, instrumentApp: false, javascriptEnabled: true, keystorePath: ~/.android/debug.keystore, locationServicesAuthorized: false, newSessionWaitTimeout: 600.0, noReset: false, platform: ANDROID, platformName: Android, projectName: , reportDirectory: reports, reportFormat: xml, reportTestId: 1090.0, reportUrl: https://cloud.seetest.io:44..., reservationDuration: 240.0, takeScreenshots: true, test.type: Mobile, testName: Quick Start Android Browser..., udid: 98866742375a394e33, useKeystore: false, waitForDeviceTimeout: 120000.0}
+Session ID: CLOUD-SID:2021-05-27_16-01-02-b58df90a-83ad-4ca8-aee5-931e2dc3ef9d
+*** Element info: {Using=xpath, value=//button[text()='Add My Visit']}
+01:33:17.635 [main] INFO  TestAddMyVisit - ******STARTING TEST ADD MY VISIT******
+01:33:18.615 [main] INFO  TestAddMyVisit - Starting QA site validation
+01:33:21.031 [main] INFO  TestAddMyVisit - QA site launch is successful, Site Name : https://qa3.chilis.com/
+01:33:26.766 [main] INFO  TestAddMyVisit - Pop up closed
+01:33:32.195 [main] INFO  TestAddMyVisit - Menu button clicked
+01:33:38.030 [main] INFO  TestAddMyVisit - Login option selected
+01:33:48.474 [main] INFO  TestAddMyVisit - User name (512) 212-1212 entered
+01:33:56.156 [main] INFO  TestAddMyVisit - Password Brinkers@2021 entered
+01:33:58.819 [main] INFO  TestAddMyVisit - Sign in button clicked
+01:34:15.713 [main] INFO  TestAddMyVisit - Add my visit button clicked
+01:34:30.152 [main] INFO  TestAddMyVisit - Restaurant location entered as : Addison, TX 75001, USA
+01:34:43.566 [main] INFO  TestAddMyVisit - Chilis location selected as : Addison - 4500 Beltline Rd., Dallas, TX 75001
+01:34:52.167 [main] INFO  TestAddMyVisit - Visit month selected as :April
+01:37:58.316 [main] INFO  TestAddMyVisit - ******STARTING TEST ADD MY VISIT******
+01:37:59.282 [main] INFO  TestAddMyVisit - Starting QA site validation
+01:38:01.922 [main] INFO  TestAddMyVisit - QA site launch is successful, Site Name : https://qa3.chilis.com/
+01:38:07.451 [main] INFO  TestAddMyVisit - Pop up closed
+01:38:13.184 [main] INFO  TestAddMyVisit - Menu button clicked
+01:38:18.918 [main] INFO  TestAddMyVisit - Login option selected
+01:38:28.242 [main] INFO  TestAddMyVisit - User name (512) 212-1212 entered
+01:38:36.132 [main] INFO  TestAddMyVisit - Password Brinkers@2021 entered
+01:38:39.192 [main] INFO  TestAddMyVisit - Sign in button clicked
+01:38:55.987 [main] INFO  TestAddMyVisit - Add my visit button clicked
+01:39:10.120 [main] INFO  TestAddMyVisit - Restaurant location entered as : Addison, TX 75001, USA
+01:39:24.248 [main] INFO  TestAddMyVisit - Chilis location selected as : Addison - 4500 Beltline Rd., Dallas, TX 75001
+01:39:37.355 [main] INFO  TestAddMyVisit - Visit month selected as :April
+01:49:06.479 [main] INFO  TestAddMyVisit - ******STARTING TEST ADD MY VISIT******
+01:49:07.459 [main] INFO  TestAddMyVisit - Starting QA site validation
+01:49:10.397 [main] INFO  TestAddMyVisit - QA site launch is successful, Site Name : https://qa3.chilis.com/
+01:49:15.717 [main] INFO  TestAddMyVisit - Pop up closed
+01:49:21.964 [main] INFO  TestAddMyVisit - Menu button clicked
+01:49:28.007 [main] INFO  TestAddMyVisit - Login option selected
+01:49:37.018 [main] INFO  TestAddMyVisit - User name (512) 212-1212 entered
+01:49:44.593 [main] INFO  TestAddMyVisit - Password Brinkers@2021 entered
+01:49:47.566 [main] INFO  TestAddMyVisit - Sign in button clicked
+01:50:05.128 [main] INFO  TestAddMyVisit - Add my visit button clicked
+01:50:19.512 [main] INFO  TestAddMyVisit - Restaurant location entered as : Addison, TX 75001, USA
+01:50:32.723 [main] INFO  TestAddMyVisit - Chilis location selected as : Addison - 4500 Beltline Rd., Dallas, TX 75001
+01:50:46.443 [main] INFO  TestAddMyVisit - Visit month selected as :April
+02:27:59.558 [main] INFO  TestAddMyVisit - ******STARTING TEST ADD MY VISIT******
+02:28:00.539 [main] INFO  TestAddMyVisit - Starting QA site validation
+02:28:03.218 [main] INFO  TestAddMyVisit - QA site launch is successful, Site Name : https://qa3.chilis.com/
+02:28:08.312 [main] INFO  TestAddMyVisit - Pop up closed
+02:28:13.842 [main] INFO  TestAddMyVisit - Menu button clicked
+02:28:19.883 [main] INFO  TestAddMyVisit - Login option selected
+02:28:29.508 [main] INFO  TestAddMyVisit - User name (512) 212-1212 entered
+02:28:36.881 [main] INFO  TestAddMyVisit - Password Brinkers@2021 entered
+02:28:39.748 [main] INFO  TestAddMyVisit - Sign in button clicked
+02:28:57.668 [main] INFO  TestAddMyVisit - Add my visit button clicked
+02:29:13.644 [main] INFO  TestAddMyVisit - Restaurant location entered as : Addison, TX 75001, USA
+02:29:26.955 [main] INFO  TestAddMyVisit - Chilis location selected as : Addison - 4500 Beltline Rd., Dallas, TX 75001
+02:29:47.360 [main] ERROR TestAddMyVisit - Visit month selection failed
+02:29:47.361 [main] ERROR TestAddMyVisit - no such element (An element could not be located on the page using the given search parameters (XPATH='//*[@resource-id='android:id/text1' and @text='April' and @class='android.widget.CheckedTextView']'))  (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.12.0', revision: '7c6e0b3', time: '2018-05-08T14:04:26.12Z'
+System info: host: 'LAPTOP-2HJFJ1OT', ip: '192.168.225.168', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_281'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {appBuildVersion: , appReleaseVersion: , appiumVersion: 1.8.0, applicationClearData: false, autoAcceptAlerts: false, autoDismissAlerts: false, autoGrantPermissions: false, autoWebview: false, browserName: Chromium, cloudViewLink: https://cloud.seetest.io:44..., commandTimeouts: 120000, desired: {browserName: Chromium, deviceQuery: @os='android' and @version=..., platformName: Android, testName: Quick Start Android Browser...}, device.category: PHONE, device.majorVersion: 8, device.manufacture: samsung, device.model: SM-G930F, device.name: samsung Galaxy S7 IO IL 086, device.os: Android, device.screenSize: 1080x1920, device.serialNumber: 98866742375a394e33, device.version: 8.0.0, deviceQuery: @os='android' and @version=..., deviceUDID: 98866742375a394e33, dontGoHomeOnQuit: false, dontStopAppOnReset: false, ehmPrefixUrl: /agent-6292135, ehmUrl: https://cloud.seetest.io:44..., fullReset: false, gridNodePort: 7851, install.only.for.update: false, installOnlyForUpdate: false, instrumentApp: false, javascriptEnabled: true, keystorePath: ~/.android/debug.keystore, locationServicesAuthorized: false, newSessionWaitTimeout: 600.0, noReset: false, platform: ANDROID, platformName: Android, projectName: , reportDirectory: reports, reportFormat: xml, reportTestId: 1094.0, reportUrl: https://cloud.seetest.io:44..., reservationDuration: 240.0, takeScreenshots: true, test.type: Mobile, testName: Quick Start Android Browser..., udid: 98866742375a394e33, useKeystore: false, waitForDeviceTimeout: 120000.0}
+Session ID: CLOUD-SID:2021-05-27_16-57-30-8433dfd8-b358-4b42-ad63-8919ae51b799
+*** Element info: {Using=xpath, value=//*[@resource-id='android:id/text1' and @text='April' and @class='android.widget.CheckedTextView']}
+02:40:01.462 [main] INFO  TestAddMyVisit - ******STARTING TEST ADD MY VISIT******
+02:40:02.607 [main] INFO  TestAddMyVisit - Starting QA site validation
+02:40:05.020 [main] INFO  TestAddMyVisit - QA site launch is successful, Site Name : https://qa3.chilis.com/
+02:40:10.201 [main] INFO  TestAddMyVisit - Pop up closed
+02:40:15.666 [main] INFO  TestAddMyVisit - Menu button clicked
+02:40:21.810 [main] INFO  TestAddMyVisit - Login option selected
+02:40:32.050 [main] INFO  TestAddMyVisit - User name (512) 212-1212 entered
+02:40:39.837 [main] INFO  TestAddMyVisit - Password Brinkers@2021 entered
+02:40:42.926 [main] INFO  TestAddMyVisit - Sign in button clicked
+02:40:59.497 [main] INFO  TestAddMyVisit - Add my visit button clicked
+02:41:13.010 [main] INFO  TestAddMyVisit - Restaurant location entered as : Addison, TX 75001, USA
+02:41:26.117 [main] INFO  TestAddMyVisit - Chilis location selected as : Addison - 4500 Beltline Rd., Dallas, TX 75001
+02:41:47.231 [main] ERROR TestAddMyVisit - Visit month selection failed
+02:41:47.232 [main] ERROR TestAddMyVisit - no such element (An element could not be located on the page using the given search parameters (XPATH='//*[@resource-id='android:id/text1' and @text='April' and @class='android.widget.CheckedTextView']'))  (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.12.0', revision: '7c6e0b3', time: '2018-05-08T14:04:26.12Z'
+System info: host: 'LAPTOP-2HJFJ1OT', ip: '192.168.225.168', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_281'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {appBuildVersion: , appReleaseVersion: , appiumVersion: 1.8.0, applicationClearData: false, autoAcceptAlerts: false, autoDismissAlerts: false, autoGrantPermissions: false, autoWebview: false, browserName: Chromium, cloudViewLink: https://cloud.seetest.io:44..., commandTimeouts: 120000, desired: {browserName: Chromium, deviceQuery: @os='android' and @version=..., platformName: Android, testName: Quick Start Android Browser...}, device.category: PHONE, device.majorVersion: 8, device.manufacture: samsung, device.model: SM-G930F, device.name: samsung Galaxy S7 IO IL 086, device.os: Android, device.screenSize: 1080x1920, device.serialNumber: 98866742375a394e33, device.version: 8.0.0, deviceQuery: @os='android' and @version=..., deviceUDID: 98866742375a394e33, dontGoHomeOnQuit: false, dontStopAppOnReset: false, ehmPrefixUrl: /agent-6292135, ehmUrl: https://cloud.seetest.io:44..., fullReset: false, gridNodePort: 7852, install.only.for.update: false, installOnlyForUpdate: false, instrumentApp: false, javascriptEnabled: true, keystorePath: ~/.android/debug.keystore, locationServicesAuthorized: false, newSessionWaitTimeout: 600.0, noReset: false, platform: ANDROID, platformName: Android, projectName: , reportDirectory: reports, reportFormat: xml, reportTestId: 1095.0, reportUrl: https://cloud.seetest.io:44..., reservationDuration: 240.0, takeScreenshots: true, test.type: Mobile, testName: Quick Start Android Browser..., udid: 98866742375a394e33, useKeystore: false, waitForDeviceTimeout: 120000.0}
+Session ID: CLOUD-SID:2021-05-27_17-09-30-8c71d675-ecfa-4426-ac41-2d482a2b694a
+*** Element info: {Using=xpath, value=//*[@resource-id='android:id/text1' and @text='April' and @class='android.widget.CheckedTextView']}
+02:56:16.655 [main] INFO  TestAddMyVisit - ******STARTING TEST ADD MY VISIT******
+02:56:17.788 [main] INFO  TestAddMyVisit - Starting QA site validation
+02:56:20.204 [main] INFO  TestAddMyVisit - QA site launch is successful, Site Name : https://qa3.chilis.com/
+02:56:25.262 [main] INFO  TestAddMyVisit - Pop up closed
+02:56:31.024 [main] INFO  TestAddMyVisit - Menu button clicked
+02:56:36.463 [main] INFO  TestAddMyVisit - Login option selected
+02:56:45.422 [main] INFO  TestAddMyVisit - User name (512) 212-1212 entered
+02:56:53.103 [main] INFO  TestAddMyVisit - Password Brinkers@2021 entered
+02:56:55.982 [main] INFO  TestAddMyVisit - Sign in button clicked
+02:57:11.023 [main] INFO  TestAddMyVisit - Add my visit button clicked
+02:57:26.068 [main] INFO  TestAddMyVisit - Restaurant location entered as : Addison, TX 75001, USA
+02:57:39.822 [main] INFO  TestAddMyVisit - Chilis location selected as : Addison - 4500 Beltline Rd., Dallas, TX 75001
+02:57:57.446 [main] ERROR TestAddMyVisit - Visit month selection failed
+02:57:57.446 [main] ERROR TestAddMyVisit - no such element (An element could not be located on the page using the given search parameters (XPATH='//*[@text='April' and @id='text1']'))  (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.12.0', revision: '7c6e0b3', time: '2018-05-08T14:04:26.12Z'
+System info: host: 'LAPTOP-2HJFJ1OT', ip: '192.168.225.168', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_281'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {appBuildVersion: , appReleaseVersion: , appiumVersion: 1.8.0, applicationClearData: false, autoAcceptAlerts: false, autoDismissAlerts: false, autoGrantPermissions: false, autoWebview: false, browserName: Chromium, cloudViewLink: https://cloud.seetest.io:44..., commandTimeouts: 120000, desired: {browserName: Chromium, deviceQuery: @os='android' and @version=..., platformName: Android, testName: Quick Start Android Browser...}, device.category: PHONE, device.majorVersion: 8, device.manufacture: samsung, device.model: SM-G930F, device.name: samsung Galaxy S7 IO IL 086, device.os: Android, device.screenSize: 1080x1920, device.serialNumber: 98866742375a394e33, device.version: 8.0.0, deviceQuery: @os='android' and @version=..., deviceUDID: 98866742375a394e33, dontGoHomeOnQuit: false, dontStopAppOnReset: false, ehmPrefixUrl: /agent-6292135, ehmUrl: https://cloud.seetest.io:44..., fullReset: false, gridNodePort: 7853, install.only.for.update: false, installOnlyForUpdate: false, instrumentApp: false, javascriptEnabled: true, keystorePath: ~/.android/debug.keystore, locationServicesAuthorized: false, newSessionWaitTimeout: 600.0, noReset: false, platform: ANDROID, platformName: Android, projectName: , reportDirectory: reports, reportFormat: xml, reportTestId: 1096.0, reportUrl: https://cloud.seetest.io:44..., reservationDuration: 240.0, takeScreenshots: true, test.type: Mobile, testName: Quick Start Android Browser..., udid: 98866742375a394e33, useKeystore: false, waitForDeviceTimeout: 120000.0}
+Session ID: CLOUD-SID:2021-05-27_17-25-45-5764ecfc-1a40-4df8-a726-5170a28c45d3
+*** Element info: {Using=xpath, value=//*[@text='April' and @id='text1']}
+03:13:18.498 [main] INFO  TestAddMyVisit - ******STARTING TEST ADD MY VISIT******
+03:13:19.540 [main] INFO  TestAddMyVisit - Starting QA site validation
+03:13:21.902 [main] INFO  TestAddMyVisit - QA site launch is successful, Site Name : https://qa3.chilis.com/
+03:13:27.163 [main] INFO  TestAddMyVisit - Pop up closed
+03:13:33.103 [main] INFO  TestAddMyVisit - Menu button clicked
+03:13:39.046 [main] INFO  TestAddMyVisit - Login option selected
+03:13:48.462 [main] INFO  TestAddMyVisit - User name (512) 212-1212 entered
+03:13:56.143 [main] INFO  TestAddMyVisit - Password Brinkers@2021 entered
+03:13:59.346 [main] INFO  TestAddMyVisit - Sign in button clicked
+03:14:16.306 [main] INFO  TestAddMyVisit - Add my visit button clicked
+03:14:30.703 [main] INFO  TestAddMyVisit - Restaurant location entered as : Addison, TX 75001, USA
+03:14:44.143 [main] INFO  TestAddMyVisit - Chilis location selected as : Addison - 4500 Beltline Rd., Dallas, TX 75001
+03:15:12.318 [main] ERROR TestAddMyVisit - Visit month selection failed
+03:15:12.318 [main] ERROR TestAddMyVisit - no such element (An element could not be located on the page using the given search parameters (XPATH='//*[@text='April' and @id='text1']'))  (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.12.0', revision: '7c6e0b3', time: '2018-05-08T14:04:26.12Z'
+System info: host: 'LAPTOP-2HJFJ1OT', ip: '192.168.225.168', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_281'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {appBuildVersion: , appReleaseVersion: , appiumVersion: 1.8.0, applicationClearData: false, autoAcceptAlerts: false, autoDismissAlerts: false, autoGrantPermissions: false, autoWebview: false, browserName: Chromium, cloudViewLink: https://cloud.seetest.io:44..., commandTimeouts: 120000, desired: {browserName: Chromium, deviceQuery: @os='android' and @version=..., platformName: Android, testName: Quick Start Android Browser...}, device.category: PHONE, device.majorVersion: 8, device.manufacture: samsung, device.model: SM-G930F, device.name: samsung Galaxy S7 IO IL 086, device.os: Android, device.screenSize: 1080x1920, device.serialNumber: 98866742375a394e33, device.version: 8.0.0, deviceQuery: @os='android' and @version=..., deviceUDID: 98866742375a394e33, dontGoHomeOnQuit: false, dontStopAppOnReset: false, ehmPrefixUrl: /agent-6292135, ehmUrl: https://cloud.seetest.io:44..., fullReset: false, gridNodePort: 7854, install.only.for.update: false, installOnlyForUpdate: false, instrumentApp: false, javascriptEnabled: true, keystorePath: ~/.android/debug.keystore, locationServicesAuthorized: false, newSessionWaitTimeout: 600.0, noReset: false, platform: ANDROID, platformName: Android, projectName: , reportDirectory: reports, reportFormat: xml, reportTestId: 1097.0, reportUrl: https://cloud.seetest.io:44..., reservationDuration: 240.0, takeScreenshots: true, test.type: Mobile, testName: Quick Start Android Browser..., udid: 98866742375a394e33, useKeystore: false, waitForDeviceTimeout: 120000.0}
+Session ID: CLOUD-SID:2021-05-27_17-42-50-feabc9c8-cb6a-4624-8a4d-b047bd95567c
+*** Element info: {Using=xpath, value=//*[@text='April' and @id='text1']}
+03:20:23.831 [main] INFO  TestAddMyVisit - ******STARTING TEST ADD MY VISIT******
+03:20:24.878 [main] INFO  TestAddMyVisit - Starting QA site validation
+03:20:27.210 [main] INFO  TestAddMyVisit - QA site launch is successful, Site Name : https://qa3.chilis.com/
+03:20:32.304 [main] INFO  TestAddMyVisit - Pop up closed
+03:20:37.742 [main] INFO  TestAddMyVisit - Menu button clicked
+03:20:43.201 [main] INFO  TestAddMyVisit - Login option selected
+03:20:51.506 [main] INFO  TestAddMyVisit - User name (512) 212-1212 entered
+03:20:59.503 [main] INFO  TestAddMyVisit - Password Brinkers@2021 entered
+03:21:02.320 [main] INFO  TestAddMyVisit - Sign in button clicked
+03:21:19.668 [main] INFO  TestAddMyVisit - Add my visit button clicked
+03:21:32.143 [main] INFO  TestAddMyVisit - Restaurant location entered as : Addison, TX 75001, USA
+03:21:46.144 [main] INFO  TestAddMyVisit - Chilis location selected as : Addison - 4500 Beltline Rd., Dallas, TX 75001
+03:22:03.158 [main] ERROR TestAddMyVisit - Visit month selection failed
+03:22:03.158 [main] ERROR TestAddMyVisit - no such element (An element could not be located on the page using the given search parameters (XPATH='//*[@class='android.widget.ListView']'))  (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.12.0', revision: '7c6e0b3', time: '2018-05-08T14:04:26.12Z'
+System info: host: 'LAPTOP-2HJFJ1OT', ip: '192.168.225.168', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_281'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {appBuildVersion: , appReleaseVersion: , appiumVersion: 1.8.0, applicationClearData: false, autoAcceptAlerts: false, autoDismissAlerts: false, autoGrantPermissions: false, autoWebview: false, browserName: Chromium, cloudViewLink: https://cloud.seetest.io:44..., commandTimeouts: 120000, desired: {browserName: Chromium, deviceQuery: @os='android' and @version=..., platformName: Android, testName: Quick Start Android Browser...}, device.category: PHONE, device.majorVersion: 8, device.manufacture: samsung, device.model: SM-G930F, device.name: samsung Galaxy S7 IO IL 086, device.os: Android, device.screenSize: 1080x1920, device.serialNumber: 98866742375a394e33, device.version: 8.0.0, deviceQuery: @os='android' and @version=..., deviceUDID: 98866742375a394e33, dontGoHomeOnQuit: false, dontStopAppOnReset: false, ehmPrefixUrl: /agent-6292135, ehmUrl: https://cloud.seetest.io:44..., fullReset: false, gridNodePort: 7855, install.only.for.update: false, installOnlyForUpdate: false, instrumentApp: false, javascriptEnabled: true, keystorePath: ~/.android/debug.keystore, locationServicesAuthorized: false, newSessionWaitTimeout: 600.0, noReset: false, platform: ANDROID, platformName: Android, projectName: , reportDirectory: reports, reportFormat: xml, reportTestId: 1098.0, reportUrl: https://cloud.seetest.io:44..., reservationDuration: 240.0, takeScreenshots: true, test.type: Mobile, testName: Quick Start Android Browser..., udid: 98866742375a394e33, useKeystore: false, waitForDeviceTimeout: 120000.0}
+Session ID: CLOUD-SID:2021-05-27_17-49-54-f571248a-989b-46f1-8aa3-175fa4f8a171
+*** Element info: {Using=xpath, value=//*[@class='android.widget.ListView']}
+03:52:43.134 [main] INFO  TestAddMyVisit - ******STARTING TEST ADD MY VISIT******
+03:52:44.475 [main] INFO  TestAddMyVisit - Starting QA site validation
+03:52:46.980 [main] INFO  TestAddMyVisit - QA site launch is successful, Site Name : https://qa3.chilis.com/
+03:52:52.741 [main] INFO  TestAddMyVisit - Pop up closed
+03:52:58.180 [main] INFO  TestAddMyVisit - Menu button clicked
+03:53:03.511 [main] INFO  TestAddMyVisit - Login option selected
+03:53:13.223 [main] INFO  TestAddMyVisit - User name (512) 212-1212 entered
+03:53:21.539 [main] INFO  TestAddMyVisit - Password Brinkers@2021 entered
+03:53:24.424 [main] INFO  TestAddMyVisit - Sign in button clicked
+03:53:29.372 [main] ERROR TestAddMyVisit - Add my visit button click failed
+03:53:29.372 [main] ERROR TestAddMyVisit - no such element (An element could not be located on the page using the given search parameters (XPATH='//button[text()='Add My Visit']'))  (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.12.0', revision: '7c6e0b3', time: '2018-05-08T14:04:26.12Z'
+System info: host: 'LAPTOP-2HJFJ1OT', ip: '192.168.225.168', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_281'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {appBuildVersion: , appReleaseVersion: , appiumVersion: 1.8.0, applicationClearData: false, autoAcceptAlerts: false, autoDismissAlerts: false, autoGrantPermissions: false, autoWebview: false, browserName: Chromium, cloudViewLink: https://cloud.seetest.io:44..., commandTimeouts: 120000, desired: {browserName: Chromium, deviceQuery: @os='android' and @version=..., platformName: Android, testName: Quick Start Android Browser...}, device.category: PHONE, device.majorVersion: 8, device.manufacture: samsung, device.model: SM-G930F, device.name: samsung Galaxy S7 IO IL 086, device.os: Android, device.screenSize: 1080x1920, device.serialNumber: 98866742375a394e33, device.version: 8.0.0, deviceQuery: @os='android' and @version=..., deviceUDID: 98866742375a394e33, dontGoHomeOnQuit: false, dontStopAppOnReset: false, ehmPrefixUrl: /agent-6292135, ehmUrl: https://cloud.seetest.io:44..., fullReset: false, gridNodePort: 7856, install.only.for.update: false, installOnlyForUpdate: false, instrumentApp: false, javascriptEnabled: true, keystorePath: ~/.android/debug.keystore, locationServicesAuthorized: false, newSessionWaitTimeout: 600.0, noReset: false, platform: ANDROID, platformName: Android, projectName: , reportDirectory: reports, reportFormat: xml, reportTestId: 1100.0, reportUrl: https://cloud.seetest.io:44..., reservationDuration: 240.0, takeScreenshots: true, test.type: Mobile, testName: Quick Start Android Browser..., udid: 98866742375a394e33, useKeystore: false, waitForDeviceTimeout: 120000.0}
+Session ID: CLOUD-SID:2021-05-27_18-22-12-9726414d-4d3b-4340-959a-fd6eff11f331
+*** Element info: {Using=xpath, value=//button[text()='Add My Visit']}
+03:54:52.578 [main] INFO  TestAddMyVisit - ******STARTING TEST ADD MY VISIT******
+03:54:53.525 [main] INFO  TestAddMyVisit - Starting QA site validation
+03:54:56.265 [main] INFO  TestAddMyVisit - QA site launch is successful, Site Name : https://qa3.chilis.com/
+03:55:01.059 [main] INFO  TestAddMyVisit - Pop up closed
+03:55:06.519 [main] INFO  TestAddMyVisit - Menu button clicked
+03:55:12.264 [main] INFO  TestAddMyVisit - Login option selected
+03:55:20.905 [main] INFO  TestAddMyVisit - User name (512) 212-1212 entered
+03:55:28.586 [main] INFO  TestAddMyVisit - Password Brinkers@2021 entered
+03:55:31.459 [main] INFO  TestAddMyVisit - Sign in button clicked
+03:55:36.270 [main] ERROR TestAddMyVisit - Add my visit button click failed
+03:55:36.270 [main] ERROR TestAddMyVisit - no such element (An element could not be located on the page using the given search parameters (XPATH='//button[text()='Add My Visit']'))  (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.12.0', revision: '7c6e0b3', time: '2018-05-08T14:04:26.12Z'
+System info: host: 'LAPTOP-2HJFJ1OT', ip: '192.168.225.168', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_281'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {appBuildVersion: , appReleaseVersion: , appiumVersion: 1.8.0, applicationClearData: false, autoAcceptAlerts: false, autoDismissAlerts: false, autoGrantPermissions: false, autoWebview: false, browserName: Chromium, cloudViewLink: https://cloud.seetest.io:44..., commandTimeouts: 120000, desired: {browserName: Chromium, deviceQuery: @os='android' and @version=..., platformName: Android, testName: Quick Start Android Browser...}, device.category: PHONE, device.majorVersion: 8, device.manufacture: samsung, device.model: SM-G930F, device.name: samsung Galaxy S7 IO IL 086, device.os: Android, device.screenSize: 1080x1920, device.serialNumber: 98866742375a394e33, device.version: 8.0.0, deviceQuery: @os='android' and @version=..., deviceUDID: 98866742375a394e33, dontGoHomeOnQuit: false, dontStopAppOnReset: false, ehmPrefixUrl: /agent-6292135, ehmUrl: https://cloud.seetest.io:44..., fullReset: false, gridNodePort: 7857, install.only.for.update: false, installOnlyForUpdate: false, instrumentApp: false, javascriptEnabled: true, keystorePath: ~/.android/debug.keystore, locationServicesAuthorized: false, newSessionWaitTimeout: 600.0, noReset: false, platform: ANDROID, platformName: Android, projectName: , reportDirectory: reports, reportFormat: xml, reportTestId: 1101.0, reportUrl: https://cloud.seetest.io:44..., reservationDuration: 240.0, takeScreenshots: true, test.type: Mobile, testName: Quick Start Android Browser..., udid: 98866742375a394e33, useKeystore: false, waitForDeviceTimeout: 120000.0}
+Session ID: CLOUD-SID:2021-05-27_18-24-21-d7f7c6b6-ab34-4e47-ae5d-d70c28b70c0f
+*** Element info: {Using=xpath, value=//button[text()='Add My Visit']}
+03:56:37.158 [main] INFO  TestAddMyVisit - ******STARTING TEST ADD MY VISIT******
+03:56:38.126 [main] INFO  TestAddMyVisit - Starting QA site validation
+03:56:40.903 [main] INFO  TestAddMyVisit - QA site launch is successful, Site Name : https://qa3.chilis.com/
+03:56:46.345 [main] INFO  TestAddMyVisit - Pop up closed
+03:56:51.465 [main] INFO  TestAddMyVisit - Menu button clicked
+03:56:56.611 [main] INFO  TestAddMyVisit - Login option selected
+03:57:06.184 [main] INFO  TestAddMyVisit - User name (512) 212-1212 entered
+03:57:13.678 [main] INFO  TestAddMyVisit - Password Brinkers@2021 entered
+03:57:16.421 [main] INFO  TestAddMyVisit - Sign in button clicked
+03:57:21.557 [main] ERROR TestAddMyVisit - Add my visit button click failed
+03:57:21.558 [main] ERROR TestAddMyVisit - no such element (An element could not be located on the page using the given search parameters (XPATH='//button[text()='Add My Visit']'))  (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.12.0', revision: '7c6e0b3', time: '2018-05-08T14:04:26.12Z'
+System info: host: 'LAPTOP-2HJFJ1OT', ip: '192.168.225.168', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_281'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {appBuildVersion: , appReleaseVersion: , appiumVersion: 1.8.0, applicationClearData: false, autoAcceptAlerts: false, autoDismissAlerts: false, autoGrantPermissions: false, autoWebview: false, browserName: Chromium, cloudViewLink: https://cloud.seetest.io:44..., commandTimeouts: 120000, desired: {browserName: Chromium, deviceQuery: @os='android' and @version=..., platformName: Android, testName: Quick Start Android Browser...}, device.category: PHONE, device.majorVersion: 8, device.manufacture: samsung, device.model: SM-G930F, device.name: samsung Galaxy S7 IO IL 086, device.os: Android, device.screenSize: 1080x1920, device.serialNumber: 98866742375a394e33, device.version: 8.0.0, deviceQuery: @os='android' and @version=..., deviceUDID: 98866742375a394e33, dontGoHomeOnQuit: false, dontStopAppOnReset: false, ehmPrefixUrl: /agent-6292135, ehmUrl: https://cloud.seetest.io:44..., fullReset: false, gridNodePort: 7858, install.only.for.update: false, installOnlyForUpdate: false, instrumentApp: false, javascriptEnabled: true, keystorePath: ~/.android/debug.keystore, locationServicesAuthorized: false, newSessionWaitTimeout: 600.0, noReset: false, platform: ANDROID, platformName: Android, projectName: , reportDirectory: reports, reportFormat: xml, reportTestId: 1102.0, reportUrl: https://cloud.seetest.io:44..., reservationDuration: 240.0, takeScreenshots: true, test.type: Mobile, testName: Quick Start Android Browser..., udid: 98866742375a394e33, useKeystore: false, waitForDeviceTimeout: 120000.0}
+Session ID: CLOUD-SID:2021-05-27_18-26-08-02ca63a0-5502-4826-9f6d-023b9d8d240e
+*** Element info: {Using=xpath, value=//button[text()='Add My Visit']}
+04:01:18.174 [main] INFO  TestAddMyVisit - ******STARTING TEST ADD MY VISIT******
+04:01:19.123 [main] INFO  TestAddMyVisit - Starting QA site validation
+04:01:21.940 [main] INFO  TestAddMyVisit - QA site launch is successful, Site Name : https://qa3.chilis.com/
+04:01:27.700 [main] INFO  TestAddMyVisit - Pop up closed
+04:01:32.820 [main] INFO  TestAddMyVisit - Menu button clicked
+04:01:38.470 [main] INFO  TestAddMyVisit - Login option selected
+04:01:47.861 [main] INFO  TestAddMyVisit - User name (512) 212-1212 entered
+04:01:55.540 [main] INFO  TestAddMyVisit - Password Brinkers@2021 entered
+04:01:58.186 [main] INFO  TestAddMyVisit - Sign in button clicked
+04:02:13.499 [main] INFO  TestAddMyVisit - Add my visit button clicked
+04:02:27.350 [main] INFO  TestAddMyVisit - Restaurant location entered as : Addison, TX 75001, USA
+04:02:40.659 [main] INFO  TestAddMyVisit - Chilis location selected as : Addison - 4500 Beltline Rd., Dallas, TX 75001
+04:03:10.753 [main] ERROR TestAddMyVisit - Visit month selection failed
+04:03:10.754 [main] ERROR TestAddMyVisit - no such element (An element could not be located on the page using the given search parameters (XPATH='//*[@text='April' and @id='text1']'))  (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.12.0', revision: '7c6e0b3', time: '2018-05-08T14:04:26.12Z'
+System info: host: 'LAPTOP-2HJFJ1OT', ip: '192.168.225.168', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_281'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {appBuildVersion: , appReleaseVersion: , appiumVersion: 1.8.0, applicationClearData: false, autoAcceptAlerts: false, autoDismissAlerts: false, autoGrantPermissions: false, autoWebview: false, browserName: Chromium, cloudViewLink: https://cloud.seetest.io:44..., commandTimeouts: 120000, desired: {browserName: Chromium, deviceQuery: @os='android' and @version=..., platformName: Android, testName: Quick Start Android Browser...}, device.category: PHONE, device.majorVersion: 8, device.manufacture: samsung, device.model: SM-G930F, device.name: samsung Galaxy S7 IO IL 086, device.os: Android, device.screenSize: 1080x1920, device.serialNumber: 98866742375a394e33, device.version: 8.0.0, deviceQuery: @os='android' and @version=..., deviceUDID: 98866742375a394e33, dontGoHomeOnQuit: false, dontStopAppOnReset: false, ehmPrefixUrl: /agent-6292135, ehmUrl: https://cloud.seetest.io:44..., fullReset: false, gridNodePort: 7859, install.only.for.update: false, installOnlyForUpdate: false, instrumentApp: false, javascriptEnabled: true, keystorePath: ~/.android/debug.keystore, locationServicesAuthorized: false, newSessionWaitTimeout: 600.0, noReset: false, platform: ANDROID, platformName: Android, projectName: , reportDirectory: reports, reportFormat: xml, reportTestId: 1103.0, reportUrl: https://cloud.seetest.io:44..., reservationDuration: 240.0, takeScreenshots: true, test.type: Mobile, testName: Quick Start Android Browser..., udid: 98866742375a394e33, useKeystore: false, waitForDeviceTimeout: 120000.0}
+Session ID: CLOUD-SID:2021-05-27_18-30-49-0d04ae6c-c865-46bd-8257-91fbdee79b28
+*** Element info: {Using=xpath, value=//*[@text='April' and @id='text1']}
+04:06:56.177 [main] INFO  TestAddMyVisit - ******STARTING TEST ADD MY VISIT******
+04:06:57.141 [main] INFO  TestAddMyVisit - Starting QA site validation
+04:06:59.554 [main] INFO  TestAddMyVisit - QA site launch is successful, Site Name : https://qa3.chilis.com/
+04:07:04.671 [main] INFO  TestAddMyVisit - Pop up closed
+04:07:09.790 [main] INFO  TestAddMyVisit - Menu button clicked
+04:07:15.871 [main] INFO  TestAddMyVisit - Login option selected
+04:07:25.149 [main] INFO  TestAddMyVisit - User name (512) 212-1212 entered
+04:07:33.471 [main] INFO  TestAddMyVisit - Password Brinkers@2021 entered
+04:07:37.771 [main] INFO  TestAddMyVisit - Sign in button clicked
+04:07:51.712 [main] INFO  TestAddMyVisit - Add my visit button clicked
+04:08:06.890 [main] INFO  TestAddMyVisit - Restaurant location entered as : Addison, TX 75001, USA
+04:08:19.872 [main] INFO  TestAddMyVisit - Chilis location selected as : Addison - 4500 Beltline Rd., Dallas, TX 75001
+04:08:49.879 [main] ERROR TestAddMyVisit - Visit month selection failed
+04:08:49.880 [main] ERROR TestAddMyVisit - no such element (An element could not be located on the page using the given search parameters (XPATH='//*[text()='April' and @id='text1']'))  (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.12.0', revision: '7c6e0b3', time: '2018-05-08T14:04:26.12Z'
+System info: host: 'LAPTOP-2HJFJ1OT', ip: '192.168.225.168', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_281'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {appBuildVersion: , appReleaseVersion: , appiumVersion: 1.8.0, applicationClearData: false, autoAcceptAlerts: false, autoDismissAlerts: false, autoGrantPermissions: false, autoWebview: false, browserName: Chromium, cloudViewLink: https://cloud.seetest.io:44..., commandTimeouts: 120000, desired: {browserName: Chromium, deviceQuery: @os='android' and @version=..., platformName: Android, testName: Quick Start Android Browser...}, device.category: PHONE, device.majorVersion: 8, device.manufacture: samsung, device.model: SM-G930F, device.name: samsung Galaxy S7 IO IL 086, device.os: Android, device.screenSize: 1080x1920, device.serialNumber: 98866742375a394e33, device.version: 8.0.0, deviceQuery: @os='android' and @version=..., deviceUDID: 98866742375a394e33, dontGoHomeOnQuit: false, dontStopAppOnReset: false, ehmPrefixUrl: /agent-6292135, ehmUrl: https://cloud.seetest.io:44..., fullReset: false, gridNodePort: 7860, install.only.for.update: false, installOnlyForUpdate: false, instrumentApp: false, javascriptEnabled: true, keystorePath: ~/.android/debug.keystore, locationServicesAuthorized: false, newSessionWaitTimeout: 600.0, noReset: false, platform: ANDROID, platformName: Android, projectName: , reportDirectory: reports, reportFormat: xml, reportTestId: 1104.0, reportUrl: https://cloud.seetest.io:44..., reservationDuration: 240.0, takeScreenshots: true, test.type: Mobile, testName: Quick Start Android Browser..., udid: 98866742375a394e33, useKeystore: false, waitForDeviceTimeout: 120000.0}
+Session ID: CLOUD-SID:2021-05-27_18-36-26-ed79c50c-4dd5-40ec-aedb-f7ee1c09a96d
+*** Element info: {Using=xpath, value=//*[text()='April' and @id='text1']}
+04:37:56.036 [main] INFO  TestAddMyVisit - ******STARTING TEST ADD MY VISIT******
+04:37:57.003 [main] INFO  TestAddMyVisit - Starting QA site validation
+04:37:59.946 [main] INFO  TestAddMyVisit - QA site launch is successful, Site Name : https://qa3.chilis.com/
+04:38:05.702 [main] INFO  TestAddMyVisit - Pop up closed
+04:38:10.821 [main] INFO  TestAddMyVisit - Menu button clicked
+04:38:16.580 [main] INFO  TestAddMyVisit - Login option selected
+04:38:25.541 [main] INFO  TestAddMyVisit - User name (512) 212-1212 entered
+04:38:32.901 [main] INFO  TestAddMyVisit - Password Brinkers@2021 entered
+04:38:35.707 [main] INFO  TestAddMyVisit - Sign in button clicked
+04:38:53.377 [main] INFO  TestAddMyVisit - Add my visit button clicked
+04:39:06.825 [main] INFO  TestAddMyVisit - Restaurant location entered as : Addison, TX 75001, USA
+04:39:20.901 [main] INFO  TestAddMyVisit - Chilis location selected as : Addison - 4500 Beltline Rd., Dallas, TX 75001
+04:39:49.388 [main] ERROR TestAddMyVisit - Visit month selection failed
+04:39:49.388 [main] ERROR TestAddMyVisit - Expected condition failed: waiting for element to be clickable: By.xpath: //android.widget.CheckedTextView[contains(text(), 'April')] (tried for 15 second(s) with 500 milliseconds interval)
+04:41:12.162 [main] INFO  TestAddMyVisit - ******STARTING TEST ADD MY VISIT******
+04:41:13.113 [main] INFO  TestAddMyVisit - Starting QA site validation
+04:41:15.463 [main] INFO  TestAddMyVisit - QA site launch is successful, Site Name : https://qa3.chilis.com/
+04:41:20.582 [main] INFO  TestAddMyVisit - Pop up closed
+04:41:26.021 [main] INFO  TestAddMyVisit - Menu button clicked
+04:41:31.458 [main] INFO  TestAddMyVisit - Login option selected
+04:41:39.462 [main] INFO  TestAddMyVisit - User name (512) 212-1212 entered
+04:41:47.139 [main] INFO  TestAddMyVisit - Password Brinkers@2021 entered
+04:41:50.026 [main] INFO  TestAddMyVisit - Sign in button clicked
+04:42:05.066 [main] INFO  TestAddMyVisit - Add my visit button clicked
+04:42:19.572 [main] INFO  TestAddMyVisit - Restaurant location entered as : Addison, TX 75001, USA
+04:42:33.226 [main] INFO  TestAddMyVisit - Chilis location selected as : Addison - 4500 Beltline Rd., Dallas, TX 75001
+04:42:53.549 [main] ERROR TestAddMyVisit - Visit month selection failed
+04:42:53.549 [main] ERROR TestAddMyVisit - no such element (An element could not be located on the page using the given search parameters (XPATH='//android.widget.CheckedTextView[contains(text(), 'April')]'))  (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.12.0', revision: '7c6e0b3', time: '2018-05-08T14:04:26.12Z'
+System info: host: 'LAPTOP-2HJFJ1OT', ip: '192.168.225.168', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_281'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {appBuildVersion: , appReleaseVersion: , appiumVersion: 1.8.0, applicationClearData: false, autoAcceptAlerts: false, autoDismissAlerts: false, autoGrantPermissions: false, autoWebview: false, browserName: Chromium, cloudViewLink: https://cloud.seetest.io:44..., commandTimeouts: 120000, desired: {browserName: Chromium, deviceQuery: @os='android' and @version=..., platformName: Android, testName: Quick Start Android Browser...}, device.category: PHONE, device.majorVersion: 8, device.manufacture: samsung, device.model: SM-G930F, device.name: samsung Galaxy S7 IO IL 086, device.os: Android, device.screenSize: 1080x1920, device.serialNumber: 98866742375a394e33, device.version: 8.0.0, deviceQuery: @os='android' and @version=..., deviceUDID: 98866742375a394e33, dontGoHomeOnQuit: false, dontStopAppOnReset: false, ehmPrefixUrl: /agent-6292135, ehmUrl: https://cloud.seetest.io:44..., fullReset: false, gridNodePort: 7862, install.only.for.update: false, installOnlyForUpdate: false, instrumentApp: false, javascriptEnabled: true, keystorePath: ~/.android/debug.keystore, locationServicesAuthorized: false, newSessionWaitTimeout: 600.0, noReset: false, platform: ANDROID, platformName: Android, projectName: , reportDirectory: reports, reportFormat: xml, reportTestId: 1106.0, reportUrl: https://cloud.seetest.io:44..., reservationDuration: 240.0, takeScreenshots: true, test.type: Mobile, testName: Quick Start Android Browser..., udid: 98866742375a394e33, useKeystore: false, waitForDeviceTimeout: 120000.0}
+Session ID: CLOUD-SID:2021-05-27_19-10-43-96682ceb-93a9-4c07-b3a5-f54194da3f0c
+*** Element info: {Using=xpath, value=//android.widget.CheckedTextView[contains(text(), 'April')]}

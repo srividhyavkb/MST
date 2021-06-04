@@ -1,0 +1,21 @@
+00:07:02.297 [main] INFO  TestAddMyVisit - ******STARTING TEST ADD MY VISIT******
+00:07:03.383 [main] INFO  TestAddMyVisit - Starting QA site validation
+00:07:05.907 [main] INFO  TestAddMyVisit - QA site launch is successful, Site Name : https://qa3.chilis.com/
+00:07:10.038 [main] INFO  TestAddMyVisit - Pop up closed
+00:07:14.962 [main] INFO  TestAddMyVisit - Menu button clicked
+00:07:20.026 [main] INFO  TestAddMyVisit - Login option selected
+00:07:28.070 [main] INFO  TestAddMyVisit - User name (512) 212-1212 entered
+00:07:34.120 [main] INFO  TestAddMyVisit - Password Brinkers@2021 entered
+00:07:36.483 [main] INFO  TestAddMyVisit - Sign in button clicked
+00:07:49.550 [main] INFO  TestAddMyVisit - Add my visit button clicked
+00:08:02.561 [main] INFO  TestAddMyVisit - Restaurant location entered as : Addison, TX 75001, USA
+00:08:16.588 [main] INFO  TestAddMyVisit - Chilis location selected as : Addison - 4500 Beltline Rd., Dallas, TX 75001
+00:08:42.633 [main] INFO  TestAddMyVisit - Visit month selected as :April
+00:08:56.914 [main] ERROR TestAddMyVisit - Visit day selection failed
+00:08:56.915 [main] ERROR TestAddMyVisit - unknown error (An unknown server-side error occurred. status='false'. Failed to complete internal method: 'click args: [WEB, xpath=(//*[@id='visit-day'])[1], 0, 1]', details: Failed to click 'xpath=(//*[@id='visit-day'])[1]'. Cannot click. The element is found but not visible on Screen. deviceScreenDimension = java.awt.Rectangle[x=0,y=0,width=1080,height=1920])  (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+Build info: version: '3.12.0', revision: '7c6e0b3', time: '2018-05-08T14:04:26.12Z'
+System info: host: 'LAPTOP-2HJFJ1OT', ip: '192.168.29.229', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_281'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {appBuildVersion: , appReleaseVersion: , appiumVersion: 1.8.0, applicationClearData: false, autoAcceptAlerts: false, autoDismissAlerts: false, autoGrantPermissions: false, autoWebview: false, browserName: Chromium, cloudViewLink: https://cloud.seetest.io:44..., commandTimeouts: 120000, desired: {browserName: Chromium, deviceQuery: @os='android' and @version=..., platformName: Android, testName: Quick Start Android Browser...}, device.category: PHONE, device.majorVersion: 8, device.manufacture: samsung, device.model: SM-G930F, device.name: samsung Galaxy S7 IO IL 086, device.os: Android, device.screenSize: 1080x1920, device.serialNumber: 98866742375a394e33, device.version: 8.0.0, deviceQuery: @os='android' and @version=..., deviceUDID: 98866742375a394e33, dontGoHomeOnQuit: false, dontStopAppOnReset: false, ehmPrefixUrl: /agent-6292135, ehmUrl: https://cloud.seetest.io:44..., fullReset: false, gridNodePort: 7849, install.only.for.update: false, installOnlyForUpdate: false, instrumentApp: false, javascriptEnabled: true, keystorePath: ~/.android/debug.keystore, locationServicesAuthorized: false, newSessionWaitTimeout: 600.0, noReset: false, platform: ANDROID, platformName: Android, projectName: , reportDirectory: reports, reportFormat: xml, reportTestId: 1150.0, reportUrl: https://cloud.seetest.io:44..., reservationDuration: 240.0, takeScreenshots: true, test.type: Mobile, testName: Quick Start Android Browser..., udid: 98866742375a394e33, useKeystore: false, waitForDeviceTimeout: 120000.0}
+Session ID: CLOUD-SID:2021-05-31_14-34-37-2267d76c-4333-4a06-8214-216c394f94c5

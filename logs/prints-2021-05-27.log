@@ -1,0 +1,336 @@
+10:38:49.669 [main] INFO  TestUpdateAccount - ******STARTING TEST UPDATE ACCOUNT******
+10:38:51.553 [main] INFO  TestUpdateAccount - Starting QA site validation
+10:38:54.149 [main] INFO  TestUpdateAccount - QA site launch is successful, Site Name : https://qa3.chilis.com/
+10:38:58.994 [main] INFO  TestUpdateAccount - Pop up closed
+10:39:04.157 [main] INFO  TestUpdateAccount - Menu button clicked
+10:39:09.361 [main] INFO  TestUpdateAccount - Login option selected
+10:39:17.704 [main] INFO  TestUpdateAccount - User name (512) 212-1212 entered
+10:39:24.464 [main] INFO  TestUpdateAccount - Password Brinkers@2021 entered
+10:39:26.864 [main] INFO  TestUpdateAccount - Sign in button clicked
+10:39:40.044 [main] INFO  TestUpdateAccount - Menu button clicked
+10:39:45.636 [main] INFO  TestUpdateAccount - My Account option selected
+10:39:52.521 [main] INFO  TestUpdateAccount - First Name before update obtained as : Rashggh56
+10:39:54.792 [main] INFO  TestUpdateAccount - Last Name before update obtained as : Sarkar1
+10:39:58.229 [main] INFO  TestUpdateAccount - Email before update obtained as : somnath.baul@brinker.com
+10:40:02.218 [main] INFO  TestUpdateAccount - Zip Code before update obtained as : 75008
+10:40:11.107 [main] INFO  TestUpdateAccount - First Name updated with : Ramesh1
+10:40:18.597 [main] INFO  TestUpdateAccount - Last Name updated with : Sarkar1
+10:40:26.595 [main] INFO  TestUpdateAccount - Email updated with : somnath.baul@brinker.com
+10:40:34.919 [main] INFO  TestUpdateAccount - Zip Code updated with : 75006.0
+10:40:40.911 [main] INFO  TestUpdateAccount - Consent checked
+10:40:45.802 [main] INFO  TestUpdateAccount - Update button clicked
+10:40:53.485 [main] INFO  TestUpdateAccount - Success message obtained as : Account successfully updated
+10:40:56.039 [main] INFO  TestUpdateAccount - First Name after update obtained as : Ramesh1
+10:40:59.371 [main] INFO  TestUpdateAccount - Last Name after update obtained as : Sarkar1
+10:41:03.074 [main] INFO  TestUpdateAccount - Email after update obtained as : somnath.baul@brinker.com
+10:41:06.592 [main] INFO  TestUpdateAccount - Zip Code after update obtained as : 75006
+10:41:09.170 [main] INFO  TestUpdateAccount - First Name after update obtained as : Ramesh1
+10:41:11.720 [main] INFO  TestUpdateAccount - Last Name after update obtained as : Sarkar1
+10:41:14.595 [main] INFO  TestUpdateAccount - Email after update obtained as : somnath.baul@brinker.com
+10:41:17.319 [main] INFO  TestUpdateAccount - Zip Code after update obtained as : 75006
+10:54:55.668 [main] INFO  TestUpdateAccount - ******STARTING TEST UPDATE ACCOUNT******
+10:54:56.735 [main] INFO  TestUpdateAccount - Starting QA site validation
+10:54:59.024 [main] INFO  TestUpdateAccount - QA site launch is successful, Site Name : https://qa3.chilis.com/
+10:55:04.125 [main] INFO  TestUpdateAccount - Pop up closed
+10:55:09.250 [main] INFO  TestUpdateAccount - Menu button clicked
+10:55:15.015 [main] INFO  TestUpdateAccount - Login option selected
+10:55:23.991 [main] ERROR TestUpdateAccount - Could not enter user name
+10:55:23.991 [main] ERROR TestUpdateAccount - unknown error (An unknown server-side error occurred. status='false'. Failed to complete internal method: 'elementSendText args: [WEB, xpath=(//*[cmd:equalsIgnoreCase(@nodeName,'input')][@id='username'])[1], 0, ]', details: )  (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+Build info: version: '3.12.0', revision: '7c6e0b3', time: '2018-05-08T14:04:26.12Z'
+System info: host: 'LAPTOP-2HJFJ1OT', ip: '192.168.225.168', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_281'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {appBuildVersion: , appReleaseVersion: , appiumVersion: 1.8.0, applicationClearData: false, autoAcceptAlerts: false, autoDismissAlerts: false, autoGrantPermissions: false, autoWebview: false, browserName: Chromium, cloudViewLink: https://cloud.seetest.io:44..., commandTimeouts: 120000, desired: {browserName: Chromium, deviceQuery: @os='android' and @version=..., platformName: Android, testName: Quick Start Android Browser...}, device.category: PHONE, device.majorVersion: 8, device.manufacture: samsung, device.model: SM-G930F, device.name: samsung Galaxy S7 IO IL 086, device.os: Android, device.screenSize: 1080x1920, device.serialNumber: 98866742375a394e33, device.version: 8.0.0, deviceQuery: @os='android' and @version=..., deviceUDID: 98866742375a394e33, dontGoHomeOnQuit: false, dontStopAppOnReset: false, ehmPrefixUrl: /agent-6292135, ehmUrl: https://cloud.seetest.io:44..., fullReset: false, gridNodePort: 7812, install.only.for.update: false, installOnlyForUpdate: false, instrumentApp: false, javascriptEnabled: true, keystorePath: ~/.android/debug.keystore, locationServicesAuthorized: false, newSessionWaitTimeout: 600.0, noReset: false, platform: ANDROID, platformName: Android, projectName: , reportDirectory: reports, reportFormat: xml, reportTestId: 1048.0, reportUrl: https://cloud.seetest.io:44..., reservationDuration: 240.0, takeScreenshots: true, test.type: Mobile, testName: Quick Start Android Browser..., udid: 98866742375a394e33, useKeystore: false, waitForDeviceTimeout: 120000.0}
+Session ID: CLOUD-SID:2021-05-27_01-24-26-90c43e35-bda2-4fbf-8340-561926f6d1bf
+10:59:45.870 [main] INFO  TestUpdateAccount - ******STARTING TEST UPDATE ACCOUNT******
+10:59:46.993 [main] INFO  TestUpdateAccount - Starting QA site validation
+10:59:49.520 [main] INFO  TestUpdateAccount - QA site launch is successful, Site Name : https://qa3.chilis.com/
+10:59:54.653 [main] INFO  TestUpdateAccount - Pop up closed
+10:59:59.783 [main] INFO  TestUpdateAccount - Menu button clicked
+11:00:05.540 [main] INFO  TestUpdateAccount - Login option selected
+11:00:14.804 [main] INFO  TestUpdateAccount - User name (512) 212-1212 entered
+11:00:22.484 [main] INFO  TestUpdateAccount - Password Brinkers@2021 entered
+11:00:25.365 [main] INFO  TestUpdateAccount - Sign in button clicked
+11:00:41.553 [main] INFO  TestUpdateAccount - Menu button clicked
+11:00:48.638 [main] INFO  TestUpdateAccount - My Account option selected
+11:00:57.588 [main] INFO  TestUpdateAccount - First Name before update obtained as : Ramesh1
+11:00:59.879 [main] INFO  TestUpdateAccount - Last Name before update obtained as : Sarkar1
+11:01:04.513 [main] INFO  TestUpdateAccount - Email before update obtained as : somnath.baul@brinker.com
+11:01:08.965 [main] INFO  TestUpdateAccount - Zip Code before update obtained as : 75006
+11:01:18.484 [main] INFO  TestUpdateAccount - First Name updated with : Ramesh2
+11:01:26.171 [main] INFO  TestUpdateAccount - Last Name updated with : Sarkar2
+11:01:33.844 [main] INFO  TestUpdateAccount - Email updated with : somnath.baul123@brinker.com
+11:01:42.926 [main] INFO  TestUpdateAccount - Zip Code updated with : 75090
+11:01:50.237 [main] INFO  TestUpdateAccount - Consent checked
+11:01:54.719 [main] INFO  TestUpdateAccount - Update button clicked
+11:02:04.323 [main] INFO  TestUpdateAccount - Success message obtained as : Account successfully updated
+11:02:06.748 [main] INFO  TestUpdateAccount - First Name after update obtained as : Ramesh2
+11:02:10.225 [main] INFO  TestUpdateAccount - Last Name after update obtained as : Sarkar2
+11:02:13.746 [main] INFO  TestUpdateAccount - Email after update obtained as : somnath.baul123@brinker.com
+11:02:16.164 [main] INFO  TestUpdateAccount - Zip Code after update obtained as : 75090
+11:02:18.717 [main] INFO  TestUpdateAccount - First Name after update obtained as : Ramesh2
+11:02:22.065 [main] INFO  TestUpdateAccount - Last Name after update obtained as : Sarkar2
+11:02:25.774 [main] INFO  TestUpdateAccount - Email after update obtained as : somnath.baul123@brinker.com
+11:02:28.149 [main] INFO  TestUpdateAccount - Zip Code after update obtained as : 75090
+11:02:28.152 [main] INFO  TestUpdateAccount - All fields are updated
+11:44:59.657 [main] INFO  TestAddMyVisit - ******STARTING TEST ADD MY VISIT******
+11:45:01.198 [main] INFO  TestAddMyVisit - Starting QA site validation
+11:45:04.453 [main] INFO  TestAddMyVisit - QA site launch is successful, Site Name : https://qa3.chilis.com/
+11:45:09.944 [main] INFO  TestAddMyVisit - Pop up closed
+11:45:15.263 [main] INFO  TestAddMyVisit - Menu button clicked
+11:45:21.341 [main] INFO  TestAddMyVisit - Login option selected
+11:45:29.660 [main] INFO  TestAddMyVisit - User name (512) 212-1212 entered
+11:45:38.297 [main] INFO  TestAddMyVisit - Password Brinkers@2021 entered
+11:45:41.548 [main] INFO  TestAddMyVisit - Sign in button clicked
+11:45:56.863 [main] INFO  TestAddMyVisit - Add my visit button clicked
+11:46:09.993 [main] INFO  TestAddMyVisit - Restaurant location entered as : Addison, TX 75001, USA
+11:46:16.563 [main] INFO  TestAddMyVisit - Chilis location selected as : Addison - 4500 Beltline Rd., Dallas, TX 75001
+11:46:24.867 [main] INFO  TestAddMyVisit - Visit month selected as :June
+12:01:16.470 [main] INFO  TestAddMyVisit - ******STARTING TEST ADD MY VISIT******
+12:01:17.596 [main] INFO  TestAddMyVisit - Starting QA site validation
+12:01:19.786 [main] INFO  TestAddMyVisit - QA site launch is successful, Site Name : https://qa3.chilis.com/
+12:01:25.166 [main] INFO  TestAddMyVisit - Pop up closed
+12:01:30.367 [main] INFO  TestAddMyVisit - Menu button clicked
+12:01:36.127 [main] INFO  TestAddMyVisit - Login option selected
+12:01:46.452 [main] INFO  TestAddMyVisit - User name (512) 212-1212 entered
+12:01:53.963 [main] INFO  TestAddMyVisit - Password Brinkers@2021 entered
+12:01:57.175 [main] INFO  TestAddMyVisit - Sign in button clicked
+12:02:11.591 [main] INFO  TestAddMyVisit - Add my visit button clicked
+12:02:30.128 [main] INFO  TestAddMyVisit - Restaurant location entered as : Addison, TX 75001, USA
+12:02:38.442 [main] INFO  TestAddMyVisit - Chilis location selected as : Addison - 4500 Beltline Rd., Dallas, TX 75001
+12:02:46.132 [main] INFO  TestAddMyVisit - Visit month selected as :June
+13:25:21.355 [main] INFO  TestAddMyVisit - ******STARTING TEST ADD MY VISIT******
+13:25:22.303 [main] INFO  TestAddMyVisit - Starting QA site validation
+13:25:25.268 [main] INFO  TestAddMyVisit - QA site launch is successful, Site Name : https://qa3.chilis.com/
+13:25:30.902 [main] INFO  TestAddMyVisit - Pop up closed
+13:25:37.683 [main] INFO  TestAddMyVisit - Menu button clicked
+13:25:43.203 [main] INFO  TestAddMyVisit - Login option selected
+13:25:51.836 [main] INFO  TestAddMyVisit - User name (512) 212-1212 entered
+13:26:00.186 [main] INFO  TestAddMyVisit - Password Brinkers@2021 entered
+13:26:03.054 [main] INFO  TestAddMyVisit - Sign in button clicked
+13:26:18.692 [main] INFO  TestAddMyVisit - Add my visit button clicked
+13:26:38.586 [main] INFO  TestAddMyVisit - Restaurant location entered as : Addison, TX 75001, USA
+13:26:49.033 [main] INFO  TestAddMyVisit - Chilis location selected as : Addison - 4500 Beltline Rd., Dallas, TX 75001
+13:26:57.428 [main] INFO  TestAddMyVisit - Visit month selected as :June
+13:37:23.889 [main] INFO  TestAddMyVisit - ******STARTING TEST ADD MY VISIT******
+13:37:24.985 [main] INFO  TestAddMyVisit - Starting QA site validation
+13:37:28.118 [main] INFO  TestAddMyVisit - QA site launch is successful, Site Name : https://qa3.chilis.com/
+13:37:33.548 [main] INFO  TestAddMyVisit - Pop up closed
+13:37:39.074 [main] INFO  TestAddMyVisit - Menu button clicked
+13:37:45.524 [main] INFO  TestAddMyVisit - Login option selected
+13:37:54.433 [main] INFO  TestAddMyVisit - User name (512) 212-1212 entered
+13:38:03.547 [main] INFO  TestAddMyVisit - Password Brinkers@2021 entered
+13:38:07.233 [main] INFO  TestAddMyVisit - Sign in button clicked
+13:38:22.288 [main] INFO  TestAddMyVisit - Add my visit button clicked
+13:38:40.923 [main] INFO  TestAddMyVisit - Restaurant location entered as : Addison, TX 75001, USA
+13:38:52.290 [main] INFO  TestAddMyVisit - Chilis location selected as : Addison - 4500 Beltline Rd., Dallas, TX 75001
+13:39:03.554 [main] INFO  TestAddMyVisit - Visit month selected as :June
+14:58:44.318 [main] INFO  TestAddMyVisit - ******STARTING TEST ADD MY VISIT******
+14:58:45.285 [main] INFO  TestAddMyVisit - Starting QA site validation
+14:58:48.049 [main] INFO  TestAddMyVisit - QA site launch is successful, Site Name : https://qa3.chilis.com/
+14:58:53.477 [main] INFO  TestAddMyVisit - Pop up closed
+14:58:58.903 [main] INFO  TestAddMyVisit - Menu button clicked
+14:59:06.378 [main] INFO  TestAddMyVisit - Login option selected
+14:59:15.002 [main] INFO  TestAddMyVisit - User name (512) 212-1212 entered
+14:59:22.352 [main] INFO  TestAddMyVisit - Password Brinkers@2021 entered
+14:59:25.220 [main] INFO  TestAddMyVisit - Sign in button clicked
+14:59:41.809 [main] INFO  TestAddMyVisit - Add my visit button clicked
+15:00:08.148 [main] ERROR TestAddMyVisit - Failed to enter restaurant location
+15:00:08.149 [main] ERROR TestAddMyVisit - no such element (An element could not be located on the page using the given search parameters (XPATH='//*[text()='Addison, TX 75001, USA']'))  (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.12.0', revision: '7c6e0b3', time: '2018-05-08T14:04:26.12Z'
+System info: host: 'LAPTOP-2HJFJ1OT', ip: '192.168.225.168', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_281'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {appBuildVersion: , appReleaseVersion: , appiumVersion: 1.8.0, applicationClearData: false, autoAcceptAlerts: false, autoDismissAlerts: false, autoGrantPermissions: false, autoWebview: false, browserName: Chromium, cloudViewLink: https://cloud.seetest.io:44..., commandTimeouts: 120000, desired: {browserName: Chromium, deviceQuery: @os='android' and @version=..., platformName: Android, testName: Quick Start Android Browser...}, device.category: PHONE, device.majorVersion: 8, device.manufacture: samsung, device.model: SM-G930F, device.name: samsung Galaxy S7 IO IL 086, device.os: Android, device.screenSize: 1080x1920, device.serialNumber: 98866742375a394e33, device.version: 8.0.0, deviceQuery: @os='android' and @version=..., deviceUDID: 98866742375a394e33, dontGoHomeOnQuit: false, dontStopAppOnReset: false, ehmPrefixUrl: /agent-6292135, ehmUrl: https://cloud.seetest.io:44..., fullReset: false, gridNodePort: 7816, install.only.for.update: false, installOnlyForUpdate: false, instrumentApp: false, javascriptEnabled: true, keystorePath: ~/.android/debug.keystore, locationServicesAuthorized: false, newSessionWaitTimeout: 600.0, noReset: false, platform: ANDROID, platformName: Android, projectName: , reportDirectory: reports, reportFormat: xml, reportTestId: 1070.0, reportUrl: https://cloud.seetest.io:44..., reservationDuration: 240.0, takeScreenshots: true, test.type: Mobile, testName: Quick Start Android Browser..., udid: 98866742375a394e33, useKeystore: false, waitForDeviceTimeout: 120000.0}
+Session ID: CLOUD-SID:2021-05-27_05-28-14-2631d1c9-2eb3-44a5-9728-c65eb4fefdc1
+*** Element info: {Using=xpath, value=//*[text()='Addison, TX 75001, USA']}
+15:05:44.789 [main] INFO  TestAddMyVisit - ******STARTING TEST ADD MY VISIT******
+15:05:45.747 [main] INFO  TestAddMyVisit - Starting QA site validation
+15:05:48.508 [main] INFO  TestAddMyVisit - QA site launch is successful, Site Name : https://qa3.chilis.com/
+15:05:54.344 [main] INFO  TestAddMyVisit - Pop up closed
+15:05:59.771 [main] INFO  TestAddMyVisit - Menu button clicked
+15:06:05.506 [main] INFO  TestAddMyVisit - Login option selected
+15:06:14.108 [main] INFO  TestAddMyVisit - User name (512) 212-1212 entered
+15:06:22.811 [main] INFO  TestAddMyVisit - Password Brinkers@2021 entered
+15:06:25.678 [main] INFO  TestAddMyVisit - Sign in button clicked
+15:06:41.960 [main] INFO  TestAddMyVisit - Add my visit button clicked
+15:06:56.324 [main] INFO  TestAddMyVisit - Restaurant location entered as : Addison, TX 75001, USA
+15:07:10.736 [main] INFO  TestAddMyVisit - Chilis location selected as : Addison - 4500 Beltline Rd., Dallas, TX 75001
+15:07:21.590 [main] INFO  TestAddMyVisit - Visit month selected as :June
+15:15:21.528 [main] INFO  TestAddMyVisit - ******STARTING TEST ADD MY VISIT******
+15:15:22.471 [main] INFO  TestAddMyVisit - Starting QA site validation
+15:15:30.657 [main] INFO  TestAddMyVisit - QA site launch is successful, Site Name : https://qa3.chilis.com/
+15:15:51.446 [main] INFO  TestAddMyVisit - Pop up closed
+15:16:08.035 [main] INFO  TestAddMyVisit - Menu button clicked
+15:16:25.032 [main] INFO  TestAddMyVisit - Login option selected
+15:16:56.573 [main] INFO  TestAddMyVisit - User name (512) 212-1212 entered
+15:17:24.936 [main] INFO  TestAddMyVisit - Password Brinkers@2021 entered
+15:17:38.045 [main] INFO  TestAddMyVisit - Sign in button clicked
+15:18:10.300 [main] INFO  TestAddMyVisit - Add my visit button clicked
+15:18:50.954 [main] INFO  TestAddMyVisit - Restaurant location entered as : Addison, TX 75001, USA
+15:19:20.342 [main] INFO  TestAddMyVisit - Chilis location selected as : Addison - 4500 Beltline Rd., Dallas, TX 75001
+15:19:49.127 [main] ERROR TestAddMyVisit - Visit month selection failed
+15:19:49.128 [main] ERROR TestAddMyVisit - Expected condition failed: waiting for element to be clickable: By.xpath: //*[text()='June'] (tried for 15 second(s) with 500 milliseconds interval)
+Build info: version: '3.12.0', revision: '7c6e0b3', time: '2018-05-08T14:04:26.12Z'
+System info: host: 'LAPTOP-2HJFJ1OT', ip: '192.168.225.168', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_281'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {appBuildVersion: , appReleaseVersion: , appiumVersion: 1.8.0, applicationClearData: false, autoAcceptAlerts: false, autoDismissAlerts: false, autoGrantPermissions: false, autoWebview: false, browserName: Chromium, cloudViewLink: https://au-1.seetest.io:443..., commandTimeouts: 120000, desired: {browserName: Chromium, deviceQuery: @os='android' and @version=..., platformName: Android, testName: Quick Start Android Browser...}, device.category: PHONE, device.majorVersion: 8, device.manufacture: samsung, device.model: SM-G930U, device.name: Samsung Galaxy S7 IO-AU 06, device.os: Android, device.screenSize: 1080x1920, device.serialNumber: 9d80ce95, device.version: 8.0.0, deviceQuery: @os='android' and @version=..., deviceUDID: 9d80ce95, dontGoHomeOnQuit: false, dontStopAppOnReset: false, ehmPrefixUrl: /agent-5937317, ehmUrl: https://au-1.seetest.io:443..., fullReset: false, gridNodePort: 7827, install.only.for.update: false, installOnlyForUpdate: false, instrumentApp: false, javascriptEnabled: true, keystorePath: ~/.android/debug.keystore, locationServicesAuthorized: false, newSessionWaitTimeout: 600.0, noReset: false, platform: ANDROID, platformName: Android, projectName: , reportDirectory: reports, reportFormat: xml, reportTestId: 1072.0, reportUrl: https://cloud.seetest.io:44..., reservationDuration: 240.0, takeScreenshots: true, test.type: Mobile, testName: Quick Start Android Browser..., udid: 9d80ce95, useKeystore: false, waitForDeviceTimeout: 120000.0}
+Session ID: CLOUD-SID:2021-05-27_05-44-05-71fd6fe8-26ac-4bab-94f3-4b8e0acd1f18
+15:22:02.693 [main] INFO  TestAddMyVisit - ******STARTING TEST ADD MY VISIT******
+15:22:03.623 [main] INFO  TestAddMyVisit - Starting QA site validation
+15:22:06.130 [main] INFO  TestAddMyVisit - QA site launch is successful, Site Name : https://qa3.chilis.com/
+15:22:11.251 [main] INFO  TestAddMyVisit - Pop up closed
+15:22:16.677 [main] INFO  TestAddMyVisit - Menu button clicked
+15:22:22.103 [main] INFO  TestAddMyVisit - Login option selected
+15:22:32.038 [main] INFO  TestAddMyVisit - User name (512) 212-1212 entered
+15:22:40.331 [main] INFO  TestAddMyVisit - Password Brinkers@2021 entered
+15:22:43.507 [main] INFO  TestAddMyVisit - Sign in button clicked
+15:23:00.197 [main] INFO  TestAddMyVisit - Add my visit button clicked
+15:23:14.637 [main] INFO  TestAddMyVisit - Restaurant location entered as : Addison, TX 75001, USA
+15:23:28.668 [main] INFO  TestAddMyVisit - Chilis location selected as : Addison - 4500 Beltline Rd., Dallas, TX 75001
+15:23:53.666 [main] ERROR TestAddMyVisit - Visit month selection failed
+15:23:53.667 [main] ERROR TestAddMyVisit - Expected condition failed: waiting for element to be clickable: By.xpath: //*[text()='June'] (tried for 15 second(s) with 500 milliseconds interval)
+Build info: version: '3.12.0', revision: '7c6e0b3', time: '2018-05-08T14:04:26.12Z'
+System info: host: 'LAPTOP-2HJFJ1OT', ip: '192.168.225.168', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_281'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {appBuildVersion: , appReleaseVersion: , appiumVersion: 1.8.0, applicationClearData: false, autoAcceptAlerts: false, autoDismissAlerts: false, autoGrantPermissions: false, autoWebview: false, browserName: Chromium, cloudViewLink: https://cloud.seetest.io:44..., commandTimeouts: 120000, desired: {browserName: Chromium, deviceQuery: @os='android' and @version=..., platformName: Android, testName: Quick Start Android Browser...}, device.category: PHONE, device.majorVersion: 8, device.manufacture: samsung, device.model: SM-G930F, device.name: samsung Galaxy S7 IO IL 086, device.os: Android, device.screenSize: 1080x1920, device.serialNumber: 98866742375a394e33, device.version: 8.0.0, deviceQuery: @os='android' and @version=..., deviceUDID: 98866742375a394e33, dontGoHomeOnQuit: false, dontStopAppOnReset: false, ehmPrefixUrl: /agent-6292135, ehmUrl: https://cloud.seetest.io:44..., fullReset: false, gridNodePort: 7818, install.only.for.update: false, installOnlyForUpdate: false, instrumentApp: false, javascriptEnabled: true, keystorePath: ~/.android/debug.keystore, locationServicesAuthorized: false, newSessionWaitTimeout: 600.0, noReset: false, platform: ANDROID, platformName: Android, projectName: , reportDirectory: reports, reportFormat: xml, reportTestId: 1073.0, reportUrl: https://cloud.seetest.io:44..., reservationDuration: 240.0, takeScreenshots: true, test.type: Mobile, testName: Quick Start Android Browser..., udid: 98866742375a394e33, useKeystore: false, waitForDeviceTimeout: 120000.0}
+Session ID: CLOUD-SID:2021-05-27_05-51-29-cdfdcc5b-e1bc-4f35-b40f-840ced9d5952
+15:25:52.839 [main] INFO  TestAddMyVisit - ******STARTING TEST ADD MY VISIT******
+15:25:53.784 [main] INFO  TestAddMyVisit - Starting QA site validation
+15:26:03.599 [main] INFO  TestAddMyVisit - QA site launch is successful, Site Name : https://qa3.chilis.com/
+15:26:24.386 [main] INFO  TestAddMyVisit - Pop up closed
+15:26:41.590 [main] INFO  TestAddMyVisit - Menu button clicked
+15:26:59.612 [main] INFO  TestAddMyVisit - Login option selected
+15:27:28.079 [main] INFO  TestAddMyVisit - User name (512) 212-1212 entered
+15:27:58.185 [main] INFO  TestAddMyVisit - Password Brinkers@2021 entered
+15:28:11.907 [main] INFO  TestAddMyVisit - Sign in button clicked
+15:28:43.959 [main] INFO  TestAddMyVisit - Add my visit button clicked
+15:29:26.045 [main] INFO  TestAddMyVisit - Restaurant location entered as : Addison, TX 75001, USA
+15:29:55.229 [main] INFO  TestAddMyVisit - Chilis location selected as : Addison - 4500 Beltline Rd., Dallas, TX 75001
+15:30:25.641 [main] INFO  TestAddMyVisit - Visit month selected as :June
+15:50:07.938 [main] INFO  TestAddMyVisit - ******STARTING TEST ADD MY VISIT******
+15:50:08.964 [main] INFO  TestAddMyVisit - Starting QA site validation
+15:50:11.358 [main] INFO  TestAddMyVisit - QA site launch is successful, Site Name : https://qa3.chilis.com/
+15:50:17.043 [main] INFO  TestAddMyVisit - Pop up closed
+15:50:22.572 [main] INFO  TestAddMyVisit - Menu button clicked
+15:50:28.203 [main] INFO  TestAddMyVisit - Login option selected
+15:50:36.703 [main] INFO  TestAddMyVisit - User name (512) 212-1212 entered
+15:50:44.793 [main] INFO  TestAddMyVisit - Password Brinkers@2021 entered
+15:50:47.761 [main] INFO  TestAddMyVisit - Sign in button clicked
+15:51:03.534 [main] INFO  TestAddMyVisit - Add my visit button clicked
+15:51:18.176 [main] INFO  TestAddMyVisit - Restaurant location entered as : Addison, TX 75001, USA
+15:51:32.203 [main] INFO  TestAddMyVisit - Chilis location selected as : Addison - 4500 Beltline Rd., Dallas, TX 75001
+15:51:44.287 [main] INFO  TestAddMyVisit - Visit month selected as :June
+15:52:09.791 [main] ERROR TestAddMyVisit - Visit day selection failed
+15:52:09.792 [main] ERROR TestAddMyVisit - Expected condition failed: waiting for presence of element located by: By.xpath: //*[text()='4.0'] (tried for 15 second(s) with 500 milliseconds interval)
+15:56:40.462 [main] INFO  TestAddMyVisit - ******STARTING TEST ADD MY VISIT******
+15:56:41.440 [main] INFO  TestAddMyVisit - Starting QA site validation
+15:56:44.118 [main] INFO  TestAddMyVisit - QA site launch is successful, Site Name : https://qa3.chilis.com/
+15:56:50.364 [main] INFO  TestAddMyVisit - Pop up closed
+15:56:55.894 [main] INFO  TestAddMyVisit - Menu button clicked
+15:57:01.834 [main] INFO  TestAddMyVisit - Login option selected
+15:57:11.152 [main] INFO  TestAddMyVisit - User name (512) 212-1212 entered
+15:57:20.265 [main] INFO  TestAddMyVisit - Password Brinkers@2021 entered
+15:57:23.236 [main] INFO  TestAddMyVisit - Sign in button clicked
+15:57:39.926 [main] INFO  TestAddMyVisit - Add my visit button clicked
+15:57:55.184 [main] INFO  TestAddMyVisit - Restaurant location entered as : Addison, TX 75001, USA
+15:58:08.394 [main] INFO  TestAddMyVisit - Chilis location selected as : Addison - 4500 Beltline Rd., Dallas, TX 75001
+15:58:19.248 [main] INFO  TestAddMyVisit - Visit month selected as :June
+16:07:46.793 [main] INFO  TestAddMyVisit - ******STARTING TEST ADD MY VISIT******
+16:07:48.017 [main] INFO  TestAddMyVisit - Starting QA site validation
+16:07:50.522 [main] INFO  TestAddMyVisit - QA site launch is successful, Site Name : https://qa3.chilis.com/
+16:07:55.562 [main] INFO  TestAddMyVisit - Pop up closed
+16:08:00.845 [main] INFO  TestAddMyVisit - Menu button clicked
+16:08:06.245 [main] INFO  TestAddMyVisit - Login option selected
+16:08:20.060 [main] INFO  TestAddMyVisit - User name (512) 212-1212 entered
+16:08:29.859 [main] INFO  TestAddMyVisit - Password Brinkers@2021 entered
+16:08:32.396 [main] INFO  TestAddMyVisit - Sign in button clicked
+16:08:37.781 [main] ERROR TestAddMyVisit - Add my visit button click failed
+16:08:37.782 [main] ERROR TestAddMyVisit - no such element (An element could not be located on the page using the given search parameters (XPATH='//button[text()='Add My Visit']'))  (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.12.0', revision: '7c6e0b3', time: '2018-05-08T14:04:26.12Z'
+System info: host: 'LAPTOP-2HJFJ1OT', ip: '192.168.225.168', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_281'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {appBuildVersion: , appReleaseVersion: , appiumVersion: 1.8.0, applicationClearData: false, autoAcceptAlerts: false, autoDismissAlerts: false, autoGrantPermissions: false, autoWebview: false, browserName: Chromium, cloudViewLink: https://cloud.seetest.io:44..., commandTimeouts: 120000, desired: {browserName: Chromium, deviceQuery: @os='android' and @version=..., platformName: Android, testName: Quick Start Android Browser...}, device.category: PHONE, device.majorVersion: 8, device.manufacture: samsung, device.model: SM-G930F, device.name: samsung Galaxy S7 IO IL 086, device.os: Android, device.screenSize: 1080x1920, device.serialNumber: 98866742375a394e33, device.version: 8.0.0, deviceQuery: @os='android' and @version=..., deviceUDID: 98866742375a394e33, dontGoHomeOnQuit: false, dontStopAppOnReset: false, ehmPrefixUrl: /agent-6292135, ehmUrl: https://cloud.seetest.io:44..., fullReset: false, gridNodePort: 7822, install.only.for.update: false, installOnlyForUpdate: false, instrumentApp: false, javascriptEnabled: true, keystorePath: ~/.android/debug.keystore, locationServicesAuthorized: false, newSessionWaitTimeout: 600.0, noReset: false, platform: ANDROID, platformName: Android, projectName: , reportDirectory: reports, reportFormat: xml, reportTestId: 1077.0, reportUrl: https://cloud.seetest.io:44..., reservationDuration: 240.0, takeScreenshots: true, test.type: Mobile, testName: Quick Start Android Browser..., udid: 98866742375a394e33, useKeystore: false, waitForDeviceTimeout: 120000.0}
+Session ID: CLOUD-SID:2021-05-27_06-37-17-4673a75d-6666-457c-86d3-d902ca5d6e05
+*** Element info: {Using=xpath, value=//button[text()='Add My Visit']}
+16:09:55.056 [main] INFO  TestAddMyVisit - ******STARTING TEST ADD MY VISIT******
+16:09:56.044 [main] INFO  TestAddMyVisit - Starting QA site validation
+16:09:58.444 [main] INFO  TestAddMyVisit - QA site launch is successful, Site Name : https://qa3.chilis.com/
+16:10:03.565 [main] INFO  TestAddMyVisit - Pop up closed
+16:10:08.683 [main] INFO  TestAddMyVisit - Menu button clicked
+16:10:14.110 [main] INFO  TestAddMyVisit - Login option selected
+16:10:24.658 [main] INFO  TestAddMyVisit - User name (512) 212-1212 entered
+16:10:32.030 [main] INFO  TestAddMyVisit - Password Brinkers@2021 entered
+16:10:34.845 [main] INFO  TestAddMyVisit - Sign in button clicked
+16:10:48.619 [main] INFO  TestAddMyVisit - Add my visit button clicked
+16:11:03.161 [main] INFO  TestAddMyVisit - Restaurant location entered as : Addison, TX 75001, USA
+16:11:16.472 [main] INFO  TestAddMyVisit - Chilis location selected as : Addison - 4500 Beltline Rd., Dallas, TX 75001
+16:11:26.041 [main] ERROR TestAddMyVisit - Visit month selection failed
+16:11:26.043 [main] ERROR TestAddMyVisit - Not Implemented (Method 'mouseMoveTo' is not implemented)  (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+Build info: version: '3.12.0', revision: '7c6e0b3', time: '2018-05-08T14:04:26.12Z'
+System info: host: 'LAPTOP-2HJFJ1OT', ip: '192.168.225.168', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_281'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {appBuildVersion: , appReleaseVersion: , appiumVersion: 1.8.0, applicationClearData: false, autoAcceptAlerts: false, autoDismissAlerts: false, autoGrantPermissions: false, autoWebview: false, browserName: Chromium, cloudViewLink: https://cloud.seetest.io:44..., commandTimeouts: 120000, desired: {browserName: Chromium, deviceQuery: @os='android' and @version=..., platformName: Android, testName: Quick Start Android Browser...}, device.category: PHONE, device.majorVersion: 8, device.manufacture: samsung, device.model: SM-G930F, device.name: samsung Galaxy S7 IO IL 086, device.os: Android, device.screenSize: 1080x1920, device.serialNumber: 98866742375a394e33, device.version: 8.0.0, deviceQuery: @os='android' and @version=..., deviceUDID: 98866742375a394e33, dontGoHomeOnQuit: false, dontStopAppOnReset: false, ehmPrefixUrl: /agent-6292135, ehmUrl: https://cloud.seetest.io:44..., fullReset: false, gridNodePort: 7823, install.only.for.update: false, installOnlyForUpdate: false, instrumentApp: false, javascriptEnabled: true, keystorePath: ~/.android/debug.keystore, locationServicesAuthorized: false, newSessionWaitTimeout: 600.0, noReset: false, platform: ANDROID, platformName: Android, projectName: , reportDirectory: reports, reportFormat: xml, reportTestId: 1078.0, reportUrl: https://cloud.seetest.io:44..., reservationDuration: 240.0, takeScreenshots: true, test.type: Mobile, testName: Quick Start Android Browser..., udid: 98866742375a394e33, useKeystore: false, waitForDeviceTimeout: 120000.0}
+Session ID: CLOUD-SID:2021-05-27_06-39-28-3afd8d85-adcb-48d2-9905-34b8d4446268
+16:14:59.344 [main] INFO  TestAddMyVisit - ******STARTING TEST ADD MY VISIT******
+16:15:00.294 [main] INFO  TestAddMyVisit - Starting QA site validation
+16:15:03.087 [main] INFO  TestAddMyVisit - QA site launch is successful, Site Name : https://qa3.chilis.com/
+16:15:08.515 [main] INFO  TestAddMyVisit - Pop up closed
+16:15:14.249 [main] INFO  TestAddMyVisit - Menu button clicked
+16:15:19.778 [main] INFO  TestAddMyVisit - Login option selected
+16:15:28.686 [main] INFO  TestAddMyVisit - User name (512) 212-1212 entered
+16:15:36.367 [main] INFO  TestAddMyVisit - Password Brinkers@2021 entered
+16:15:39.807 [main] INFO  TestAddMyVisit - Sign in button clicked
+16:15:55.824 [main] INFO  TestAddMyVisit - Add my visit button clicked
+16:16:11.882 [main] INFO  TestAddMyVisit - Restaurant location entered as : Addison, TX 75001, USA
+16:16:25.724 [main] INFO  TestAddMyVisit - Chilis location selected as : Addison - 4500 Beltline Rd., Dallas, TX 75001
+16:16:42.313 [main] INFO  TestAddMyVisit - Visit month selected as :June
+16:33:11.168 [main] INFO  TestAddMyVisit - ******STARTING TEST ADD MY VISIT******
+16:33:12.141 [main] INFO  TestAddMyVisit - Starting QA site validation
+16:33:14.658 [main] INFO  TestAddMyVisit - QA site launch is successful, Site Name : https://qa3.chilis.com/
+16:33:20.622 [main] INFO  TestAddMyVisit - Pop up closed
+16:33:25.450 [main] INFO  TestAddMyVisit - Menu button clicked
+16:33:30.863 [main] INFO  TestAddMyVisit - Login option selected
+16:33:39.873 [main] INFO  TestAddMyVisit - User name (512) 212-1212 entered
+16:33:46.880 [main] INFO  TestAddMyVisit - Password Brinkers@2021 entered
+16:33:50.112 [main] INFO  TestAddMyVisit - Sign in button clicked
+16:34:06.088 [main] INFO  TestAddMyVisit - Add my visit button clicked
+16:34:19.195 [main] INFO  TestAddMyVisit - Restaurant location entered as : Addison, TX 75001, USA
+16:34:32.917 [main] INFO  TestAddMyVisit - Chilis location selected as : Addison - 4500 Beltline Rd., Dallas, TX 75001
+16:34:43.874 [main] INFO  TestAddMyVisit - Visit month selected as :April
+16:46:52.114 [main] INFO  TestAddMyVisit - ******STARTING TEST ADD MY VISIT******
+16:46:53.053 [main] INFO  TestAddMyVisit - Starting QA site validation
+16:47:02.187 [main] INFO  TestAddMyVisit - QA site launch is successful, Site Name : https://qa3.chilis.com/
+16:47:22.052 [main] INFO  TestAddMyVisit - Pop up closed
+16:47:38.641 [main] INFO  TestAddMyVisit - Menu button clicked
+16:47:55.333 [main] INFO  TestAddMyVisit - Login option selected
+16:48:25.745 [main] INFO  TestAddMyVisit - User name (512) 212-1212 entered
+16:48:54.212 [main] INFO  TestAddMyVisit - Password Brinkers@2021 entered
+16:49:07.627 [main] INFO  TestAddMyVisit - Sign in button clicked
+16:49:16.659 [main] ERROR TestAddMyVisit - Add my visit button click failed
+16:49:16.660 [main] ERROR TestAddMyVisit - no such element (An element could not be located on the page using the given search parameters (XPATH='//button[text()='Add My Visit']'))  (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.12.0', revision: '7c6e0b3', time: '2018-05-08T14:04:26.12Z'
+System info: host: 'LAPTOP-2HJFJ1OT', ip: '192.168.225.168', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_281'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {appBuildVersion: , appReleaseVersion: , appiumVersion: 1.8.0, applicationClearData: false, autoAcceptAlerts: false, autoDismissAlerts: false, autoGrantPermissions: false, autoWebview: false, browserName: Chromium, cloudViewLink: https://au-1.seetest.io:443..., commandTimeouts: 120000, desired: {browserName: Chromium, deviceQuery: @os='android' and @version=..., platformName: Android, testName: Quick Start Android Browser...}, device.category: PHONE, device.majorVersion: 8, device.manufacture: samsung, device.model: SM-G930U, device.name: Samsung Galaxy S7 IO-AU 06, device.os: Android, device.screenSize: 1080x1920, device.serialNumber: 9d80ce95, device.version: 8.0.0, deviceQuery: @os='android' and @version=..., deviceUDID: 9d80ce95, dontGoHomeOnQuit: false, dontStopAppOnReset: false, ehmPrefixUrl: /agent-5937317, ehmUrl: https://au-1.seetest.io:443..., fullReset: false, gridNodePort: 7830, install.only.for.update: false, installOnlyForUpdate: false, instrumentApp: false, javascriptEnabled: true, keystorePath: ~/.android/debug.keystore, locationServicesAuthorized: false, newSessionWaitTimeout: 600.0, noReset: false, platform: ANDROID, platformName: Android, projectName: , reportDirectory: reports, reportFormat: xml, reportTestId: 1081.0, reportUrl: https://cloud.seetest.io:44..., reservationDuration: 240.0, takeScreenshots: true, test.type: Mobile, testName: Quick Start Android Browser..., udid: 9d80ce95, useKeystore: false, waitForDeviceTimeout: 120000.0}
+Session ID: CLOUD-SID:2021-05-27_07-15-42-9eff4510-69a9-4946-9bda-89ac2cf3ceb6
+*** Element info: {Using=xpath, value=//button[text()='Add My Visit']}
+16:58:43.217 [main] INFO  TestAddMyVisit - ******STARTING TEST ADD MY VISIT******
+16:58:44.179 [main] INFO  TestAddMyVisit - Starting QA site validation
+16:58:46.920 [main] INFO  TestAddMyVisit - QA site launch is successful, Site Name : https://qa3.chilis.com/
+16:58:52.360 [main] INFO  TestAddMyVisit - Pop up closed
+16:58:57.486 [main] INFO  TestAddMyVisit - Menu button clicked
+16:59:03.259 [main] INFO  TestAddMyVisit - Login option selected
+16:59:10.301 [main] INFO  TestAddMyVisit - User name (512) 212-1212 entered
+16:59:17.339 [main] INFO  TestAddMyVisit - Password Brinkers@2021 entered
+16:59:20.218 [main] INFO  TestAddMyVisit - Sign in button clicked
+16:59:35.258 [main] INFO  TestAddMyVisit - Add my visit button clicked
+16:59:50.056 [main] INFO  TestAddMyVisit - Restaurant location entered as : Addison, TX 75001, USA
+17:00:04.054 [main] INFO  TestAddMyVisit - Chilis location selected as : Addison - 4500 Beltline Rd., Dallas, TX 75001
+17:00:15.910 [main] INFO  TestAddMyVisit - Visit month selected as :April
