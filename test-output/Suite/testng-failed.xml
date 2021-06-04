@@ -6,13 +6,13 @@
   </listeners>
   <test name="Test Chilis WebApp(failed)">
     <classes>
-      <class name="MobileAutomation.MobileSeeTestWebAutomation.TestLoggedInOrder">
+      <class name="MobileAutomation.MobileSeeTestWebAutomation.TestMCACarryOutLaterToday">
         <methods>
-          <include name="testLoggedInOrderFeature"/>
+          <include name="testMCACarryoutASAP"/>
           <include name="initialize"/>
           <include name="tearDown"/>
         </methods>
-      </class> <!-- MobileAutomation.MobileSeeTestWebAutomation.TestLoggedInOrder -->
+      </class> <!-- MobileAutomation.MobileSeeTestWebAutomation.TestMCACarryOutLaterToday -->
     </classes>
   </test> <!-- Test Chilis WebApp(failed) -->
 </suite> <!-- Failed suite [Suite] -->

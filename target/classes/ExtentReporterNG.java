@@ -24,8 +24,8 @@ public class ExtentReporterNG {
 	prop = base.returnProperty();
 	DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyyMMddHHmmss");  
 	LocalDateTime now = LocalDateTime.now();  
-	String path = System.getProperty("user.dir")+"/reports/index-"+dtf.format(now)+".html";
-	SendEmailJava.getReportPath(path);
+	final String path = System.getProperty("user.dir")+"/reports/index-"+dtf.format(now)+".html";
+	SendEmail.getReportPath(path);
 	ExtentHtmlReporter reporter = new ExtentHtmlReporter(path);
 	reporter.config().setReportName("Mobile SeeTest Web Automation Results");
 	reporter.config().setDocumentTitle("Test Results");

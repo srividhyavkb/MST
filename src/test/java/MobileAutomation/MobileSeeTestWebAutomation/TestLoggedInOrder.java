@@ -37,11 +37,11 @@ public class TestLoggedInOrder extends Base {
 		ob.clickCheckOut();
 		ob.continueToPayment();
 		ob.enterCardNo();
+		ob.enterCVV();
 		ob.selectExpirationMonth();
 		ob.selectExpirationYear();
 		ob.enterNameOnCard();
 		ob.enterBillingZipCode();
-		ob.enterCVV();
 		ob.giveTip();
 		ob.checkRoundOff();
 		String priceBeforePlacingOrder = ob.OrderTotal();

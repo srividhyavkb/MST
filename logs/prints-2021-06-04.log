@@ -1,0 +1,1036 @@
+11:56:05.238 [main] INFO  TestLoginLogout - ******Starting to Validate Login and Logout functionality of Chilis WebApp******
+11:56:06.456 [main] INFO  TestLoginLogout - Starting QA site validation
+11:56:08.587 [main] INFO  TestLoginLogout - QA site launch is successful, Site Name : https://qa3.chilis.com/
+11:56:12.888 [main] INFO  TestLoginLogout - Pop up closed
+11:56:17.700 [main] INFO  TestLoginLogout - Menu button clicked
+11:56:22.820 [main] INFO  TestLoginLogout - Login option selected
+11:56:31.627 [main] INFO  TestLoginLogout - User name (512) 212-1212 entered
+11:56:37.773 [main] INFO  TestLoginLogout - Password Brinkers@2021 entered
+11:56:40.023 [main] INFO  TestLoginLogout - Sign in button clicked
+11:56:52.209 [main] INFO  TestLoginLogout - Menu button clicked
+11:56:55.182 [main] INFO  TestLoginLogout - Logout button clicked
+11:56:59.888 [main] INFO  TestLoginLogout - Login header displayed : LOG IN
+12:05:05.525 [main] INFO  TestLoggedInOrder - ******STARTING TEST LOGGED IN ORDER******
+12:05:06.555 [main] INFO  TestLoggedInOrder - Starting QA site validation
+12:05:08.959 [main] INFO  TestLoggedInOrder - QA site launch is successful, Site Name : https://qa3.chilis.com/
+12:05:13.670 [main] INFO  TestLoggedInOrder - Pop up closed
+12:05:18.688 [main] INFO  TestLoggedInOrder - Menu button clicked
+12:05:23.910 [main] INFO  TestLoggedInOrder - Login option selected
+12:05:33.802 [main] INFO  TestLoggedInOrder - User name (512) 212-1212 entered
+12:05:40.395 [main] INFO  TestLoggedInOrder - Password Brinkers@2021 entered
+12:05:42.853 [main] INFO  TestLoggedInOrder - Sign in button clicked
+12:05:55.652 [main] INFO  TestLoggedInOrder - Menu button clicked
+12:06:00.773 [main] INFO  TestLoggedInOrder - Location option selected
+12:06:10.297 [main] INFO  TestLoggedInOrder - Restaurant location entered as Addison, TX 75001, USA
+12:06:15.827 [main] INFO  TestLoggedInOrder - Search button clicked
+12:06:31.493 [main] INFO  TestLoggedInOrder - Site scrolled and order button clicked
+12:06:51.051 [main] INFO  TestLoggedInOrder - Chilis favourite Item Original Full Order Ribs selected
+12:07:03.033 [main] INFO  TestLoggedInOrder - View Cart clicked
+12:07:12.746 [main] INFO  TestLoggedInOrder - Silver ware opted in
+12:07:18.588 [main] INFO  TestLoggedInOrder - Order checked Out
+12:07:31.704 [main] INFO  TestLoggedInOrder - Payment button clicked
+12:07:43.378 [main] INFO  TestLoggedInOrder - Card Number entered as : 4111111111111111
+12:08:00.103 [main] ERROR TestLoggedInOrder - Failed to select Expiration Month
+12:08:00.112 [main] ERROR TestLoggedInOrder - no such element (An element could not be located on the page using the given search parameters (XPATH='//*[contains(text(),'4.0')]'))  (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.12.0', revision: '7c6e0b3', time: '2018-05-08T14:04:26.12Z'
+System info: host: 'LAPTOP-2HJFJ1OT', ip: '192.168.29.229', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_281'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {appBuildVersion: , appReleaseVersion: , appiumVersion: 1.8.0, applicationClearData: false, autoAcceptAlerts: false, autoDismissAlerts: false, autoGrantPermissions: false, autoWebview: false, browserName: Chromium, cloudViewLink: https://cloud.seetest.io:44..., commandTimeouts: 120000, desired: {browserName: Chromium, deviceQuery: @os='android' and @version=..., platformName: Android, testName: Quick Start Android Browser...}, device.category: PHONE, device.majorVersion: 8, device.manufacture: samsung, device.model: SM-G935F, device.name: Galaxy S7 Edge IO IL 036, device.os: Android, device.screenSize: 1080x1920, device.serialNumber: 9886674e5258475a46, device.version: 8.0.0, deviceQuery: @os='android' and @version=..., deviceUDID: 9886674e5258475a46, dontGoHomeOnQuit: false, dontStopAppOnReset: false, ehmPrefixUrl: /agent-6132805, ehmUrl: https://cloud.seetest.io:44..., fullReset: false, gridNodePort: 7852, install.only.for.update: false, installOnlyForUpdate: false, instrumentApp: false, javascriptEnabled: true, keystorePath: ~/.android/debug.keystore, locationServicesAuthorized: false, newSessionWaitTimeout: 600.0, noReset: false, platform: ANDROID, platformName: Android, projectName: , reportDirectory: reports, reportFormat: xml, reportTestId: 1277.0, reportUrl: https://cloud.seetest.io:44..., reservationDuration: 240.0, takeScreenshots: true, test.type: Mobile, testName: Quick Start Android Browser..., udid: 9886674e5258475a46, useKeystore: false, waitForDeviceTimeout: 120000.0}
+Session ID: CLOUD-SID:2021-06-04_02-34-04-031033f8-1174-42e3-b5a1-92c29fb9cc8f
+*** Element info: {Using=xpath, value=//*[contains(text(),'4.0')]}
+13:11:31.117 [main] INFO  TestLoggedInOrder - ******STARTING TEST LOGGED IN ORDER******
+13:11:32.536 [main] INFO  TestLoggedInOrder - Starting QA site validation
+13:11:34.797 [main] INFO  TestLoggedInOrder - QA site launch is successful, Site Name : https://qa3.chilis.com/
+13:11:39.301 [main] INFO  TestLoggedInOrder - Pop up closed
+13:11:44.285 [main] INFO  TestLoggedInOrder - Menu button clicked
+13:11:49.117 [main] INFO  TestLoggedInOrder - Login option selected
+13:11:58.039 [main] INFO  TestLoggedInOrder - User name (512) 212-1212 entered
+13:12:04.467 [main] INFO  TestLoggedInOrder - Password Brinkers@2021 entered
+13:12:06.846 [main] INFO  TestLoggedInOrder - Sign in button clicked
+13:12:19.440 [main] INFO  TestLoggedInOrder - Menu button clicked
+13:12:25.176 [main] INFO  TestLoggedInOrder - Location option selected
+13:12:33.571 [main] INFO  TestLoggedInOrder - Restaurant location entered as Addison, TX 75001, USA
+13:12:39.006 [main] INFO  TestLoggedInOrder - Search button clicked
+13:12:53.502 [main] INFO  TestLoggedInOrder - Site scrolled and order button clicked
+13:13:13.536 [main] INFO  TestLoggedInOrder - Chilis favourite Item Original Full Order Ribs selected
+13:13:24.658 [main] INFO  TestLoggedInOrder - View Cart clicked
+13:13:35.316 [main] INFO  TestLoggedInOrder - Silver ware opted in
+13:13:40.889 [main] INFO  TestLoggedInOrder - Order checked Out
+13:13:54.620 [main] INFO  TestLoggedInOrder - Payment button clicked
+13:14:06.976 [main] INFO  TestLoggedInOrder - Card Number entered as : 4111111111111111
+13:14:23.500 [main] ERROR TestLoggedInOrder - Failed to select Expiration Month
+13:14:23.504 [main] ERROR TestLoggedInOrder - no such element (An element could not be located on the page using the given search parameters (XPATH='//*[contains(text(),'4.0')]'))  (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.12.0', revision: '7c6e0b3', time: '2018-05-08T14:04:26.12Z'
+System info: host: 'LAPTOP-2HJFJ1OT', ip: '192.168.29.229', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_281'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {appBuildVersion: , appReleaseVersion: , appiumVersion: 1.8.0, applicationClearData: false, autoAcceptAlerts: false, autoDismissAlerts: false, autoGrantPermissions: false, autoWebview: false, browserName: Chromium, cloudViewLink: https://cloud.seetest.io:44..., commandTimeouts: 120000, desired: {browserName: Chromium, deviceQuery: @os='android' and @version=..., platformName: Android, testName: Quick Start Android Browser...}, device.category: PHONE, device.majorVersion: 8, device.manufacture: samsung, device.model: SM-G935F, device.name: Galaxy S7 Edge IO IL 036, device.os: Android, device.screenSize: 1080x1920, device.serialNumber: 9886674e5258475a46, device.version: 8.0.0, deviceQuery: @os='android' and @version=..., deviceUDID: 9886674e5258475a46, dontGoHomeOnQuit: false, dontStopAppOnReset: false, ehmPrefixUrl: /agent-6132805, ehmUrl: https://cloud.seetest.io:44..., fullReset: false, gridNodePort: 7858, install.only.for.update: false, installOnlyForUpdate: false, instrumentApp: false, javascriptEnabled: true, keystorePath: ~/.android/debug.keystore, locationServicesAuthorized: false, newSessionWaitTimeout: 600.0, noReset: false, platform: ANDROID, platformName: Android, projectName: , reportDirectory: reports, reportFormat: xml, reportTestId: 1278.0, reportUrl: https://cloud.seetest.io:44..., reservationDuration: 240.0, takeScreenshots: true, test.type: Mobile, testName: Quick Start Android Browser..., udid: 9886674e5258475a46, useKeystore: false, waitForDeviceTimeout: 120000.0}
+Session ID: CLOUD-SID:2021-06-04_03-39-19-27f7b641-7861-48dd-b149-23a939df5ab6
+*** Element info: {Using=xpath, value=//*[contains(text(),'4.0')]}
+13:21:41.771 [main] INFO  TestLoggedInOrder - ******STARTING TEST LOGGED IN ORDER******
+13:21:43.108 [main] INFO  TestLoggedInOrder - Starting QA site validation
+13:21:45.630 [main] INFO  TestLoggedInOrder - QA site launch is successful, Site Name : https://qa3.chilis.com/
+13:21:50.129 [main] INFO  TestLoggedInOrder - Pop up closed
+13:21:54.665 [main] INFO  TestLoggedInOrder - Menu button clicked
+13:22:00.223 [main] INFO  TestLoggedInOrder - Login option selected
+13:22:08.987 [main] INFO  TestLoggedInOrder - User name (512) 212-1212 entered
+13:22:15.450 [main] INFO  TestLoggedInOrder - Password Brinkers@2021 entered
+13:22:17.958 [main] INFO  TestLoggedInOrder - Sign in button clicked
+13:22:28.894 [main] INFO  TestLoggedInOrder - Menu button clicked
+13:22:34.149 [main] INFO  TestLoggedInOrder - Location option selected
+13:22:40.693 [main] INFO  TestLoggedInOrder - Restaurant location entered as Addison, TX 75001, USA
+13:22:46.448 [main] INFO  TestLoggedInOrder - Search button clicked
+13:23:01.071 [main] INFO  TestLoggedInOrder - Site scrolled and order button clicked
+13:23:19.389 [main] INFO  TestLoggedInOrder - Chilis favourite Item Original Full Order Ribs selected
+13:23:31.368 [main] INFO  TestLoggedInOrder - View Cart clicked
+13:23:41.419 [main] INFO  TestLoggedInOrder - Silver ware opted in
+13:23:46.831 [main] INFO  TestLoggedInOrder - Order checked Out
+13:23:58.432 [main] INFO  TestLoggedInOrder - Payment button clicked
+13:24:07.088 [main] INFO  TestLoggedInOrder - Card Number entered as : 4111111111111111
+13:24:20.150 [main] INFO  TestLoggedInOrder - Expiration Month selected as : 4
+13:24:29.012 [main] INFO  TestLoggedInOrder - Expiration Year selected as : 2025
+13:24:46.308 [main] ERROR TestLoggedInOrder - Failed to enter Name on Card
+13:24:46.310 [main] ERROR TestLoggedInOrder - Expected condition failed: waiting for element to be clickable: By.xpath: //*[@id='nameOnCard'] (tried for 15 second(s) with 500 milliseconds interval)
+Build info: version: '3.12.0', revision: '7c6e0b3', time: '2018-05-08T14:04:26.12Z'
+System info: host: 'LAPTOP-2HJFJ1OT', ip: '192.168.29.229', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_281'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {appBuildVersion: , appReleaseVersion: , appiumVersion: 1.8.0, applicationClearData: false, autoAcceptAlerts: false, autoDismissAlerts: false, autoGrantPermissions: false, autoWebview: false, browserName: Chromium, cloudViewLink: https://cloud.seetest.io:44..., commandTimeouts: 120000, desired: {browserName: Chromium, deviceQuery: @os='android' and @version=..., platformName: Android, testName: Quick Start Android Browser...}, device.category: PHONE, device.majorVersion: 8, device.manufacture: samsung, device.model: SM-G930F, device.name: samsung Galaxy S7 IO IL 086, device.os: Android, device.screenSize: 1080x1920, device.serialNumber: 98866742375a394e33, device.version: 8.0.0, deviceQuery: @os='android' and @version=..., deviceUDID: 98866742375a394e33, dontGoHomeOnQuit: false, dontStopAppOnReset: false, ehmPrefixUrl: /agent-6292135, ehmUrl: https://cloud.seetest.io:44..., fullReset: false, gridNodePort: 7833, install.only.for.update: false, installOnlyForUpdate: false, instrumentApp: false, javascriptEnabled: true, keystorePath: ~/.android/debug.keystore, locationServicesAuthorized: false, newSessionWaitTimeout: 600.0, noReset: false, platform: ANDROID, platformName: Android, projectName: , reportDirectory: reports, reportFormat: xml, reportTestId: 1280.0, reportUrl: https://cloud.seetest.io:44..., reservationDuration: 240.0, takeScreenshots: true, test.type: Mobile, testName: Quick Start Android Browser..., udid: 98866742375a394e33, useKeystore: false, waitForDeviceTimeout: 120000.0}
+Session ID: CLOUD-SID:2021-06-04_03-50-19-a58fa83e-59c4-42cf-b0bb-c57ad4ed404a
+13:41:03.397 [main] INFO  TestLoggedInOrder - ******STARTING TEST LOGGED IN ORDER******
+13:41:04.417 [main] INFO  TestLoggedInOrder - Starting QA site validation
+13:41:06.609 [main] INFO  TestLoggedInOrder - QA site launch is successful, Site Name : https://qa3.chilis.com/
+13:41:11.026 [main] INFO  TestLoggedInOrder - Pop up closed
+13:41:16.141 [main] INFO  TestLoggedInOrder - Menu button clicked
+13:41:21.149 [main] INFO  TestLoggedInOrder - Login option selected
+13:41:30.002 [main] INFO  TestLoggedInOrder - User name (512) 212-1212 entered
+13:41:36.780 [main] INFO  TestLoggedInOrder - Password Brinkers@2021 entered
+13:41:39.045 [main] INFO  TestLoggedInOrder - Sign in button clicked
+13:41:50.683 [main] INFO  TestLoggedInOrder - Menu button clicked
+13:41:56.059 [main] INFO  TestLoggedInOrder - Location option selected
+13:42:01.818 [main] INFO  TestLoggedInOrder - Restaurant location entered as Addison, TX 75001, USA
+13:42:07.626 [main] INFO  TestLoggedInOrder - Search button clicked
+13:42:23.954 [main] INFO  TestLoggedInOrder - Site scrolled and order button clicked
+13:42:41.534 [main] INFO  TestLoggedInOrder - Chilis favourite Item Original Full Order Ribs selected
+13:42:52.499 [main] INFO  TestLoggedInOrder - View Cart clicked
+13:43:02.463 [main] INFO  TestLoggedInOrder - Silver ware opted in
+13:43:07.914 [main] INFO  TestLoggedInOrder - Order checked Out
+13:43:20.445 [main] INFO  TestLoggedInOrder - Payment button clicked
+13:43:28.900 [main] INFO  TestLoggedInOrder - Card Number entered as : 4111111111111111
+13:43:35.962 [main] INFO  TestLoggedInOrder - CVV entered as : 145
+13:43:45.083 [main] INFO  TestLoggedInOrder - Expiration Month selected as : 4
+13:43:55.093 [main] INFO  TestLoggedInOrder - Expiration Year selected as : 2025
+13:44:12.243 [main] ERROR TestLoggedInOrder - Failed to enter Name on Card
+13:44:12.248 [main] ERROR TestLoggedInOrder - Expected condition failed: waiting for element to be clickable: By.xpath: //*[@id='nameOnCard'] (tried for 15 second(s) with 500 milliseconds interval)
+Build info: version: '3.12.0', revision: '7c6e0b3', time: '2018-05-08T14:04:26.12Z'
+System info: host: 'LAPTOP-2HJFJ1OT', ip: '192.168.29.229', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_281'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {appBuildVersion: , appReleaseVersion: , appiumVersion: 1.8.0, applicationClearData: false, autoAcceptAlerts: false, autoDismissAlerts: false, autoGrantPermissions: false, autoWebview: false, browserName: Chromium, cloudViewLink: https://cloud.seetest.io:44..., commandTimeouts: 120000, desired: {browserName: Chromium, deviceQuery: @os='android' and @version=..., platformName: Android, testName: Quick Start Android Browser...}, device.category: PHONE, device.majorVersion: 8, device.manufacture: samsung, device.model: SM-G930F, device.name: samsung Galaxy S7 IO IL 086, device.os: Android, device.screenSize: 1080x1920, device.serialNumber: 98866742375a394e33, device.version: 8.0.0, deviceQuery: @os='android' and @version=..., deviceUDID: 98866742375a394e33, dontGoHomeOnQuit: false, dontStopAppOnReset: false, ehmPrefixUrl: /agent-6292135, ehmUrl: https://cloud.seetest.io:44..., fullReset: false, gridNodePort: 7849, install.only.for.update: false, installOnlyForUpdate: false, instrumentApp: false, javascriptEnabled: true, keystorePath: ~/.android/debug.keystore, locationServicesAuthorized: false, newSessionWaitTimeout: 600.0, noReset: false, platform: ANDROID, platformName: Android, projectName: , reportDirectory: reports, reportFormat: xml, reportTestId: 1281.0, reportUrl: https://cloud.seetest.io:44..., reservationDuration: 240.0, takeScreenshots: true, test.type: Mobile, testName: Quick Start Android Browser..., udid: 98866742375a394e33, useKeystore: false, waitForDeviceTimeout: 120000.0}
+Session ID: CLOUD-SID:2021-06-04_04-10-31-48eb31d4-0bb9-41b9-a74c-d0cd5ac88c48
+14:46:17.014 [main] INFO  TestMcaCurbside-ASAPOrder - ******STARTING TEST MCA CURBSIDE-ASAP Order*******
+14:46:18.456 [main] INFO  TestMcaCurbside-ASAPOrder - Starting QA site validation
+14:46:20.775 [main] INFO  TestMcaCurbside-ASAPOrder - QA site launch is successful, Site Name : https://qa3.chilis.com/
+14:46:25.328 [main] INFO  TestMcaCurbside-ASAPOrder - Pop up closed
+14:46:29.984 [main] INFO  TestMcaCurbside-ASAPOrder - Menu button clicked
+14:46:34.911 [main] INFO  TestMcaCurbside-ASAPOrder - Login option selected
+14:46:43.330 [main] INFO  TestMcaCurbside-ASAPOrder - User name (512) 212-1212 entered
+14:46:49.572 [main] INFO  TestMcaCurbside-ASAPOrder - Password Brinkers@2021 entered
+14:46:51.756 [main] INFO  TestMcaCurbside-ASAPOrder - Sign in button clicked
+14:47:02.099 [main] INFO  TestMcaCurbside-ASAPOrder - Menu button clicked
+14:47:07.361 [main] INFO  TestMcaCurbside-ASAPOrder - Location option selected
+14:47:16.184 [main] INFO  TestMcaCurbside-ASAPOrder - Restaurant location entered as Addison, TX 75001, USA
+14:47:31.675 [main] ERROR TestMcaCurbside-ASAPOrder - Search button click failed
+14:47:31.681 [main] ERROR TestMcaCurbside-ASAPOrder - Expected condition failed: waiting for element to be clickable: By.xpath: //*[@id='button-location-query']/span (tried for 15 second(s) with 500 milliseconds interval)
+Build info: version: '3.12.0', revision: '7c6e0b3', time: '2018-05-08T14:04:26.12Z'
+System info: host: 'LAPTOP-2HJFJ1OT', ip: '192.168.29.229', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_281'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {appBuildVersion: , appReleaseVersion: , appiumVersion: 1.8.0, applicationClearData: false, autoAcceptAlerts: false, autoDismissAlerts: false, autoGrantPermissions: false, autoWebview: false, browserName: Chromium, cloudViewLink: https://cloud.seetest.io:44..., commandTimeouts: 120000, desired: {browserName: Chromium, deviceQuery: @os='android' and @version=..., platformName: Android, testName: Quick Start Android Browser...}, device.category: PHONE, device.majorVersion: 8, device.manufacture: samsung, device.model: SM-G935F, device.name: Galaxy S7 Edge IO IL 036, device.os: Android, device.screenSize: 1080x1920, device.serialNumber: 9886674e5258475a46, device.version: 8.0.0, deviceQuery: @os='android' and @version=..., deviceUDID: 9886674e5258475a46, dontGoHomeOnQuit: false, dontStopAppOnReset: false, ehmPrefixUrl: /agent-6132805, ehmUrl: https://cloud.seetest.io:44..., fullReset: false, gridNodePort: 7859, install.only.for.update: false, installOnlyForUpdate: false, instrumentApp: false, javascriptEnabled: true, keystorePath: ~/.android/debug.keystore, locationServicesAuthorized: false, newSessionWaitTimeout: 600.0, noReset: false, platform: ANDROID, platformName: Android, projectName: , reportDirectory: reports, reportFormat: xml, reportTestId: 1290.0, reportUrl: https://cloud.seetest.io:44..., reservationDuration: 240.0, takeScreenshots: true, test.type: Mobile, testName: Quick Start Android Browser..., udid: 9886674e5258475a46, useKeystore: false, waitForDeviceTimeout: 120000.0}
+Session ID: CLOUD-SID:2021-06-04_05-14-42-815d22f2-e80a-418d-9b72-f37b2822c23c
+14:49:13.747 [main] INFO  TestMcaCurbside-ASAPOrder - ******STARTING TEST MCA CURBSIDE-ASAP Order*******
+14:49:14.808 [main] INFO  TestMcaCurbside-ASAPOrder - Starting QA site validation
+14:49:16.913 [main] INFO  TestMcaCurbside-ASAPOrder - QA site launch is successful, Site Name : https://qa3.chilis.com/
+14:49:21.531 [main] INFO  TestMcaCurbside-ASAPOrder - Pop up closed
+14:49:26.208 [main] INFO  TestMcaCurbside-ASAPOrder - Menu button clicked
+14:49:31.071 [main] INFO  TestMcaCurbside-ASAPOrder - Login option selected
+14:49:39.522 [main] INFO  TestMcaCurbside-ASAPOrder - User name (512) 212-1212 entered
+14:49:45.723 [main] INFO  TestMcaCurbside-ASAPOrder - Password Brinkers@2021 entered
+14:49:47.972 [main] INFO  TestMcaCurbside-ASAPOrder - Sign in button clicked
+14:49:59.512 [main] INFO  TestMcaCurbside-ASAPOrder - Menu button clicked
+14:50:04.499 [main] INFO  TestMcaCurbside-ASAPOrder - Location option selected
+14:50:11.172 [main] INFO  TestMcaCurbside-ASAPOrder - Restaurant location entered as Addison, TX 75001, USA
+14:50:16.655 [main] INFO  TestMcaCurbside-ASAPOrder - Search button clicked
+14:50:23.508 [main] INFO  TestMcaCurbside-ASAPOrder - Restaurant name CHILI'S RESTAURANTS IN ADDISON, TEXAS is displayed
+14:50:42.659 [main] INFO  TestMcaCurbside-ASAPOrder - Site scrolled and order button clicked
+14:51:00.422 [main] INFO  TestMcaCurbside-ASAPOrder - Chilis favourite Item Original Full Order Ribs selected
+14:51:11.894 [main] INFO  TestMcaCurbside-ASAPOrder - View Cart clicked
+14:51:21.678 [main] INFO  TestMcaCurbside-ASAPOrder - Silver ware opted in
+14:51:26.961 [main] INFO  TestMcaCurbside-ASAPOrder - Order checked Out
+14:51:45.311 [main] INFO  TestMcaCurbside-ASAPOrder - Site scrolled and Curbside mode is selected
+14:52:01.508 [main] ERROR TestMcaCurbside-ASAPOrder - Failed to select pickup time 'ASAP'
+14:52:01.523 [main] ERROR TestMcaCurbside-ASAPOrder - Expected condition failed: waiting for element to be clickable: By.xpath: //*[@id='pickup-date'] (tried for 15 second(s) with 500 milliseconds interval)
+Build info: version: '3.12.0', revision: '7c6e0b3', time: '2018-05-08T14:04:26.12Z'
+System info: host: 'LAPTOP-2HJFJ1OT', ip: '192.168.29.229', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_281'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {appBuildVersion: , appReleaseVersion: , appiumVersion: 1.8.0, applicationClearData: false, autoAcceptAlerts: false, autoDismissAlerts: false, autoGrantPermissions: false, autoWebview: false, browserName: Chromium, cloudViewLink: https://cloud.seetest.io:44..., commandTimeouts: 120000, desired: {browserName: Chromium, deviceQuery: @os='android' and @version=..., platformName: Android, testName: Quick Start Android Browser...}, device.category: PHONE, device.majorVersion: 8, device.manufacture: samsung, device.model: SM-G930F, device.name: samsung Galaxy S7 IO IL 086, device.os: Android, device.screenSize: 1080x1920, device.serialNumber: 98866742375a394e33, device.version: 8.0.0, deviceQuery: @os='android' and @version=..., deviceUDID: 98866742375a394e33, dontGoHomeOnQuit: false, dontStopAppOnReset: false, ehmPrefixUrl: /agent-6292135, ehmUrl: https://cloud.seetest.io:44..., fullReset: false, gridNodePort: 7797, install.only.for.update: false, installOnlyForUpdate: false, instrumentApp: false, javascriptEnabled: true, keystorePath: ~/.android/debug.keystore, locationServicesAuthorized: false, newSessionWaitTimeout: 600.0, noReset: false, platform: ANDROID, platformName: Android, projectName: , reportDirectory: reports, reportFormat: xml, reportTestId: 1291.0, reportUrl: https://cloud.seetest.io:44..., reservationDuration: 240.0, takeScreenshots: true, test.type: Mobile, testName: Quick Start Android Browser..., udid: 98866742375a394e33, useKeystore: false, waitForDeviceTimeout: 120000.0}
+Session ID: CLOUD-SID:2021-06-04_05-18-46-a44bfb5e-1582-46cc-9e4e-b8e86273e2e4
+14:59:14.177 [main] INFO  TestMcaCurbside-ASAPOrder - ******STARTING TEST MCA CURBSIDE-ASAP Order*******
+14:59:16.060 [main] INFO  TestMcaCurbside-ASAPOrder - Starting QA site validation
+14:59:18.372 [main] INFO  TestMcaCurbside-ASAPOrder - QA site launch is successful, Site Name : https://qa3.chilis.com/
+14:59:22.609 [main] INFO  TestMcaCurbside-ASAPOrder - Pop up closed
+14:59:27.728 [main] INFO  TestMcaCurbside-ASAPOrder - Menu button clicked
+14:59:32.456 [main] INFO  TestMcaCurbside-ASAPOrder - Login option selected
+14:59:41.393 [main] INFO  TestMcaCurbside-ASAPOrder - User name (512) 212-1212 entered
+14:59:48.668 [main] ERROR TestMcaCurbside-ASAPOrder - Could not enter password
+14:59:48.671 [main] ERROR TestMcaCurbside-ASAPOrder - Your session was disconnected - Device Reservation Ended (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+Build info: version: '3.12.0', revision: '7c6e0b3', time: '2018-05-08T14:04:26.12Z'
+System info: host: 'LAPTOP-2HJFJ1OT', ip: '192.168.29.229', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_281'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {appBuildVersion: , appReleaseVersion: , appiumVersion: 1.8.0, applicationClearData: false, autoAcceptAlerts: false, autoDismissAlerts: false, autoGrantPermissions: false, autoWebview: false, browserName: Chromium, cloudViewLink: https://cloud.seetest.io:44..., commandTimeouts: 120000, desired: {browserName: Chromium, deviceQuery: @os='android' and @version=..., platformName: Android, testName: Quick Start Android Browser...}, device.category: PHONE, device.majorVersion: 8, device.manufacture: samsung, device.model: SM-G930F, device.name: samsung Galaxy S7 IO IL 086, device.os: Android, device.screenSize: 1080x1920, device.serialNumber: 98866742375a394e33, device.version: 8.0.0, deviceQuery: @os='android' and @version=..., deviceUDID: 98866742375a394e33, dontGoHomeOnQuit: false, dontStopAppOnReset: false, ehmPrefixUrl: /agent-6292135, ehmUrl: https://cloud.seetest.io:44..., fullReset: false, gridNodePort: 7798, install.only.for.update: false, installOnlyForUpdate: false, instrumentApp: false, javascriptEnabled: true, keystorePath: ~/.android/debug.keystore, locationServicesAuthorized: false, newSessionWaitTimeout: 600.0, noReset: false, platform: ANDROID, platformName: Android, projectName: , reportDirectory: reports, reportFormat: xml, reportTestId: 1293.0, reportUrl: https://cloud.seetest.io:44..., reservationDuration: 240.0, takeScreenshots: true, test.type: Mobile, testName: Quick Start Android Browser..., udid: 98866742375a394e33, useKeystore: false, waitForDeviceTimeout: 120000.0}
+Session ID: CLOUD-SID:2021-06-04_05-27-36-03b0565f-e564-4732-926b-b9d274b36948
+15:01:57.275 [main] INFO  TestMcaCurbside-ASAPOrder - ******STARTING TEST MCA CURBSIDE-ASAP Order*******
+15:01:58.336 [main] INFO  TestMcaCurbside-ASAPOrder - Starting QA site validation
+15:02:00.537 [main] INFO  TestMcaCurbside-ASAPOrder - QA site launch is successful, Site Name : https://qa3.chilis.com/
+15:02:04.954 [main] INFO  TestMcaCurbside-ASAPOrder - Pop up closed
+15:02:09.611 [main] INFO  TestMcaCurbside-ASAPOrder - Menu button clicked
+15:02:14.327 [main] INFO  TestMcaCurbside-ASAPOrder - Login option selected
+15:02:23.236 [main] INFO  TestMcaCurbside-ASAPOrder - User name (512) 212-1212 entered
+15:02:29.182 [main] INFO  TestMcaCurbside-ASAPOrder - Password Brinkers@2021 entered
+15:02:31.339 [main] INFO  TestMcaCurbside-ASAPOrder - Sign in button clicked
+15:02:43.914 [main] INFO  TestMcaCurbside-ASAPOrder - Menu button clicked
+15:02:49.094 [main] INFO  TestMcaCurbside-ASAPOrder - Location option selected
+15:02:55.173 [main] INFO  TestMcaCurbside-ASAPOrder - Restaurant location entered as Addison, TX 75001, USA
+15:03:00.350 [main] INFO  TestMcaCurbside-ASAPOrder - Search button clicked
+15:03:08.172 [main] INFO  TestMcaCurbside-ASAPOrder - Restaurant name CHILI'S RESTAURANTS IN ADDISON, TEXAS is displayed
+15:03:27.430 [main] INFO  TestMcaCurbside-ASAPOrder - Site scrolled and order button clicked
+15:03:45.032 [main] INFO  TestMcaCurbside-ASAPOrder - Chilis favourite Item Original Full Order Ribs selected
+15:03:56.330 [main] INFO  TestMcaCurbside-ASAPOrder - View Cart clicked
+15:04:06.187 [main] INFO  TestMcaCurbside-ASAPOrder - Silver ware opted in
+15:04:11.306 [main] INFO  TestMcaCurbside-ASAPOrder - Order checked Out
+15:04:28.006 [main] INFO  TestMcaCurbside-ASAPOrder - Site scrolled and Curbside mode is selected
+15:04:49.246 [main] ERROR TestMcaCurbside-ASAPOrder - Failed to select pickup time 'ASAP'
+15:04:49.250 [main] ERROR TestMcaCurbside-ASAPOrder - no such element (An element could not be located on the page using the given search parameters (XPATH='//*[contains(text(),'ASAP')] '))  (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.12.0', revision: '7c6e0b3', time: '2018-05-08T14:04:26.12Z'
+System info: host: 'LAPTOP-2HJFJ1OT', ip: '192.168.29.229', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_281'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {appBuildVersion: , appReleaseVersion: , appiumVersion: 1.8.0, applicationClearData: false, autoAcceptAlerts: false, autoDismissAlerts: false, autoGrantPermissions: false, autoWebview: false, browserName: Chromium, cloudViewLink: https://cloud.seetest.io:44..., commandTimeouts: 120000, desired: {browserName: Chromium, deviceQuery: @os='android' and @version=..., platformName: Android, testName: Quick Start Android Browser...}, device.category: PHONE, device.majorVersion: 8, device.manufacture: samsung, device.model: SM-G930F, device.name: samsung Galaxy S7 IO IL 086, device.os: Android, device.screenSize: 1080x1920, device.serialNumber: 98866742375a394e33, device.version: 8.0.0, deviceQuery: @os='android' and @version=..., deviceUDID: 98866742375a394e33, dontGoHomeOnQuit: false, dontStopAppOnReset: false, ehmPrefixUrl: /agent-6292135, ehmUrl: https://cloud.seetest.io:44..., fullReset: false, gridNodePort: 7799, install.only.for.update: false, installOnlyForUpdate: false, instrumentApp: false, javascriptEnabled: true, keystorePath: ~/.android/debug.keystore, locationServicesAuthorized: false, newSessionWaitTimeout: 600.0, noReset: false, platform: ANDROID, platformName: Android, projectName: , reportDirectory: reports, reportFormat: xml, reportTestId: 1294.0, reportUrl: https://cloud.seetest.io:44..., reservationDuration: 240.0, takeScreenshots: true, test.type: Mobile, testName: Quick Start Android Browser..., udid: 98866742375a394e33, useKeystore: false, waitForDeviceTimeout: 120000.0}
+Session ID: CLOUD-SID:2021-06-04_05-31-29-74a5b427-8ef7-443a-91ae-b76907573b2e
+*** Element info: {Using=xpath, value=//*[contains(text(),'ASAP')] }
+15:32:39.035 [main] INFO  TestMCACarryoutASAP - ******STARTING TEST MCA CARRY OUT ASAP******
+15:32:40.411 [main] INFO  TestMCACarryoutASAP - Starting QA site validation
+15:32:42.473 [main] INFO  TestMCACarryoutASAP - QA site launch is successful, Site Name : https://qa3.chilis.com/
+15:32:46.599 [main] INFO  TestMCACarryoutASAP - Pop up closed
+15:32:51.385 [main] INFO  TestMCACarryoutASAP - Menu button clicked
+15:32:56.207 [main] INFO  TestMCACarryoutASAP - Login option selected
+15:33:04.022 [main] INFO  TestMCACarryoutASAP - User name (512) 212-1212 entered
+15:33:10.144 [main] INFO  TestMCACarryoutASAP - Password Brinkers@2021 entered
+15:33:12.337 [main] INFO  TestMCACarryoutASAP - Sign in button clicked
+15:33:22.609 [main] INFO  TestMCACarryoutASAP - Menu button clicked
+15:33:28.714 [main] INFO  TestMCACarryoutASAP - Location option selected
+15:33:33.896 [main] INFO  TestMCACarryoutASAP - Restaurant location entered as Addison, TX 75001, USA
+15:33:49.517 [main] ERROR TestMCACarryoutASAP - Search button click failed
+15:33:49.520 [main] ERROR TestMCACarryoutASAP - Expected condition failed: waiting for element to be clickable: By.xpath: //*[@id='button-location-query']/span (tried for 15 second(s) with 500 milliseconds interval)
+Build info: version: '3.12.0', revision: '7c6e0b3', time: '2018-05-08T14:04:26.12Z'
+System info: host: 'LAPTOP-2HJFJ1OT', ip: '192.168.29.229', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_281'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {appBuildVersion: , appReleaseVersion: , appiumVersion: 1.8.0, applicationClearData: false, autoAcceptAlerts: false, autoDismissAlerts: false, autoGrantPermissions: false, autoWebview: false, browserName: Chromium, cloudViewLink: https://cloud.seetest.io:44..., commandTimeouts: 120000, desired: {browserName: Chromium, deviceQuery: @os='android' and @version=..., platformName: Android, testName: Quick Start Android Browser...}, device.category: PHONE, device.majorVersion: 8, device.manufacture: samsung, device.model: SM-G930F, device.name: samsung Galaxy S7 IO IL 086, device.os: Android, device.screenSize: 1080x1920, device.serialNumber: 98866742375a394e33, device.version: 8.0.0, deviceQuery: @os='android' and @version=..., deviceUDID: 98866742375a394e33, dontGoHomeOnQuit: false, dontStopAppOnReset: false, ehmPrefixUrl: /agent-6292135, ehmUrl: https://cloud.seetest.io:44..., fullReset: false, gridNodePort: 7801, install.only.for.update: false, installOnlyForUpdate: false, instrumentApp: false, javascriptEnabled: true, keystorePath: ~/.android/debug.keystore, locationServicesAuthorized: false, newSessionWaitTimeout: 600.0, noReset: false, platform: ANDROID, platformName: Android, projectName: , reportDirectory: reports, reportFormat: xml, reportTestId: 1297.0, reportUrl: https://cloud.seetest.io:44..., reservationDuration: 240.0, takeScreenshots: true, test.type: Mobile, testName: Quick Start Android Browser..., udid: 98866742375a394e33, useKeystore: false, waitForDeviceTimeout: 120000.0}
+Session ID: CLOUD-SID:2021-06-04_06-00-58-5f3776d2-d547-4846-86d8-368cd534f8e0
+15:35:16.681 [main] INFO  TestMCACarryoutASAP - ******STARTING TEST MCA CARRY OUT ASAP******
+15:35:17.691 [main] INFO  TestMCACarryoutASAP - Starting QA site validation
+15:35:19.847 [main] INFO  TestMCACarryoutASAP - QA site launch is successful, Site Name : https://qa3.chilis.com/
+15:35:24.003 [main] INFO  TestMCACarryoutASAP - Pop up closed
+15:35:28.592 [main] INFO  TestMCACarryoutASAP - Menu button clicked
+15:35:33.414 [main] INFO  TestMCACarryoutASAP - Login option selected
+15:35:42.458 [main] INFO  TestMCACarryoutASAP - User name (512) 212-1212 entered
+15:35:48.590 [main] INFO  TestMCACarryoutASAP - Password Brinkers@2021 entered
+15:35:51.329 [main] INFO  TestMCACarryoutASAP - Sign in button clicked
+15:36:01.394 [main] INFO  TestMCACarryoutASAP - Menu button clicked
+15:36:06.949 [main] INFO  TestMCACarryoutASAP - Location option selected
+15:36:12.481 [main] INFO  TestMCACarryoutASAP - Restaurant location entered as Addison, TX 75001, USA
+15:36:18.447 [main] INFO  TestMCACarryoutASAP - Search button clicked
+15:36:31.769 [main] ERROR TestMCACarryoutASAP - Site scrolled but order button not clicked
+15:36:31.769 [main] ERROR TestMCACarryoutASAP - no such element (An element could not be located on the page using the given search parameters (XPATH='//a[@id='location-select-row 2 or column -1 does not exist  in Excel']'))  (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.12.0', revision: '7c6e0b3', time: '2018-05-08T14:04:26.12Z'
+System info: host: 'LAPTOP-2HJFJ1OT', ip: '192.168.29.229', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_281'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {appBuildVersion: , appReleaseVersion: , appiumVersion: 1.8.0, applicationClearData: false, autoAcceptAlerts: false, autoDismissAlerts: false, autoGrantPermissions: false, autoWebview: false, browserName: Chromium, cloudViewLink: https://cloud.seetest.io:44..., commandTimeouts: 120000, desired: {browserName: Chromium, deviceQuery: @os='android' and @version=..., platformName: Android, testName: Quick Start Android Browser...}, device.category: PHONE, device.majorVersion: 8, device.manufacture: samsung, device.model: SM-G930F, device.name: samsung Galaxy S7 IO IL 086, device.os: Android, device.screenSize: 1080x1920, device.serialNumber: 98866742375a394e33, device.version: 8.0.0, deviceQuery: @os='android' and @version=..., deviceUDID: 98866742375a394e33, dontGoHomeOnQuit: false, dontStopAppOnReset: false, ehmPrefixUrl: /agent-6292135, ehmUrl: https://cloud.seetest.io:44..., fullReset: false, gridNodePort: 7802, install.only.for.update: false, installOnlyForUpdate: false, instrumentApp: false, javascriptEnabled: true, keystorePath: ~/.android/debug.keystore, locationServicesAuthorized: false, newSessionWaitTimeout: 600.0, noReset: false, platform: ANDROID, platformName: Android, projectName: , reportDirectory: reports, reportFormat: xml, reportTestId: 1298.0, reportUrl: https://cloud.seetest.io:44..., reservationDuration: 240.0, takeScreenshots: true, test.type: Mobile, testName: Quick Start Android Browser..., udid: 98866742375a394e33, useKeystore: false, waitForDeviceTimeout: 120000.0}
+Session ID: CLOUD-SID:2021-06-04_06-04-48-6a3e9fae-ff6c-4327-81a4-2f21f722fc3d
+*** Element info: {Using=xpath, value=//a[@id='location-select-row 2 or column -1 does not exist  in Excel']}
+15:39:17.781 [main] INFO  TestMCACarryoutASAP - ******STARTING TEST MCA CARRY OUT ASAP******
+15:39:18.916 [main] INFO  TestMCACarryoutASAP - Starting QA site validation
+15:39:21.181 [main] INFO  TestMCACarryoutASAP - QA site launch is successful, Site Name : https://qa3.chilis.com/
+15:39:25.618 [main] INFO  TestMCACarryoutASAP - Pop up closed
+15:39:30.349 [main] INFO  TestMCACarryoutASAP - Menu button clicked
+15:39:35.330 [main] INFO  TestMCACarryoutASAP - Login option selected
+15:39:44.130 [main] INFO  TestMCACarryoutASAP - User name (512) 212-1212 entered
+15:39:50.400 [main] INFO  TestMCACarryoutASAP - Password Brinkers@2021 entered
+15:39:52.616 [main] INFO  TestMCACarryoutASAP - Sign in button clicked
+15:40:03.091 [main] INFO  TestMCACarryoutASAP - Menu button clicked
+15:40:08.268 [main] INFO  TestMCACarryoutASAP - Location option selected
+15:40:14.213 [main] INFO  TestMCACarryoutASAP - Restaurant location entered as Addison, TX 75001, USA
+15:40:20.073 [main] INFO  TestMCACarryoutASAP - Search button clicked
+15:40:36.197 [main] INFO  TestMCACarryoutASAP - Site scrolled and order button clicked
+15:40:53.996 [main] INFO  TestMCACarryoutASAP - Chilis favourite Item Original Full Order Ribs selected
+15:41:06.766 [main] INFO  TestMCACarryoutASAP - View Cart clicked
+15:41:16.084 [main] INFO  TestMCACarryoutASAP - Order checked Out
+15:41:37.899 [main] ERROR TestMCACarryoutASAP - Carryout Button click failed
+15:41:37.905 [main] ERROR TestMCACarryoutASAP - Expected condition failed: waiting for presence of element located by: By.xpath: //*[@id='order-type-carryout-btn'] (tried for 15 second(s) with 500 milliseconds interval)
+15:47:45.572 [main] INFO  TestMCACarryoutASAP - ******STARTING TEST MCA CARRY OUT ASAP******
+15:47:46.589 [main] INFO  TestMCACarryoutASAP - Starting QA site validation
+15:47:48.792 [main] INFO  TestMCACarryoutASAP - QA site launch is successful, Site Name : https://qa3.chilis.com/
+15:47:53.195 [main] INFO  TestMCACarryoutASAP - Pop up closed
+15:47:58.113 [main] INFO  TestMCACarryoutASAP - Menu button clicked
+15:48:03.231 [main] INFO  TestMCACarryoutASAP - Login option selected
+15:48:12.857 [main] INFO  TestMCACarryoutASAP - User name (512) 212-1212 entered
+15:48:19.514 [main] INFO  TestMCACarryoutASAP - Password Brinkers@2021 entered
+15:48:22.072 [main] INFO  TestMCACarryoutASAP - Sign in button clicked
+15:48:32.346 [main] INFO  TestMCACarryoutASAP - Menu button clicked
+15:48:37.535 [main] INFO  TestMCACarryoutASAP - Location option selected
+15:48:45.420 [main] INFO  TestMCACarryoutASAP - Restaurant location entered as Addison, TX 75001, USA
+15:48:51.053 [main] INFO  TestMCACarryoutASAP - Search button clicked
+15:49:07.590 [main] INFO  TestMCACarryoutASAP - Site scrolled and order button clicked
+15:49:25.867 [main] INFO  TestMCACarryoutASAP - Chilis favourite Item Original Full Order Ribs selected
+15:49:38.974 [main] INFO  TestMCACarryoutASAP - View Cart clicked
+15:49:46.654 [main] INFO  TestMCACarryoutASAP - Order checked Out
+15:49:55.051 [main] INFO  TestMCACarryoutASAP - Carryout Button is Clicked
+15:50:10.640 [main] ERROR TestMCACarryoutASAP - Failed to select Later Today
+15:50:10.648 [main] ERROR TestMCACarryoutASAP - unknown error (An unknown server-side error occurred. status='false'. Failed to complete internal method: 'hybridSelect args: [, 0, xpath, (//*[text()='Later Today'])[1]/.., Later Today]', details: )  (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+Build info: version: '3.12.0', revision: '7c6e0b3', time: '2018-05-08T14:04:26.12Z'
+System info: host: 'LAPTOP-2HJFJ1OT', ip: '192.168.29.229', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_281'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {appBuildVersion: , appReleaseVersion: , appiumVersion: 1.8.0, applicationClearData: false, autoAcceptAlerts: false, autoDismissAlerts: false, autoGrantPermissions: false, autoWebview: false, browserName: Chromium, cloudViewLink: https://cloud.seetest.io:44..., commandTimeouts: 120000, desired: {browserName: Chromium, deviceQuery: @os='android' and @version=..., platformName: Android, testName: Quick Start Android Browser...}, device.category: PHONE, device.majorVersion: 8, device.manufacture: samsung, device.model: SM-G930F, device.name: samsung Galaxy S7 IO IL 086, device.os: Android, device.screenSize: 1080x1920, device.serialNumber: 98866742375a394e33, device.version: 8.0.0, deviceQuery: @os='android' and @version=..., deviceUDID: 98866742375a394e33, dontGoHomeOnQuit: false, dontStopAppOnReset: false, ehmPrefixUrl: /agent-6292135, ehmUrl: https://cloud.seetest.io:44..., fullReset: false, gridNodePort: 7804, install.only.for.update: false, installOnlyForUpdate: false, instrumentApp: false, javascriptEnabled: true, keystorePath: ~/.android/debug.keystore, locationServicesAuthorized: false, newSessionWaitTimeout: 600.0, noReset: false, platform: ANDROID, platformName: Android, projectName: , reportDirectory: reports, reportFormat: xml, reportTestId: 1301.0, reportUrl: https://cloud.seetest.io:44..., reservationDuration: 240.0, takeScreenshots: true, test.type: Mobile, testName: Quick Start Android Browser..., udid: 98866742375a394e33, useKeystore: false, waitForDeviceTimeout: 120000.0}
+Session ID: CLOUD-SID:2021-06-04_06-17-18-73926063-2ce0-4dc6-a74c-4588d93de4d7
+16:00:16.748 [main] INFO  TestLoggedInOrder - ******STARTING TEST LOGGED IN ORDER******
+16:00:17.867 [main] INFO  TestLoggedInOrder - Starting QA site validation
+16:00:20.216 [main] INFO  TestLoggedInOrder - QA site launch is successful, Site Name : https://qa3.chilis.com/
+16:00:24.531 [main] INFO  TestLoggedInOrder - Pop up closed
+16:00:29.357 [main] INFO  TestLoggedInOrder - Menu button clicked
+16:00:34.833 [main] INFO  TestLoggedInOrder - Login option selected
+16:00:44.278 [main] INFO  TestLoggedInOrder - User name (512) 212-1212 entered
+16:00:50.886 [main] INFO  TestLoggedInOrder - Password Brinkers@2021 entered
+16:00:53.049 [main] INFO  TestLoggedInOrder - Sign in button clicked
+16:01:03.836 [main] INFO  TestLoggedInOrder - Menu button clicked
+16:01:09.569 [main] INFO  TestLoggedInOrder - Location option selected
+16:01:15.850 [main] INFO  TestLoggedInOrder - Restaurant location entered as Addison, TX 75001, USA
+16:01:21.754 [main] INFO  TestLoggedInOrder - Search button clicked
+16:01:36.617 [main] INFO  TestLoggedInOrder - Site scrolled and order button clicked
+16:01:54.832 [main] INFO  TestLoggedInOrder - Chilis favourite Item Original Full Order Ribs selected
+16:02:07.425 [main] INFO  TestLoggedInOrder - View Cart clicked
+16:02:17.358 [main] INFO  TestLoggedInOrder - Silver ware opted in
+16:02:22.684 [main] INFO  TestLoggedInOrder - Order checked Out
+16:02:35.174 [main] INFO  TestLoggedInOrder - Payment button clicked
+16:02:56.691 [main] ERROR TestLoggedInOrder - Failed to enter Card Number
+16:02:56.698 [main] ERROR TestLoggedInOrder - Expected condition failed: waiting for presence of element located by: By.xpath: //*[@id='card-number'] (tried for 15 second(s) with 500 milliseconds interval)
+16:27:08.032 [main] INFO  TestLoggedInOrder - ******STARTING TEST LOGGED IN ORDER******
+16:27:09.281 [main] INFO  TestLoggedInOrder - Starting QA site validation
+16:27:11.599 [main] INFO  TestLoggedInOrder - QA site launch is successful, Site Name : https://qa3.chilis.com/
+16:27:16.104 [main] INFO  TestLoggedInOrder - Pop up closed
+16:27:20.918 [main] INFO  TestLoggedInOrder - Menu button clicked
+16:27:26.038 [main] INFO  TestLoggedInOrder - Login option selected
+16:27:35.049 [main] INFO  TestLoggedInOrder - User name (512) 212-1212 entered
+16:27:41.190 [main] INFO  TestLoggedInOrder - Password Brinkers@2021 entered
+16:27:43.652 [main] INFO  TestLoggedInOrder - Sign in button clicked
+16:27:54.300 [main] INFO  TestLoggedInOrder - Menu button clicked
+16:27:59.522 [main] INFO  TestLoggedInOrder - Location option selected
+16:28:06.588 [main] INFO  TestLoggedInOrder - Restaurant location entered as Addison, TX 75001, USA
+16:28:12.531 [main] INFO  TestLoggedInOrder - Search button clicked
+16:28:27.581 [main] INFO  TestLoggedInOrder - Site scrolled and order button clicked
+16:28:45.705 [main] INFO  TestLoggedInOrder - Chilis favourite Item Original Full Order Ribs selected
+16:28:57.072 [main] INFO  TestLoggedInOrder - View Cart clicked
+16:29:07.005 [main] INFO  TestLoggedInOrder - Silver ware opted in
+16:29:12.266 [main] INFO  TestLoggedInOrder - Order checked Out
+16:29:26.359 [main] INFO  TestLoggedInOrder - Payment button clicked
+16:29:35.267 [main] INFO  TestLoggedInOrder - Card Number entered as : 4111111111111111
+16:29:42.435 [main] INFO  TestLoggedInOrder - CVV entered as : 145
+16:29:49.603 [main] INFO  TestLoggedInOrder - Expiration Month selected as : 4
+16:30:00.356 [main] INFO  TestLoggedInOrder - Expiration Year selected as : 2025
+16:30:17.670 [main] ERROR TestLoggedInOrder - Failed to enter Name on Card
+16:30:17.676 [main] ERROR TestLoggedInOrder - Expected condition failed: waiting for element to be clickable: By.xpath: //*[@id='nameOnCard'] (tried for 15 second(s) with 500 milliseconds interval)
+Build info: version: '3.12.0', revision: '7c6e0b3', time: '2018-05-08T14:04:26.12Z'
+System info: host: 'LAPTOP-2HJFJ1OT', ip: '192.168.29.229', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_281'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {appBuildVersion: , appReleaseVersion: , appiumVersion: 1.8.0, applicationClearData: false, autoAcceptAlerts: false, autoDismissAlerts: false, autoGrantPermissions: false, autoWebview: false, browserName: Chromium, cloudViewLink: https://cloud.seetest.io:44..., commandTimeouts: 120000, desired: {browserName: Chromium, deviceQuery: @os='android' and @version=..., platformName: Android, testName: Quick Start Android Browser...}, device.category: PHONE, device.majorVersion: 8, device.manufacture: samsung, device.model: SM-G930F, device.name: samsung Galaxy S7 IO IL 086, device.os: Android, device.screenSize: 1080x1920, device.serialNumber: 98866742375a394e33, device.version: 8.0.0, deviceQuery: @os='android' and @version=..., deviceUDID: 98866742375a394e33, dontGoHomeOnQuit: false, dontStopAppOnReset: false, ehmPrefixUrl: /agent-6292135, ehmUrl: https://cloud.seetest.io:44..., fullReset: false, gridNodePort: 7806, install.only.for.update: false, installOnlyForUpdate: false, instrumentApp: false, javascriptEnabled: true, keystorePath: ~/.android/debug.keystore, locationServicesAuthorized: false, newSessionWaitTimeout: 600.0, noReset: false, platform: ANDROID, platformName: Android, projectName: , reportDirectory: reports, reportFormat: xml, reportTestId: 1304.0, reportUrl: https://cloud.seetest.io:44..., reservationDuration: 240.0, takeScreenshots: true, test.type: Mobile, testName: Quick Start Android Browser..., udid: 98866742375a394e33, useKeystore: false, waitForDeviceTimeout: 120000.0}
+Session ID: CLOUD-SID:2021-06-04_06-56-35-b0599e9e-bf34-464f-889c-04b590c12713
+16:38:37.736 [main] INFO  TestLoggedInOrder - ******STARTING TEST LOGGED IN ORDER******
+16:38:38.748 [main] INFO  TestLoggedInOrder - Starting QA site validation
+16:38:40.964 [main] INFO  TestLoggedInOrder - QA site launch is successful, Site Name : https://qa3.chilis.com/
+16:38:46.292 [main] INFO  TestLoggedInOrder - Pop up closed
+16:38:51.103 [main] INFO  TestLoggedInOrder - Menu button clicked
+16:38:56.119 [main] INFO  TestLoggedInOrder - Login option selected
+16:39:04.619 [main] INFO  TestLoggedInOrder - User name (512) 212-1212 entered
+16:39:11.171 [main] INFO  TestLoggedInOrder - Password Brinkers@2021 entered
+16:39:13.425 [main] INFO  TestLoggedInOrder - Sign in button clicked
+16:39:24.586 [main] INFO  TestLoggedInOrder - Menu button clicked
+16:39:29.810 [main] INFO  TestLoggedInOrder - Location option selected
+16:39:37.182 [main] INFO  TestLoggedInOrder - Restaurant location entered as Addison, TX 75001, USA
+16:39:43.327 [main] INFO  TestLoggedInOrder - Search button clicked
+16:39:58.688 [main] INFO  TestLoggedInOrder - Site scrolled and order button clicked
+16:40:17.732 [main] INFO  TestLoggedInOrder - Chilis favourite Item Original Full Order Ribs selected
+16:40:29.099 [main] INFO  TestLoggedInOrder - View Cart clicked
+16:40:38.930 [main] INFO  TestLoggedInOrder - Silver ware opted in
+16:40:44.358 [main] INFO  TestLoggedInOrder - Order checked Out
+16:40:56.543 [main] INFO  TestLoggedInOrder - Payment button clicked
+16:41:05.657 [main] INFO  TestLoggedInOrder - Card Number entered as : 4111111111111111
+16:41:12.927 [main] INFO  TestLoggedInOrder - CVV entered as : 145
+16:41:19.685 [main] INFO  TestLoggedInOrder - Expiration Month selected as : 4
+16:41:28.308 [main] INFO  TestLoggedInOrder - Expiration Year selected as : 2025
+16:41:35.557 [main] INFO  TestLoggedInOrder - Name on Card entered as : Somnath
+16:41:39.879 [main] INFO  TestLoggedInOrder - Billing zip code entered as : 75001
+16:41:56.356 [main] ERROR TestLoggedInOrder - Failed to enter tip
+16:41:56.363 [main] ERROR TestLoggedInOrder - Expected condition failed: waiting for element to be clickable: By.xpath: //input[@name='tip'] (tried for 15 second(s) with 500 milliseconds interval)
+Build info: version: '3.12.0', revision: '7c6e0b3', time: '2018-05-08T14:04:26.12Z'
+System info: host: 'LAPTOP-2HJFJ1OT', ip: '192.168.29.229', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_281'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {appBuildVersion: , appReleaseVersion: , appiumVersion: 1.8.0, applicationClearData: false, autoAcceptAlerts: false, autoDismissAlerts: false, autoGrantPermissions: false, autoWebview: false, browserName: Chromium, cloudViewLink: https://cloud.seetest.io:44..., commandTimeouts: 120000, desired: {browserName: Chromium, deviceQuery: @os='android' and @version=..., platformName: Android, testName: Quick Start Android Browser...}, device.category: PHONE, device.majorVersion: 8, device.manufacture: samsung, device.model: SM-G930F, device.name: samsung Galaxy S7 IO IL 086, device.os: Android, device.screenSize: 1080x1920, device.serialNumber: 98866742375a394e33, device.version: 8.0.0, deviceQuery: @os='android' and @version=..., deviceUDID: 98866742375a394e33, dontGoHomeOnQuit: false, dontStopAppOnReset: false, ehmPrefixUrl: /agent-6292135, ehmUrl: https://cloud.seetest.io:44..., fullReset: false, gridNodePort: 7807, install.only.for.update: false, installOnlyForUpdate: false, instrumentApp: false, javascriptEnabled: true, keystorePath: ~/.android/debug.keystore, locationServicesAuthorized: false, newSessionWaitTimeout: 600.0, noReset: false, platform: ANDROID, platformName: Android, projectName: , reportDirectory: reports, reportFormat: xml, reportTestId: 1305.0, reportUrl: https://cloud.seetest.io:44..., reservationDuration: 240.0, takeScreenshots: true, test.type: Mobile, testName: Quick Start Android Browser..., udid: 98866742375a394e33, useKeystore: false, waitForDeviceTimeout: 120000.0}
+Session ID: CLOUD-SID:2021-06-04_07-08-06-66abc730-b3f3-4ab6-b54c-56f8125e52bd
+16:42:02.182 [main] INFO  TestLoggedInOrder - Donation checked
+16:42:05.050 [main] INFO  TestLoggedInOrder - Pick up cost displayed as : $22.00
+16:42:11.704 [main] INFO  TestLoggedInOrder - Place order button clicked
+16:42:25.734 [main] INFO  TestLoggedInOrder - Success message displayed as : THANK YOU FOR ORDERING FROM CHILI'S
+16:42:33.823 [main] INFO  TestLoggedInOrder - Order price displayed as  : $22.00
+16:47:33.459 [main] INFO  TestLoggedInOrder - ******STARTING TEST LOGGED IN ORDER******
+16:47:34.545 [main] INFO  TestLoggedInOrder - Starting QA site validation
+16:47:36.933 [main] INFO  TestLoggedInOrder - QA site launch is successful, Site Name : https://qa3.chilis.com/
+16:47:41.234 [main] INFO  TestLoggedInOrder - Pop up closed
+16:47:46.150 [main] INFO  TestLoggedInOrder - Menu button clicked
+16:47:51.371 [main] INFO  TestLoggedInOrder - Login option selected
+16:47:59.768 [main] INFO  TestLoggedInOrder - User name (512) 212-1212 entered
+16:48:06.646 [main] INFO  TestLoggedInOrder - Password Brinkers@2021 entered
+16:48:09.290 [main] INFO  TestLoggedInOrder - Sign in button clicked
+16:48:20.863 [main] INFO  TestLoggedInOrder - Menu button clicked
+16:48:26.598 [main] INFO  TestLoggedInOrder - Location option selected
+16:48:32.229 [main] INFO  TestLoggedInOrder - Restaurant location entered as Addison, TX 75001, USA
+16:48:38.168 [main] INFO  TestLoggedInOrder - Search button clicked
+16:48:52.401 [main] INFO  TestLoggedInOrder - Site scrolled and order button clicked
+16:49:10.321 [main] INFO  TestLoggedInOrder - Chilis favourite Item Original Full Order Ribs selected
+16:49:21.791 [main] INFO  TestLoggedInOrder - View Cart clicked
+16:49:31.212 [main] INFO  TestLoggedInOrder - Silver ware opted in
+16:49:36.537 [main] INFO  TestLoggedInOrder - Order checked Out
+16:49:49.848 [main] INFO  TestLoggedInOrder - Payment button clicked
+16:49:58.552 [main] INFO  TestLoggedInOrder - Card Number entered as : 4111111111111111
+16:50:05.824 [main] INFO  TestLoggedInOrder - CVV entered as : 145
+16:50:12.343 [main] INFO  TestLoggedInOrder - Expiration Month selected as : 4
+16:50:20.365 [main] INFO  TestLoggedInOrder - Expiration Year selected as : 2025
+16:50:27.736 [main] INFO  TestLoggedInOrder - Name on Card entered as : Somnath
+16:50:31.731 [main] INFO  TestLoggedInOrder - Billing zip code entered as : 75001
+16:50:41.970 [main] INFO  TestLoggedInOrder - Tip given as : 15
+16:50:46.681 [main] INFO  TestLoggedInOrder - Donation checked
+16:50:50.266 [main] INFO  TestLoggedInOrder - Pick up cost displayed as : $22.00
+16:50:56.615 [main] INFO  TestLoggedInOrder - Place order button clicked
+16:51:09.619 [main] INFO  TestLoggedInOrder - Success message displayed as : THANK YOU FOR ORDERING FROM CHILI'S
+16:51:17.236 [main] INFO  TestLoggedInOrder - Order price displayed as  : $22.00
+16:54:28.343 [main] INFO  TestAddMyVisit - ******STARTING TEST ADD MY VISIT******
+16:54:29.521 [main] INFO  TestAddMyVisit - Starting QA site validation
+16:54:32.068 [main] INFO  TestAddMyVisit - QA site launch is successful, Site Name : https://qa3.chilis.com/
+16:54:36.472 [main] INFO  TestAddMyVisit - Pop up closed
+16:54:41.386 [main] INFO  TestAddMyVisit - Menu button clicked
+16:54:46.711 [main] INFO  TestAddMyVisit - Login option selected
+16:54:55.211 [main] INFO  TestAddMyVisit - User name (512) 212-1212 entered
+16:55:01.866 [main] INFO  TestAddMyVisit - Password Brinkers@2021 entered
+16:55:04.425 [main] INFO  TestAddMyVisit - Sign in button clicked
+16:55:19.786 [main] INFO  TestAddMyVisit - Add my visit button clicked
+16:55:33.097 [main] INFO  TestAddMyVisit - Restaurant location entered as : Addison, TX 75001, USA
+16:55:45.797 [main] INFO  TestAddMyVisit - Chilis location selected as : Addison - 4500 Beltline Rd., Dallas, TX 75001
+16:56:10.976 [main] INFO  TestAddMyVisit - Visit month selected as :April
+16:56:36.194 [main] ERROR TestAddMyVisit - Visit day selection failed
+16:56:36.210 [main] ERROR TestAddMyVisit - Expected condition failed: waiting for presence of element located by: By.xpath: //*[text()='4.0'] (tried for 15 second(s) with 500 milliseconds interval)
+17:14:04.113 [main] INFO  TestAddMyVisit - ******STARTING TEST ADD MY VISIT******
+17:14:05.417 [main] INFO  TestAddMyVisit - Starting QA site validation
+17:14:07.635 [main] INFO  TestAddMyVisit - QA site launch is successful, Site Name : https://qa3.chilis.com/
+17:14:12.236 [main] INFO  TestAddMyVisit - Pop up closed
+17:14:17.259 [main] INFO  TestAddMyVisit - Menu button clicked
+17:14:22.278 [main] INFO  TestAddMyVisit - Login option selected
+17:14:31.800 [main] INFO  TestAddMyVisit - User name (512) 212-1212 entered
+17:14:38.356 [main] INFO  TestAddMyVisit - Password Brinkers@2021 entered
+17:14:40.811 [main] INFO  TestAddMyVisit - Sign in button clicked
+17:14:54.841 [main] INFO  TestAddMyVisit - Add my visit button clicked
+17:15:09.280 [main] INFO  TestAddMyVisit - Restaurant location entered as : Addison, TX 75001, USA
+17:15:26.049 [main] ERROR TestAddMyVisit - Chillis location selection failed
+17:15:26.055 [main] ERROR TestAddMyVisit - no such element (An element could not be located on the page using the given search parameters (XPATH='//*[text()='Addison - 4500 Beltline Rd., Dallas, TX 75001']'))  (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.12.0', revision: '7c6e0b3', time: '2018-05-08T14:04:26.12Z'
+System info: host: 'LAPTOP-2HJFJ1OT', ip: '192.168.29.229', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_281'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {appBuildVersion: , appReleaseVersion: , appiumVersion: 1.8.0, applicationClearData: false, autoAcceptAlerts: false, autoDismissAlerts: false, autoGrantPermissions: false, autoWebview: false, browserName: Chromium, cloudViewLink: https://cloud.seetest.io:44..., commandTimeouts: 120000, desired: {browserName: Chromium, deviceQuery: @os='android' and @version=..., platformName: Android, testName: Quick Start Android Browser...}, device.category: PHONE, device.majorVersion: 8, device.manufacture: samsung, device.model: SM-G930F, device.name: samsung Galaxy S7 IO IL 086, device.os: Android, device.screenSize: 1080x1920, device.serialNumber: 98866742375a394e33, device.version: 8.0.0, deviceQuery: @os='android' and @version=..., deviceUDID: 98866742375a394e33, dontGoHomeOnQuit: false, dontStopAppOnReset: false, ehmPrefixUrl: /agent-6292135, ehmUrl: https://cloud.seetest.io:44..., fullReset: false, gridNodePort: 7813, install.only.for.update: false, installOnlyForUpdate: false, instrumentApp: false, javascriptEnabled: true, keystorePath: ~/.android/debug.keystore, locationServicesAuthorized: false, newSessionWaitTimeout: 600.0, noReset: false, platform: ANDROID, platformName: Android, projectName: , reportDirectory: reports, reportFormat: xml, reportTestId: 1308.0, reportUrl: https://cloud.seetest.io:44..., reservationDuration: 240.0, takeScreenshots: true, test.type: Mobile, testName: Quick Start Android Browser..., udid: 98866742375a394e33, useKeystore: false, waitForDeviceTimeout: 120000.0}
+Session ID: CLOUD-SID:2021-06-04_07-43-26-9ef7b8ce-eb0e-4d3a-ac9b-d405958c2b8b
+*** Element info: {Using=xpath, value=//*[text()='Addison - 4500 Beltline Rd., Dallas, TX 75001']}
+17:17:07.112 [main] INFO  TestAddMyVisit - ******STARTING TEST ADD MY VISIT******
+17:17:08.235 [main] INFO  TestAddMyVisit - Starting QA site validation
+17:17:10.831 [main] INFO  TestAddMyVisit - QA site launch is successful, Site Name : https://qa3.chilis.com/
+17:17:15.644 [main] INFO  TestAddMyVisit - Pop up closed
+17:17:20.660 [main] INFO  TestAddMyVisit - Menu button clicked
+17:17:26.088 [main] INFO  TestAddMyVisit - Login option selected
+17:17:36.430 [main] INFO  TestAddMyVisit - User name (512) 212-1212 entered
+17:17:43.158 [main] INFO  TestAddMyVisit - Password Brinkers@2021 entered
+17:17:45.748 [main] INFO  TestAddMyVisit - Sign in button clicked
+17:17:59.470 [main] INFO  TestAddMyVisit - Add my visit button clicked
+17:18:12.679 [main] INFO  TestAddMyVisit - Restaurant location entered as : Addison, TX 75001, USA
+17:18:25.070 [main] INFO  TestAddMyVisit - Chilis location selected as : Addison - 4500 Beltline Rd., Dallas, TX 75001
+17:18:49.742 [main] INFO  TestAddMyVisit - Visit month selected as :April
+17:18:58.058 [main] ERROR TestAddMyVisit - Visit day selection failed
+17:18:58.062 [main] ERROR TestAddMyVisit - unknown error (An unknown server-side error occurred. status='false'. Failed to complete internal method: 'hybridSelect args: [, 0, xpath, (//*[text()='4'])[1]/.., 4]', details: )  (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+Build info: version: '3.12.0', revision: '7c6e0b3', time: '2018-05-08T14:04:26.12Z'
+System info: host: 'LAPTOP-2HJFJ1OT', ip: '192.168.29.229', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_281'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {appBuildVersion: , appReleaseVersion: , appiumVersion: 1.8.0, applicationClearData: false, autoAcceptAlerts: false, autoDismissAlerts: false, autoGrantPermissions: false, autoWebview: false, browserName: Chromium, cloudViewLink: https://cloud.seetest.io:44..., commandTimeouts: 120000, desired: {browserName: Chromium, deviceQuery: @os='android' and @version=..., platformName: Android, testName: Quick Start Android Browser...}, device.category: PHONE, device.majorVersion: 8, device.manufacture: samsung, device.model: SM-G930F, device.name: samsung Galaxy S7 IO IL 086, device.os: Android, device.screenSize: 1080x1920, device.serialNumber: 98866742375a394e33, device.version: 8.0.0, deviceQuery: @os='android' and @version=..., deviceUDID: 98866742375a394e33, dontGoHomeOnQuit: false, dontStopAppOnReset: false, ehmPrefixUrl: /agent-6292135, ehmUrl: https://cloud.seetest.io:44..., fullReset: false, gridNodePort: 7814, install.only.for.update: false, installOnlyForUpdate: false, instrumentApp: false, javascriptEnabled: true, keystorePath: ~/.android/debug.keystore, locationServicesAuthorized: false, newSessionWaitTimeout: 600.0, noReset: false, platform: ANDROID, platformName: Android, projectName: , reportDirectory: reports, reportFormat: xml, reportTestId: 1309.0, reportUrl: https://cloud.seetest.io:44..., reservationDuration: 240.0, takeScreenshots: true, test.type: Mobile, testName: Quick Start Android Browser..., udid: 98866742375a394e33, useKeystore: false, waitForDeviceTimeout: 120000.0}
+Session ID: CLOUD-SID:2021-06-04_07-46-36-ce0b649d-567c-4150-b569-13cb267ea439
+17:33:14.721 [main] INFO  TestAddMyVisit - ******STARTING TEST ADD MY VISIT******
+17:33:15.932 [main] INFO  TestAddMyVisit - Starting QA site validation
+17:33:37.987 [main] ERROR TestAddMyVisit - QA site launch failed
+17:33:37.995 [main] ERROR TestAddMyVisit - Expected condition failed: waiting for presence of element located by: By.className: close-btn (tried for 15 second(s) with 500 milliseconds interval)
+17:34:27.101 [main] INFO  TestAddMyVisit - ******STARTING TEST ADD MY VISIT******
+17:34:28.338 [main] INFO  TestAddMyVisit - Starting QA site validation
+17:34:30.920 [main] INFO  TestAddMyVisit - QA site launch is successful, Site Name : https://qa3.chilis.com/
+17:34:35.324 [main] INFO  TestAddMyVisit - Pop up closed
+17:34:40.331 [main] INFO  TestAddMyVisit - Menu button clicked
+17:34:45.562 [main] INFO  TestAddMyVisit - Login option selected
+17:34:55.086 [main] INFO  TestAddMyVisit - User name (512) 212-1212 entered
+17:35:01.643 [main] INFO  TestAddMyVisit - Password Brinkers@2021 entered
+17:35:04.302 [main] INFO  TestAddMyVisit - Sign in button clicked
+17:35:18.330 [main] INFO  TestAddMyVisit - Add my visit button clicked
+17:35:32.667 [main] INFO  TestAddMyVisit - Restaurant location entered as : Addison, TX 75001, USA
+17:35:45.570 [main] INFO  TestAddMyVisit - Chilis location selected as : Addison - 4500 Beltline Rd., Dallas, TX 75001
+17:35:57.143 [main] INFO  TestAddMyVisit - Visit month selected as :April
+17:36:04.925 [main] INFO  TestAddMyVisit - Visit day selected as : 4
+17:36:12.500 [main] INFO  TestAddMyVisit - Visit year selected as : 2018
+17:36:20.285 [main] INFO  TestAddMyVisit - Check Number entered as : 6767789
+17:36:29.120 [main] ERROR TestAddMyVisit - Failed to enter check total
+17:36:29.129 [main] ERROR TestAddMyVisit - unknown error (An unknown server-side error occurred. status='false'. Failed to complete internal method: 'elementSendText args: [WEB, xpath=(//*[@id='check-total'])[1], 0, ]', details: )  (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+Build info: version: '3.12.0', revision: '7c6e0b3', time: '2018-05-08T14:04:26.12Z'
+System info: host: 'LAPTOP-2HJFJ1OT', ip: '192.168.29.229', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_281'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {appBuildVersion: , appReleaseVersion: , appiumVersion: 1.8.0, applicationClearData: false, autoAcceptAlerts: false, autoDismissAlerts: false, autoGrantPermissions: false, autoWebview: false, browserName: Chromium, cloudViewLink: https://cloud.seetest.io:44..., commandTimeouts: 120000, desired: {browserName: Chromium, deviceQuery: @os='android' and @version=..., platformName: Android, testName: Quick Start Android Browser...}, device.category: PHONE, device.majorVersion: 8, device.manufacture: samsung, device.model: SM-G930F, device.name: samsung Galaxy S7 IO IL 086, device.os: Android, device.screenSize: 1080x1920, device.serialNumber: 98866742375a394e33, device.version: 8.0.0, deviceQuery: @os='android' and @version=..., deviceUDID: 98866742375a394e33, dontGoHomeOnQuit: false, dontStopAppOnReset: false, ehmPrefixUrl: /agent-6292135, ehmUrl: https://cloud.seetest.io:44..., fullReset: false, gridNodePort: 7819, install.only.for.update: false, installOnlyForUpdate: false, instrumentApp: false, javascriptEnabled: true, keystorePath: ~/.android/debug.keystore, locationServicesAuthorized: false, newSessionWaitTimeout: 600.0, noReset: false, platform: ANDROID, platformName: Android, projectName: , reportDirectory: reports, reportFormat: xml, reportTestId: 1314.0, reportUrl: https://cloud.seetest.io:44..., reservationDuration: 240.0, takeScreenshots: true, test.type: Mobile, testName: Quick Start Android Browser..., udid: 98866742375a394e33, useKeystore: false, waitForDeviceTimeout: 120000.0}
+Session ID: CLOUD-SID:2021-06-04_08-03-59-d8ef52c8-0131-496a-95b9-aea481ba1953
+17:36:31.966 [main] INFO  TestAddMyVisit - Visit submitted
+17:36:55.509 [main] ERROR TestAddMyVisit - Success message for add my visit not displayed
+17:36:55.511 [main] ERROR TestAddMyVisit - Expected condition failed: waiting for presence of element located by: By.xpath: //span[@class='server-success-message'] (tried for 15 second(s) with 500 milliseconds interval)
+18:13:21.369 [main] INFO  TestAddMyVisit - ******STARTING TEST ADD MY VISIT******
+18:13:23.361 [main] INFO  TestAddMyVisit - Starting QA site validation
+18:13:25.503 [main] INFO  TestAddMyVisit - QA site launch is successful, Site Name : https://qa3.chilis.com/
+18:13:30.105 [main] INFO  TestAddMyVisit - Pop up closed
+18:13:34.816 [main] INFO  TestAddMyVisit - Menu button clicked
+18:13:39.647 [main] INFO  TestAddMyVisit - Login option selected
+18:13:48.395 [main] INFO  TestAddMyVisit - User name (512) 212-1212 entered
+18:13:55.923 [main] ERROR TestAddMyVisit - Could not enter password
+18:13:55.928 [main] ERROR TestAddMyVisit - unknown error (An unknown server-side error occurred. status='false'. Failed to complete internal method: 'elementSendText args: [WEB, xpath=(//*[cmd:equalsIgnoreCase(@nodeName,'input')][@id='password'])[1], 0, ]', details: )  (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+Build info: version: '3.12.0', revision: '7c6e0b3', time: '2018-05-08T14:04:26.12Z'
+System info: host: 'LAPTOP-2HJFJ1OT', ip: '192.168.29.229', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_281'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {appBuildVersion: , appReleaseVersion: , appiumVersion: 1.8.0, applicationClearData: false, autoAcceptAlerts: false, autoDismissAlerts: false, autoGrantPermissions: false, autoWebview: false, browserName: Chromium, cloudViewLink: https://cloud.seetest.io:44..., commandTimeouts: 120000, desired: {browserName: Chromium, deviceQuery: @os='android' and @version=..., platformName: Android, testName: Quick Start Android Browser...}, device.category: PHONE, device.majorVersion: 8, device.manufacture: samsung, device.model: SM-G930F, device.name: samsung Galaxy S7 IO IL 086, device.os: Android, device.screenSize: 1080x1920, device.serialNumber: 98866742375a394e33, device.version: 8.0.0, deviceQuery: @os='android' and @version=..., deviceUDID: 98866742375a394e33, dontGoHomeOnQuit: false, dontStopAppOnReset: false, ehmPrefixUrl: /agent-6292135, ehmUrl: https://cloud.seetest.io:44..., fullReset: false, gridNodePort: 7822, install.only.for.update: false, installOnlyForUpdate: false, instrumentApp: false, javascriptEnabled: true, keystorePath: ~/.android/debug.keystore, locationServicesAuthorized: false, newSessionWaitTimeout: 600.0, noReset: false, platform: ANDROID, platformName: Android, projectName: , reportDirectory: reports, reportFormat: xml, reportTestId: 1318.0, reportUrl: https://cloud.seetest.io:44..., reservationDuration: 240.0, takeScreenshots: true, test.type: Mobile, testName: Quick Start Android Browser..., udid: 98866742375a394e33, useKeystore: false, waitForDeviceTimeout: 120000.0}
+Session ID: CLOUD-SID:2021-06-04_08-42-51-4c570520-2bac-40a3-a0e8-76ff80741abf
+18:18:51.822 [main] INFO  TestAddMyVisit - ******STARTING TEST ADD MY VISIT******
+18:18:53.185 [main] INFO  TestAddMyVisit - Starting QA site validation
+18:18:55.638 [main] INFO  TestAddMyVisit - QA site launch is successful, Site Name : https://qa3.chilis.com/
+18:19:00.044 [main] INFO  TestAddMyVisit - Pop up closed
+18:19:04.928 [main] INFO  TestAddMyVisit - Menu button clicked
+18:19:10.268 [main] INFO  TestAddMyVisit - Login option selected
+18:19:19.133 [main] INFO  TestAddMyVisit - User name (512) 212-1212 entered
+18:19:25.426 [main] INFO  TestAddMyVisit - Password Brinkers@2021 entered
+18:19:27.786 [main] INFO  TestAddMyVisit - Sign in button clicked
+18:19:42.629 [main] INFO  TestAddMyVisit - Add my visit button clicked
+18:19:55.364 [main] INFO  TestAddMyVisit - Restaurant location entered as : Addison, TX 75001, USA
+18:20:08.002 [main] INFO  TestAddMyVisit - Chilis location selected as : Addison - 4500 Beltline Rd., Dallas, TX 75001
+18:20:18.754 [main] INFO  TestAddMyVisit - Visit month selected as :April
+18:20:26.196 [main] INFO  TestAddMyVisit - Visit day selected as : 4
+18:20:33.959 [main] INFO  TestAddMyVisit - Visit year selected as : 2018
+18:20:41.536 [main] INFO  TestAddMyVisit - Check Number entered as : 6767789
+18:20:49.996 [main] ERROR TestAddMyVisit - Failed to enter check total
+18:20:50.000 [main] ERROR TestAddMyVisit - unknown error (An unknown server-side error occurred. status='false'. Failed to complete internal method: 'elementSendText args: [WEB, xpath=(//*[@id='check-total'])[1], 0, ]', details: )  (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+Build info: version: '3.12.0', revision: '7c6e0b3', time: '2018-05-08T14:04:26.12Z'
+System info: host: 'LAPTOP-2HJFJ1OT', ip: '192.168.29.229', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_281'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {appBuildVersion: , appReleaseVersion: , appiumVersion: 1.8.0, applicationClearData: false, autoAcceptAlerts: false, autoDismissAlerts: false, autoGrantPermissions: false, autoWebview: false, browserName: Chromium, cloudViewLink: https://cloud.seetest.io:44..., commandTimeouts: 120000, desired: {browserName: Chromium, deviceQuery: @os='android' and @version=..., platformName: Android, testName: Quick Start Android Browser...}, device.category: PHONE, device.majorVersion: 8, device.manufacture: samsung, device.model: SM-G930F, device.name: samsung Galaxy S7 IO IL 086, device.os: Android, device.screenSize: 1080x1920, device.serialNumber: 98866742375a394e33, device.version: 8.0.0, deviceQuery: @os='android' and @version=..., deviceUDID: 98866742375a394e33, dontGoHomeOnQuit: false, dontStopAppOnReset: false, ehmPrefixUrl: /agent-6292135, ehmUrl: https://cloud.seetest.io:44..., fullReset: false, gridNodePort: 7824, install.only.for.update: false, installOnlyForUpdate: false, instrumentApp: false, javascriptEnabled: true, keystorePath: ~/.android/debug.keystore, locationServicesAuthorized: false, newSessionWaitTimeout: 600.0, noReset: false, platform: ANDROID, platformName: Android, projectName: , reportDirectory: reports, reportFormat: xml, reportTestId: 1320.0, reportUrl: https://cloud.seetest.io:44..., reservationDuration: 240.0, takeScreenshots: true, test.type: Mobile, testName: Quick Start Android Browser..., udid: 98866742375a394e33, useKeystore: false, waitForDeviceTimeout: 120000.0}
+Session ID: CLOUD-SID:2021-06-04_08-48-23-52be7c18-efd0-40e0-b236-b24aafab28ad
+18:20:53.525 [main] INFO  TestAddMyVisit - Visit submitted
+18:21:16.351 [main] ERROR TestAddMyVisit - Success message for add my visit not displayed
+18:21:16.353 [main] ERROR TestAddMyVisit - Expected condition failed: waiting for presence of element located by: By.xpath: //span[@class='server-success-message'] (tried for 15 second(s) with 500 milliseconds interval)
+18:24:30.007 [main] INFO  TestAddMyVisit - ******STARTING TEST ADD MY VISIT******
+18:24:31.050 [main] INFO  TestAddMyVisit - Starting QA site validation
+18:24:33.200 [main] INFO  TestAddMyVisit - QA site launch is successful, Site Name : https://qa3.chilis.com/
+18:24:37.253 [main] INFO  TestAddMyVisit - Pop up closed
+18:24:41.745 [main] INFO  TestAddMyVisit - Menu button clicked
+18:24:47.040 [main] INFO  TestAddMyVisit - Login option selected
+18:24:55.191 [main] INFO  TestAddMyVisit - User name (512) 212-1212 entered
+18:25:02.784 [main] ERROR TestAddMyVisit - Could not enter password
+18:25:02.788 [main] ERROR TestAddMyVisit - unknown error (An unknown server-side error occurred. status='false'. Failed to complete internal method: 'elementSendText args: [WEB, xpath=(//*[cmd:equalsIgnoreCase(@nodeName,'input')][@id='password'])[1], 0, ]', details: )  (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+Build info: version: '3.12.0', revision: '7c6e0b3', time: '2018-05-08T14:04:26.12Z'
+System info: host: 'LAPTOP-2HJFJ1OT', ip: '192.168.29.229', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_281'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {appBuildVersion: , appReleaseVersion: , appiumVersion: 1.8.0, applicationClearData: false, autoAcceptAlerts: false, autoDismissAlerts: false, autoGrantPermissions: false, autoWebview: false, browserName: Chromium, cloudViewLink: https://cloud.seetest.io:44..., commandTimeouts: 120000, desired: {browserName: Chromium, deviceQuery: @os='android' and @version=..., platformName: Android, testName: Quick Start Android Browser...}, device.category: PHONE, device.majorVersion: 8, device.manufacture: samsung, device.model: SM-G930F, device.name: samsung Galaxy S7 IO IL 086, device.os: Android, device.screenSize: 1080x1920, device.serialNumber: 98866742375a394e33, device.version: 8.0.0, deviceQuery: @os='android' and @version=..., deviceUDID: 98866742375a394e33, dontGoHomeOnQuit: false, dontStopAppOnReset: false, ehmPrefixUrl: /agent-6292135, ehmUrl: https://cloud.seetest.io:44..., fullReset: false, gridNodePort: 7825, install.only.for.update: false, installOnlyForUpdate: false, instrumentApp: false, javascriptEnabled: true, keystorePath: ~/.android/debug.keystore, locationServicesAuthorized: false, newSessionWaitTimeout: 600.0, noReset: false, platform: ANDROID, platformName: Android, projectName: , reportDirectory: reports, reportFormat: xml, reportTestId: 1321.0, reportUrl: https://cloud.seetest.io:44..., reservationDuration: 240.0, takeScreenshots: true, test.type: Mobile, testName: Quick Start Android Browser..., udid: 98866742375a394e33, useKeystore: false, waitForDeviceTimeout: 120000.0}
+Session ID: CLOUD-SID:2021-06-04_08-54-03-5c264cf6-2fb6-4185-9445-5e1869087108
+18:26:29.907 [main] INFO  TestAddMyVisit - ******STARTING TEST ADD MY VISIT******
+18:26:30.921 [main] INFO  TestAddMyVisit - Starting QA site validation
+18:26:32.903 [main] INFO  TestAddMyVisit - QA site launch is successful, Site Name : https://qa3.chilis.com/
+18:26:37.010 [main] INFO  TestAddMyVisit - Pop up closed
+18:26:41.879 [main] INFO  TestAddMyVisit - Menu button clicked
+18:26:46.491 [main] INFO  TestAddMyVisit - Login option selected
+18:26:55.601 [main] INFO  TestAddMyVisit - User name (512) 212-1212 entered
+18:27:01.760 [main] INFO  TestAddMyVisit - Password Brinkers@2021 entered
+18:27:03.863 [main] INFO  TestAddMyVisit - Sign in button clicked
+18:27:17.871 [main] INFO  TestAddMyVisit - Add my visit button clicked
+18:27:30.489 [main] INFO  TestAddMyVisit - Restaurant location entered as : Addison, TX 75001, USA
+18:27:42.912 [main] INFO  TestAddMyVisit - Chilis location selected as : Addison - 4500 Beltline Rd., Dallas, TX 75001
+18:27:53.433 [main] INFO  TestAddMyVisit - Visit month selected as :April
+18:28:01.297 [main] INFO  TestAddMyVisit - Visit day selected as : 4
+18:28:08.922 [main] INFO  TestAddMyVisit - Visit year selected as : 2018
+18:28:15.816 [main] INFO  TestAddMyVisit - Check Number entered as : 6767789
+18:28:18.699 [main] INFO  TestAddMyVisit - Check total entered as : 12
+18:28:21.496 [main] INFO  TestAddMyVisit - Visit submitted
+18:28:30.609 [main] INFO  TestAddMyVisit - Success message for add my visit displayed as : Visit request successfully submitted. Once your receipt is validated your base offer will be reset within 48 hours.
+18:31:34.295 [main] INFO  TestMcaCurbside-ASAPOrder - ******STARTING TEST MCA CURBSIDE-ASAP Order*******
+18:31:35.316 [main] INFO  TestMcaCurbside-ASAPOrder - Starting QA site validation
+18:31:37.468 [main] INFO  TestMcaCurbside-ASAPOrder - QA site launch is successful, Site Name : https://qa3.chilis.com/
+18:31:42.010 [main] INFO  TestMcaCurbside-ASAPOrder - Pop up closed
+18:31:46.930 [main] INFO  TestMcaCurbside-ASAPOrder - Menu button clicked
+18:31:51.698 [main] INFO  TestMcaCurbside-ASAPOrder - Login option selected
+18:31:59.817 [main] INFO  TestMcaCurbside-ASAPOrder - User name (512) 212-1212 entered
+18:32:05.994 [main] INFO  TestMcaCurbside-ASAPOrder - Password Brinkers@2021 entered
+18:32:08.286 [main] INFO  TestMcaCurbside-ASAPOrder - Sign in button clicked
+18:32:19.307 [main] INFO  TestMcaCurbside-ASAPOrder - Menu button clicked
+18:32:24.718 [main] INFO  TestMcaCurbside-ASAPOrder - Location option selected
+18:32:31.258 [main] INFO  TestMcaCurbside-ASAPOrder - Restaurant location entered as Addison, TX 75001, USA
+18:32:37.090 [main] INFO  TestMcaCurbside-ASAPOrder - Search button clicked
+18:32:44.820 [main] INFO  TestMcaCurbside-ASAPOrder - Restaurant name CHILI'S RESTAURANTS IN ADDISON, TEXAS is displayed
+18:33:04.987 [main] INFO  TestMcaCurbside-ASAPOrder - Site scrolled and order button clicked
+18:33:22.863 [main] INFO  TestMcaCurbside-ASAPOrder - Chilis favourite Item Original Full Order Ribs selected
+18:33:34.473 [main] INFO  TestMcaCurbside-ASAPOrder - View Cart clicked
+18:33:44.738 [main] INFO  TestMcaCurbside-ASAPOrder - Silver ware opted in
+18:33:49.839 [main] INFO  TestMcaCurbside-ASAPOrder - Order checked Out
+18:34:03.465 [main] INFO  TestMcaCurbside-ASAPOrder - Site scrolled and Curbside mode is selected
+18:34:24.700 [main] ERROR TestMcaCurbside-ASAPOrder - Failed to select pickup time 'ASAP'
+18:34:24.703 [main] ERROR TestMcaCurbside-ASAPOrder - no such element (An element could not be located on the page using the given search parameters (XPATH='//*[contains(text(),'ASAP')] '))  (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.12.0', revision: '7c6e0b3', time: '2018-05-08T14:04:26.12Z'
+System info: host: 'LAPTOP-2HJFJ1OT', ip: '192.168.29.229', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_281'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {appBuildVersion: , appReleaseVersion: , appiumVersion: 1.8.0, applicationClearData: false, autoAcceptAlerts: false, autoDismissAlerts: false, autoGrantPermissions: false, autoWebview: false, browserName: Chromium, cloudViewLink: https://cloud.seetest.io:44..., commandTimeouts: 120000, desired: {browserName: Chromium, deviceQuery: @os='android' and @version=..., platformName: Android, testName: Quick Start Android Browser...}, device.category: PHONE, device.majorVersion: 8, device.manufacture: samsung, device.model: SM-G930F, device.name: samsung Galaxy S7 IO IL 086, device.os: Android, device.screenSize: 1080x1920, device.serialNumber: 98866742375a394e33, device.version: 8.0.0, deviceQuery: @os='android' and @version=..., deviceUDID: 98866742375a394e33, dontGoHomeOnQuit: false, dontStopAppOnReset: false, ehmPrefixUrl: /agent-6292135, ehmUrl: https://cloud.seetest.io:44..., fullReset: false, gridNodePort: 7827, install.only.for.update: false, installOnlyForUpdate: false, instrumentApp: false, javascriptEnabled: true, keystorePath: ~/.android/debug.keystore, locationServicesAuthorized: false, newSessionWaitTimeout: 600.0, noReset: false, platform: ANDROID, platformName: Android, projectName: , reportDirectory: reports, reportFormat: xml, reportTestId: 1323.0, reportUrl: https://cloud.seetest.io:44..., reservationDuration: 240.0, takeScreenshots: true, test.type: Mobile, testName: Quick Start Android Browser..., udid: 98866742375a394e33, useKeystore: false, waitForDeviceTimeout: 120000.0}
+Session ID: CLOUD-SID:2021-06-04_09-01-06-1abd19d6-79c4-48e1-94f5-5aedaa8fea21
+*** Element info: {Using=xpath, value=//*[contains(text(),'ASAP')] }
+18:42:36.071 [main] INFO  TestMCACarryoutASAP - ******STARTING TEST MCA CARRY OUT ASAP******
+18:42:37.177 [main] INFO  TestMCACarryoutASAP - Starting QA site validation
+18:42:39.326 [main] INFO  TestMCACarryoutASAP - QA site launch is successful, Site Name : https://qa3.chilis.com/
+18:42:43.357 [main] INFO  TestMCACarryoutASAP - Pop up closed
+18:42:48.019 [main] INFO  TestMCACarryoutASAP - Menu button clicked
+18:42:53.001 [main] INFO  TestMCACarryoutASAP - Login option selected
+18:43:01.132 [main] INFO  TestMCACarryoutASAP - User name (512) 212-1212 entered
+18:43:07.595 [main] INFO  TestMCACarryoutASAP - Password Brinkers@2021 entered
+18:43:09.907 [main] INFO  TestMCACarryoutASAP - Sign in button clicked
+18:43:21.486 [main] INFO  TestMCACarryoutASAP - Menu button clicked
+18:43:26.711 [main] INFO  TestMCACarryoutASAP - Location option selected
+18:43:33.400 [main] INFO  TestMCACarryoutASAP - Restaurant location entered as Addison, TX 75001, USA
+18:43:39.159 [main] INFO  TestMCACarryoutASAP - Search button clicked
+18:43:55.164 [main] INFO  TestMCACarryoutASAP - Site scrolled and order button clicked
+18:44:13.382 [main] INFO  TestMCACarryoutASAP - Chilis favourite Item Original Full Order Ribs selected
+18:44:24.587 [main] INFO  TestMCACarryoutASAP - View Cart clicked
+18:44:32.433 [main] INFO  TestMCACarryoutASAP - Order checked Out
+18:44:42.207 [main] INFO  TestMCACarryoutASAP - Carryout Button is Clicked
+18:44:53.613 [main] ERROR TestMCACarryoutASAP - Failed to select Later Today
+18:44:53.617 [main] ERROR TestMCACarryoutASAP - unknown error (An unknown server-side error occurred. status='false'. Failed to complete internal method: 'hybridSelect args: [, 0, xpath, (//*[text()='Later Today'])[1]/.., Later Today]', details: )  (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+Build info: version: '3.12.0', revision: '7c6e0b3', time: '2018-05-08T14:04:26.12Z'
+System info: host: 'LAPTOP-2HJFJ1OT', ip: '192.168.29.229', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_281'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {appBuildVersion: , appReleaseVersion: , appiumVersion: 1.8.0, applicationClearData: false, autoAcceptAlerts: false, autoDismissAlerts: false, autoGrantPermissions: false, autoWebview: false, browserName: Chromium, cloudViewLink: https://cloud.seetest.io:44..., commandTimeouts: 120000, desired: {browserName: Chromium, deviceQuery: @os='android' and @version=..., platformName: Android, testName: Quick Start Android Browser...}, device.category: PHONE, device.majorVersion: 8, device.manufacture: samsung, device.model: SM-G930F, device.name: samsung Galaxy S7 IO IL 086, device.os: Android, device.screenSize: 1080x1920, device.serialNumber: 98866742375a394e33, device.version: 8.0.0, deviceQuery: @os='android' and @version=..., deviceUDID: 98866742375a394e33, dontGoHomeOnQuit: false, dontStopAppOnReset: false, ehmPrefixUrl: /agent-6292135, ehmUrl: https://cloud.seetest.io:44..., fullReset: false, gridNodePort: 7828, install.only.for.update: false, installOnlyForUpdate: false, instrumentApp: false, javascriptEnabled: true, keystorePath: ~/.android/debug.keystore, locationServicesAuthorized: false, newSessionWaitTimeout: 600.0, noReset: false, platform: ANDROID, platformName: Android, projectName: , reportDirectory: reports, reportFormat: xml, reportTestId: 1324.0, reportUrl: https://cloud.seetest.io:44..., reservationDuration: 240.0, takeScreenshots: true, test.type: Mobile, testName: Quick Start Android Browser..., udid: 98866742375a394e33, useKeystore: false, waitForDeviceTimeout: 120000.0}
+Session ID: CLOUD-SID:2021-06-04_09-12-09-4743b0c1-963e-4aea-b273-8d6cbca309f0
+18:45:31.531 [main] INFO  TestMCACarryoutASAP - ******STARTING TEST MCA CARRY OUT ASAP******
+18:45:31.631 [main] INFO  TestMCACarryoutASAP - Starting QA site validation
+18:45:34.058 [main] INFO  TestMCACarryoutASAP - QA site launch is successful, Site Name : https://qa3.chilis.com/
+18:45:37.987 [main] INFO  TestMCACarryoutASAP - Pop up closed
+18:45:42.415 [main] INFO  TestMCACarryoutASAP - Menu button clicked
+18:45:46.868 [main] INFO  TestMCACarryoutASAP - Login option selected
+18:45:55.005 [main] INFO  TestMCACarryoutASAP - User name (512) 212-1212 entered
+18:46:00.806 [main] INFO  TestMCACarryoutASAP - Password Brinkers@2021 entered
+18:46:02.763 [main] INFO  TestMCACarryoutASAP - Sign in button clicked
+18:46:16.992 [main] INFO  TestMCACarryoutASAP - Menu button clicked
+18:46:21.752 [main] INFO  TestMCACarryoutASAP - Location option selected
+18:46:27.959 [main] INFO  TestMCACarryoutASAP - Restaurant location entered as Addison, TX 75001, USA
+18:46:33.592 [main] INFO  TestMCACarryoutASAP - Search button clicked
+18:46:48.867 [main] INFO  TestMCACarryoutASAP - Site scrolled and order button clicked
+18:47:07.240 [main] INFO  TestMCACarryoutASAP - Chilis favourite Item Original Full Order Ribs selected
+18:47:17.538 [main] INFO  TestMCACarryoutASAP - View Cart clicked
+18:47:24.546 [main] INFO  TestMCACarryoutASAP - Order checked Out
+18:47:34.021 [main] INFO  TestMCACarryoutASAP - Carryout Button is Clicked
+18:47:44.334 [main] ERROR TestMCACarryoutASAP - Failed to select Later Today
+18:47:44.336 [main] ERROR TestMCACarryoutASAP - unknown error (An unknown server-side error occurred. status='false'. Failed to complete internal method: 'hybridSelect args: [, 0, xpath, (//*[text()='Later Today'])[1]/.., Later Today]', details: )  (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+Build info: version: '3.12.0', revision: '7c6e0b3', time: '2018-05-08T14:04:26.12Z'
+System info: host: 'LAPTOP-2HJFJ1OT', ip: '192.168.29.229', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_281'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {appBuildVersion: , appReleaseVersion: , appiumVersion: 1.8.0, applicationClearData: false, autoAcceptAlerts: false, autoDismissAlerts: false, autoGrantPermissions: false, autoWebview: false, browserName: Chromium, cloudViewLink: https://cloud.seetest.io:44..., commandTimeouts: 120000, desired: {browserName: Chromium, deviceQuery: @os='android' and @version=..., platformName: Android, testName: Quick Start Android Browser...}, device.category: PHONE, device.majorVersion: 8, device.manufacture: samsung, device.model: SM-N950F, device.name: galaxy NOTE 8 IO IL 058, device.os: Android, device.screenSize: 1080x2220, device.serialNumber: ce061716e0a9dcc00c7e, device.version: 8.0.0, deviceQuery: @os='android' and @version=..., deviceUDID: ce061716e0a9dcc00c7e, dontGoHomeOnQuit: false, dontStopAppOnReset: false, ehmPrefixUrl: /agent-6292135, ehmUrl: https://cloud.seetest.io:44..., fullReset: false, gridNodePort: 7829, install.only.for.update: false, installOnlyForUpdate: false, instrumentApp: false, javascriptEnabled: true, keystorePath: ~/.android/debug.keystore, locationServicesAuthorized: false, newSessionWaitTimeout: 600.0, noReset: false, platform: ANDROID, platformName: Android, projectName: , reportDirectory: reports, reportFormat: xml, reportTestId: 1325.0, reportUrl: https://cloud.seetest.io:44..., reservationDuration: 240.0, takeScreenshots: true, test.type: Mobile, testName: Quick Start Android Browser..., udid: ce061716e0a9dcc00c7e, useKeystore: false, waitForDeviceTimeout: 120000.0}
+Session ID: CLOUD-SID:2021-06-04_09-15-07-722d0181-3060-4d46-bdf1-7bca6b3a7950
+18:48:24.947 [main] INFO  TestMCACarryoutASAP - ******STARTING TEST MCA CARRY OUT ASAP******
+18:48:25.040 [main] INFO  TestMCACarryoutASAP - Starting QA site validation
+18:48:27.117 [main] INFO  TestMCACarryoutASAP - QA site launch is successful, Site Name : https://qa3.chilis.com/
+18:48:31.263 [main] INFO  TestMCACarryoutASAP - Pop up closed
+18:48:36.098 [main] INFO  TestMCACarryoutASAP - Menu button clicked
+18:48:41.214 [main] INFO  TestMCACarryoutASAP - Login option selected
+18:48:50.139 [main] INFO  TestMCACarryoutASAP - User name (512) 212-1212 entered
+18:48:56.366 [main] INFO  TestMCACarryoutASAP - Password Brinkers@2021 entered
+18:48:58.515 [main] INFO  TestMCACarryoutASAP - Sign in button clicked
+18:49:10.739 [main] INFO  TestMCACarryoutASAP - Menu button clicked
+18:49:15.605 [main] INFO  TestMCACarryoutASAP - Location option selected
+18:49:21.774 [main] INFO  TestMCACarryoutASAP - Restaurant location entered as Addison, TX 75001, USA
+18:49:27.692 [main] INFO  TestMCACarryoutASAP - Search button clicked
+18:49:44.395 [main] INFO  TestMCACarryoutASAP - Site scrolled and order button clicked
+18:50:01.928 [main] INFO  TestMCACarryoutASAP - Chilis favourite Item Original Full Order Ribs selected
+18:50:12.982 [main] INFO  TestMCACarryoutASAP - View Cart clicked
+18:50:33.515 [main] ERROR TestMCACarryoutASAP - Order check out failed
+18:50:33.516 [main] ERROR TestMCACarryoutASAP - Expected condition failed: waiting for element to be clickable: By.xpath: //*[@id='cart-checkout'] (tried for 15 second(s) with 500 milliseconds interval)
+Build info: version: '3.12.0', revision: '7c6e0b3', time: '2018-05-08T14:04:26.12Z'
+System info: host: 'LAPTOP-2HJFJ1OT', ip: '192.168.29.229', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_281'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {appBuildVersion: , appReleaseVersion: , appiumVersion: 1.8.0, applicationClearData: false, autoAcceptAlerts: false, autoDismissAlerts: false, autoGrantPermissions: false, autoWebview: false, browserName: Chromium, cloudViewLink: https://cloud.seetest.io:44..., commandTimeouts: 120000, desired: {browserName: Chromium, deviceQuery: @os='android' and @version=..., platformName: Android, testName: Quick Start Android Browser...}, device.category: PHONE, device.majorVersion: 8, device.manufacture: samsung, device.model: SM-G930F, device.name: samsung Galaxy S7 IO IL 086, device.os: Android, device.screenSize: 1080x1920, device.serialNumber: 98866742375a394e33, device.version: 8.0.0, deviceQuery: @os='android' and @version=..., deviceUDID: 98866742375a394e33, dontGoHomeOnQuit: false, dontStopAppOnReset: false, ehmPrefixUrl: /agent-6292135, ehmUrl: https://cloud.seetest.io:44..., fullReset: false, gridNodePort: 7830, install.only.for.update: false, installOnlyForUpdate: false, instrumentApp: false, javascriptEnabled: true, keystorePath: ~/.android/debug.keystore, locationServicesAuthorized: false, newSessionWaitTimeout: 600.0, noReset: false, platform: ANDROID, platformName: Android, projectName: , reportDirectory: reports, reportFormat: xml, reportTestId: 1326.0, reportUrl: https://cloud.seetest.io:44..., reservationDuration: 240.0, takeScreenshots: true, test.type: Mobile, testName: Quick Start Android Browser..., udid: 98866742375a394e33, useKeystore: false, waitForDeviceTimeout: 120000.0}
+Session ID: CLOUD-SID:2021-06-04_09-17-57-d010bda3-c217-4607-9882-cdc649046fd5
+18:51:08.801 [main] INFO  TestMCACarryoutASAP - ******STARTING TEST MCA CARRY OUT ASAP******
+18:51:08.873 [main] INFO  TestMCACarryoutASAP - Starting QA site validation
+18:51:11.045 [main] INFO  TestMCACarryoutASAP - QA site launch is successful, Site Name : https://qa3.chilis.com/
+18:51:14.986 [main] INFO  TestMCACarryoutASAP - Pop up closed
+18:51:19.621 [main] INFO  TestMCACarryoutASAP - Menu button clicked
+18:51:24.377 [main] INFO  TestMCACarryoutASAP - Login option selected
+18:51:32.215 [main] INFO  TestMCACarryoutASAP - User name (512) 212-1212 entered
+18:51:37.601 [main] INFO  TestMCACarryoutASAP - Password Brinkers@2021 entered
+18:51:39.651 [main] INFO  TestMCACarryoutASAP - Sign in button clicked
+18:51:49.684 [main] INFO  TestMCACarryoutASAP - Menu button clicked
+18:51:54.579 [main] INFO  TestMCACarryoutASAP - Location option selected
+18:52:01.134 [main] INFO  TestMCACarryoutASAP - Restaurant location entered as Addison, TX 75001, USA
+18:52:06.509 [main] INFO  TestMCACarryoutASAP - Search button clicked
+18:52:22.143 [main] INFO  TestMCACarryoutASAP - Site scrolled and order button clicked
+18:52:40.437 [main] INFO  TestMCACarryoutASAP - Chilis favourite Item Original Full Order Ribs selected
+18:52:50.913 [main] INFO  TestMCACarryoutASAP - View Cart clicked
+18:52:58.555 [main] INFO  TestMCACarryoutASAP - Order checked Out
+18:53:06.346 [main] INFO  TestMCACarryoutASAP - Carryout Button is Clicked
+18:53:16.018 [main] ERROR TestMCACarryoutASAP - Failed to select Later Today
+18:53:16.019 [main] ERROR TestMCACarryoutASAP - unknown error (An unknown server-side error occurred. status='false'. Failed to complete internal method: 'hybridSelect args: [, 0, xpath, (//*[text()='Later Today'])[1]/.., Later Today]', details: )  (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+Build info: version: '3.12.0', revision: '7c6e0b3', time: '2018-05-08T14:04:26.12Z'
+System info: host: 'LAPTOP-2HJFJ1OT', ip: '192.168.29.229', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_281'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {appBuildVersion: , appReleaseVersion: , appiumVersion: 1.8.0, applicationClearData: false, autoAcceptAlerts: false, autoDismissAlerts: false, autoGrantPermissions: false, autoWebview: false, browserName: Chromium, cloudViewLink: https://cloud.seetest.io:44..., commandTimeouts: 120000, desired: {browserName: Chromium, deviceQuery: @os='android' and @version=..., platformName: Android, testName: Quick Start Android Browser...}, device.category: PHONE, device.majorVersion: 8, device.manufacture: samsung, device.model: SM-N950F, device.name: galaxy NOTE 8 IO IL 058, device.os: Android, device.screenSize: 1080x2220, device.serialNumber: ce061716e0a9dcc00c7e, device.version: 8.0.0, deviceQuery: @os='android' and @version=..., deviceUDID: ce061716e0a9dcc00c7e, dontGoHomeOnQuit: false, dontStopAppOnReset: false, ehmPrefixUrl: /agent-6292135, ehmUrl: https://cloud.seetest.io:44..., fullReset: false, gridNodePort: 7831, install.only.for.update: false, installOnlyForUpdate: false, instrumentApp: false, javascriptEnabled: true, keystorePath: ~/.android/debug.keystore, locationServicesAuthorized: false, newSessionWaitTimeout: 600.0, noReset: false, platform: ANDROID, platformName: Android, projectName: , reportDirectory: reports, reportFormat: xml, reportTestId: 1327.0, reportUrl: https://cloud.seetest.io:44..., reservationDuration: 240.0, takeScreenshots: true, test.type: Mobile, testName: Quick Start Android Browser..., udid: ce061716e0a9dcc00c7e, useKeystore: false, waitForDeviceTimeout: 120000.0}
+Session ID: CLOUD-SID:2021-06-04_09-20-44-ad417da0-ba41-4c77-86dc-de64990af2a1
+18:53:59.065 [main] INFO  TestMCACarryoutASAP - ******STARTING TEST MCA CARRY OUT ASAP******
+18:54:00.282 [main] INFO  TestMCACarryoutASAP - Starting QA site validation
+18:54:02.858 [main] INFO  TestMCACarryoutASAP - QA site launch is successful, Site Name : https://qa3.chilis.com/
+18:54:07.057 [main] INFO  TestMCACarryoutASAP - Pop up closed
+18:54:11.874 [main] INFO  TestMCACarryoutASAP - Menu button clicked
+18:54:16.645 [main] INFO  TestMCACarryoutASAP - Login option selected
+18:54:25.808 [main] INFO  TestMCACarryoutASAP - User name (512) 212-1212 entered
+18:54:31.899 [main] INFO  TestMCACarryoutASAP - Password Brinkers@2021 entered
+18:54:34.172 [main] INFO  TestMCACarryoutASAP - Sign in button clicked
+18:54:44.093 [main] INFO  TestMCACarryoutASAP - Menu button clicked
+18:54:49.399 [main] INFO  TestMCACarryoutASAP - Location option selected
+18:54:54.992 [main] INFO  TestMCACarryoutASAP - Restaurant location entered as Addison, TX 75001, USA
+18:55:00.726 [main] INFO  TestMCACarryoutASAP - Search button clicked
+18:55:16.986 [main] INFO  TestMCACarryoutASAP - Site scrolled and order button clicked
+18:55:34.228 [main] INFO  TestMCACarryoutASAP - Chilis favourite Item Original Full Order Ribs selected
+18:55:46.020 [main] INFO  TestMCACarryoutASAP - View Cart clicked
+18:55:53.504 [main] INFO  TestMCACarryoutASAP - Order checked Out
+18:56:01.886 [main] INFO  TestMCACarryoutASAP - Carryout Button is Clicked
+18:56:13.736 [main] ERROR TestMCACarryoutASAP - Failed to select Later Today
+18:56:13.740 [main] ERROR TestMCACarryoutASAP - unknown error (An unknown server-side error occurred. status='false'. Failed to complete internal method: 'hybridSelect args: [, 0, xpath, (//*[text()='Later Today'])[1]/.., Later Today]', details: )  (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+Build info: version: '3.12.0', revision: '7c6e0b3', time: '2018-05-08T14:04:26.12Z'
+System info: host: 'LAPTOP-2HJFJ1OT', ip: '192.168.29.229', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_281'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {appBuildVersion: , appReleaseVersion: , appiumVersion: 1.8.0, applicationClearData: false, autoAcceptAlerts: false, autoDismissAlerts: false, autoGrantPermissions: false, autoWebview: false, browserName: Chromium, cloudViewLink: https://cloud.seetest.io:44..., commandTimeouts: 120000, desired: {browserName: Chromium, deviceQuery: @os='android' and @version=..., platformName: Android, testName: Quick Start Android Browser...}, device.category: PHONE, device.majorVersion: 8, device.manufacture: samsung, device.model: SM-G930F, device.name: samsung Galaxy S7 IO IL 086, device.os: Android, device.screenSize: 1080x1920, device.serialNumber: 98866742375a394e33, device.version: 8.0.0, deviceQuery: @os='android' and @version=..., deviceUDID: 98866742375a394e33, dontGoHomeOnQuit: false, dontStopAppOnReset: false, ehmPrefixUrl: /agent-6292135, ehmUrl: https://cloud.seetest.io:44..., fullReset: false, gridNodePort: 7832, install.only.for.update: false, installOnlyForUpdate: false, instrumentApp: false, javascriptEnabled: true, keystorePath: ~/.android/debug.keystore, locationServicesAuthorized: false, newSessionWaitTimeout: 600.0, noReset: false, platform: ANDROID, platformName: Android, projectName: , reportDirectory: reports, reportFormat: xml, reportTestId: 1328.0, reportUrl: https://cloud.seetest.io:44..., reservationDuration: 240.0, takeScreenshots: true, test.type: Mobile, testName: Quick Start Android Browser..., udid: 98866742375a394e33, useKeystore: false, waitForDeviceTimeout: 120000.0}
+Session ID: CLOUD-SID:2021-06-04_09-22-10-ab73161a-9ca3-4dbf-adae-4f8fc7ce6a9f
+18:56:51.277 [main] INFO  TestMCACarryoutASAP - ******STARTING TEST MCA CARRY OUT ASAP******
+18:56:51.375 [main] INFO  TestMCACarryoutASAP - Starting QA site validation
+18:56:53.586 [main] INFO  TestMCACarryoutASAP - QA site launch is successful, Site Name : https://qa3.chilis.com/
+18:56:57.530 [main] INFO  TestMCACarryoutASAP - Pop up closed
+18:57:02.078 [main] INFO  TestMCACarryoutASAP - Menu button clicked
+18:57:06.647 [main] INFO  TestMCACarryoutASAP - Login option selected
+18:57:14.031 [main] INFO  TestMCACarryoutASAP - User name (512) 212-1212 entered
+18:57:19.652 [main] INFO  TestMCACarryoutASAP - Password Brinkers@2021 entered
+18:57:21.632 [main] INFO  TestMCACarryoutASAP - Sign in button clicked
+18:57:32.163 [main] INFO  TestMCACarryoutASAP - Menu button clicked
+18:57:36.843 [main] INFO  TestMCACarryoutASAP - Location option selected
+18:57:42.713 [main] INFO  TestMCACarryoutASAP - Restaurant location entered as Addison, TX 75001, USA
+18:57:48.304 [main] INFO  TestMCACarryoutASAP - Search button clicked
+18:58:05.032 [main] INFO  TestMCACarryoutASAP - Site scrolled and order button clicked
+18:58:21.986 [main] INFO  TestMCACarryoutASAP - Chilis favourite Item Original Full Order Ribs selected
+18:58:32.985 [main] INFO  TestMCACarryoutASAP - View Cart clicked
+18:58:40.304 [main] INFO  TestMCACarryoutASAP - Order checked Out
+18:58:49.597 [main] INFO  TestMCACarryoutASAP - Carryout Button is Clicked
+18:59:00.603 [main] ERROR TestMCACarryoutASAP - Failed to select Later Today
+18:59:00.619 [main] ERROR TestMCACarryoutASAP - unknown error (An unknown server-side error occurred. status='false'. Failed to complete internal method: 'hybridSelect args: [, 0, xpath, (//*[text()='Later Today'])[1]/.., Later Today]', details: )  (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+Build info: version: '3.12.0', revision: '7c6e0b3', time: '2018-05-08T14:04:26.12Z'
+System info: host: 'LAPTOP-2HJFJ1OT', ip: '192.168.29.229', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_281'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {appBuildVersion: , appReleaseVersion: , appiumVersion: 1.8.0, applicationClearData: false, autoAcceptAlerts: false, autoDismissAlerts: false, autoGrantPermissions: false, autoWebview: false, browserName: Chromium, cloudViewLink: https://cloud.seetest.io:44..., commandTimeouts: 120000, desired: {browserName: Chromium, deviceQuery: @os='android' and @version=..., platformName: Android, testName: Quick Start Android Browser...}, device.category: PHONE, device.majorVersion: 8, device.manufacture: samsung, device.model: SM-N950F, device.name: galaxy NOTE 8 IO IL 058, device.os: Android, device.screenSize: 1080x2220, device.serialNumber: ce061716e0a9dcc00c7e, device.version: 8.0.0, deviceQuery: @os='android' and @version=..., deviceUDID: ce061716e0a9dcc00c7e, dontGoHomeOnQuit: false, dontStopAppOnReset: false, ehmPrefixUrl: /agent-6292135, ehmUrl: https://cloud.seetest.io:44..., fullReset: false, gridNodePort: 7833, install.only.for.update: false, installOnlyForUpdate: false, instrumentApp: false, javascriptEnabled: true, keystorePath: ~/.android/debug.keystore, locationServicesAuthorized: false, newSessionWaitTimeout: 600.0, noReset: false, platform: ANDROID, platformName: Android, projectName: , reportDirectory: reports, reportFormat: xml, reportTestId: 1329.0, reportUrl: https://cloud.seetest.io:44..., reservationDuration: 240.0, takeScreenshots: true, test.type: Mobile, testName: Quick Start Android Browser..., udid: ce061716e0a9dcc00c7e, useKeystore: false, waitForDeviceTimeout: 120000.0}
+Session ID: CLOUD-SID:2021-06-04_09-26-27-e1903ff7-7368-45be-81f6-7ed4799979a3
+18:59:40.979 [main] INFO  TestMCACarryoutASAP - ******STARTING TEST MCA CARRY OUT ASAP******
+18:59:41.059 [main] INFO  TestMCACarryoutASAP - Starting QA site validation
+18:59:43.207 [main] INFO  TestMCACarryoutASAP - QA site launch is successful, Site Name : https://qa3.chilis.com/
+18:59:47.493 [main] INFO  TestMCACarryoutASAP - Pop up closed
+18:59:51.933 [main] INFO  TestMCACarryoutASAP - Menu button clicked
+18:59:56.675 [main] INFO  TestMCACarryoutASAP - Login option selected
+19:00:05.947 [main] INFO  TestMCACarryoutASAP - User name (512) 212-1212 entered
+19:00:12.110 [main] INFO  TestMCACarryoutASAP - Password Brinkers@2021 entered
+19:00:14.346 [main] INFO  TestMCACarryoutASAP - Sign in button clicked
+19:00:26.217 [main] INFO  TestMCACarryoutASAP - Menu button clicked
+19:00:31.154 [main] INFO  TestMCACarryoutASAP - Location option selected
+19:00:37.389 [main] INFO  TestMCACarryoutASAP - Restaurant location entered as Addison, TX 75001, USA
+19:00:43.138 [main] INFO  TestMCACarryoutASAP - Search button clicked
+19:00:58.619 [main] INFO  TestMCACarryoutASAP - Site scrolled and order button clicked
+19:01:00.819 [main] INFO  TestMCACarryoutASAP - Chilis favourite Item Original Full Order Ribs selected
+19:01:27.972 [main] ERROR TestMCACarryoutASAP - Failed to click View Cart
+19:01:27.974 [main] ERROR TestMCACarryoutASAP - Expected condition failed: waiting for element to be clickable: By.xpath: //a[@id='mini-cart-view-upsell'] (tried for 15 second(s) with 500 milliseconds interval)
+19:04:12.532 [main] INFO  TestMCACarryoutASAP - ******STARTING TEST MCA CARRY OUT ASAP******
+19:04:13.564 [main] INFO  TestMCACarryoutASAP - Starting QA site validation
+19:04:15.876 [main] INFO  TestMCACarryoutASAP - QA site launch is successful, Site Name : https://qa3.chilis.com/
+19:04:19.994 [main] INFO  TestMCACarryoutASAP - Pop up closed
+19:04:24.439 [main] INFO  TestMCACarryoutASAP - Menu button clicked
+19:04:29.542 [main] INFO  TestMCACarryoutASAP - Login option selected
+19:04:38.458 [main] INFO  TestMCACarryoutASAP - User name (512) 212-1212 entered
+19:04:44.557 [main] INFO  TestMCACarryoutASAP - Password Brinkers@2021 entered
+19:04:46.618 [main] INFO  TestMCACarryoutASAP - Sign in button clicked
+19:04:56.820 [main] INFO  TestMCACarryoutASAP - Menu button clicked
+19:05:01.981 [main] INFO  TestMCACarryoutASAP - Location option selected
+19:05:08.075 [main] INFO  TestMCACarryoutASAP - Restaurant location entered as Addison, TX 75001, USA
+19:05:13.747 [main] INFO  TestMCACarryoutASAP - Search button clicked
+19:05:29.690 [main] INFO  TestMCACarryoutASAP - Site scrolled and order button clicked
+19:05:46.885 [main] INFO  TestMCACarryoutASAP - Chilis favourite Item Original Full Order Ribs selected
+19:05:58.206 [main] INFO  TestMCACarryoutASAP - View Cart clicked
+19:06:16.799 [main] ERROR TestMCACarryoutASAP - Order check out failed
+19:06:16.803 [main] ERROR TestMCACarryoutASAP - Expected condition failed: waiting for element to be clickable: By.xpath: //*[@id='cart-checkout'] (tried for 15 second(s) with 500 milliseconds interval)
+Build info: version: '3.12.0', revision: '7c6e0b3', time: '2018-05-08T14:04:26.12Z'
+System info: host: 'LAPTOP-2HJFJ1OT', ip: '192.168.29.229', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_281'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {appBuildVersion: , appReleaseVersion: , appiumVersion: 1.8.0, applicationClearData: false, autoAcceptAlerts: false, autoDismissAlerts: false, autoGrantPermissions: false, autoWebview: false, browserName: Chromium, cloudViewLink: https://cloud.seetest.io:44..., commandTimeouts: 120000, desired: {browserName: Chromium, deviceQuery: @os='android' and @version=..., platformName: Android, testName: Quick Start Android Browser...}, device.category: PHONE, device.majorVersion: 8, device.manufacture: samsung, device.model: SM-G930F, device.name: samsung Galaxy S7 IO IL 086, device.os: Android, device.screenSize: 1080x1920, device.serialNumber: 98866742375a394e33, device.version: 8.0.0, deviceQuery: @os='android' and @version=..., deviceUDID: 98866742375a394e33, dontGoHomeOnQuit: false, dontStopAppOnReset: false, ehmPrefixUrl: /agent-6292135, ehmUrl: https://cloud.seetest.io:44..., fullReset: false, gridNodePort: 7835, install.only.for.update: false, installOnlyForUpdate: false, instrumentApp: false, javascriptEnabled: true, keystorePath: ~/.android/debug.keystore, locationServicesAuthorized: false, newSessionWaitTimeout: 600.0, noReset: false, platform: ANDROID, platformName: Android, projectName: , reportDirectory: reports, reportFormat: xml, reportTestId: 1332.0, reportUrl: https://cloud.seetest.io:44..., reservationDuration: 240.0, takeScreenshots: true, test.type: Mobile, testName: Quick Start Android Browser..., udid: 98866742375a394e33, useKeystore: false, waitForDeviceTimeout: 120000.0}
+Session ID: CLOUD-SID:2021-06-04_09-33-47-1a8d07c0-d4f0-47e9-947e-97f90c4e7823
+19:07:21.810 [main] INFO  TestMCACarryoutASAP - ******STARTING TEST MCA CARRY OUT ASAP******
+19:07:22.828 [main] INFO  TestMCACarryoutASAP - Starting QA site validation
+19:07:25.230 [main] INFO  TestMCACarryoutASAP - QA site launch is successful, Site Name : https://qa3.chilis.com/
+19:07:29.647 [main] INFO  TestMCACarryoutASAP - Pop up closed
+19:07:34.530 [main] INFO  TestMCACarryoutASAP - Menu button clicked
+19:07:39.642 [main] INFO  TestMCACarryoutASAP - Login option selected
+19:07:49.046 [main] INFO  TestMCACarryoutASAP - User name (512) 212-1212 entered
+19:07:55.349 [main] INFO  TestMCACarryoutASAP - Password Brinkers@2021 entered
+19:07:57.682 [main] INFO  TestMCACarryoutASAP - Sign in button clicked
+19:08:08.249 [main] INFO  TestMCACarryoutASAP - Menu button clicked
+19:08:13.495 [main] INFO  TestMCACarryoutASAP - Location option selected
+19:08:19.757 [main] INFO  TestMCACarryoutASAP - Restaurant location entered as Addison, TX 75001, USA
+19:08:25.789 [main] INFO  TestMCACarryoutASAP - Search button clicked
+19:08:42.161 [main] INFO  TestMCACarryoutASAP - Site scrolled and order button clicked
+19:09:00.238 [main] INFO  TestMCACarryoutASAP - Chilis favourite Item Original Full Order Ribs selected
+19:09:11.488 [main] INFO  TestMCACarryoutASAP - View Cart clicked
+19:09:31.188 [main] ERROR TestMCACarryoutASAP - Order check out failed
+19:09:31.191 [main] ERROR TestMCACarryoutASAP - Expected condition failed: waiting for element to be clickable: By.xpath: //*[@id='cart-checkout'] (tried for 15 second(s) with 500 milliseconds interval)
+Build info: version: '3.12.0', revision: '7c6e0b3', time: '2018-05-08T14:04:26.12Z'
+System info: host: 'LAPTOP-2HJFJ1OT', ip: '192.168.29.229', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_281'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {appBuildVersion: , appReleaseVersion: , appiumVersion: 1.8.0, applicationClearData: false, autoAcceptAlerts: false, autoDismissAlerts: false, autoGrantPermissions: false, autoWebview: false, browserName: Chromium, cloudViewLink: https://cloud.seetest.io:44..., commandTimeouts: 120000, desired: {browserName: Chromium, deviceQuery: @os='android' and @version=..., platformName: Android, testName: Quick Start Android Browser...}, device.category: PHONE, device.majorVersion: 8, device.manufacture: samsung, device.model: SM-G930F, device.name: samsung Galaxy S7 IO IL 086, device.os: Android, device.screenSize: 1080x1920, device.serialNumber: 98866742375a394e33, device.version: 8.0.0, deviceQuery: @os='android' and @version=..., deviceUDID: 98866742375a394e33, dontGoHomeOnQuit: false, dontStopAppOnReset: false, ehmPrefixUrl: /agent-6292135, ehmUrl: https://cloud.seetest.io:44..., fullReset: false, gridNodePort: 7836, install.only.for.update: false, installOnlyForUpdate: false, instrumentApp: false, javascriptEnabled: true, keystorePath: ~/.android/debug.keystore, locationServicesAuthorized: false, newSessionWaitTimeout: 600.0, noReset: false, platform: ANDROID, platformName: Android, projectName: , reportDirectory: reports, reportFormat: xml, reportTestId: 1333.0, reportUrl: https://cloud.seetest.io:44..., reservationDuration: 240.0, takeScreenshots: true, test.type: Mobile, testName: Quick Start Android Browser..., udid: 98866742375a394e33, useKeystore: false, waitForDeviceTimeout: 120000.0}
+Session ID: CLOUD-SID:2021-06-04_09-36-52-14a226d8-a02f-4949-8b5d-8714531f9b5e
+19:14:28.631 [main] INFO  TestMCACarryoutASAP - ******STARTING TEST MCA CARRY OUT ASAP******
+19:14:30.055 [main] INFO  TestMCACarryoutASAP - Starting QA site validation
+19:14:32.147 [main] INFO  TestMCACarryoutASAP - QA site launch is successful, Site Name : https://qa3.chilis.com/
+19:14:36.715 [main] INFO  TestMCACarryoutASAP - Pop up closed
+19:14:41.415 [main] INFO  TestMCACarryoutASAP - Menu button clicked
+19:14:46.195 [main] INFO  TestMCACarryoutASAP - Login option selected
+19:14:55.042 [main] INFO  TestMCACarryoutASAP - User name (512) 212-1212 entered
+19:15:01.384 [main] INFO  TestMCACarryoutASAP - Password Brinkers@2021 entered
+19:15:03.812 [main] INFO  TestMCACarryoutASAP - Sign in button clicked
+19:15:16.506 [main] INFO  TestMCACarryoutASAP - Menu button clicked
+19:15:21.509 [main] INFO  TestMCACarryoutASAP - Location option selected
+19:15:27.850 [main] INFO  TestMCACarryoutASAP - Restaurant location entered as Addison, TX 75001, USA
+19:15:33.717 [main] INFO  TestMCACarryoutASAP - Search button clicked
+19:15:49.536 [main] INFO  TestMCACarryoutASAP - Site scrolled and order button clicked
+19:16:07.175 [main] INFO  TestMCACarryoutASAP - Chilis favourite Item Original Full Order Ribs selected
+19:16:18.103 [main] INFO  TestMCACarryoutASAP - View Cart clicked
+19:16:27.373 [main] INFO  TestMCACarryoutASAP - Order checked Out
+19:16:37.646 [main] INFO  TestMCACarryoutASAP - Carryout Button is Clicked
+19:16:42.943 [main] ERROR TestMCACarryoutASAP - Failed to select Later Today
+19:16:42.948 [main] ERROR TestMCACarryoutASAP - invalid selector (Argument was an invalid selector (e.g. XPath/CSS). xpath = //*[text()='Tomorrow')  (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/invalid_selector_exception.html
+Build info: version: '3.12.0', revision: '7c6e0b3', time: '2018-05-08T14:04:26.12Z'
+System info: host: 'LAPTOP-2HJFJ1OT', ip: '192.168.29.229', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_281'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {appBuildVersion: , appReleaseVersion: , appiumVersion: 1.8.0, applicationClearData: false, autoAcceptAlerts: false, autoDismissAlerts: false, autoGrantPermissions: false, autoWebview: false, browserName: Chromium, cloudViewLink: https://cloud.seetest.io:44..., commandTimeouts: 120000, desired: {browserName: Chromium, deviceQuery: @os='android' and @version=..., platformName: Android, testName: Quick Start Android Browser...}, device.category: PHONE, device.majorVersion: 8, device.manufacture: samsung, device.model: SM-G930F, device.name: samsung Galaxy S7 IO IL 086, device.os: Android, device.screenSize: 1080x1920, device.serialNumber: 98866742375a394e33, device.version: 8.0.0, deviceQuery: @os='android' and @version=..., deviceUDID: 98866742375a394e33, dontGoHomeOnQuit: false, dontStopAppOnReset: false, ehmPrefixUrl: /agent-6292135, ehmUrl: https://cloud.seetest.io:44..., fullReset: false, gridNodePort: 7837, install.only.for.update: false, installOnlyForUpdate: false, instrumentApp: false, javascriptEnabled: true, keystorePath: ~/.android/debug.keystore, locationServicesAuthorized: false, newSessionWaitTimeout: 600.0, noReset: false, platform: ANDROID, platformName: Android, projectName: , reportDirectory: reports, reportFormat: xml, reportTestId: 1334.0, reportUrl: https://cloud.seetest.io:44..., reservationDuration: 240.0, takeScreenshots: true, test.type: Mobile, testName: Quick Start Android Browser..., udid: 98866742375a394e33, useKeystore: false, waitForDeviceTimeout: 120000.0}
+Session ID: CLOUD-SID:2021-06-04_09-44-00-80e70dd0-167f-486f-9c96-5774aa8cc1d4
+*** Element info: {Using=xpath, value=//*[text()='Tomorrow'}
+19:19:01.540 [main] INFO  TestMCACarryoutASAP - ******STARTING TEST MCA CARRY OUT ASAP******
+19:19:02.580 [main] INFO  TestMCACarryoutASAP - Starting QA site validation
+19:19:04.490 [main] INFO  TestMCACarryoutASAP - QA site launch is successful, Site Name : https://qa3.chilis.com/
+19:19:08.536 [main] INFO  TestMCACarryoutASAP - Pop up closed
+19:19:13.060 [main] INFO  TestMCACarryoutASAP - Menu button clicked
+19:19:17.984 [main] INFO  TestMCACarryoutASAP - Login option selected
+19:19:26.234 [main] INFO  TestMCACarryoutASAP - User name (512) 212-1212 entered
+19:19:31.822 [main] INFO  TestMCACarryoutASAP - Password Brinkers@2021 entered
+19:19:33.840 [main] INFO  TestMCACarryoutASAP - Sign in button clicked
+19:19:44.187 [main] INFO  TestMCACarryoutASAP - Menu button clicked
+19:19:49.499 [main] INFO  TestMCACarryoutASAP - Location option selected
+19:19:54.870 [main] INFO  TestMCACarryoutASAP - Restaurant location entered as Addison, TX 75001, USA
+19:20:00.526 [main] INFO  TestMCACarryoutASAP - Search button clicked
+19:20:16.479 [main] INFO  TestMCACarryoutASAP - Site scrolled and order button clicked
+19:20:34.906 [main] INFO  TestMCACarryoutASAP - Chilis favourite Item Original Full Order Ribs selected
+19:20:45.350 [main] INFO  TestMCACarryoutASAP - View Cart clicked
+19:20:53.963 [main] INFO  TestMCACarryoutASAP - Order checked Out
+19:21:01.843 [main] INFO  TestMCACarryoutASAP - Carryout Button is Clicked
+19:21:16.173 [main] ERROR TestMCACarryoutASAP - Failed to select Later Today
+19:21:16.178 [main] ERROR TestMCACarryoutASAP - unknown error (An unknown server-side error occurred. status='false'. Failed to complete internal method: 'hybridSelect args: [, 0, xpath, (//*[text()='Later Today'])[1]/.., Later Today]', details: )  (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+Build info: version: '3.12.0', revision: '7c6e0b3', time: '2018-05-08T14:04:26.12Z'
+System info: host: 'LAPTOP-2HJFJ1OT', ip: '192.168.29.229', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_281'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {appBuildVersion: , appReleaseVersion: , appiumVersion: 1.8.0, applicationClearData: false, autoAcceptAlerts: false, autoDismissAlerts: false, autoGrantPermissions: false, autoWebview: false, browserName: Chromium, cloudViewLink: https://cloud.seetest.io:44..., commandTimeouts: 120000, desired: {browserName: Chromium, deviceQuery: @os='android' and @version=..., platformName: Android, testName: Quick Start Android Browser...}, device.category: PHONE, device.majorVersion: 8, device.manufacture: samsung, device.model: SM-N950F, device.name: galaxy NOTE 8 IO IL 058, device.os: Android, device.screenSize: 1080x2220, device.serialNumber: ce061716e0a9dcc00c7e, device.version: 8.0.0, deviceQuery: @os='android' and @version=..., deviceUDID: ce061716e0a9dcc00c7e, dontGoHomeOnQuit: false, dontStopAppOnReset: false, ehmPrefixUrl: /agent-6292135, ehmUrl: https://cloud.seetest.io:44..., fullReset: false, gridNodePort: 7839, install.only.for.update: false, installOnlyForUpdate: false, instrumentApp: false, javascriptEnabled: true, keystorePath: ~/.android/debug.keystore, locationServicesAuthorized: false, newSessionWaitTimeout: 600.0, noReset: false, platform: ANDROID, platformName: Android, projectName: , reportDirectory: reports, reportFormat: xml, reportTestId: 1336.0, reportUrl: https://cloud.seetest.io:44..., reservationDuration: 240.0, takeScreenshots: true, test.type: Mobile, testName: Quick Start Android Browser..., udid: ce061716e0a9dcc00c7e, useKeystore: false, waitForDeviceTimeout: 120000.0}
+Session ID: CLOUD-SID:2021-06-04_09-47-58-79e092b2-1462-48ee-b79e-484738abfbfb
+19:29:57.838 [main] INFO  TestMCACarryoutASAP - ******STARTING TEST MCA CARRY OUT ASAP******
+19:29:59.296 [main] INFO  TestMCACarryoutASAP - Starting QA site validation
+19:30:01.515 [main] INFO  TestMCACarryoutASAP - QA site launch is successful, Site Name : https://qa3.chilis.com/
+19:30:06.383 [main] INFO  TestMCACarryoutASAP - Pop up closed
+19:30:11.066 [main] INFO  TestMCACarryoutASAP - Menu button clicked
+19:30:15.816 [main] INFO  TestMCACarryoutASAP - Login option selected
+19:30:23.916 [main] INFO  TestMCACarryoutASAP - User name (512) 212-1212 entered
+19:30:30.299 [main] INFO  TestMCACarryoutASAP - Password Brinkers@2021 entered
+19:30:32.567 [main] INFO  TestMCACarryoutASAP - Sign in button clicked
+19:30:45.139 [main] INFO  TestMCACarryoutASAP - Menu button clicked
+19:30:50.464 [main] INFO  TestMCACarryoutASAP - Location option selected
+19:30:56.817 [main] INFO  TestMCACarryoutASAP - Restaurant location entered as Addison, TX 75001, USA
+19:31:02.071 [main] INFO  TestMCACarryoutASAP - Search button clicked
+19:31:18.106 [main] INFO  TestMCACarryoutASAP - Site scrolled and order button clicked
+19:31:35.785 [main] INFO  TestMCACarryoutASAP - Chilis favourite Item Original Full Order Ribs selected
+19:31:47.103 [main] INFO  TestMCACarryoutASAP - View Cart clicked
+19:31:56.241 [main] INFO  TestMCACarryoutASAP - Order checked Out
+19:32:06.036 [main] INFO  TestMCACarryoutASAP - Carryout Button is Clicked
+19:32:22.106 [main] ERROR TestMCACarryoutASAP - Failed to select Later Today
+19:32:22.117 [main] ERROR TestMCACarryoutASAP - unknown error (An unknown server-side error occurred. status='false'. Failed to complete internal method: 'hybridSelect args: [, 0, xpath, (//*[text()='Later Today'])[1]/.., Later Today]', details: )  (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+Build info: version: '3.12.0', revision: '7c6e0b3', time: '2018-05-08T14:04:26.12Z'
+System info: host: 'LAPTOP-2HJFJ1OT', ip: '192.168.29.229', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_281'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {appBuildVersion: , appReleaseVersion: , appiumVersion: 1.8.0, applicationClearData: false, autoAcceptAlerts: false, autoDismissAlerts: false, autoGrantPermissions: false, autoWebview: false, browserName: Chromium, cloudViewLink: https://cloud.seetest.io:44..., commandTimeouts: 120000, desired: {browserName: Chromium, deviceQuery: @os='android' and @version=..., platformName: Android, testName: Quick Start Android Browser...}, device.category: PHONE, device.majorVersion: 8, device.manufacture: samsung, device.model: SM-G930F, device.name: samsung Galaxy S7 IO IL 086, device.os: Android, device.screenSize: 1080x1920, device.serialNumber: 98866742375a394e33, device.version: 8.0.0, deviceQuery: @os='android' and @version=..., deviceUDID: 98866742375a394e33, dontGoHomeOnQuit: false, dontStopAppOnReset: false, ehmPrefixUrl: /agent-6292135, ehmUrl: https://cloud.seetest.io:44..., fullReset: false, gridNodePort: 7841, install.only.for.update: false, installOnlyForUpdate: false, instrumentApp: false, javascriptEnabled: true, keystorePath: ~/.android/debug.keystore, locationServicesAuthorized: false, newSessionWaitTimeout: 600.0, noReset: false, platform: ANDROID, platformName: Android, projectName: , reportDirectory: reports, reportFormat: xml, reportTestId: 1339.0, reportUrl: https://cloud.seetest.io:44..., reservationDuration: 240.0, takeScreenshots: true, test.type: Mobile, testName: Quick Start Android Browser..., udid: 98866742375a394e33, useKeystore: false, waitForDeviceTimeout: 120000.0}
+Session ID: CLOUD-SID:2021-06-04_09-59-26-10d15486-6ccc-41e2-9b3c-ce24294f34a3
+19:41:44.258 [main] INFO  TestMCACarryoutASAP - ******STARTING TEST MCA CARRY OUT ASAP******
+19:41:45.459 [main] INFO  TestMCACarryoutASAP - Starting QA site validation
+19:41:47.817 [main] INFO  TestMCACarryoutASAP - QA site launch is successful, Site Name : https://qa3.chilis.com/
+19:41:51.751 [main] INFO  TestMCACarryoutASAP - Pop up closed
+19:41:56.256 [main] INFO  TestMCACarryoutASAP - Menu button clicked
+19:42:01.074 [main] INFO  TestMCACarryoutASAP - Login option selected
+19:42:10.042 [main] INFO  TestMCACarryoutASAP - User name (512) 212-1212 entered
+19:42:17.437 [main] ERROR TestMCACarryoutASAP - Could not enter password
+19:42:17.441 [main] ERROR TestMCACarryoutASAP - unknown error (An unknown server-side error occurred. status='false'. Failed to complete internal method: 'elementSendText args: [WEB, xpath=(//*[cmd:equalsIgnoreCase(@nodeName,'input')][@id='password'])[1], 0, ]', details: )  (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+Build info: version: '3.12.0', revision: '7c6e0b3', time: '2018-05-08T14:04:26.12Z'
+System info: host: 'LAPTOP-2HJFJ1OT', ip: '192.168.29.229', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_281'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {appBuildVersion: , appReleaseVersion: , appiumVersion: 1.8.0, applicationClearData: false, autoAcceptAlerts: false, autoDismissAlerts: false, autoGrantPermissions: false, autoWebview: false, browserName: Chromium, cloudViewLink: https://cloud.seetest.io:44..., commandTimeouts: 120000, desired: {browserName: Chromium, deviceQuery: @os='android' and @version=..., platformName: Android, testName: Quick Start Android Browser...}, device.category: PHONE, device.majorVersion: 8, device.manufacture: samsung, device.model: SM-G930F, device.name: samsung Galaxy S7 IO IL 086, device.os: Android, device.screenSize: 1080x1920, device.serialNumber: 98866742375a394e33, device.version: 8.0.0, deviceQuery: @os='android' and @version=..., deviceUDID: 98866742375a394e33, dontGoHomeOnQuit: false, dontStopAppOnReset: false, ehmPrefixUrl: /agent-6292135, ehmUrl: https://cloud.seetest.io:44..., fullReset: false, gridNodePort: 7842, install.only.for.update: false, installOnlyForUpdate: false, instrumentApp: false, javascriptEnabled: true, keystorePath: ~/.android/debug.keystore, locationServicesAuthorized: false, newSessionWaitTimeout: 600.0, noReset: false, platform: ANDROID, platformName: Android, projectName: , reportDirectory: reports, reportFormat: xml, reportTestId: 1341.0, reportUrl: https://cloud.seetest.io:44..., reservationDuration: 240.0, takeScreenshots: true, test.type: Mobile, testName: Quick Start Android Browser..., udid: 98866742375a394e33, useKeystore: false, waitForDeviceTimeout: 120000.0}
+Session ID: CLOUD-SID:2021-06-04_10-10-27-1d0b5040-8a66-4e29-9ce9-f62a086cf9a9
+19:43:11.306 [main] INFO  TestMCACarryoutASAP - ******STARTING TEST MCA CARRY OUT ASAP******
+19:43:12.312 [main] INFO  TestMCACarryoutASAP - Starting QA site validation
+19:43:14.277 [main] INFO  TestMCACarryoutASAP - QA site launch is successful, Site Name : https://qa3.chilis.com/
+19:43:18.352 [main] INFO  TestMCACarryoutASAP - Pop up closed
+19:43:22.873 [main] INFO  TestMCACarryoutASAP - Menu button clicked
+19:43:27.539 [main] INFO  TestMCACarryoutASAP - Login option selected
+19:43:36.416 [main] INFO  TestMCACarryoutASAP - User name (512) 212-1212 entered
+19:43:42.372 [main] INFO  TestMCACarryoutASAP - Password Brinkers@2021 entered
+19:43:44.527 [main] INFO  TestMCACarryoutASAP - Sign in button clicked
+19:43:55.209 [main] INFO  TestMCACarryoutASAP - Menu button clicked
+19:44:00.083 [main] INFO  TestMCACarryoutASAP - Location option selected
+19:44:06.181 [main] INFO  TestMCACarryoutASAP - Restaurant location entered as Addison, TX 75001, USA
+19:44:11.491 [main] INFO  TestMCACarryoutASAP - Search button clicked
+19:44:26.307 [main] INFO  TestMCACarryoutASAP - Site scrolled and order button clicked
+19:44:43.542 [main] INFO  TestMCACarryoutASAP - Chilis favourite Item Original Full Order Ribs selected
+19:44:55.092 [main] INFO  TestMCACarryoutASAP - View Cart clicked
+19:45:02.079 [main] INFO  TestMCACarryoutASAP - Order checked Out
+19:45:11.381 [main] INFO  TestMCACarryoutASAP - Carryout Button is Clicked
+19:45:25.737 [main] INFO  TestMCACarryoutASAP - Later Today pickup time is selected
+19:45:42.116 [main] ERROR TestMCACarryoutASAP - Failed to select Pickup time
+19:45:42.119 [main] ERROR TestMCACarryoutASAP - no such element (An element could not be located on the page using the given search parameters (XPATH='//*[text()='31/12/99']'))  (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.12.0', revision: '7c6e0b3', time: '2018-05-08T14:04:26.12Z'
+System info: host: 'LAPTOP-2HJFJ1OT', ip: '192.168.29.229', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_281'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {appBuildVersion: , appReleaseVersion: , appiumVersion: 1.8.0, applicationClearData: false, autoAcceptAlerts: false, autoDismissAlerts: false, autoGrantPermissions: false, autoWebview: false, browserName: Chromium, cloudViewLink: https://cloud.seetest.io:44..., commandTimeouts: 120000, desired: {browserName: Chromium, deviceQuery: @os='android' and @version=..., platformName: Android, testName: Quick Start Android Browser...}, device.category: PHONE, device.majorVersion: 8, device.manufacture: samsung, device.model: SM-G930F, device.name: samsung Galaxy S7 IO IL 086, device.os: Android, device.screenSize: 1080x1920, device.serialNumber: 98866742375a394e33, device.version: 8.0.0, deviceQuery: @os='android' and @version=..., deviceUDID: 98866742375a394e33, dontGoHomeOnQuit: false, dontStopAppOnReset: false, ehmPrefixUrl: /agent-6292135, ehmUrl: https://cloud.seetest.io:44..., fullReset: false, gridNodePort: 7843, install.only.for.update: false, installOnlyForUpdate: false, instrumentApp: false, javascriptEnabled: true, keystorePath: ~/.android/debug.keystore, locationServicesAuthorized: false, newSessionWaitTimeout: 600.0, noReset: false, platform: ANDROID, platformName: Android, projectName: , reportDirectory: reports, reportFormat: xml, reportTestId: 1342.0, reportUrl: https://cloud.seetest.io:44..., reservationDuration: 240.0, takeScreenshots: true, test.type: Mobile, testName: Quick Start Android Browser..., udid: 98866742375a394e33, useKeystore: false, waitForDeviceTimeout: 120000.0}
+Session ID: CLOUD-SID:2021-06-04_10-12-41-477a80c5-1ba9-4371-bd8c-e56b1d242aa7
+*** Element info: {Using=xpath, value=//*[text()='31/12/99']}
+19:51:52.191 [main] INFO  TestMCACarryoutASAP - ******STARTING TEST MCA CARRY OUT ASAP******
+19:51:53.755 [main] INFO  TestMCACarryoutASAP - Starting QA site validation
+19:51:55.840 [main] INFO  TestMCACarryoutASAP - QA site launch is successful, Site Name : https://qa3.chilis.com/
+19:52:00.112 [main] INFO  TestMCACarryoutASAP - Pop up closed
+19:52:04.611 [main] INFO  TestMCACarryoutASAP - Menu button clicked
+19:52:09.398 [main] INFO  TestMCACarryoutASAP - Login option selected
+19:52:18.689 [main] INFO  TestMCACarryoutASAP - User name (512) 212-1212 entered
+19:52:24.960 [main] INFO  TestMCACarryoutASAP - Password Brinkers@2021 entered
+19:52:27.093 [main] INFO  TestMCACarryoutASAP - Sign in button clicked
+19:52:37.480 [main] INFO  TestMCACarryoutASAP - Menu button clicked
+19:52:42.654 [main] INFO  TestMCACarryoutASAP - Location option selected
+19:52:49.279 [main] INFO  TestMCACarryoutASAP - Restaurant location entered as Addison, TX 75001, USA
+19:52:54.965 [main] INFO  TestMCACarryoutASAP - Search button clicked
+19:53:09.748 [main] INFO  TestMCACarryoutASAP - Site scrolled and order button clicked
+19:53:26.508 [main] INFO  TestMCACarryoutASAP - Chilis favourite Item Original Full Order Ribs selected
+19:53:37.780 [main] INFO  TestMCACarryoutASAP - View Cart clicked
+19:53:46.552 [main] INFO  TestMCACarryoutASAP - Order checked Out
+19:53:55.650 [main] INFO  TestMCACarryoutASAP - Carryout Button is Clicked
+19:54:06.733 [main] INFO  TestMCACarryoutASAP - Later Today pickup time is selected
+19:54:19.510 [main] ERROR TestMCACarryoutASAP - Failed to select Pickup time
+19:54:19.513 [main] ERROR TestMCACarryoutASAP - unknown error (An unknown server-side error occurred. status='false'. Failed to complete internal method: 'hybridSelect args: [, 0, xpath, (//*[text()='11:30 AM'])[1]/.., 11:30 AM]', details: )  (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+Build info: version: '3.12.0', revision: '7c6e0b3', time: '2018-05-08T14:04:26.12Z'
+System info: host: 'LAPTOP-2HJFJ1OT', ip: '192.168.29.229', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_281'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {appBuildVersion: , appReleaseVersion: , appiumVersion: 1.8.0, applicationClearData: false, autoAcceptAlerts: false, autoDismissAlerts: false, autoGrantPermissions: false, autoWebview: false, browserName: Chromium, cloudViewLink: https://cloud.seetest.io:44..., commandTimeouts: 120000, desired: {browserName: Chromium, deviceQuery: @os='android' and @version=..., platformName: Android, testName: Quick Start Android Browser...}, device.category: PHONE, device.majorVersion: 8, device.manufacture: samsung, device.model: SM-G930F, device.name: samsung Galaxy S7 IO IL 086, device.os: Android, device.screenSize: 1080x1920, device.serialNumber: 98866742375a394e33, device.version: 8.0.0, deviceQuery: @os='android' and @version=..., deviceUDID: 98866742375a394e33, dontGoHomeOnQuit: false, dontStopAppOnReset: false, ehmPrefixUrl: /agent-6292135, ehmUrl: https://cloud.seetest.io:44..., fullReset: false, gridNodePort: 7844, install.only.for.update: false, installOnlyForUpdate: false, instrumentApp: false, javascriptEnabled: true, keystorePath: ~/.android/debug.keystore, locationServicesAuthorized: false, newSessionWaitTimeout: 600.0, noReset: false, platform: ANDROID, platformName: Android, projectName: , reportDirectory: reports, reportFormat: xml, reportTestId: 1343.0, reportUrl: https://cloud.seetest.io:44..., reservationDuration: 240.0, takeScreenshots: true, test.type: Mobile, testName: Quick Start Android Browser..., udid: 98866742375a394e33, useKeystore: false, waitForDeviceTimeout: 120000.0}
+Session ID: CLOUD-SID:2021-06-04_10-21-23-e72ff095-8248-4867-bb8d-4ba5c9896630
+19:58:38.852 [main] INFO  TestMCACarryoutASAP - ******STARTING TEST MCA CARRY OUT ASAP******
+19:58:39.944 [main] INFO  TestMCACarryoutASAP - Starting QA site validation
+19:58:42.081 [main] INFO  TestMCACarryoutASAP - QA site launch is successful, Site Name : https://qa3.chilis.com/
+19:58:46.367 [main] INFO  TestMCACarryoutASAP - Pop up closed
+19:58:51.385 [main] INFO  TestMCACarryoutASAP - Menu button clicked
+19:58:56.101 [main] INFO  TestMCACarryoutASAP - Login option selected
+19:59:06.718 [main] ERROR TestMCACarryoutASAP - Could not enter user name
+19:59:06.722 [main] ERROR TestMCACarryoutASAP - unknown error (An unknown server-side error occurred. status='false'. Failed to complete internal method: 'elementSendText args: [WEB, xpath=(//*[cmd:equalsIgnoreCase(@nodeName,'input')][@id='username'])[1], 0, ]', details: )  (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+Build info: version: '3.12.0', revision: '7c6e0b3', time: '2018-05-08T14:04:26.12Z'
+System info: host: 'LAPTOP-2HJFJ1OT', ip: '192.168.29.229', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_281'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {appBuildVersion: , appReleaseVersion: , appiumVersion: 1.8.0, applicationClearData: false, autoAcceptAlerts: false, autoDismissAlerts: false, autoGrantPermissions: false, autoWebview: false, browserName: Chromium, cloudViewLink: https://cloud.seetest.io:44..., commandTimeouts: 120000, desired: {browserName: Chromium, deviceQuery: @os='android' and @version=..., platformName: Android, testName: Quick Start Android Browser...}, device.category: PHONE, device.majorVersion: 8, device.manufacture: samsung, device.model: SM-G930F, device.name: samsung Galaxy S7 IO IL 086, device.os: Android, device.screenSize: 1080x1920, device.serialNumber: 98866742375a394e33, device.version: 8.0.0, deviceQuery: @os='android' and @version=..., deviceUDID: 98866742375a394e33, dontGoHomeOnQuit: false, dontStopAppOnReset: false, ehmPrefixUrl: /agent-6292135, ehmUrl: https://cloud.seetest.io:44..., fullReset: false, gridNodePort: 7845, install.only.for.update: false, installOnlyForUpdate: false, instrumentApp: false, javascriptEnabled: true, keystorePath: ~/.android/debug.keystore, locationServicesAuthorized: false, newSessionWaitTimeout: 600.0, noReset: false, platform: ANDROID, platformName: Android, projectName: , reportDirectory: reports, reportFormat: xml, reportTestId: 1344.0, reportUrl: https://cloud.seetest.io:44..., reservationDuration: 240.0, takeScreenshots: true, test.type: Mobile, testName: Quick Start Android Browser..., udid: 98866742375a394e33, useKeystore: false, waitForDeviceTimeout: 120000.0}
+Session ID: CLOUD-SID:2021-06-04_10-28-09-60e293a7-afa9-4dd7-83d0-c7ba1f7fed12
+20:00:15.630 [main] INFO  TestMCACarryoutASAP - ******STARTING TEST MCA CARRY OUT ASAP******
+20:00:17.126 [main] INFO  TestMCACarryoutASAP - Starting QA site validation
+20:00:19.326 [main] INFO  TestMCACarryoutASAP - QA site launch is successful, Site Name : https://qa3.chilis.com/
+20:00:23.750 [main] INFO  TestMCACarryoutASAP - Pop up closed
+20:00:28.381 [main] INFO  TestMCACarryoutASAP - Menu button clicked
+20:00:33.005 [main] INFO  TestMCACarryoutASAP - Login option selected
+20:00:41.955 [main] INFO  TestMCACarryoutASAP - User name (512) 212-1212 entered
+20:00:48.169 [main] INFO  TestMCACarryoutASAP - Password Brinkers@2021 entered
+20:00:50.432 [main] INFO  TestMCACarryoutASAP - Sign in button clicked
+20:01:00.857 [main] INFO  TestMCACarryoutASAP - Menu button clicked
+20:01:05.868 [main] INFO  TestMCACarryoutASAP - Location option selected
+20:01:12.406 [main] INFO  TestMCACarryoutASAP - Restaurant location entered as Addison, TX 75001, USA
+20:01:18.137 [main] INFO  TestMCACarryoutASAP - Search button clicked
+20:01:34.230 [main] INFO  TestMCACarryoutASAP - Site scrolled and order button clicked
+20:01:52.269 [main] INFO  TestMCACarryoutASAP - Chilis favourite Item Original Full Order Ribs selected
+20:02:03.494 [main] INFO  TestMCACarryoutASAP - View Cart clicked
+20:02:12.504 [main] INFO  TestMCACarryoutASAP - Order checked Out
+20:02:21.065 [main] INFO  TestMCACarryoutASAP - Carryout Button is Clicked
+20:02:32.364 [main] INFO  TestMCACarryoutASAP - Later Today pickup time is selected
+20:02:43.938 [main] INFO  TestMCACarryoutASAP - Pickup time selected as 11:30 AM
+20:02:49.805 [main] INFO  TestMCACarryoutASAP - Payment button clicked
+20:02:57.138 [main] INFO  TestMCACarryoutASAP - Card Number entered as : 4111111111111111
+20:03:04.572 [main] INFO  TestMCACarryoutASAP - CVV entered as : 145
+20:03:11.039 [main] INFO  TestMCACarryoutASAP - Expiration Month selected as : 4
+20:03:18.683 [main] INFO  TestMCACarryoutASAP - Expiration Year selected as : 2025
+20:03:25.618 [main] INFO  TestMCACarryoutASAP - Name on Card entered as : Somnath
+20:03:29.485 [main] INFO  TestMCACarryoutASAP - Billing zip code entered as : 75001
+20:03:39.300 [main] INFO  TestMCACarryoutASAP - Tip given as : 15
+20:03:44.131 [main] INFO  TestMCACarryoutASAP - Donation checked
+20:03:47.700 [main] INFO  TestMCACarryoutASAP - Pick up cost displayed as : $22.00
+20:03:53.636 [main] INFO  TestMCACarryoutASAP - Place order button clicked
+20:04:05.981 [main] INFO  TestMCACarryoutASAP - Success message displayed as : THANK YOU FOR ORDERING FROM CHILI'S
+20:04:14.070 [main] INFO  TestMCACarryoutASAP - Order price displayed as  : $22.00

@@ -1,3 +1,4 @@
+package MobileAutomation.MobileSeeTestWebAutomation;
 import java.util.Properties;
 
 import org.apache.logging.log4j.LogManager;
@@ -27,7 +28,7 @@ public class TestCurbSideASAPMCA extends Base{
 		curb.clickMenuButton();
 		curb.selectLocationsOption();
 		curb.enterRestaurantLocationForLoggedInOrder();
-		curb.clickSearchButton();
+		curb.clickSearchButtonForLoggedInOrder();
 		curb.getRestaurantName();
 		curb.orderNow();
 		curb.AddChilisFavouriteToCart();

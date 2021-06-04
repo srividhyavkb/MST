@@ -16,7 +16,7 @@ import io.appium.java_client.android.AndroidElement;
 public class TestAddMyVisit extends Base {
 
 @Test
-public void testUpdateAccountFeature() throws Exception
+public void testAddMyVisit() throws Exception
 {
 Logger log = LogManager.getLogger("TestAddMyVisit");
 log.info("******STARTING TEST ADD MY VISIT******");
@@ -32,13 +32,12 @@ func6.clickAddVisit();
 func6.enterRestaurantLocation();
 func6.selectChilisLocation();
 func6.selectVisitMonth();
-Thread.sleep(10000);
 func6.selectVisitDay();
-//func6.selectVisitYear();
-//func6.enterCheckNumber();
-//func6.enterCheckTotal();
-//func6.clickSubmit();
-//System.out.println(func6.retrieveSuccessMessage());
+func6.selectVisitYear();
+func6.enterCheckNumber();
+func6.enterCheckTotal();
+func6.clickSubmit();
+System.out.println(func6.retrieveSuccessMessage());
 }
 
 

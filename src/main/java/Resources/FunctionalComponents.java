@@ -772,17 +772,9 @@ public class FunctionalComponents extends Base {
 	public void selectVisitMonth() throws InterruptedException {
 		String visitMonth = excel.getCellData("AddMyVisit", "Visit Month", 2);
 		try {
-			explicitWait(Elements.visitMonthDropDown);
-			clickElement(Elements.visitMonthDropDown);
-			Thread.sleep(2000);
-			AndroidElement ele = driver.findElementByXPath("//*[text()='March']");
-			Thread.sleep(2000);
-			ele.click();
-			driver.findElementByXPath("//*[text()='April']").click();
-			driver.navigate().back();
-			Thread.sleep(3000);
-			scrollDownFromStart("2000");
-			scrollIntoViewTop(Elements.addMyVisitButton);
+			scrollIntoViewBottom(Elements.visitMonthDropDown);
+			scrollIntoViewBottom(By.xpath("//*[text()='"+visitMonth+"']"));
+			clickElement(By.xpath("//*[text()='"+visitMonth+"']"));
 			log.info("Visit month selected as :" + visitMonth);
 			extTestObj.get().createNode("Visit month selected as :" + visitMonth).pass("PASSED");
 		} catch (Exception e) {
@@ -792,9 +784,6 @@ public class FunctionalComponents extends Base {
 			log.error(e.getMessage());
 
 			tearDown();
-			// *[@resource-id='android:id/text1' and @text='April' and
-			// @class='android.widget.CheckedTextView']
-
 		}
 
 	}
@@ -802,11 +791,9 @@ public class FunctionalComponents extends Base {
 	public void selectVisitDay() {
 		String visitDay = excel.getCellData("AddMyVisit", "Visit Day", 2);
 		try {
-			explicitWait(Elements.visitDayDropDown);
-			clickElement(Elements.visitDayDropDown);
-			explicitWait(By.xpath("//*[text()='" + visitDay + "']"));
-			clickElement(By.xpath("//*[text()='" + visitDay + "']"));
-			driver.getKeyboard().sendKeys(Keys.ENTER);
+			scrollIntoViewBottom(Elements.visitDayDropDown);
+			scrollIntoViewBottom(By.xpath("//*[text()='"+visitDay+"']"));
+			clickElement(By.xpath("//*[text()='"+visitDay+"']"));
 			log.info("Visit day selected as : " + visitDay);
 			extTestObj.get().createNode("Visit day selected as : " + visitDay).pass("PASSED");
 		} catch (Exception e) {
@@ -823,10 +810,8 @@ public class FunctionalComponents extends Base {
 		String visitYear = excel.getCellData("AddMyVisit", "Visit Year", 2);
 		try {
 			explicitWait(Elements.visitYearDropDown);
-			clickElement(Elements.visitYearDropDown);
-			explicitWait(By.xpath("//*[text()='" + visitYear + "']"));
-			clickElement(By.xpath("//*[text()='" + visitYear + "']"));
-			driver.getKeyboard().sendKeys(Keys.ENTER);
+			scrollIntoViewBottom(By.xpath("//*[text()='"+visitYear+"']"));
+			clickElement(By.xpath("//*[text()='"+visitYear+"']"));
 			log.info("Visit year selected as : " + visitYear);
 			extTestObj.get().createNode("Visit year selected as : " + visitYear).pass("PASSED");
 		} catch (Exception e) {
@@ -861,7 +846,8 @@ public class FunctionalComponents extends Base {
 
 		String checkTotal = excel.getCellData("AddMyVisit", "Subtotal", 2);
 		try {
-			sendKeysWait(Elements.checkTotalTextBox, checkTotal);
+			clickableWait(Elements.checkTotalTextBox);
+			driver.getKeyboard().sendKeys(checkTotal);
 			log.info("Check total entered as : " + checkTotal);
 			extTestObj.get().createNode("Check total entered as : " + checkTotal).pass("PASSED");
 		} catch (Exception e) {
@@ -1046,7 +1032,7 @@ public class FunctionalComponents extends Base {
 
 	public void clickCheckOut() {
 		try {
-			explicitWait(Elements.cartTotal);
+			scrollIntoViewBottom(Elements.checkOutButton);
 			clickableWait(Elements.checkOutButton);
 			log.info("Order checked Out");
 			extTestObj.get().createNode("Order checked Out").pass("PASSED");
@@ -1112,15 +1098,14 @@ public class FunctionalComponents extends Base {
 
 	}
 
-	public void selectExpirationMonth() // Ayushman
+	public void selectExpirationMonth() 
 	{
 		String month = excel.getCellData("LoggedInOrder", "Expiration Month", 2);
-		String year = excel.getCellData("LoggedInOrder", "Expiration Year", 2);
 		try {
 			scrollIntoViewBottom(Elements.expirationMonth);
-			clickableWait(Elements.expirationMonth);
-			scrollIntoViewBottom(By.xpath("//*[contains(text(),'" + month + "')]"));
-			clickElement(By.xpath("//*[contains(text(),'" + month + "')]"));
+//			clickableWait(Elements.expirationMonth);
+			scrollIntoViewBottom(By.xpath("//*[contains(text(),'(0" + month + ")')]"));
+			clickElement(By.xpath("//*[contains(text(),'(0" + month + ")')]"));
 			log.info("Expiration Month selected as : " + month);
 			extTestObj.get().createNode("Expiration Month selected as : " + month).pass("PASSED");
 		} catch (Exception e) {
@@ -1138,9 +1123,9 @@ public class FunctionalComponents extends Base {
 		String year = excel.getCellData("LoggedInOrder", "Expiration Year", 2);
 		try {
 			scrollIntoViewBottom(Elements.expirationYear);
-			clickableWait(Elements.expirationYear);
-			scrollIntoViewBottom(By.xpath("//*[contains(text(),'" + year + "')]"));
-			clickElement(By.xpath("//*[contains(text(),'" + year + "')]"));
+//			clickableWait(Elements.expirationYear);
+			scrollIntoViewBottom(By.xpath("//*[text()='"+year+"']"));
+			clickElement(By.xpath("//*[text()='"+year+"']"));
 			log.info("Expiration Year selected as : " + year);
 			extTestObj.get().createNode("Expiration Year selected as : " + year).pass("PASSED");
 		} catch (Exception e) {
@@ -1157,14 +1142,15 @@ public class FunctionalComponents extends Base {
 
 		String nameOnCard = excel.getCellData("LoggedInOrder", "Name On Card", 2);
 		try {
+			scrollIntoViewBottom(Elements.nameOnCard);
 			explicitWait(Elements.nameOnCard);
 			clickableWait(Elements.nameOnCard);
 			driver.getKeyboard().sendKeys(nameOnCard);
 			log.info("Name on Card entered as : " + nameOnCard);
-			extTestObj.get().log(Status.PASS, "Name on Card entered as : " + nameOnCard);
+			extTestObj.get().createNode("Name on Card entered as : " + nameOnCard);
 		} catch (Exception e) {
 			log.error("Failed to enter Name on Card");
-			extTestObj.get().log(Status.FAIL, "Failed to enter Name on Card");
+			extTestObj.get().createNode( "Failed to enter Name on Card").fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);;
 			log.error(e.getMessage());
 
 			tearDown();
@@ -1192,6 +1178,7 @@ public class FunctionalComponents extends Base {
 	public void giveTip() {
 		String tip = excel.getCellData("LoggedInOrder", "Tip", 2);
 		try {
+			scrollIntoViewBottom(Elements.tipTextBox);
 			sendKeysWait(Elements.tipTextBox, tip);
 			log.info("Tip given as : " + tip);
 			extTestObj.get().createNode("Tip has entered").pass("PASSED");
@@ -1223,6 +1210,7 @@ public class FunctionalComponents extends Base {
 
 	public void checkRoundOff() {
 		try {
+			scrollIntoViewBottom(Elements.donationCheckBox);
 			clickableWait(Elements.donationCheckBox);
 			log.info("Donation checked");
 			extTestObj.get().createNode("Donation checked").pass("PASSED");
@@ -1676,15 +1664,13 @@ public class FunctionalComponents extends Base {
 		}
 	}
 
-	public void selectPickupTime() // Ayushman
+	public void selectPickupTime() 
 	{
-		String timeInput = excel.getCellData("Pickup", "Pickup Time", 2);
+		String timeInput = excel.getCellData("CarryOut", "Pickup Time", 2);
 		try {
-			scrollIntoViewHalf(Elements.pickTime);
-			clickableWait(Elements.pickTime);
-			Thread.sleep(2000);
-			clickableWait(By.xpath("//*[text()='" + timeInput + "']"));
-			Thread.sleep(2000);
+			scrollIntoViewBottom(Elements.pickTime);
+			scrollIntoViewBottom(By.xpath("//select[@id='pickup-time']/option[text()='" + timeInput + "']"));
+			clickElement(By.xpath("//select[@id='pickup-time']/option[text()='" + timeInput + "']"));
 			log.info("Pickup time selected as " + timeInput);
 			extTestObj.get().createNode("Pickup time selected as " + timeInput).pass("PASSED");
 		} catch (Exception e) {
@@ -1775,8 +1761,8 @@ public class FunctionalComponents extends Base {
 	/* Validate user is able to place Curbside-ASAP order for MCA user */
 	public void selectPickupAsap() {
 		try {
-			clickableWait(Elements.pickDate);
-			Thread.sleep(3000);
+			scrollIntoViewBottom(Elements.pickDate);
+			scrollIntoViewBottom(Elements.pickupAsapOrder);
 			clickElement(Elements.pickupAsapOrder);
 			log.info("'ASAP' pickup time is selected");
 			extTestObj.get().createNode("'ASAP' pickup time is selected").pass("PASSED");
@@ -1797,6 +1783,7 @@ public class FunctionalComponents extends Base {
 	public void clickOnCarryOut() {
 		try {
 			explicitWait(Elements.selectCarryOutMode);
+			clickElement(Elements.selectCarryOutMode);
 			log.info("Carryout Button is Clicked");
 			extTestObj.get().createNode("Carryout Button is Clicked").pass("PASSED");
 		} catch (Exception e) {
@@ -1826,8 +1813,8 @@ public class FunctionalComponents extends Base {
 
 	public void selectPickupLaterToday() {
 		try {
-			clickableWait(Elements.pickDate);
-			Thread.sleep(3000);
+			scrollIntoViewBottom(Elements.pickDate);
+			scrollIntoViewBottom(Elements.LaterToday);
 			clickElement(Elements.LaterToday);
 			log.info("Later Today pickup time is selected");
 			extTestObj.get().createNode("Later Today pickup time is selected").pass("PASSED");

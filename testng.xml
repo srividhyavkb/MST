@@ -6,7 +6,7 @@
 </listeners>
   <test name="Test Chilis WebApp">
     <classes>
-      <class name="MobileAutomation.MobileSeeTestWebAutomation.TestLoggedInOrder"/>
+      <class name="MobileAutomation.MobileSeeTestWebAutomation.TestMCACarryOutLaterToday"/>
     </classes>
     </test>
 </suite> <!-- Suite -->

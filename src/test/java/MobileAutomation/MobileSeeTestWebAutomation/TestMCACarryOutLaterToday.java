@@ -11,7 +11,7 @@ import Resources.FunctionalComponents;
 
 public class TestMCACarryOutLaterToday extends Base {
 	
-	@Test
+	@Test/*( enabled=true, retryAnalyzer = Resources.RetryAnalyzer.class )*/
 	public void testMCACarryoutASAP() throws InterruptedException
 	{
 		Logger log = LogManager.getLogger("TestMCACarryoutASAP");
@@ -27,8 +27,8 @@ public class TestMCACarryOutLaterToday extends Base {
 		ob.clickMenuButton();
 		ob.selectLocationsOption();
 		ob.enterRestaurantLocationForLoggedInOrder();
-		ob.clickSearchButton();
-		ob.clickOrderNow();
+		ob.clickSearchButtonForLoggedInOrder();
+		ob.orderNow();
 		ob.AddChilisFavouriteToCart();
 		ob.clickViewCart();
 		ob.clickCheckOut();
@@ -39,7 +39,7 @@ public class TestMCACarryOutLaterToday extends Base {
 		ob.enterCardNo();
 		ob.enterCVV();
 		ob.selectExpirationMonth();
-		ob.selectExpirationMonth();
+		ob.selectExpirationYear();
 		ob.enterNameOnCard();
 		ob.enterBillingZipCode();
 		ob.giveTip();

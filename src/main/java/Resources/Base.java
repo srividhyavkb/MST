@@ -33,10 +33,14 @@ public class Base {
 	DesiredCapabilities dcIOS = new DesiredCapabilities();
 	String projectPath = System.getProperty("user.dir");
 	protected Properties prop;
+	
+	public Base()
+	{
+		prop = returnProperty();
+	}
 
 	public AndroidDriver<AndroidElement> initializeDriver() throws Exception {
 
-		prop = returnProperty();
 		dc.setCapability("accessKey", accessKey);
 		dc.setCapability("testName", "Quick Start Android Browser Demo");
 		dc.setCapability("deviceQuery",
@@ -49,7 +53,6 @@ public class Base {
 
 	public IOSDriver<IOSElement> initializeDriverIOS() throws Exception {
 
-		prop = returnProperty();
 		dcIOS.setCapability("accessKey", accessKey);
 		dcIOS.setCapability("testName", "Quick Start iOS Browser Demo");
 		dcIOS.setCapability("deviceQuery", "@os='ios' and @version='14.4' and @category='PHONE'");
@@ -73,14 +76,15 @@ public class Base {
 
 	@BeforeMethod
 	public void initialize() throws Exception {
-		if (prop.getProperty("Android").equals("true")) {
+		
+		if (prop.getProperty("device").equals("Android")) {
 			driver = initializeDriver();
 			prop = returnProperty();
 			driver.get(prop.getProperty("url"));
 			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 			driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
 		}
-		if (prop.getProperty("IOS").equals("true")) {
+		if (prop.getProperty("device").equals("IOS")) {
 			IOSdriver = initializeDriverIOS();
 			prop = returnProperty();
 			IOSdriver.get(prop.getProperty("url"));
@@ -92,11 +96,11 @@ public class Base {
 
 	@AfterMethod
 	public void tearDown() {
-		if (prop.getProperty("Android").equals("true")) {
+		if (prop.getProperty("device").equals("Android")) {
 			System.out.println("Report URL: " + driver.getCapabilities().getCapability("reportUrl"));
 			driver.quit();
 		}
-		if (prop.getProperty("IOS").equals("true")) {
+		if (prop.getProperty("device").equals("IOS")) {
 			System.out.println("Report URL: " + IOSdriver.getCapabilities().getCapability("reportUrl"));
 			IOSdriver.quit();
 		}

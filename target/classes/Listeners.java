@@ -70,7 +70,8 @@ public class Listeners extends Base implements ITestListener {
 		
 		try {
 			formatAsTable.createTestExecutionTable(testExecuted, testPassed, testFailed, testSkipped);
-			SendEmailJava.sendEmail();
+			SendEmail.sendEmail();
+			extentTest.get().log(Status.INFO, MarkupHelper.createLabel("Email sent to recipients", ExtentColor.LIME));
 		}  catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
