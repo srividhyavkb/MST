@@ -3,6 +3,8 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.Properties;
 
+import org.apache.commons.mail.EmailException;
+
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.reporter.ExtentEmailReporter;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
@@ -18,14 +20,13 @@ public class ExtentReporterNG {
 	static Properties prop;
 	
 	@SuppressWarnings("deprecation")
-	public static ExtentReports getReportObject()
+	public static ExtentReports getReportObject() 
 	{
 	base = new Base();
 	prop = base.returnProperty();
 	DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyyMMddHHmmss");  
 	LocalDateTime now = LocalDateTime.now();  
-	final String path = System.getProperty("user.dir")+"/reports/index-"+dtf.format(now)+".html";
-	SendEmail.getReportPath(path);
+	String path = System.getProperty("user.dir")+"/reports/index-"+dtf.format(now)+".html";
 	ExtentHtmlReporter reporter = new ExtentHtmlReporter(path);
 	reporter.config().setReportName("Mobile SeeTest Web Automation Results");
 	reporter.config().setDocumentTitle("Test Results");

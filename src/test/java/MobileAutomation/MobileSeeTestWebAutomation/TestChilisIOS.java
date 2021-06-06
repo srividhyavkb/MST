@@ -1,45 +1,42 @@
 package MobileAutomation.MobileSeeTestWebAutomation;
 
 import java.net.URL;
-import java.util.Properties;
 import java.util.concurrent.TimeUnit;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.ScreenOrientation;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
-import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import Resources.Base;
 import Resources.FunctionalComponents;
-import io.appium.java_client.android.AndroidDriver;
-import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.ios.IOSDriver;
 import io.appium.java_client.ios.IOSElement;
 
-public class TestChilisAndroid extends Base {
-
-	public AndroidDriver<AndroidElement> driver = null;
+public class TestChilisIOS extends Base
+{
+	public IOSDriver<IOSElement> IOSdriver = null;
 	@BeforeMethod
 	public void initialize() throws Exception {
-		DesiredCapabilities dc = sendAndroidBrowserCapabilities();
-		driver = new AndroidDriver<>(new URL(prop.getProperty("CloudDeviceURL")), dc);
-		getDriver(driver);
-		driver.rotate(ScreenOrientation.PORTRAIT);
+		DesiredCapabilities dc = sendIOSBrowserCapabilities();
+		IOSdriver = new IOSDriver<>(new URL(prop.getProperty("CloudDeviceURL")), dc);
+		getDriver(IOSdriver);
+		IOSdriver.rotate(ScreenOrientation.PORTRAIT);
 		prop = returnProperty();
-		driver.get(prop.getProperty("url"));
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
+		IOSdriver.get(prop.getProperty("url"));
+		IOSdriver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		IOSdriver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
+		
 	}
-
+	
 	@Test(enabled = true, retryAnalyzer = Resources.RetryAnalyzer.class)
 	public void testLoginFeature() throws Exception {
 		Logger log = LogManager.getLogger("TestLoginLogout");
-		log.info("******TC01_ANDROID : Starting to Validate Login and Logout functionality of Chilis WebApp******");
-		FunctionalComponents func = new FunctionalComponents(driver, log);
+		log.info("******TC10_IOS : Starting to Validate Login and Logout functionality of Chilis WebApp******");
+		FunctionalComponents func = new FunctionalComponents(IOSdriver, log);
 		func.validateQASite();
 		func.closePopupRewards();
 		func.clickMenuButton();
@@ -52,11 +49,11 @@ public class TestChilisAndroid extends Base {
 		System.out.println(func.validateLogout());
 	}
 
-	@Test(enabled = false, retryAnalyzer = Resources.RetryAnalyzer.class)
+	@Test(enabled = true, retryAnalyzer = Resources.RetryAnalyzer.class)
 	public void testRewardsFeature() throws InterruptedException {
 		Logger log = LogManager.getLogger("TestRewards");
-		log.info("******TC02_ANDROID : Starting to validate Rewards details page for logged in user******");
-		FunctionalComponents func3 = new FunctionalComponents(driver, log);
+		log.info("******TC11_IOS : Starting to validate Rewards details page for logged in user******");
+		FunctionalComponents func3 = new FunctionalComponents(IOSdriver, log);
 		func3.validateQASite();
 		func3.closePopupRewards();
 		func3.clickMenuButton();
@@ -67,14 +64,14 @@ public class TestChilisAndroid extends Base {
 		int noOfRewardsDisplayed = func3.noOfRewards();
 		int ActualrewardCount = func3.ActualRewardsCount();
 		Assert.assertEquals(noOfRewardsDisplayed, ActualrewardCount, "Discrepancy observed in Rewards Count");
-		func3.getRewardTitle();
+		func3.getRewardTitleIOS();
 	}
 
-	@Test(enabled = false, retryAnalyzer = Resources.RetryAnalyzer.class)
+	@Test(enabled = true, retryAnalyzer = Resources.RetryAnalyzer.class)
 	public void testUpdateAccountFeature() throws InterruptedException {
 		Logger log = LogManager.getLogger("TestUpdateAccount");
-		log.info("******TC03_ANDROID : Starting to validate user is able to update my Account******");
-		FunctionalComponents func4 = new FunctionalComponents(driver, log);
+		log.info("******TC12_IOS : Starting to validate user is able to update my Account******");
+		FunctionalComponents func4 = new FunctionalComponents(IOSdriver, log);
 		func4.validateQASite();
 		func4.closePopupRewards();
 		func4.clickMenuButton();
@@ -103,11 +100,11 @@ public class TestChilisAndroid extends Base {
 
 	}
 
-	@Test(enabled = false, retryAnalyzer = Resources.RetryAnalyzer.class)
+	@Test(enabled = true, retryAnalyzer = Resources.RetryAnalyzer.class)
 	public void testFavouriteItems() throws InterruptedException {
 		Logger log = LogManager.getLogger("TestFavouriteItems");
-		log.info("******TC04_ANDROID : Starting to verify Favorites items is displaying on menu page******");
-		FunctionalComponents func5 = new FunctionalComponents(driver, log);
+		log.info("******TC13_IOS : Starting to verify Favorites items is displaying on menu page******");
+		FunctionalComponents func5 = new FunctionalComponents(IOSdriver, log);
 		func5.validateQASite();
 		func5.closePopupRewards();
 		func5.clickMenuButton();
@@ -117,14 +114,14 @@ public class TestChilisAndroid extends Base {
 		func5.clickSignin();
 		func5.clickMenuButton();
 		func5.selectMenuOption();
-		func5.getAllChilisFavouriteItems();
+		func5.getAllChilisFavouriteItemsIOS();
 	}
 
-	@Test(enabled = false, retryAnalyzer = Resources.RetryAnalyzer.class)
+	@Test(enabled = true, retryAnalyzer = Resources.RetryAnalyzer.class)
 	public void testLocationFeature() throws Exception {
 		Logger log = LogManager.getLogger("TestLocationSearch");
-		log.info("******TC05_ANDROID : Starting to validate location search fields and links for guest user******");
-		FunctionalComponents func2 = new FunctionalComponents(driver, log);
+		log.info("******TC14_IOS : Starting to validate location search fields and links for guest user******");
+		FunctionalComponents func2 = new FunctionalComponents(IOSdriver, log);
 		func2.validateQASite();
 		func2.closePopupRewards();
 		func2.clickMenuButton();
@@ -135,12 +132,12 @@ public class TestChilisAndroid extends Base {
 		System.out.println(result);
 	}
 
-	@Test(enabled = false, retryAnalyzer = Resources.RetryAnalyzer.class)
+	@Test(enabled = true, retryAnalyzer = Resources.RetryAnalyzer.class)
 	public void testCurbsideAsapOrder() throws Exception {
 
 		Logger log = LogManager.getLogger("TestMcaCurbside-ASAPOrder");
-		log.info("******TC06_ANDROID : Starting to validate user is able to place Curbside-ASAP order for MCA user*******");
-		FunctionalComponents curb = new FunctionalComponents(driver, log);
+		log.info("******TC15_IOS : Starting to validate user is able to place Curbside-ASAP order for MCA user*******");
+		FunctionalComponents curb = new FunctionalComponents(IOSdriver, log);
 		curb.validateQASite();
 		curb.closePopupRewards();
 		curb.clickMenuButton();
@@ -154,7 +151,7 @@ public class TestChilisAndroid extends Base {
 		curb.clickSearchButtonForLoggedInOrder();
 		curb.getRestaurantName();
 		curb.orderNow();
-		curb.AddChilisFavouriteToCart();
+		curb.AddChilisFavouriteToCartIOS();
 		curb.clickViewCart();
 		curb.selectSilverWare();
 		curb.clickCheckOut();
@@ -176,11 +173,11 @@ public class TestChilisAndroid extends Base {
 		Assert.assertEquals(priceBeforePlacingOrder, priceAfterPlacingOrder, "Incorrect price displayed");
 	}
 
-	@Test(enabled = false, retryAnalyzer = Resources.RetryAnalyzer.class)
+	@Test(enabled = true, retryAnalyzer = Resources.RetryAnalyzer.class)
 	public void testAddMyVisit() throws Exception {
 		Logger log = LogManager.getLogger("TestAddMyVisit");
-		log.info("******TC07_ANDROID : Starting to verify user is able to submit Add my visit form for login member******");
-		FunctionalComponents func6 = new FunctionalComponents(driver, log);
+		log.info("******TC16_IOS : Starting to verify user is able to submit Add my visit form for login member******");
+		FunctionalComponents func6 = new FunctionalComponents(IOSdriver, log);
 		func6.validateQASite();
 		func6.closePopupRewards();
 		func6.clickMenuButton();
@@ -200,11 +197,11 @@ public class TestChilisAndroid extends Base {
 		System.out.println(func6.retrieveSuccessMessage());
 	}
 
-	@Test(enabled = false, retryAnalyzer = Resources.RetryAnalyzer.class)
+	@Test(enabled = true, retryAnalyzer = Resources.RetryAnalyzer.class)
 	public void testLoggedInOrderFeature() throws InterruptedException {
 		Logger log = LogManager.getLogger("TestLoggedInOrder");
-		log.info("******TC08_ANDROID : Starting to validate user is able order placement with existing log in user******");
-		FunctionalComponents ob = new FunctionalComponents(driver, log);
+		log.info("******TC17_IOS : Starting to validate user is able order placement with existing log in user******");
+		FunctionalComponents ob = new FunctionalComponents(IOSdriver, log);
 		ob.validateQASite();
 		ob.closePopupRewards();
 		ob.clickMenuButton();
@@ -217,7 +214,7 @@ public class TestChilisAndroid extends Base {
 		ob.enterRestaurantLocationForLoggedInOrder();
 		ob.clickSearchButtonForLoggedInOrder();
 		ob.orderNow();
-		ob.AddChilisFavouriteToCart();
+		ob.AddChilisFavouriteToCartIOS();
 		ob.clickViewCart();
 		ob.selectSilverWare();
 		ob.clickCheckOut();
@@ -237,11 +234,11 @@ public class TestChilisAndroid extends Base {
 		Assert.assertEquals(priceBeforePlacingOrder, priceAfterPlacingOrder, "Incorrect price displayed");
 	}
 
-	@Test(enabled = false, retryAnalyzer = Resources.RetryAnalyzer.class)
+	@Test(enabled = true, retryAnalyzer = Resources.RetryAnalyzer.class)
 	public void testMCACarryoutLaterToday() throws InterruptedException {
 		Logger log = LogManager.getLogger("TestMCACarryoutLaterToday");
-		log.info("******TC09_ANDROID : Starting to validate user is able to place Carry out-Later Today order with MCA users******");
-		FunctionalComponents ob = new FunctionalComponents(driver, log);
+		log.info("******TC18_IOS : Starting to validate user is able to place Carry out-Later Today order with MCA users******");
+		FunctionalComponents ob = new FunctionalComponents(IOSdriver, log);
 		ob.validateQASite();
 		ob.closePopupRewards();
 		ob.clickMenuButton();
@@ -254,7 +251,7 @@ public class TestChilisAndroid extends Base {
 		ob.enterRestaurantLocationForLoggedInOrder();
 		ob.clickSearchButtonForLoggedInOrder();
 		ob.orderNow();
-		ob.AddChilisFavouriteToCart();
+		ob.AddChilisFavouriteToCartIOS();
 		ob.clickViewCart();
 		ob.clickCheckOut();
 		ob.clickOnCarryOut();
@@ -277,10 +274,9 @@ public class TestChilisAndroid extends Base {
 	}
 
 	@AfterMethod
-	public void tearDown() {
-		System.out.println("Report URL: " + driver.getCapabilities().getCapability("reportUrl"));
-		driver.quit();
-		
+	public void  tearDown() {
+		System.out.println("Report URL: " + IOSdriver.getCapabilities().getCapability("reportUrl"));
+		IOSdriver.quit();
 	}
 
 }

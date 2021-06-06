@@ -18,17 +18,23 @@ import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 
+import io.appium.java_client.AppiumDriver;
+import io.appium.java_client.MobileElement;
 import io.appium.java_client.TouchAction;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.android.AndroidKeyCode;
 import io.appium.java_client.android.AndroidTouchAction;
+import io.appium.java_client.android.nativekey.PressesKey;
+import io.appium.java_client.ios.IOSDriver;
+import io.appium.java_client.ios.IOSElement;
 import io.appium.java_client.touch.LongPressOptions;
 import io.appium.java_client.touch.offset.ElementOption;
 
+@SuppressWarnings("rawtypes")
 public class FunctionalComponents extends Base {
 
-	public AndroidDriver<AndroidElement> driver = null;
+	public AppiumDriver driver = null;
 	Properties property = returnProperty();
 	ExtentReports extent = ExtentReporterNG.getReportObject();
 	Listeners listen;
@@ -49,7 +55,20 @@ public class FunctionalComponents extends Base {
 			e.printStackTrace();
 		}
 	}
-
+	public FunctionalComponents(IOSDriver<IOSElement> driver,Logger log)
+	{
+		this.driver = driver;
+		this.log = log;
+		wait = new WebDriverWait(this.driver, 25);
+		listen = new Listeners();
+		try {
+			excel = new ExcelUtils(
+					"C:/Users/Somnath Baul/eclipse-workspace/MobileSeeTestWebAutomation/CommonData.xlsx");
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+	
 	public static void getExtentTest(ThreadLocal<ExtentTest> extentTest) {
 		extTestObj = extentTest;
 	}
@@ -123,8 +142,7 @@ public class FunctionalComponents extends Base {
 			extTestObj.get().createNode("QA site launch failed")
 					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
 			log.error(e.getMessage());
-			extTestObj.get().createNode("Error message : ").error(e);
-			tearDown();
+			stopTest();
 
 		}
 
@@ -142,7 +160,7 @@ public class FunctionalComponents extends Base {
 					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
 			log.error(e.getMessage());
 
-			tearDown();
+			stopTest();
 		}
 
 	}
@@ -157,7 +175,7 @@ public class FunctionalComponents extends Base {
 			extTestObj.get().createNode("Menu button click failed")
 					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
 			log.error(e.getMessage());
-			tearDown();
+			stopTest();
 		}
 	}
 
@@ -172,7 +190,7 @@ public class FunctionalComponents extends Base {
 					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
 			log.error(e.getMessage());
 
-			tearDown();
+			stopTest();
 		}
 	}
 
@@ -189,7 +207,7 @@ public class FunctionalComponents extends Base {
 					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
 			log.error(e.getMessage());
 
-			tearDown();
+			stopTest();
 		}
 
 	}
@@ -202,11 +220,11 @@ public class FunctionalComponents extends Base {
 			extTestObj.get().createNode("Password " + password + " entered").pass("PASSED");
 		} catch (Exception e) {
 			log.error("Could not enter password");
-			extTestObj.get().createNode("Could not enter password")
+			extTestObj.get().createNode("Enter password")
 					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
 			log.error(e.getMessage());
 
-			tearDown();
+			stopTest();
 		}
 
 	}
@@ -222,7 +240,7 @@ public class FunctionalComponents extends Base {
 					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
 			log.error(e.getMessage());
 
-			tearDown();
+			stopTest();
 		}
 
 	}
@@ -238,7 +256,7 @@ public class FunctionalComponents extends Base {
 					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
 			log.error(e.getMessage());
 
-			tearDown();
+			stopTest();
 		}
 	}
 
@@ -272,7 +290,7 @@ public class FunctionalComponents extends Base {
 					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
 			log.error(e.getMessage());
 
-			tearDown();
+			stopTest();
 		}
 	}
 
@@ -291,7 +309,7 @@ public class FunctionalComponents extends Base {
 					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
 			log.error(e.getMessage());
 
-			tearDown();
+			stopTest();
 		}
 	}
 
@@ -305,7 +323,7 @@ public class FunctionalComponents extends Base {
 			extTestObj.get().createNode("Search button click failed")
 					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
 			log.error(e.getMessage());
-			tearDown();
+			stopTest();
 		}
 	}
 
@@ -385,6 +403,28 @@ public class FunctionalComponents extends Base {
 
 		}
 	}
+	public void getRewardTitleIOS() {
+		List<IOSElement> rewards = driver.findElements(Elements.actualRewardsCount);
+		String rewardsTitle = "";
+		try {
+			log.info("Reward Titles :");
+			extTestObj.get().log(Status.INFO, "Reward Titles :");
+			for (IOSElement reward : rewards) {
+				rewardsTitle = reward.findElement(By.xpath("//div[@class='rewards-active-title item-title']"))
+						.getText();
+				log.info(rewardsTitle);
+				extTestObj.get().log(Status.INFO, rewardsTitle);
+			}
+			log.info("Reward Titles displayed");
+			extTestObj.get().createNode("Reward Titles displayed").pass("PASSED");
+		} catch (Exception e) {
+			log.error("Reward titles couldn't be obtained");
+			extTestObj.get().createNode("Reward titles couldn't be obtained")
+					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
+			log.error(e.getMessage());
+
+		}
+	}
 
 	/* Validate user is able to update my Account. */
 	public void selectMyAccountOption() {
@@ -399,7 +439,7 @@ public class FunctionalComponents extends Base {
 					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
 			log.error(e.getMessage());
 
-			tearDown();
+			stopTest();
 		}
 
 	}
@@ -558,7 +598,7 @@ public class FunctionalComponents extends Base {
 					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
 			log.error(e.getMessage());
 
-			tearDown();
+			stopTest();
 		}
 	}
 
@@ -681,7 +721,7 @@ public class FunctionalComponents extends Base {
 					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
 			log.error(e.getMessage());
 
-			tearDown();
+			stopTest();
 		}
 	}
 
@@ -693,6 +733,28 @@ public class FunctionalComponents extends Base {
 			log.info("Chillis favourite Items : ");
 			extTestObj.get().log(Status.INFO, "Chillis favourite Items : ");
 			for (AndroidElement el : items) {
+				log.info(el.findElement(Elements.favouriteItemsTitle).getText());
+				extTestObj.get().log(Status.INFO, el.findElement(Elements.favouriteItemsTitle).getText());
+			}
+			log.info("All chilis favourite items obtained");
+			extTestObj.get().createNode("All chilis favourite items obtained").pass("PASSED");
+		} catch (Exception e) {
+			log.error("Couldn't obtain chilis favourite items");
+			extTestObj.get().createNode("Couldn't obtain chilis favourite items")
+					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
+			log.error(e.getMessage());
+
+		}
+
+	}
+	public void getAllChilisFavouriteItemsIOS() {
+
+		List<IOSElement> items = null;
+		try {
+			items = driver.findElements(Elements.favouriteMenu);
+			log.info("Chillis favourite Items : ");
+			extTestObj.get().log(Status.INFO, "Chillis favourite Items : ");
+			for (IOSElement el : items) {
 				log.info(el.findElement(Elements.favouriteItemsTitle).getText());
 				extTestObj.get().log(Status.INFO, el.findElement(Elements.favouriteItemsTitle).getText());
 			}
@@ -723,7 +785,7 @@ public class FunctionalComponents extends Base {
 					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
 			log.error(e.getMessage());
 
-			tearDown();
+			stopTest();
 		}
 	}
 
@@ -744,7 +806,7 @@ public class FunctionalComponents extends Base {
 					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
 			log.error(e.getMessage());
 
-			tearDown();
+			stopTest();
 		}
 	}
 
@@ -764,7 +826,7 @@ public class FunctionalComponents extends Base {
 					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
 			log.error(e.getMessage());
 
-			tearDown();
+			stopTest();
 		}
 
 	}
@@ -783,7 +845,7 @@ public class FunctionalComponents extends Base {
 					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
 			log.error(e.getMessage());
 
-			tearDown();
+			stopTest();
 		}
 
 	}
@@ -802,7 +864,7 @@ public class FunctionalComponents extends Base {
 					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
 			log.error(e.getMessage());
 
-			tearDown();
+			stopTest();
 		}
 	}
 
@@ -820,7 +882,7 @@ public class FunctionalComponents extends Base {
 					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
 			log.error(e.getMessage());
 
-			tearDown();
+			stopTest();
 		}
 	}
 
@@ -870,7 +932,7 @@ public class FunctionalComponents extends Base {
 					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
 			log.error(e.getMessage());
 
-			tearDown();
+			stopTest();
 		}
 	}
 
@@ -910,7 +972,7 @@ public class FunctionalComponents extends Base {
 					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
 			log.error(e.getMessage());
 
-			tearDown();
+			stopTest();
 		}
 
 	}
@@ -927,7 +989,7 @@ public class FunctionalComponents extends Base {
 					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
 			log.error(e.getMessage());
 
-			tearDown();
+			stopTest();
 		}
 	}
 
@@ -946,7 +1008,7 @@ public class FunctionalComponents extends Base {
 					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
 			log.error(e.getMessage());
 
-			tearDown();
+			stopTest();
 		}
 
 	}
@@ -955,12 +1017,13 @@ public class FunctionalComponents extends Base {
 
 		String chilisFavItem = excel.getCellData("LoggedInOrder", "Chilis Favourite Items", 2).trim();
 		try {
-			List<AndroidElement> itemNames = driver
+			@SuppressWarnings("unchecked")
+			List<AndroidElement> itemNames =  driver
 					.findElements(By.xpath("//div[@class='heading-tertiary heading-favorite']"));
 			for (int i = 0; i < itemNames.size(); i++) {
 				String name = itemNames.get(i).getText().trim();
 				if (name.equalsIgnoreCase(chilisFavItem)) {
-					AndroidElement ele = driver.findElements(By.xpath("//div[@class='favorite-action']/button")).get(i);
+					AndroidElement ele = (AndroidElement) driver.findElements(By.xpath("//div[@class='favorite-action']/button")).get(i);
 					scrollIntoViewBottomByElement(ele);
 					ele.click();
 					break;
@@ -974,7 +1037,34 @@ public class FunctionalComponents extends Base {
 					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
 			log.error(e.getMessage());
 
-			tearDown();
+			stopTest();
+		}
+	}
+	public void AddChilisFavouriteToCartIOS() throws InterruptedException {
+
+		String chilisFavItem = excel.getCellData("LoggedInOrder", "Chilis Favourite Items", 2).trim();
+		try {
+			@SuppressWarnings("unchecked")
+			List<IOSElement> itemNames =  driver
+					.findElements(By.xpath("//div[@class='heading-tertiary heading-favorite']"));
+			for (int i = 0; i < itemNames.size(); i++) {
+				String name = itemNames.get(i).getText().trim();
+				if (name.equalsIgnoreCase(chilisFavItem)) {
+					AndroidElement ele = (AndroidElement) driver.findElements(By.xpath("//div[@class='favorite-action']/button")).get(i);
+					scrollIntoViewBottomByElement(ele);
+					ele.click();
+					break;
+				}
+			}
+			log.info("Chilis favourite Item " + chilisFavItem + " selected");
+			extTestObj.get().createNode("Chilis favourite Item " + chilisFavItem + " selected").pass("PASSED");
+		} catch (Exception e) {
+			log.error("Failed to select chilis favourite item");
+			extTestObj.get().createNode("Failed to select chilis favourite item")
+					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
+			log.error(e.getMessage());
+
+			stopTest();
 		}
 	}
 
@@ -990,7 +1080,7 @@ public class FunctionalComponents extends Base {
 					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
 			log.error(e.getMessage());
 
-			tearDown();
+			stopTest();
 		}
 	}
 
@@ -1005,7 +1095,7 @@ public class FunctionalComponents extends Base {
 					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
 			log.error(e.getMessage());
 
-			tearDown();
+			stopTest();
 		}
 	}
 
@@ -1024,7 +1114,7 @@ public class FunctionalComponents extends Base {
 					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
 			log.error(e.getMessage());
 
-			tearDown();
+			stopTest();
 
 		}
 
@@ -1042,7 +1132,7 @@ public class FunctionalComponents extends Base {
 					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
 			log.error(e.getMessage());
 
-			tearDown();
+			stopTest();
 		}
 	}
 
@@ -1058,7 +1148,7 @@ public class FunctionalComponents extends Base {
 					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
 			log.error(e.getMessage());
 
-			tearDown();
+			stopTest();
 		}
 	}
 
@@ -1077,7 +1167,7 @@ public class FunctionalComponents extends Base {
 					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
 			log.error(e.getMessage());
 
-			tearDown();
+			stopTest();
 		}
 	}
 
@@ -1093,7 +1183,7 @@ public class FunctionalComponents extends Base {
 					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
 			log.error(e.getMessage());
 
-			tearDown();
+			stopTest();
 		}
 
 	}
@@ -1114,7 +1204,7 @@ public class FunctionalComponents extends Base {
 					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
 			log.error(e.getMessage());
 
-			tearDown();
+			stopTest();
 		}
 	}
 
@@ -1134,7 +1224,7 @@ public class FunctionalComponents extends Base {
 					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
 			log.error(e.getMessage());
 
-			tearDown();
+			stopTest();
 		}
 	}
 
@@ -1153,7 +1243,7 @@ public class FunctionalComponents extends Base {
 			extTestObj.get().createNode( "Failed to enter Name on Card").fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);;
 			log.error(e.getMessage());
 
-			tearDown();
+			stopTest();
 		}
 	}
 
@@ -1171,7 +1261,7 @@ public class FunctionalComponents extends Base {
 			extTestObj.get().createNode("Failed to enter Billing zip code")
 					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
 			log.error(e.getMessage());
-			tearDown();
+			stopTest();
 		}
 	}
 
@@ -1233,7 +1323,7 @@ public class FunctionalComponents extends Base {
 			extTestObj.get().createNode("Failed to click place order button")
 					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
 			log.error(e.getMessage());
-			tearDown();
+			stopTest();
 
 		}
 	}
@@ -1252,7 +1342,7 @@ public class FunctionalComponents extends Base {
 			extTestObj.get().createNode("Success message not displayed")
 					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
 			log.error(e.getMessage());
-			tearDown();
+			stopTest();
 		}
 		return driver.findElement(Elements.successMessageforLoggedInOrder).getText();
 
@@ -1270,7 +1360,7 @@ public class FunctionalComponents extends Base {
 			extTestObj.get().createNode("Order price after payment not displayed")
 					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
 			log.error(e.getMessage());
-			tearDown();
+			stopTest();
 		}
 		return driver.findElement(Elements.orderPrice).getText();
 
@@ -1288,7 +1378,7 @@ public class FunctionalComponents extends Base {
 			log.error(e.getMessage());
 			extTestObj.get().createNode("Failed to select reorder option")
 					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
-			tearDown();
+			stopTest();
 		}
 	}
 
@@ -1304,7 +1394,7 @@ public class FunctionalComponents extends Base {
 			log.error(e.getMessage());
 			extTestObj.get().createNode("Failed to click reorder")
 					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
-			tearDown();
+			stopTest();
 		}
 	}
 
@@ -1321,7 +1411,7 @@ public class FunctionalComponents extends Base {
 			log.error(e.getMessage());
 			extTestObj.get().createNode("Failed to select and change quantity")
 					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
-			tearDown();
+			stopTest();
 		}
 	}
 
@@ -1341,7 +1431,7 @@ public class FunctionalComponents extends Base {
 			log.error(e.getMessage());
 			extTestObj.get().createNode("Order now button not clicked")
 					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
-			tearDown();
+			stopTest();
 		}
 	}
 
@@ -1359,7 +1449,7 @@ public class FunctionalComponents extends Base {
 			extTestObj.get().createNode("Selected catagory button not clicked")
 					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
 			log.error(e.getMessage());
-			tearDown();
+			stopTest();
 		}
 	}
 
@@ -1377,7 +1467,7 @@ public class FunctionalComponents extends Base {
 			extTestObj.get().createNode("Item not selected")
 					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
 			log.error(e.getMessage());
-			tearDown();
+			stopTest();
 		}
 	}
 
@@ -1394,7 +1484,7 @@ public class FunctionalComponents extends Base {
 			extTestObj.get().createNode("Failed to add item to cart")
 					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
 			log.error(e.getMessage());
-			tearDown();
+			stopTest();
 		}
 	}
 
@@ -1410,7 +1500,7 @@ public class FunctionalComponents extends Base {
 			extTestObj.get().createNode("Order check out failed")
 					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
 			log.error(e.getMessage());
-			tearDown();
+			stopTest();
 		}
 	}
 
@@ -1427,7 +1517,7 @@ public class FunctionalComponents extends Base {
 			extTestObj.get().createNode("Delivery mode is not selected")
 					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
 			log.error(e.getMessage());
-			tearDown();
+			stopTest();
 		}
 	}
 
@@ -1438,7 +1528,7 @@ public class FunctionalComponents extends Base {
 			explicitWait(Elements.deliveryAddress);
 			clickableWait(Elements.deliveryAddress);
 			driver.getKeyboard().sendKeys(location);
-			driver.pressKeyCode(AndroidKeyCode.ENTER);
+			((PressesKey) driver).pressKeyCode(AndroidKeyCode.ENTER);
 			Thread.sleep(3000);
 			log.info("Delivery location entered as " + location);
 			extTestObj.get().createNode("Delivery location entered as " + location).pass("PASSED");
@@ -1447,7 +1537,7 @@ public class FunctionalComponents extends Base {
 			log.error(e.getMessage());
 			extTestObj.get().createNode("Failed to enter Delivery location")
 					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
-			tearDown();
+			stopTest();
 		}
 	}
 
@@ -1465,7 +1555,7 @@ public class FunctionalComponents extends Base {
 			extTestObj.get().createNode("Failed to enter Apartment no.")
 					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
 			log.error(e.getMessage());
-			tearDown();
+			stopTest();
 		}
 	}
 
@@ -1480,7 +1570,7 @@ public class FunctionalComponents extends Base {
 			extTestObj.get().createNode("Failed to select Delivery Option as ASAP")
 					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
 			log.error(e.getMessage());
-			tearDown();
+			stopTest();
 
 		}
 
@@ -1503,7 +1593,7 @@ public class FunctionalComponents extends Base {
 			log.error(e.getMessage());
 			extTestObj.get().createNode("Failed to select Delivery date")
 					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
-			tearDown();
+			stopTest();
 		}
 	}
 
@@ -1522,7 +1612,7 @@ public class FunctionalComponents extends Base {
 			extTestObj.get().createNode("Failed to enter First name")
 					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
 			log.error(e.getMessage());
-			tearDown();
+			stopTest();
 		}
 	}
 
@@ -1540,7 +1630,7 @@ public class FunctionalComponents extends Base {
 			extTestObj.get().createNode("Failed to enter Last name")
 					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
 			log.error(e.getMessage());
-			tearDown();
+			stopTest();
 		}
 	}
 
@@ -1559,7 +1649,7 @@ public class FunctionalComponents extends Base {
 			extTestObj.get().createNode("Failed to enter Contact number")
 					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
 			log.error(e.getMessage());
-			tearDown();
+			stopTest();
 		}
 	}
 
@@ -1578,7 +1668,7 @@ public class FunctionalComponents extends Base {
 					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
 			log.error(e.getMessage());
 
-			tearDown();
+			stopTest();
 		}
 	}
 
@@ -1601,7 +1691,7 @@ public class FunctionalComponents extends Base {
 			log.error(e.getMessage());
 			extTestObj.get().createNode("Failed to select Delivery time")
 					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
-			tearDown();
+			stopTest();
 		}
 	}
 
@@ -1620,7 +1710,7 @@ public class FunctionalComponents extends Base {
 			extTestObj.get().createNode("Failed to provide Delivery Instructions")
 					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
 			log.error(e.getMessage());
-			tearDown();
+			stopTest();
 		}
 	}
 
@@ -1639,7 +1729,7 @@ public class FunctionalComponents extends Base {
 			extTestObj.get().createNode("Curbside mode is not selected")
 					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
 			log.error(e.getMessage());
-			tearDown();
+			stopTest();
 		}
 	}
 
@@ -1660,7 +1750,7 @@ public class FunctionalComponents extends Base {
 			log.error(e.getMessage());
 			extTestObj.get().createNode("Failed to select Pickup date")
 					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
-			tearDown();
+			stopTest();
 		}
 	}
 
@@ -1678,7 +1768,7 @@ public class FunctionalComponents extends Base {
 			extTestObj.get().createNode("Failed to select Pickup time")
 					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
 			log.error(e.getMessage());
-			tearDown();
+			stopTest();
 		}
 	}
 
@@ -1697,7 +1787,7 @@ public class FunctionalComponents extends Base {
 			extTestObj.get().createNode("Failed to enter Vehicle make")
 					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
 			log.error(e.getMessage());
-			tearDown();
+			stopTest();
 		}
 	}
 
@@ -1717,7 +1807,7 @@ public class FunctionalComponents extends Base {
 			extTestObj.get().createNode("Failed to enter Vehicle model")
 					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
 			log.error(e.getMessage());
-			tearDown();
+			stopTest();
 		}
 	}
 
@@ -1736,7 +1826,7 @@ public class FunctionalComponents extends Base {
 			extTestObj.get().createNode("Failed to enter Vehicle Color")
 					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
 			log.error(e.getMessage());
-			tearDown();
+			stopTest();
 		}
 	}
 
@@ -1754,7 +1844,7 @@ public class FunctionalComponents extends Base {
 			extTestObj.get().createNode("Failed to select delivery time Later Today")
 					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
 			log.error(e.getMessage());
-			tearDown();
+			stopTest();
 		}
 	}
 
@@ -1771,7 +1861,7 @@ public class FunctionalComponents extends Base {
 			extTestObj.get().createNode("Failed to select pickup time 'ASAP'")
 					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
 			log.error(e.getMessage());
-			tearDown();
+			stopTest();
 		}
 	}
 
@@ -1791,7 +1881,7 @@ public class FunctionalComponents extends Base {
 			extTestObj.get().createNode("Carryout Button click failed")
 					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
 			log.error(e.getMessage());
-			tearDown();
+			stopTest();
 		}
 
 	}
@@ -1807,7 +1897,7 @@ public class FunctionalComponents extends Base {
 	 * log.error("Failed to select pick up future time");
 	 * extTestObj.get().createNode("Failed to select pick up future time").
 	 * fail("Method Name : "+Thread.currentThread().getStackTrace()[1].getMethodName
-	 * ()+"()").error(e); log.error(e.getMessage()); tearDown(); } }
+	 * ()+"()").error(e); log.error(e.getMessage()); stopTest(); } }
 	 * 
 	 */
 
@@ -1823,7 +1913,7 @@ public class FunctionalComponents extends Base {
 			extTestObj.get().createNode("Failed to select Later Today")
 					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
 			log.error(e.getMessage());
-			tearDown();
+			stopTest();
 		}
 	}
 
@@ -1838,7 +1928,7 @@ public class FunctionalComponents extends Base {
 			extTestObj.get().createNode("Failed to add reward")
 					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
 			log.error(e.getMessage());
-			tearDown();
+			stopTest();
 		}
 	}
 
@@ -1854,7 +1944,7 @@ public class FunctionalComponents extends Base {
 	 * log.error("Failed to add reward item");
 	 * extTestObj.get().createNode("Failed to add reward item").
 	 * fail("Method Name : "+Thread.currentThread().getStackTrace()[1].getMethodName
-	 * ()+"()").error(e); log.error(e.getMessage()); tearDown(); } }
+	 * ()+"()").error(e); log.error(e.getMessage()); stopTest(); } }
 	 */
 
 	/*
@@ -1866,7 +1956,7 @@ public class FunctionalComponents extends Base {
 	 * (Exception e) { log.error("Failed to apply discount");
 	 * extTestObj.get().createNode("Failed to apply discount").fail("Method Name : "
 	 * +Thread.currentThread().getStackTrace()[1].getMethodName()+"()").error(e);
-	 * log.error(e.getMessage()); tearDown(); }
+	 * log.error(e.getMessage()); stopTest(); }
 	 * 
 	 * 
 	 * }
@@ -1888,7 +1978,7 @@ public class FunctionalComponents extends Base {
 	 * ; } catch(Exception e) { log.error("Failed to customize order");
 	 * extTestObj.get().createNode("Failed to customize order").
 	 * fail("Method Name : "+Thread.currentThread().getStackTrace()[1].getMethodName
-	 * ()+"()").error(e); log.error(e.getMessage()); tearDown(); } }
+	 * ()+"()").error(e); log.error(e.getMessage()); stopTest(); } }
 	 */
 
 	/*
@@ -1903,7 +1993,7 @@ public class FunctionalComponents extends Base {
 	 * log.error("Incorrect Customization Info");
 	 * extTestObj.get().createNode("Incorrect Customization Info").
 	 * fail("Method Name : "+Thread.currentThread().getStackTrace()[1].getMethodName
-	 * ()+"()").error(e); log.error(e.getMessage()); tearDown();
+	 * ()+"()").error(e); log.error(e.getMessage()); stopTest();
 	 * 
 	 * } }
 	 */
@@ -1928,7 +2018,7 @@ public class FunctionalComponents extends Base {
 			log.error(e.getMessage());
 			extTestObj.get().createNode("Join line button not clicked")
 					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
-			tearDown();
+			stopTest();
 		}
 	}
 	/*
@@ -1944,7 +2034,7 @@ public class FunctionalComponents extends Base {
 	 * log.error(e.getMessage());
 	 * extTestObj.get().createNode("Party size not selected").fail("Method Name : "
 	 * +Thread.currentThread().getStackTrace()[1].getMethodName()+"()").error(e);
-	 * tearDown(); }
+	 * stopTest(); }
 	 * 
 	 * }
 	 */
@@ -1962,7 +2052,7 @@ public class FunctionalComponents extends Base {
 	 * log.error(e.getMessage());
 	 * extTestObj.get().createNode("Failed to enter Name on join line").
 	 * fail("Method Name : "+Thread.currentThread().getStackTrace()[1].getMethodName
-	 * ()+"()").error(e); tearDown(); } }
+	 * ()+"()").error(e); stopTest(); } }
 	 */
 
 	/*
@@ -1977,7 +2067,7 @@ public class FunctionalComponents extends Base {
 	 * log.error(e.getMessage());
 	 * extTestObj.get().createNode("Failed to enter Mobile number").
 	 * fail("Method Name : "+Thread.currentThread().getStackTrace()[1].getMethodName
-	 * ()+"()").error(e); tearDown(); } }
+	 * ()+"()").error(e); stopTest(); } }
 	 */
 
 	/*
@@ -1990,7 +2080,7 @@ public class FunctionalComponents extends Base {
 	 * log.error("Site scrolled but not joined line"); log.error(e.getMessage());
 	 * extTestObj.get().createNode("Joined line is failed").fail("Method Name : "
 	 * +Thread.currentThread().getStackTrace()[1].getMethodName()+"()").error(e);
-	 * tearDown(); }
+	 * stopTest(); }
 	 * 
 	 * }
 	 */
