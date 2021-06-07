@@ -1084,7 +1084,7 @@ public class FunctionalComponents extends Base {
 		}
 	}
 
-	public void noClickViewCart() throws InterruptedException {
+	public void guestClickViewCart() throws InterruptedException {
 		try {
 			clickableWait(Elements.viewCartButton);
 			log.info("View Cart clicked");
@@ -1251,6 +1251,7 @@ public class FunctionalComponents extends Base {
 
 		String zipCode = excel.getCellData("LoggedInOrder", "Zip Code", 2);
 		try {
+			scrollIntoViewBottom(Elements.billingZip);
 			explicitWait(Elements.billingZip);
 			clickableWait(Elements.billingZip);
 			driver.getKeyboard().sendKeys(zipCode);
@@ -1283,6 +1284,7 @@ public class FunctionalComponents extends Base {
 
 	public String OrderTotal() {
 		try {
+			scrollIntoViewBottom(Elements.pickUpCost);
 			explicitWait(Elements.pickUpCost);
 			log.info("Pick up cost displayed as : " + driver.findElement(Elements.pickUpCost).getText());
 			extTestObj.get()
@@ -1314,7 +1316,7 @@ public class FunctionalComponents extends Base {
 
 	public void placeOrder() {
 		try {
-			scrollDownFromStart("50");
+			scrollIntoViewBottom(Elements.placeOrder);
 			clickableWait(Elements.placeOrder);
 			log.info("Place order button clicked");
 			extTestObj.get().createNode("Place order button clicked").pass("PASSED");
@@ -1330,7 +1332,7 @@ public class FunctionalComponents extends Base {
 
 	public String getSuccessMessageforLoggedInOrder() {
 		try {
-			scrollDownFromStart("50");
+			scrollIntoViewBottom(Elements.successMessageforLoggedInOrder);
 			explicitWait(Elements.successMessageforLoggedInOrder);
 			log.info("Success message displayed as : "
 					+ driver.findElement(Elements.successMessageforLoggedInOrder).getText());
@@ -1350,6 +1352,7 @@ public class FunctionalComponents extends Base {
 
 	public String returnOrderPrice() {
 		try {
+			scrollIntoViewBottom(Elements.orderPrice);
 			explicitWait(Elements.orderPrice);
 			log.info("Order price displayed as  : " + driver.findElement(Elements.orderPrice).getText());
 			extTestObj.get().createNode(
@@ -1436,14 +1439,14 @@ public class FunctionalComponents extends Base {
 	}
 
 	public void clickMenuCatagory() { // Ayushman
-		String catagory = excel.getCellData("Common", "Menu Category", 2);
+		String category = excel.getCellData("Menu", "Category", 2);
 		try {
 			Thread.sleep(3000);
-			scrollIntoViewHalf(By.xpath("//*[contains(id()," + catagory + ")]"));
+			scrollIntoViewHalf(By.xpath("//a[@title='"+category+"']"));
 			Thread.sleep(3000);
-			clickElement(By.xpath("//*[contains(id()," + catagory + ")]"));
-			log.info("Site scrolled and category " + catagory + " selected");
-			extTestObj.get().createNode("Site scrolled and category " + catagory + " selected").pass("PASSED");
+			clickElement(By.xpath("//a[@title='"+category+"']"));
+			log.info("Site scrolled and category " + category + " selected");
+			extTestObj.get().createNode("Site scrolled and category " + category + " selected").pass("PASSED");
 		} catch (Exception e) {
 			log.error("Site scrolled but selected catagory button not clicked");
 			extTestObj.get().createNode("Selected catagory button not clicked")
@@ -1454,12 +1457,12 @@ public class FunctionalComponents extends Base {
 	}
 
 	public void clickItemOrder() { // Ayushman
-		String item = excel.getCellData("Common", "Item", 2);
+		String item = excel.getCellData("Menu", "Item", 2);
 		try {
 			Thread.sleep(2000);
-			scrollIntoViewHalf(By.xpath("//*[contains(text()," + item + ")]"));
+			scrollIntoViewHalf(By.xpath("//a[@title='"+item+"']"));
 			Thread.sleep(2000);
-			clickElement(By.xpath("//*[contains(text()," + item + ")]"));
+			clickElement(By.xpath("//a[@title='"+item+"']"));
 			log.info("Site scrolled and item" + item + "clicked");
 			extTestObj.get().createNode("Site scrolled and item" + item + "clicked").pass("PASSED");
 		} catch (Exception e) {
@@ -1474,7 +1477,7 @@ public class FunctionalComponents extends Base {
 	public void clickAddItem() { // Ayushman
 		try {
 			Thread.sleep(2000);
-			scrollIntoViewHalf(Elements.addThisItem);
+			scrollIntoViewBottom(Elements.addThisItem);
 			Thread.sleep(2000);
 			clickElement(Elements.addThisItem);
 			log.info("Item added to cart");
@@ -1776,7 +1779,7 @@ public class FunctionalComponents extends Base {
 
 		String vehicle = excel.getCellData("GuestUserCurbSide", "Vehicle Make", 2);
 		try {
-			scrollIntoViewHalf(Elements.vehicleMake);
+			scrollIntoViewBottom(Elements.vehicleMake);
 			explicitWait(Elements.vehicleMake);
 			clickableWait(Elements.vehicleMake);
 			driver.getKeyboard().sendKeys(vehicle);
@@ -1797,7 +1800,7 @@ public class FunctionalComponents extends Base {
 		try {
 			scrollIntoViewHalf(Elements.vehicleModel);
 			explicitWait(Elements.vehicleModel);
-			clickableWait(Elements.vehicleMake);
+			clickableWait(Elements.vehicleModel);
 			driver.getKeyboard().sendKeys(vehicleModel);
 			log.info("Vehicle model entered as : " + vehicleModel);
 			extTestObj.get().createNode("Vehicle model entered as : " + vehicleModel).pass("PASSED");
@@ -1815,7 +1818,7 @@ public class FunctionalComponents extends Base {
 
 		String vehicleColor = excel.getCellData("GuestUserCurbSide", "Vehicle Color", 2);
 		try {
-			scrollIntoViewHalf(Elements.vehicleColor);
+			scrollIntoViewBottom(Elements.vehicleColor);
 			explicitWait(Elements.vehicleColor);
 			clickableWait(Elements.vehicleColor);
 			driver.getKeyboard().sendKeys(vehicleColor);

@@ -20,13 +20,12 @@ import org.openxmlformats.schemas.spreadsheetml.x2006.main.CTTable;
 import org.openxmlformats.schemas.spreadsheetml.x2006.main.CTTableColumn;
 import org.openxmlformats.schemas.spreadsheetml.x2006.main.CTTableColumns;
 import org.openxmlformats.schemas.spreadsheetml.x2006.main.CTTableStyleInfo;
-public class formatAsTable  {
+public class GenerateTestSummary  {
 	
-	public final String header1 = "No. of Test Cases Executed";
-	public final String header2 = "No. of Test Cases Passed";
-	public final String header3 = "No. of Test Cases Executed";
-	public final String header4 = "No. of Test Cases Executed";
+	
+	public static String projectPath = System.getProperty("user.dir");
 	public static void createTestExecutionTable(int testExecuted,int testPassed,int testFailed, int testSkipped) throws FileNotFoundException, IOException {
+		
 		/* Start with Creating a workbook and worksheet object */
 		Workbook wb = new XSSFWorkbook();
 		XSSFSheet sheet = (XSSFSheet) wb.createSheet();
@@ -96,8 +95,7 @@ public class formatAsTable  {
 		localXSSFCell23.setCellValue(testFailed);
 		localXSSFCell24.setCellValue(testSkipped);
 		/* Write output as File */
-		FileOutputStream fileOut = new FileOutputStream(
-				"C:/Users/Somnath Baul/eclipse-workspace/MobileSeeTestWebAutomation/Excel_Format_As_Table.xlsx");
+		FileOutputStream fileOut = new FileOutputStream(projectPath+"/TestSummary.xlsx");
 		wb.write(fileOut);
 		fileOut.close();
 	}

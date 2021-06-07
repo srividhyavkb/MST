@@ -137,7 +137,7 @@ public class Elements {
 		public static final By LaterToday = By.xpath("//select[@id='pickup-date']/option[contains(text(),'Later')]");
 		
 		//Curbside ASAP MCA 
-		public static final By pickupAsapOrder = By.xpath("//*[contains(text(),'ASAP')] ");
+		public static final By pickupAsapOrder = By.xpath("//*[@id='pickup-date']/option[contains(@value,'ASAP')]");
 		
 		//Place order with Rewards
 		public static final By addRewards = By.xpath("//*[@name='reward']");

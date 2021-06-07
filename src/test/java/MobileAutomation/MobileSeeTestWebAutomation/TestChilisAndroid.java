@@ -34,8 +34,9 @@ public class TestChilisAndroid extends Base {
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
 	}
-
-	@Test(enabled = true, retryAnalyzer = Resources.RetryAnalyzer.class)
+	
+	
+	@Test(enabled = true,priority=1)
 	public void testLoginFeature() throws Exception {
 		Logger log = LogManager.getLogger("TestLoginLogout");
 		log.info("******TC01_ANDROID : Starting to Validate Login and Logout functionality of Chilis WebApp******");
@@ -52,7 +53,7 @@ public class TestChilisAndroid extends Base {
 		System.out.println(func.validateLogout());
 	}
 
-	@Test(enabled = false, retryAnalyzer = Resources.RetryAnalyzer.class)
+	@Test(enabled = false,priority=2)
 	public void testRewardsFeature() throws InterruptedException {
 		Logger log = LogManager.getLogger("TestRewards");
 		log.info("******TC02_ANDROID : Starting to validate Rewards details page for logged in user******");
@@ -70,7 +71,7 @@ public class TestChilisAndroid extends Base {
 		func3.getRewardTitle();
 	}
 
-	@Test(enabled = false, retryAnalyzer = Resources.RetryAnalyzer.class)
+	@Test(enabled = false,priority=3)
 	public void testUpdateAccountFeature() throws InterruptedException {
 		Logger log = LogManager.getLogger("TestUpdateAccount");
 		log.info("******TC03_ANDROID : Starting to validate user is able to update my Account******");
@@ -103,7 +104,7 @@ public class TestChilisAndroid extends Base {
 
 	}
 
-	@Test(enabled = false, retryAnalyzer = Resources.RetryAnalyzer.class)
+	@Test(enabled = false,priority=4)
 	public void testFavouriteItems() throws InterruptedException {
 		Logger log = LogManager.getLogger("TestFavouriteItems");
 		log.info("******TC04_ANDROID : Starting to verify Favorites items is displaying on menu page******");
@@ -120,7 +121,7 @@ public class TestChilisAndroid extends Base {
 		func5.getAllChilisFavouriteItems();
 	}
 
-	@Test(enabled = false, retryAnalyzer = Resources.RetryAnalyzer.class)
+	@Test(enabled = false,priority=5)
 	public void testLocationFeature() throws Exception {
 		Logger log = LogManager.getLogger("TestLocationSearch");
 		log.info("******TC05_ANDROID : Starting to validate location search fields and links for guest user******");
@@ -135,7 +136,7 @@ public class TestChilisAndroid extends Base {
 		System.out.println(result);
 	}
 
-	@Test(enabled = false, retryAnalyzer = Resources.RetryAnalyzer.class)
+	@Test(enabled = false,priority=6)
 	public void testCurbsideAsapOrder() throws Exception {
 
 		Logger log = LogManager.getLogger("TestMcaCurbside-ASAPOrder");
@@ -176,7 +177,7 @@ public class TestChilisAndroid extends Base {
 		Assert.assertEquals(priceBeforePlacingOrder, priceAfterPlacingOrder, "Incorrect price displayed");
 	}
 
-	@Test(enabled = false, retryAnalyzer = Resources.RetryAnalyzer.class)
+	@Test(enabled = false,priority=7)
 	public void testAddMyVisit() throws Exception {
 		Logger log = LogManager.getLogger("TestAddMyVisit");
 		log.info("******TC07_ANDROID : Starting to verify user is able to submit Add my visit form for login member******");
@@ -200,7 +201,7 @@ public class TestChilisAndroid extends Base {
 		System.out.println(func6.retrieveSuccessMessage());
 	}
 
-	@Test(enabled = false, retryAnalyzer = Resources.RetryAnalyzer.class)
+	@Test(enabled = false,priority=8)
 	public void testLoggedInOrderFeature() throws InterruptedException {
 		Logger log = LogManager.getLogger("TestLoggedInOrder");
 		log.info("******TC08_ANDROID : Starting to validate user is able order placement with existing log in user******");
@@ -237,7 +238,7 @@ public class TestChilisAndroid extends Base {
 		Assert.assertEquals(priceBeforePlacingOrder, priceAfterPlacingOrder, "Incorrect price displayed");
 	}
 
-	@Test(enabled = false, retryAnalyzer = Resources.RetryAnalyzer.class)
+	@Test(enabled = false,priority=9)
 	public void testMCACarryoutLaterToday() throws InterruptedException {
 		Logger log = LogManager.getLogger("TestMCACarryoutLaterToday");
 		log.info("******TC09_ANDROID : Starting to validate user is able to place Carry out-Later Today order with MCA users******");
@@ -269,6 +270,46 @@ public class TestChilisAndroid extends Base {
 		ob.enterBillingZipCode();
 		ob.giveTip();
 		ob.checkRoundOff();
+		String priceBeforePlacingOrder = ob.OrderTotal();
+		ob.placeOrder();
+		System.out.println(ob.getSuccessMessageforLoggedInOrder());
+		String priceAfterPlacingOrder = ob.returnOrderPrice();
+		Assert.assertEquals(priceBeforePlacingOrder, priceAfterPlacingOrder, "Incorrect price displayed");
+	}
+	
+	@Test(enabled = false,priority=10)
+	public void testGuestCurbSide() throws InterruptedException {
+		Logger log = LogManager.getLogger("TestGuestCurbsideOrder");
+		log.info("******TC10_ANDROID : Starting to validate user is able to place Curbside order. For Guest user******");
+		FunctionalComponents ob = new FunctionalComponents(driver, log);
+		ob.validateQASite();
+		ob.closePopupRewards();
+		ob.clickMenuButton();
+		ob.selectLocationsOption();
+		ob.enterRestaurantLocationforSearch();
+		ob.clickSearchButton();
+		ob.orderNow();
+		ob.clickMenuCatagory();
+		ob.clickItemOrder();
+		ob.clickAddItem();
+		ob.guestClickViewCart();
+		ob.clickCheckOut();
+		ob.selectCurbside();
+		ob.selectPickupAsap();
+		ob.enterFirstName();
+		ob.enterLastName();
+		ob.enterContactNumber();
+		ob.enterEMail();
+		ob.enterVehicleMake();
+		ob.enterVehicleModel();
+		ob.enterVehicleColor();
+		ob.continueToPayment();
+		ob.enterCardNo();
+		ob.enterCVV();
+		ob.selectExpirationMonth();
+		ob.selectExpirationYear();
+		ob.enterNameOnCard();
+		ob.enterBillingZipCode();
 		String priceBeforePlacingOrder = ob.OrderTotal();
 		ob.placeOrder();
 		System.out.println(ob.getSuccessMessageforLoggedInOrder());

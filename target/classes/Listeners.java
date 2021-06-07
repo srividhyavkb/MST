@@ -25,16 +25,16 @@ import io.appium.java_client.android.AndroidElement;
 public class Listeners extends TestListenerAdapter implements ITestListener {
 	ExtentTest test;
 	ExtentReports extent = ExtentReporterNG.getReportObject();
-	ThreadLocal<ExtentTest> extentTest = new ThreadLocal<ExtentTest>();
+	static ThreadLocal<ExtentTest> extentTest = new ThreadLocal<ExtentTest>();
 	public int testPassed = 0;
 	public int testFailed = 0;
 	public int testSkipped = 0;
 	public int testExecuted = 0;
+	public static Base base = new Base();
+	public static Properties prop = base.returnProperty();
 
 	public static void main(String[] args) {
 
-		Base base = new Base();
-		Properties prop = base.returnProperty();
 		if(prop.getProperty("sendEmail").equals("true"))
 		{
 		SendEmail.getReportPath(new File(System.getProperty("user.dir") + "/reports"));
@@ -94,6 +94,7 @@ public class Listeners extends TestListenerAdapter implements ITestListener {
 
 		try {
 			formatAsTable.createTestExecutionTable(testExecuted, testPassed, testFailed, testSkipped);
+			if(prop.getProperty("sendEmail").equals("true"))
 			extentTest.get().log(Status.INFO, MarkupHelper.createLabel("Email sent to recipients", ExtentColor.LIME));
 		} catch (Exception e) {
 			// TODO Auto-generated catch block

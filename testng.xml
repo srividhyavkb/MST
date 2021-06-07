@@ -3,10 +3,11 @@
 <suite name="Suite">
 <listeners>
 <listener class-name="Resources.Listeners"/>
+<listener class-name="Resources.Transformer"/>
 </listeners>
   <test name="Test Chilis WebApp">
     <classes>
-      <class name="MobileAutomation.MobileSeeTestWebAutomation.TestGuestCurbSide"/>
+      <class name="MobileAutomation.MobileSeeTestWebAutomation.TestMCACarryOutASAP"/>
     </classes>
     </test>
 </suite> <!-- Suite -->

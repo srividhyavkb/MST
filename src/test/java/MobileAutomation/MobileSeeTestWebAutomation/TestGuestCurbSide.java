@@ -7,6 +7,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.ScreenOrientation;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -48,8 +49,7 @@ public class TestGuestCurbSide extends Base {
 		ob.guestClickViewCart();
 		ob.clickCheckOut();
 		ob.selectCurbside();
-		ob.selectPickupDate();
-		ob.selectPickupTime();
+		ob.selectPickupAsap();
 		ob.enterFirstName();
 		ob.enterLastName();
 		ob.enterContactNumber();
@@ -61,10 +61,14 @@ public class TestGuestCurbSide extends Base {
 		ob.enterCardNo();
 		ob.enterCVV();
 		ob.selectExpirationMonth();
-		ob.selectExpirationMonth();
+		ob.selectExpirationYear();
 		ob.enterNameOnCard();
 		ob.enterBillingZipCode();
+		String priceBeforePlacingOrder = ob.OrderTotal();
 		ob.placeOrder();
+		System.out.println(ob.getSuccessMessageforLoggedInOrder());
+		String priceAfterPlacingOrder = ob.returnOrderPrice();
+		Assert.assertEquals(priceBeforePlacingOrder, priceAfterPlacingOrder, "Incorrect price displayed");
 	}
 	
 	@AfterMethod
