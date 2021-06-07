@@ -1436,14 +1436,14 @@ public class FunctionalComponents extends Base {
 	}
 
 	public void clickMenuCatagory() { // Ayushman
-		String catagory = excel.getCellData("Common", "Menu Category", 2);
+		String category = excel.getCellData("Menu", "Category", 2);
 		try {
 			Thread.sleep(3000);
-			scrollIntoViewHalf(By.xpath("//*[contains(id()," + catagory + ")]"));
+			scrollIntoViewHalf(By.xpath("//a[@title='"+category+"']"));
 			Thread.sleep(3000);
-			clickElement(By.xpath("//*[contains(id()," + catagory + ")]"));
-			log.info("Site scrolled and category " + catagory + " selected");
-			extTestObj.get().createNode("Site scrolled and category " + catagory + " selected").pass("PASSED");
+			clickElement(By.xpath("//a[@title='"+category+"']"));
+			log.info("Site scrolled and category " + category + " selected");
+			extTestObj.get().createNode("Site scrolled and category " + category + " selected").pass("PASSED");
 		} catch (Exception e) {
 			log.error("Site scrolled but selected catagory button not clicked");
 			extTestObj.get().createNode("Selected catagory button not clicked")
@@ -1454,12 +1454,12 @@ public class FunctionalComponents extends Base {
 	}
 
 	public void clickItemOrder() { // Ayushman
-		String item = excel.getCellData("Common", "Item", 2);
+		String item = excel.getCellData("Menu", "Item", 2);
 		try {
 			Thread.sleep(2000);
-			scrollIntoViewHalf(By.xpath("//*[contains(text()," + item + ")]"));
+			scrollIntoViewHalf(By.xpath("//a[@title='"+item+"']"));
 			Thread.sleep(2000);
-			clickElement(By.xpath("//*[contains(text()," + item + ")]"));
+			clickElement(By.xpath("//a[@title='"+item+"']"));
 			log.info("Site scrolled and item" + item + "clicked");
 			extTestObj.get().createNode("Site scrolled and item" + item + "clicked").pass("PASSED");
 		} catch (Exception e) {

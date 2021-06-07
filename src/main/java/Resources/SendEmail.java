@@ -12,7 +12,7 @@ import org.apache.commons.mail.EmailException;
 import org.apache.commons.mail.MultiPartEmail;
 import org.apache.commons.mail.SimpleEmail;
 
-public class SendEmail {
+public class SendEmail extends Thread {
 
 	public static String reportPath;
 
@@ -27,9 +27,10 @@ public class SendEmail {
 
 	}
 
-	public static void sendEmail() throws EmailException {
+	public void run()  {
 
 		// Create the attachment
+		try {
 		EmailAttachment attachment = new EmailAttachment();
 		attachment.setPath(reportPath);
 		attachment.setDisposition(EmailAttachment.ATTACHMENT);
@@ -46,6 +47,11 @@ public class SendEmail {
 		String[] emailAddress = { "baulsom1596@gmail.com", "Somnath.Baul@brinker.com" };
 		email.addTo(emailAddress);
 		email.send();
+		}
+		catch(Exception e)
+		{
+			
+		}
 
 	}
 

@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Iterator;
+import java.util.Properties;
 
 import org.apache.commons.mail.EmailException;
 import org.testng.ITestContext;
@@ -21,7 +22,7 @@ import com.aventstack.extentreports.markuputils.MarkupHelper;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
 
-public class Listeners extends TestListenerAdapter implements ITestListener  {
+public class Listeners extends TestListenerAdapter implements ITestListener {
 	ExtentTest test;
 	ExtentReports extent = ExtentReporterNG.getReportObject();
 	ThreadLocal<ExtentTest> extentTest = new ThreadLocal<ExtentTest>();
@@ -29,6 +30,19 @@ public class Listeners extends TestListenerAdapter implements ITestListener  {
 	public int testFailed = 0;
 	public int testSkipped = 0;
 	public int testExecuted = 0;
+
+	public static void main(String[] args) {
+
+		Base base = new Base();
+		Properties prop = base.returnProperty();
+		if(prop.getProperty("sendEmail").equals("true"))
+		{
+		SendEmail.getReportPath(new File(System.getProperty("user.dir") + "/reports"));
+		Runtime current = Runtime.getRuntime();
+		current.addShutdownHook(new SendEmail());
+		}
+
+	}
 
 	public void onTestStart(ITestResult result) {
 // TODO Auto-generated method stub
@@ -54,10 +68,9 @@ public class Listeners extends TestListenerAdapter implements ITestListener  {
 	}
 
 	public void onTestSkipped(ITestResult result) {
-		if(result.getThrowable().getMessage()==null)
+		if (result.getThrowable().getMessage() == null)
 			extent.removeTest(test);
-		else
-		{
+		else {
 			extentTest.get().log(Status.SKIP,
 					MarkupHelper.createLabel(result.getName() + " - Test Case Skipped", ExtentColor.ORANGE));
 			testSkipped++;
@@ -81,8 +94,6 @@ public class Listeners extends TestListenerAdapter implements ITestListener  {
 
 		try {
 			formatAsTable.createTestExecutionTable(testExecuted, testPassed, testFailed, testSkipped);
-			SendEmail.getReportPath(new File(System.getProperty("user.dir")+"/reports"));
-			SendEmail.sendEmail();
 			extentTest.get().log(Status.INFO, MarkupHelper.createLabel("Email sent to recipients", ExtentColor.LIME));
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
@@ -95,11 +106,12 @@ public class Listeners extends TestListenerAdapter implements ITestListener  {
 			if (context.getSkippedTests().getResults(method).size() > 0) {
 				System.out.println("Removing:" + skippedTestCase.getTestClass().toString());
 				skippedTestCases.remove();
-				
+
 			}
 		}
 		extent.flush();
-		
+		main(null);
+
 	}
 
 }

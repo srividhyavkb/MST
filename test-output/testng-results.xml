@@ -2,20 +2,20 @@
 <testng-results skipped="0" failed="0" ignored="8" total="9" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="99434" started-at="2021-06-05T19:57:05Z" finished-at="2021-06-05T19:58:45Z">
+  <suite name="Suite" duration-ms="138789" started-at="2021-06-07T03:37:33Z" finished-at="2021-06-07T03:39:52Z">
     <groups>
     </groups>
-    <test name="Test Chilis WebApp" duration-ms="99434" started-at="2021-06-05T19:57:05Z" finished-at="2021-06-05T19:58:45Z">
+    <test name="Test Chilis WebApp" duration-ms="138789" started-at="2021-06-07T03:37:33Z" finished-at="2021-06-07T03:39:52Z">
       <class name="MobileAutomation.MobileSeeTestWebAutomation.TestChilisAndroid">
-        <test-method status="PASS" signature="initialize()[pri:0, instance:MobileAutomation.MobileSeeTestWebAutomation.TestChilisAndroid@5ef60048]" name="initialize" is-config="true" duration-ms="30582" started-at="2021-06-06T01:27:05Z" finished-at="2021-06-06T01:27:36Z">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:MobileAutomation.MobileSeeTestWebAutomation.TestChilisAndroid@5ef60048]" name="initialize" is-config="true" duration-ms="74856" started-at="2021-06-07T09:07:33Z" finished-at="2021-06-07T09:08:48Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="testLoginFeature()[pri:0, instance:MobileAutomation.MobileSeeTestWebAutomation.TestChilisAndroid@5ef60048]" name="testLoginFeature" duration-ms="62055" started-at="2021-06-06T01:27:36Z" finished-at="2021-06-06T01:28:38Z">
+        <test-method status="PASS" signature="testLoginFeature()[pri:0, instance:MobileAutomation.MobileSeeTestWebAutomation.TestChilisAndroid@5ef60048]" name="testLoginFeature" duration-ms="57006" started-at="2021-06-07T09:08:48Z" finished-at="2021-06-07T09:09:45Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testLoginFeature -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:MobileAutomation.MobileSeeTestWebAutomation.TestChilisAndroid@5ef60048]" name="tearDown" is-config="true" duration-ms="6749" started-at="2021-06-06T01:28:38Z" finished-at="2021-06-06T01:28:45Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:MobileAutomation.MobileSeeTestWebAutomation.TestChilisAndroid@5ef60048]" name="tearDown" is-config="true" duration-ms="6886" started-at="2021-06-07T09:09:45Z" finished-at="2021-06-07T09:09:52Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

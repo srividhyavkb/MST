@@ -3,10 +3,15 @@ package Resources;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
+
+import org.apache.poi.ss.usermodel.CellStyle;
+import org.apache.poi.ss.usermodel.Font;
+import org.apache.poi.ss.usermodel.IndexedColors;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.ss.util.AreaReference;
 import org.apache.poi.ss.util.CellReference;
 import org.apache.poi.xssf.usermodel.XSSFCell;
+import org.apache.poi.xssf.usermodel.XSSFFont;
 import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFTable;
@@ -15,8 +20,12 @@ import org.openxmlformats.schemas.spreadsheetml.x2006.main.CTTable;
 import org.openxmlformats.schemas.spreadsheetml.x2006.main.CTTableColumn;
 import org.openxmlformats.schemas.spreadsheetml.x2006.main.CTTableColumns;
 import org.openxmlformats.schemas.spreadsheetml.x2006.main.CTTableStyleInfo;
-
-public class formatAsTable {
+public class formatAsTable  {
+	
+	public final String header1 = "No. of Test Cases Executed";
+	public final String header2 = "No. of Test Cases Passed";
+	public final String header3 = "No. of Test Cases Executed";
+	public final String header4 = "No. of Test Cases Executed";
 	public static void createTestExecutionTable(int testExecuted,int testPassed,int testFailed, int testSkipped) throws FileNotFoundException, IOException {
 		/* Start with Creating a workbook and worksheet object */
 		Workbook wb = new XSSFWorkbook();
@@ -53,24 +62,19 @@ public class formatAsTable {
 			column.setName("Column" + i);
 			column.setId(i + 1);
 		}
-
-		/* Add remaining Table Data */
-//         for (int i=0;i<=2;i++) //we have to populate 4 rows
-//         {
-//         /* Create a Row */
-//     XSSFRow row = sheet.createRow(i);
-//     for (int j = 0; j < 4; j++) //Three columns in each row
-//     {
-//          XSSFCell localXSSFCell = row.createCell(j);
-//          if (i == 0) {
-//         localXSSFCell.setCellValue("Heading" + j);
-//       } else {
-//         localXSSFCell.setCellValue(i + j);
-//       }   
-//     }
-//         }
+		
+		
+		CellStyle style = wb.createCellStyle();
+		Font font = wb.createFont();
+		font.setFontHeightInPoints((short)10);
+		font.setFontName("Arial");
+	    font.setColor(IndexedColors.BLACK.getIndex());
+	    font.setBold(true);
+	    font.setItalic(true);
+	    style.setFont(font);
 
 		XSSFRow row1 = sheet.createRow(0);
+		row1.setRowStyle(style);
 		XSSFCell localXSSFCell1, localXSSFCell2, localXSSFCell3, localXSSFCell4;
 		localXSSFCell1 = row1.createCell(0);
 		localXSSFCell2 = row1.createCell(1);
@@ -97,4 +101,8 @@ public class formatAsTable {
 		wb.write(fileOut);
 		fileOut.close();
 	}
-}
+
+	
+		
+	}
+
