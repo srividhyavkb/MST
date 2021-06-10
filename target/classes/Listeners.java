@@ -35,17 +35,18 @@ public class Listeners extends TestListenerAdapter implements ITestListener {
 
 	public static void main(String[] args) {
 
-		if(prop.getProperty("sendEmail").equals("true"))
-		{
-		SendEmail.getReportPath(new File(System.getProperty("user.dir") + "/reports"));
-		Runtime current = Runtime.getRuntime();
-		current.addShutdownHook(new SendEmail());
+		if (prop.getProperty("sendEmail").equals("true")) {
+			SendEmail.getReportPath(new File(System.getProperty("user.dir") + "/reports"));
+			Runtime current = Runtime.getRuntime();
+			current.addShutdownHook(new SendEmail());
 		}
 
 	}
 
 	public void onTestStart(ITestResult result) {
 // TODO Auto-generated method stub
+		System.setProperty("xmlrpc.connTimeout", "30000");
+		System.setProperty("xmlrpc.replyTimeout", "30000");
 		test = extent.createTest(result.getMethod().getMethodName());
 		extentTest.set(test);
 		FunctionalComponents.getExtentTest(extentTest);
@@ -93,9 +94,10 @@ public class Listeners extends TestListenerAdapter implements ITestListener {
 		// TODO Auto-generated method stub
 
 		try {
-			formatAsTable.createTestExecutionTable(testExecuted, testPassed, testFailed, testSkipped);
-			if(prop.getProperty("sendEmail").equals("true"))
-			extentTest.get().log(Status.INFO, MarkupHelper.createLabel("Email sent to recipients", ExtentColor.LIME));
+			GenerateTestSummary.createTestExecutionTable(testExecuted, testPassed, testFailed, testSkipped);
+			if (prop.getProperty("sendEmail").equals("true"))
+				extentTest.get().log(Status.INFO,
+						MarkupHelper.createLabel("Email sent to recipients", ExtentColor.LIME));
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

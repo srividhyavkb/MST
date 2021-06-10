@@ -17,6 +17,9 @@ import org.testng.Assert;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
+import com.experitest.appium.SeeTestClient;
+import static io.appium.java_client.touch.TapOptions.tapOptions;
+import static io.appium.java_client.touch.offset.ElementOption.element;
 
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
@@ -28,6 +31,7 @@ import io.appium.java_client.android.AndroidTouchAction;
 import io.appium.java_client.android.nativekey.PressesKey;
 import io.appium.java_client.ios.IOSDriver;
 import io.appium.java_client.ios.IOSElement;
+import io.appium.java_client.ios.IOSTouchAction;
 import io.appium.java_client.touch.LongPressOptions;
 import io.appium.java_client.touch.offset.ElementOption;
 
@@ -43,38 +47,52 @@ public class FunctionalComponents extends Base {
 	Logger log;
 	ExcelUtils excel;
 
+	/* Constructor for invoking Android driver */
 	public FunctionalComponents(AndroidDriver<AndroidElement> driver, Logger log) {
 		this.driver = driver;
 		this.log = log;
-		wait = new WebDriverWait(this.driver, 15);
+		wait = new WebDriverWait(this.driver, 30);
 		listen = new Listeners();
 		try {
-			excel = new ExcelUtils(
-					"C:/Users/Somnath Baul/eclipse-workspace/MobileSeeTestWebAutomation/CommonData.xlsx");
+			excel = new ExcelUtils(projectPath + "/CommonData.xlsx");
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 	}
-	public FunctionalComponents(IOSDriver<IOSElement> driver,Logger log)
-	{
+
+	/* Constructor for invoking IOS driver */
+	public FunctionalComponents(IOSDriver<IOSElement> driver, Logger log) {
 		this.driver = driver;
 		this.log = log;
 		wait = new WebDriverWait(this.driver, 25);
 		listen = new Listeners();
 		try {
-			excel = new ExcelUtils(
-					"C:/Users/Somnath Baul/eclipse-workspace/MobileSeeTestWebAutomation/CommonData.xlsx");
+			excel = new ExcelUtils(projectPath + "/CommonData.xlsx");
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 	}
-	
+
+	/* To obtain the Extent Test object for logging in Extent Report */
 	public static void getExtentTest(ThreadLocal<ExtentTest> extentTest) {
 		extTestObj = extentTest;
 	}
 
-	public void scrollIntoViewBottom(By element) throws InterruptedException // Ayushman
-	{
+	/*
+	 * Scroll functions for bringing an web element into view
+	 * scrollIntoViewBottom(By element) : for bringing an element into view at the
+	 * bottom of the screen with argument as locator
+	 * 
+	 * scrollIntoViewBottomByElement(AndroidElement element) : for bringing an
+	 * element into view at the bottom of the screen with argument as web element
+	 * 
+	 * scrollIntoViewTop(By element) : for bringing an element into view at the top
+	 * of the screen with argument as locator
+	 * 
+	 * scrollIntoViewHalf(By element) : for bringing an element into view at the
+	 * middle of the screen with argument as locator
+	 */
+	public void scrollIntoViewBottom(By element) throws InterruptedException {
 		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(false);", driver.findElement(element));
 		Thread.sleep(500);
 	}
@@ -84,43 +102,52 @@ public class FunctionalComponents extends Base {
 		Thread.sleep(500);
 	}
 
-	public void scrollIntoViewTop(By element) throws InterruptedException // Ayushman
-	{
+	public void scrollIntoViewTop(By element) throws InterruptedException {
 		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", driver.findElement(element));
 		Thread.sleep(500);
 	}
 
-	public void scrollIntoViewHalf(By element) throws InterruptedException // Ayushman
-	{
+	public void scrollIntoViewHalf(By element) throws InterruptedException {
 		((JavascriptExecutor) driver).executeScript(
 				"arguments[0].scrollIntoView(true); window.scrollBy(0, -window.innerHeight / 2);",
 				driver.findElement(element));
 		Thread.sleep(500);
 	}
 
+	/*
+	 * function to click an element after certain wait time with argument as locator
+	 */
 	public void clickableWait(By element) {
 		wait.until(ExpectedConditions.elementToBeClickable(element)).click();
 	}
 
+	/* function to wait for the presence of an element with argument as locator */
 	public void explicitWait(By element) {
 		wait.until(ExpectedConditions.presenceOfElementLocated(element));
 	}
 
+	/* function to click an element with argument as locator */
 	public void clickElement(By element) {
 		driver.findElement(element).click();
 	}
 
+	/*
+	 * function to enter data in a text box after certain wait time with argument as
+	 * locator and the data
+	 */
 	public void sendKeysWait(By element, String value) {
 		wait.until(ExpectedConditions.elementToBeClickable(element)).click();
 		driver.findElement(element).clear();
 		driver.findElement(element).sendKeys(value);
 	}
 
+	/* function to scroll down from start with argument as end coordinate */
 	public void scrollDownFromStart(String endpoint) {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("window.scrollBy(0," + endpoint + ")", "");
 	}
 
+	/* function to scroll up with argument as end coordinate */
 	public void scrollUp(String endpoint) {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("window.scrollBy(0,-" + endpoint + ")", "");
@@ -128,6 +155,7 @@ public class FunctionalComponents extends Base {
 
 	/* Validate user is able to login and then logout for the website */
 
+	/* function to validate QA site launch */
 	public void validateQASite() {
 		extTestObj.get().createNode("Starting QA site validation").info("INFO");
 		log.info("Starting QA site validation");
@@ -148,6 +176,7 @@ public class FunctionalComponents extends Base {
 
 	}
 
+	/* function to close the pop up that comes on invoking Chilis website */
 	public void closePopupRewards() {
 		try {
 			clickableWait(Elements.popUpCloseButton);
@@ -159,12 +188,12 @@ public class FunctionalComponents extends Base {
 			extTestObj.get().createNode("Pop up close failed")
 					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
 			log.error(e.getMessage());
-
 			stopTest();
 		}
 
 	}
 
+	/* function to click on the menu hamburger button */
 	public void clickMenuButton() {
 		try {
 			clickableWait(Elements.menuButton);
@@ -179,6 +208,7 @@ public class FunctionalComponents extends Base {
 		}
 	}
 
+	/* function to select login option */
 	public void selectLogin() {
 		try {
 			clickableWait(Elements.loginButton);
@@ -194,6 +224,7 @@ public class FunctionalComponents extends Base {
 		}
 	}
 
+	/* function to enter username in login page */
 	public void enterUserName() {
 		try {
 			String username = excel.getCellData("Credentials", "UserName", 2);
@@ -212,6 +243,7 @@ public class FunctionalComponents extends Base {
 
 	}
 
+	/* function to enter password in login page */
 	public void enterPassword() {
 		try {
 			String password = excel.getCellData("Credentials", "Password", 2);
@@ -229,8 +261,10 @@ public class FunctionalComponents extends Base {
 
 	}
 
+	/* function to click sign in button in the login page */
 	public void clickSignin() {
 		try {
+			scrollIntoViewBottom(Elements.signinButton);
 			clickableWait(Elements.signinButton);
 			log.info("Sign in button clicked");
 			extTestObj.get().createNode("Sign in button clicked").pass("PASSED");
@@ -245,6 +279,7 @@ public class FunctionalComponents extends Base {
 
 	}
 
+	/* function to select log out option after clicking on menu hamburger */
 	public void logout() {
 		try {
 			clickableWait(Elements.logoutButton);
@@ -260,6 +295,10 @@ public class FunctionalComponents extends Base {
 		}
 	}
 
+	/*
+	 * function to validate whether log out is successful based on the "LOGIN"
+	 * header in the login page
+	 */
 	public String validateLogout() {
 
 		try {
@@ -279,6 +318,8 @@ public class FunctionalComponents extends Base {
 	}
 
 	/* Validate Location search fields and links for guest user */
+
+	/* function to select location option after clicking on menu hamburger */
 	public void selectLocationsOption() {
 		try {
 			clickableWait(Elements.locationsButton);
@@ -294,6 +335,7 @@ public class FunctionalComponents extends Base {
 		}
 	}
 
+	/* function to enter Restaurant location search filter in the search text box */
 	public void enterRestaurantLocationforSearch() throws InterruptedException {
 		try {
 			explicitWait(Elements.locationSearchTextBox);
@@ -313,6 +355,10 @@ public class FunctionalComponents extends Base {
 		}
 	}
 
+	/*
+	 * function to click search button in the search restaurant page after entering
+	 * search filter
+	 */
 	public void clickSearchButton() {
 		try {
 			clickableWait(Elements.searchButton);
@@ -327,6 +373,7 @@ public class FunctionalComponents extends Base {
 		}
 	}
 
+	/* function to retrieve the restaurant name in the search result page */
 	public String getRestaurantName() {
 		try {
 			explicitWait(Elements.restaurantName);
@@ -346,6 +393,11 @@ public class FunctionalComponents extends Base {
 	}
 
 	/* Validate Rewards details page for logged in user */
+
+	/*
+	 * function to retrieve the reward count displayed in the reward page of MCA
+	 * user
+	 */
 	public int noOfRewards() {
 		String displayedCount = "";
 		try {
@@ -364,6 +416,10 @@ public class FunctionalComponents extends Base {
 		return Integer.parseInt(displayedCount);
 	}
 
+	/*
+	 * function to count the no of rewards available in the rewards page of MCA user
+	 * for comparison
+	 */
 	public int ActualRewardsCount() {
 		int count = 0;
 		try {
@@ -381,6 +437,10 @@ public class FunctionalComponents extends Base {
 
 	}
 
+	/*
+	 * function to retrieve the titles of rewards available in the rewards page of
+	 * MCA user getRewardTitle() : for Android getRewardTitleIOS() : for IOS
+	 */
 	public void getRewardTitle() {
 		List<AndroidElement> rewards = driver.findElements(Elements.actualRewardsCount);
 		String rewardsTitle = "";
@@ -403,6 +463,7 @@ public class FunctionalComponents extends Base {
 
 		}
 	}
+
 	public void getRewardTitleIOS() {
 		List<IOSElement> rewards = driver.findElements(Elements.actualRewardsCount);
 		String rewardsTitle = "";
@@ -427,6 +488,8 @@ public class FunctionalComponents extends Base {
 	}
 
 	/* Validate user is able to update my Account. */
+
+	/* function to select My Account option from hamburger menu */
 	public void selectMyAccountOption() {
 
 		try {
@@ -444,6 +507,7 @@ public class FunctionalComponents extends Base {
 
 	}
 
+	/* function to retrieve the first name before My Account update */
 	public void getFirstNameBeforeUpdate() {
 		String initialFirstName = "";
 		try {
@@ -461,6 +525,7 @@ public class FunctionalComponents extends Base {
 
 	}
 
+	/* function to get the last name before My Account update */
 	public void getLastNameBeforeUpdate() {
 		String initialLastName = "";
 		try {
@@ -477,6 +542,7 @@ public class FunctionalComponents extends Base {
 		}
 	}
 
+	/* function to retrieve email address before my account update */
 	public void getEmailBeforeUpdate() {
 		String initialEmail = "";
 		try {
@@ -493,6 +559,7 @@ public class FunctionalComponents extends Base {
 		}
 	}
 
+	/* function to retrieve zip code before my account update */
 	public void getZipCodeBeforeUpdate() {
 		String initialZipCode = "";
 		try {
@@ -747,6 +814,7 @@ public class FunctionalComponents extends Base {
 		}
 
 	}
+
 	public void getAllChilisFavouriteItemsIOS() {
 
 		List<IOSElement> items = null;
@@ -792,11 +860,35 @@ public class FunctionalComponents extends Base {
 	public void enterRestaurantLocation() throws InterruptedException {
 		String loc = excel.getCellData("AddMyVisit", "Location", 2);
 		try {
+			scrollIntoViewBottom(Elements.restaurantLocTextBox);
 			explicitWait(Elements.restaurantLocTextBox);
 			clickableWait(Elements.restaurantLocTextBox);
 			driver.getKeyboard().sendKeys(loc);
 			scrollIntoViewBottom(By.xpath("//*[text()='" + loc + "']"));
-			driver.getKeyboard().sendKeys(Keys.ENTER);
+			((PressesKey) driver).pressKeyCode(AndroidKeyCode.ENTER);
+			log.info("Restaurant location entered as : " + loc);
+			extTestObj.get().createNode("Restaurant location entered as : " + loc).pass("PASSED");
+			Thread.sleep(3000);
+		} catch (Exception e) {
+			log.error("Failed to enter restaurant location");
+			extTestObj.get().createNode("Failed to enter restaurant location")
+					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
+			log.error(e.getMessage());
+
+			stopTest();
+		}
+	}
+
+	public void enterRestaurantLocationIOS() throws InterruptedException {
+		String loc = excel.getCellData("AddMyVisit", "Location", 2);
+		try {
+			scrollIntoViewBottom(Elements.restaurantLocTextBox);
+			explicitWait(Elements.restaurantLocTextBox);
+			clickableWait(Elements.restaurantLocTextBox);
+			driver.getKeyboard().sendKeys(loc);
+			scrollIntoViewBottom(By.xpath("//*[text()='" + loc + "']"));
+			SeeTestClient seetest = new SeeTestClient(driver);
+			seetest.click("WEB","xpath=//*[text()='" + loc + "']",0, 1);
 			log.info("Restaurant location entered as : " + loc);
 			extTestObj.get().createNode("Restaurant location entered as : " + loc).pass("PASSED");
 			Thread.sleep(3000);
@@ -813,9 +905,40 @@ public class FunctionalComponents extends Base {
 	public void selectChilisLocation() throws Exception {
 		String locFromDropDown = excel.getCellData("AddMyVisit", "Chilis Location from DropDown", 2);
 		try {
-			clickElement(Elements.chillisLocDropDown);
+//			clickElement(Elements.chillisLocDropDown);
 			scrollIntoViewBottom(By.xpath("//*[text()='" + locFromDropDown + "']"));
 			clickElement(By.xpath("//*[text()='" + locFromDropDown + "']"));
+			log.info("Chilis location selected as : " + locFromDropDown);
+			extTestObj.get().createNode("Chilis location selected as : " + locFromDropDown).pass("PASSED");
+			Thread.sleep(3000);
+
+		} catch (Exception e) {
+			log.error("Chillis location selection failed");
+			extTestObj.get().createNode("Chillis location selection failed")
+					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
+			log.error(e.getMessage());
+
+			stopTest();
+		}
+
+	}
+
+	public void selectChilisLocationIOS() throws Exception {
+		String locFromDropDown = excel.getCellData("AddMyVisit", "Chilis Location from DropDown", 2);
+		try {
+			clickElement(Elements.chillisLocDropDown);
+			scrollIntoViewBottom(By.xpath("//*[text()='" + locFromDropDown + "']"));
+//			clickElement(By.xpath("//*[text()='" + locFromDropDown + "']"));
+			SeeTestClient seetest = new SeeTestClient(driver);
+			try {
+			seetest.setPickerValues("WEB", "xpath=//*[@class='UIAPicker']", 0, 1, "text:"+locFromDropDown);
+			}
+			catch(Exception e)
+			{
+				seetest.setPickerValues("NATIVE", "xpath=//*[@class='UIAPicker']", 0, 1, "text:"+locFromDropDown);
+			}
+//			seetest.click("NATIVE", "xpath=//*[@id='Done']", 0, 1);
+//			clickableWait(By.xpath("//*[@id='Done']"));
 			log.info("Chilis location selected as : " + locFromDropDown);
 			extTestObj.get().createNode("Chilis location selected as : " + locFromDropDown).pass("PASSED");
 			Thread.sleep(3000);
@@ -835,8 +958,28 @@ public class FunctionalComponents extends Base {
 		String visitMonth = excel.getCellData("AddMyVisit", "Visit Month", 2);
 		try {
 			scrollIntoViewBottom(Elements.visitMonthDropDown);
-			scrollIntoViewBottom(By.xpath("//*[text()='"+visitMonth+"']"));
-			clickElement(By.xpath("//*[text()='"+visitMonth+"']"));
+			scrollIntoViewBottom(By.xpath("//*[text()='" + visitMonth + "']"));
+			clickElement(By.xpath("//*[text()='" + visitMonth + "']"));
+			log.info("Visit month selected as :" + visitMonth);
+			extTestObj.get().createNode("Visit month selected as :" + visitMonth).pass("PASSED");
+		} catch (Exception e) {
+			log.error("Visit month selection failed");
+			extTestObj.get().createNode("Visit month selection failed")
+					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
+			log.error(e.getMessage());
+
+			stopTest();
+		}
+	}
+
+	public void selectVisitMonthIOS() throws InterruptedException {
+		String visitMonth = excel.getCellData("AddMyVisit", "Visit Month", 2);
+		try {
+			clickableWait(Elements.visitMonthDropDown);
+			scrollIntoViewBottom(By.xpath("//*[text()='" + visitMonth + "']"));
+			clickElement(By.xpath("//*[text()='" + visitMonth + "']"));
+			SeeTestClient seetest = new SeeTestClient(driver);
+			seetest.click("NATIVE", "xpath=//*[@id='Done']", 0, 1);
 			log.info("Visit month selected as :" + visitMonth);
 			extTestObj.get().createNode("Visit month selected as :" + visitMonth).pass("PASSED");
 		} catch (Exception e) {
@@ -854,8 +997,28 @@ public class FunctionalComponents extends Base {
 		String visitDay = excel.getCellData("AddMyVisit", "Visit Day", 2);
 		try {
 			scrollIntoViewBottom(Elements.visitDayDropDown);
-			scrollIntoViewBottom(By.xpath("//*[text()='"+visitDay+"']"));
-			clickElement(By.xpath("//*[text()='"+visitDay+"']"));
+			scrollIntoViewBottom(By.xpath("//*[text()='" + visitDay + "']"));
+			clickElement(By.xpath("//*[text()='" + visitDay + "']"));
+			log.info("Visit day selected as : " + visitDay);
+			extTestObj.get().createNode("Visit day selected as : " + visitDay).pass("PASSED");
+		} catch (Exception e) {
+			log.error("Visit day selection failed");
+			extTestObj.get().createNode("Visit day selection failed")
+					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
+			log.error(e.getMessage());
+
+			stopTest();
+		}
+	}
+
+	public void selectVisitDayIOS() {
+		String visitDay = excel.getCellData("AddMyVisit", "Visit Day", 2);
+		try {
+			scrollIntoViewBottom(Elements.visitDayDropDown);
+			scrollIntoViewBottom(By.xpath("//*[text()='" + visitDay + "']"));
+			clickElement(By.xpath("//*[text()='" + visitDay + "']"));
+			SeeTestClient seetest = new SeeTestClient(driver);
+			seetest.click("NATIVE", "xpath=//*[@id='Done']", 0, 1);
 			log.info("Visit day selected as : " + visitDay);
 			extTestObj.get().createNode("Visit day selected as : " + visitDay).pass("PASSED");
 		} catch (Exception e) {
@@ -872,8 +1035,28 @@ public class FunctionalComponents extends Base {
 		String visitYear = excel.getCellData("AddMyVisit", "Visit Year", 2);
 		try {
 			explicitWait(Elements.visitYearDropDown);
-			scrollIntoViewBottom(By.xpath("//*[text()='"+visitYear+"']"));
-			clickElement(By.xpath("//*[text()='"+visitYear+"']"));
+			scrollIntoViewBottom(By.xpath("//*[text()='" + visitYear + "']"));
+			clickElement(By.xpath("//*[text()='" + visitYear + "']"));
+			log.info("Visit year selected as : " + visitYear);
+			extTestObj.get().createNode("Visit year selected as : " + visitYear).pass("PASSED");
+		} catch (Exception e) {
+			log.error("Visit year selection failed");
+			extTestObj.get().createNode("Visit year selection failed")
+					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
+			log.error(e.getMessage());
+
+			stopTest();
+		}
+	}
+
+	public void selectVisitYearIOS() {
+		String visitYear = excel.getCellData("AddMyVisit", "Visit Year", 2);
+		try {
+			explicitWait(Elements.visitYearDropDown);
+			scrollIntoViewBottom(By.xpath("//*[text()='" + visitYear + "']"));
+			clickElement(By.xpath("//*[text()='" + visitYear + "']"));
+			SeeTestClient seetest = new SeeTestClient(driver);
+			seetest.click("NATIVE", "xpath=//*[@id='Done']", 0, 1);
 			log.info("Visit year selected as : " + visitYear);
 			extTestObj.get().createNode("Visit year selected as : " + visitYear).pass("PASSED");
 		} catch (Exception e) {
@@ -994,11 +1177,13 @@ public class FunctionalComponents extends Base {
 	}
 
 	public void orderNow() {
+		String storeName = excel.getCellData("LoggedInOrder", "Store Name", 2);
 		try {
 			Thread.sleep(3000);
-			scrollIntoViewHalf(Elements.orderNowButton);
+			scrollIntoViewHalf(
+					By.xpath("//a[contains(@href,'" + storeName + "')]/following-sibling::a[text()='Order Now']"));
 			Thread.sleep(3000);
-			clickElement(Elements.orderNowButton);
+			clickElement(By.xpath("//a[contains(@href,'" + storeName + "')]/following-sibling::a[text()='Order Now']"));
 			log.info("Site scrolled and order button clicked");
 			extTestObj.get().createNode("Site scrolled and order button clicked").pass("PASSED");
 
@@ -1017,13 +1202,14 @@ public class FunctionalComponents extends Base {
 
 		String chilisFavItem = excel.getCellData("LoggedInOrder", "Chilis Favourite Items", 2).trim();
 		try {
-			@SuppressWarnings("unchecked")
-			List<AndroidElement> itemNames =  driver
+
+			List<AndroidElement> itemNames = driver
 					.findElements(By.xpath("//div[@class='heading-tertiary heading-favorite']"));
 			for (int i = 0; i < itemNames.size(); i++) {
 				String name = itemNames.get(i).getText().trim();
 				if (name.equalsIgnoreCase(chilisFavItem)) {
-					AndroidElement ele = (AndroidElement) driver.findElements(By.xpath("//div[@class='favorite-action']/button")).get(i);
+					AndroidElement ele = (AndroidElement) driver
+							.findElements(By.xpath("//div[@class='favorite-action']/button")).get(i);
 					scrollIntoViewBottomByElement(ele);
 					ele.click();
 					break;
@@ -1040,17 +1226,18 @@ public class FunctionalComponents extends Base {
 			stopTest();
 		}
 	}
+
 	public void AddChilisFavouriteToCartIOS() throws InterruptedException {
 
 		String chilisFavItem = excel.getCellData("LoggedInOrder", "Chilis Favourite Items", 2).trim();
 		try {
-			@SuppressWarnings("unchecked")
-			List<IOSElement> itemNames =  driver
+			List<IOSElement> itemNames = driver
 					.findElements(By.xpath("//div[@class='heading-tertiary heading-favorite']"));
 			for (int i = 0; i < itemNames.size(); i++) {
 				String name = itemNames.get(i).getText().trim();
 				if (name.equalsIgnoreCase(chilisFavItem)) {
-					AndroidElement ele = (AndroidElement) driver.findElements(By.xpath("//div[@class='favorite-action']/button")).get(i);
+					AndroidElement ele = (AndroidElement) driver
+							.findElements(By.xpath("//div[@class='favorite-action']/button")).get(i);
 					scrollIntoViewBottomByElement(ele);
 					ele.click();
 					break;
@@ -1139,6 +1326,7 @@ public class FunctionalComponents extends Base {
 	public void continueToPayment() {
 		try {
 			explicitWait(Elements.orderTotal);
+			scrollIntoViewBottom(Elements.paymentButton);
 			clickableWait(Elements.paymentButton);
 			log.info("Payment button clicked");
 			extTestObj.get().createNode("Payment button clicked").pass("PASSED");
@@ -1152,10 +1340,12 @@ public class FunctionalComponents extends Base {
 		}
 	}
 
-	public void enterCardNo() throws InterruptedException { // Ayushman
+	public void enterCardNo() throws InterruptedException {
 
 		String cardNo = excel.getCellData("LoggedInOrder", "Card Number", 2);
 		try {
+			Thread.sleep(4000);
+			scrollIntoViewBottom(Elements.cardNo);
 			explicitWait(Elements.cardNo);
 			clickableWait(Elements.cardNo);
 			driver.getKeyboard().sendKeys(cardNo);
@@ -1188,12 +1378,10 @@ public class FunctionalComponents extends Base {
 
 	}
 
-	public void selectExpirationMonth() 
-	{
+	public void selectExpirationMonth() {
 		String month = excel.getCellData("LoggedInOrder", "Expiration Month", 2);
 		try {
 			scrollIntoViewBottom(Elements.expirationMonth);
-//			clickableWait(Elements.expirationMonth);
 			scrollIntoViewBottom(By.xpath("//*[contains(text(),'(0" + month + ")')]"));
 			clickElement(By.xpath("//*[contains(text(),'(0" + month + ")')]"));
 			log.info("Expiration Month selected as : " + month);
@@ -1208,14 +1396,12 @@ public class FunctionalComponents extends Base {
 		}
 	}
 
-	public void selectExpirationYear() // Ayushman
-	{
+	public void selectExpirationYear() {
 		String year = excel.getCellData("LoggedInOrder", "Expiration Year", 2);
 		try {
 			scrollIntoViewBottom(Elements.expirationYear);
-//			clickableWait(Elements.expirationYear);
-			scrollIntoViewBottom(By.xpath("//*[text()='"+year+"']"));
-			clickElement(By.xpath("//*[text()='"+year+"']"));
+			scrollIntoViewBottom(By.xpath("//*[text()='" + year + "']"));
+			clickElement(By.xpath("//*[text()='" + year + "']"));
 			log.info("Expiration Year selected as : " + year);
 			extTestObj.get().createNode("Expiration Year selected as : " + year).pass("PASSED");
 		} catch (Exception e) {
@@ -1228,7 +1414,7 @@ public class FunctionalComponents extends Base {
 		}
 	}
 
-	public void enterNameOnCard() throws InterruptedException { // Ayushman
+	public void enterNameOnCard() throws InterruptedException {
 
 		String nameOnCard = excel.getCellData("LoggedInOrder", "Name On Card", 2);
 		try {
@@ -1240,14 +1426,16 @@ public class FunctionalComponents extends Base {
 			extTestObj.get().createNode("Name on Card entered as : " + nameOnCard);
 		} catch (Exception e) {
 			log.error("Failed to enter Name on Card");
-			extTestObj.get().createNode( "Failed to enter Name on Card").fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);;
+			extTestObj.get().createNode("Failed to enter Name on Card")
+					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
+			;
 			log.error(e.getMessage());
 
 			stopTest();
 		}
 	}
 
-	public void enterBillingZipCode() throws InterruptedException { // Ayushman
+	public void enterBillingZipCode() throws InterruptedException {
 
 		String zipCode = excel.getCellData("LoggedInOrder", "Zip Code", 2);
 		try {
@@ -1318,6 +1506,8 @@ public class FunctionalComponents extends Base {
 		try {
 			scrollIntoViewBottom(Elements.placeOrder);
 			clickableWait(Elements.placeOrder);
+			SeeTestClient seetest = new SeeTestClient(driver);
+			seetest.click("NATIVE", "xpath=//*[@text='No, thanks']", 0, 1);
 			log.info("Place order button clicked");
 			extTestObj.get().createNode("Place order button clicked").pass("PASSED");
 		} catch (Exception e) {
@@ -1387,7 +1577,7 @@ public class FunctionalComponents extends Base {
 
 	public void clickReorderforanOrder() {
 		try {
-			scrollDownFromStart("350");
+			scrollIntoViewBottom(Elements.reOrder);
 			clickableWait(Elements.reOrder);
 			log.info("Clicked reorder for a particular order");
 			Thread.sleep(3000);
@@ -1402,11 +1592,11 @@ public class FunctionalComponents extends Base {
 	}
 
 	public void changeQuantity() {
+		String quantity = excel.getCellData("ReOrder", "Quantity", 2);
 		try {
-			scrollDownFromStart("400");
-			clickableWait(Elements.quantity);
-			explicitWait(Elements.quantityOption);
-			clickElement(Elements.quantityOption);
+			scrollIntoViewBottom(Elements.quantity);
+			scrollIntoViewBottom(By.xpath("//*[text()='" + quantity + "']"));
+			clickElement(By.xpath("//*[text()='" + quantity + "']"));
 			log.info("Quantity changed");
 			extTestObj.get().createNode("Quantity changed").pass("PASSED");
 		} catch (Exception e) {
@@ -1420,7 +1610,7 @@ public class FunctionalComponents extends Base {
 
 	/* Validate user is able to place Delivery-ASAP order. For Guest user */
 
-	public void clickOrderNow() { // Ayushman
+	public void clickOrderNow() {
 		String restID = excel.getCellData("Common", "Restaurant ID", 2);
 		try {
 			Thread.sleep(2000);
@@ -1438,13 +1628,13 @@ public class FunctionalComponents extends Base {
 		}
 	}
 
-	public void clickMenuCatagory() { // Ayushman
+	public void clickMenuCatagory() {
 		String category = excel.getCellData("Menu", "Category", 2);
 		try {
 			Thread.sleep(3000);
-			scrollIntoViewHalf(By.xpath("//a[@title='"+category+"']"));
+			scrollIntoViewHalf(By.xpath("//a[@title='" + category + "']"));
 			Thread.sleep(3000);
-			clickElement(By.xpath("//a[@title='"+category+"']"));
+			clickElement(By.xpath("//a[@title='" + category + "']"));
 			log.info("Site scrolled and category " + category + " selected");
 			extTestObj.get().createNode("Site scrolled and category " + category + " selected").pass("PASSED");
 		} catch (Exception e) {
@@ -1456,13 +1646,13 @@ public class FunctionalComponents extends Base {
 		}
 	}
 
-	public void clickItemOrder() { // Ayushman
+	public void clickItemOrder() {
 		String item = excel.getCellData("Menu", "Item", 2);
 		try {
 			Thread.sleep(2000);
-			scrollIntoViewHalf(By.xpath("//a[@title='"+item+"']"));
+			scrollIntoViewHalf(By.xpath("//a[@title='" + item + "']"));
 			Thread.sleep(2000);
-			clickElement(By.xpath("//a[@title='"+item+"']"));
+			clickElement(By.xpath("//a[@title='" + item + "']"));
 			log.info("Site scrolled and item" + item + "clicked");
 			extTestObj.get().createNode("Site scrolled and item" + item + "clicked").pass("PASSED");
 		} catch (Exception e) {
@@ -1474,7 +1664,7 @@ public class FunctionalComponents extends Base {
 		}
 	}
 
-	public void clickAddItem() { // Ayushman
+	public void clickAddItem() {
 		try {
 			Thread.sleep(2000);
 			scrollIntoViewBottom(Elements.addThisItem);
@@ -1507,7 +1697,7 @@ public class FunctionalComponents extends Base {
 		}
 	}
 
-	public void selectDelivery() { // Ayushman
+	public void selectDelivery() {
 		try {
 			Thread.sleep(2000);
 			scrollIntoViewBottom(Elements.selectDeliveryMode);
@@ -1525,13 +1715,26 @@ public class FunctionalComponents extends Base {
 	}
 
 	@SuppressWarnings("deprecation")
-	public void enterDeliveryLocation() throws InterruptedException { // Ayushman
-		String location = excel.getCellData("Delivery", "Restaurant Address", 2);
+	public void enterDeliveryLocation() throws InterruptedException {
+		String location = excel.getCellData("DeliveryASAP", "Restaurant Address", 2);
 		try {
+			scrollIntoViewBottom(Elements.deliveryAddress);
 			explicitWait(Elements.deliveryAddress);
-			clickableWait(Elements.deliveryAddress);
-			driver.getKeyboard().sendKeys(location);
-			((PressesKey) driver).pressKeyCode(AndroidKeyCode.ENTER);
+			driver.findElement(Elements.deliveryAddress).sendKeys(location);
+			Thread.sleep(2000);
+			SeeTestClient seetest = new SeeTestClient(driver);
+			try {
+			seetest.click("WEB","xpath=//*[@text='14534 South Military Trail']",0,1);
+			}
+			catch(Exception e)
+			{
+				seetest.click("NATIVE","xpath=//*[@text='14534 South Military Trail']",0,1);
+			}
+//            seetest.elementListPick("WEB", "id=autocomplete", "WEB", "text=14534 South Military Trail Delray Beach, FL 33484, USA", 0, true);
+//			clickElement(By.xpath("//span[text()='" + location + "']"));
+//			((PressesKey) driver).pressKeyCode(AndroidKeyCode.KEYCODE_PAGE_DOWN);
+			Thread.sleep(2000);
+//			((PressesKey) driver).pressKeyCode(AndroidKeyCode.ENTER);
 			Thread.sleep(3000);
 			log.info("Delivery location entered as " + location);
 			extTestObj.get().createNode("Delivery location entered as " + location).pass("PASSED");
@@ -1544,8 +1747,8 @@ public class FunctionalComponents extends Base {
 		}
 	}
 
-	public void enterApartmentNo() throws InterruptedException { // Ayushman
-		String aptNo = excel.getCellData("Delivery", "Apt. no", 2);
+	public void enterApartmentNo() throws InterruptedException {
+		String aptNo = excel.getCellData("DeliveryASAP", "Apt. no", 2);
 		try {
 			scrollIntoViewHalf(Elements.aptNo);
 			explicitWait(Elements.aptNo);
@@ -1564,7 +1767,8 @@ public class FunctionalComponents extends Base {
 
 	public void selectDeliveryDateASAP() {
 		try {
-			clickableWait(Elements.delDate);
+			scrollIntoViewBottom(Elements.delDate);
+			scrollIntoViewBottom(Elements.dateInputASAP);
 			clickElement(Elements.dateInputASAP);
 			log.info("Delivery Option selected as ASAP");
 			extTestObj.get().createNode("Delivery Option selected as ASAP").pass("PASSED");
@@ -1579,8 +1783,7 @@ public class FunctionalComponents extends Base {
 
 	}
 
-	public void selectDeliveryDate() // Ayushman
-	{
+	public void selectDeliveryDate() {
 		String dateInput = excel.getCellData("Delivery", "Delivery Date", 2);
 		try {
 			scrollIntoViewHalf(Elements.delDate);
@@ -1600,7 +1803,7 @@ public class FunctionalComponents extends Base {
 		}
 	}
 
-	public void enterFirstName() throws InterruptedException { // Ayushman
+	public void enterFirstName() throws InterruptedException {
 
 		String firstName = excel.getCellData("DeliveryASAP", "First Name", 2);
 		try {
@@ -1619,7 +1822,7 @@ public class FunctionalComponents extends Base {
 		}
 	}
 
-	public void enterLastName() throws InterruptedException { // Ayushman
+	public void enterLastName() throws InterruptedException {
 		String LastName = excel.getCellData("DeliveryASAP", "Last Name", 2);
 		try {
 			scrollIntoViewHalf(Elements.lastName);
@@ -1637,7 +1840,7 @@ public class FunctionalComponents extends Base {
 		}
 	}
 
-	public void enterContactNumber() throws InterruptedException { // Ayushman
+	public void enterContactNumber() throws InterruptedException {
 
 		String contactNum = excel.getCellData("DeliveryASAP", "Contact Number", 2);
 		try {
@@ -1656,7 +1859,7 @@ public class FunctionalComponents extends Base {
 		}
 	}
 
-	public void enterEMail() throws InterruptedException { // Ayushman
+	public void enterEMail() throws InterruptedException {
 		String email = excel.getCellData("DeliveryASAP", "Email", 2);
 		try {
 			scrollIntoViewHalf(Elements.eMail);
@@ -1676,8 +1879,7 @@ public class FunctionalComponents extends Base {
 	}
 
 	/* Validate user is able to place Delivery-Later today order. For Guest user */
-	public void selectDeliveryTime() // Ayushman
-	{
+	public void selectDeliveryTime() {
 		String timeInput = excel.getCellData("Delivery", "Delivery Time", 2);
 		try {
 
@@ -1699,7 +1901,7 @@ public class FunctionalComponents extends Base {
 	}
 
 	/* Validate user is able to place Delivery-ASAP order. For MCA user */
-	public void clickDeliveryInstrBox() {
+	public void enterDeliveryInstrBox() {
 		String deliveryInstruction = excel.getCellData("DeliveryASAP", "Instruction", 2);
 		try {
 
@@ -1718,7 +1920,7 @@ public class FunctionalComponents extends Base {
 	}
 
 	/* Validate if user is able to place a curbside order. */
-	public void selectCurbside() { // Ayushman
+	public void selectCurbside() {
 		try {
 			Thread.sleep(2000);
 			scrollIntoViewBottom(Elements.selectCurbsideMode);
@@ -1736,8 +1938,7 @@ public class FunctionalComponents extends Base {
 		}
 	}
 
-	public void selectPickupDate() // Ayushman
-	{
+	public void selectPickupDate() {
 		String dateInput = excel.getCellData("Pickup", "Pickup Date", 2);
 		try {
 			scrollIntoViewHalf(Elements.pickDate);
@@ -1757,8 +1958,7 @@ public class FunctionalComponents extends Base {
 		}
 	}
 
-	public void selectPickupTime() 
-	{
+	public void selectPickupTime() {
 		String timeInput = excel.getCellData("CarryOut", "Pickup Time", 2);
 		try {
 			scrollIntoViewBottom(Elements.pickTime);
@@ -1775,7 +1975,7 @@ public class FunctionalComponents extends Base {
 		}
 	}
 
-	public void enterVehicleMake() throws InterruptedException { // Ayushman
+	public void enterVehicleMake() throws InterruptedException {
 
 		String vehicle = excel.getCellData("GuestUserCurbSide", "Vehicle Make", 2);
 		try {
@@ -1794,7 +1994,7 @@ public class FunctionalComponents extends Base {
 		}
 	}
 
-	public void enterVehicleModel() throws InterruptedException { // Ayushman
+	public void enterVehicleModel() throws InterruptedException {
 
 		String vehicleModel = excel.getCellData("GuestUserCurbSide", "Vehicle Model", 2);
 		try {
@@ -1814,7 +2014,7 @@ public class FunctionalComponents extends Base {
 		}
 	}
 
-	public void enterVehicleColor() throws InterruptedException { // Ayushman
+	public void enterVehicleColor() throws InterruptedException {
 
 		String vehicleColor = excel.getCellData("GuestUserCurbSide", "Vehicle Color", 2);
 		try {
@@ -2006,7 +2206,7 @@ public class FunctionalComponents extends Base {
 	 * option)
 	 */
 
-	public void initiateJoinLine() { // Ayushman
+	public void initiateJoinLine() {
 		String restID = excel.getCellData("Common", "Restaurant ID", 2);
 		try {
 			Thread.sleep(2000);
@@ -2025,7 +2225,7 @@ public class FunctionalComponents extends Base {
 		}
 	}
 	/*
-	 * public void clickMinimumPartySize() { //Ayushman try { Thread.sleep(2000);
+	 * public void clickMinimumPartySize() { try { Thread.sleep(2000);
 	 * scrollIntoViewHalf(Elements.partySizeOne); Thread.sleep(2000);
 	 * clickableWait(Elements.partySizeOne);
 	 * log.info("Site scrolled and party size selected(1)");
@@ -2043,8 +2243,8 @@ public class FunctionalComponents extends Base {
 	 */
 
 	/*
-	 * public void enterNameJoinLine() throws InterruptedException { //Ayushman
-	 * String nameJoinLine = excel.getCellData(sheetName, colName, rowNum); try {
+	 * public void enterNameJoinLine() throws InterruptedException { String
+	 * nameJoinLine = excel.getCellData(sheetName, colName, rowNum); try {
 	 * scrollIntoViewHalf(Elements.joinLineName);
 	 * explicitWait(Elements.joinLineName); clickableWait(Elements.joinLineName);
 	 * driver.getKeyboard().sendKeys(nameJoinLine);
@@ -2059,9 +2259,9 @@ public class FunctionalComponents extends Base {
 	 */
 
 	/*
-	 * public void enterContactNumberJoinLine() throws InterruptedException {
-	 * //Ayushman String cNumber = excel.getCellData(sheetName, colName, rowNum);
-	 * try { scrollIntoViewHalf(Elements.joinLineContactNumber);
+	 * public void enterContactNumberJoinLine() throws InterruptedException { String
+	 * cNumber = excel.getCellData(sheetName, colName, rowNum); try {
+	 * scrollIntoViewHalf(Elements.joinLineContactNumber);
 	 * explicitWait(Elements.joinLineContactNumber);
 	 * clickableWait(Elements.joinLineContactNumber);
 	 * driver.getKeyboard().sendKeys(cNumber); log.info("Mobile number entered");
@@ -2074,7 +2274,7 @@ public class FunctionalComponents extends Base {
 	 */
 
 	/*
-	 * public void clickJoinLine() { //Ayushman try { Thread.sleep(2000);
+	 * public void clickJoinLine() { try { Thread.sleep(2000);
 	 * scrollIntoViewHalf(Elements.clickJoinLine); Thread.sleep(2000);
 	 * clickableWait(Elements.clickJoinLine);
 	 * log.info("Site scrolled and joined the line");

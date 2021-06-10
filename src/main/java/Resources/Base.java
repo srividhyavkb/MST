@@ -24,7 +24,9 @@ import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.ios.IOSDriver;
 import io.appium.java_client.ios.IOSElement;
+import io.appium.java_client.remote.AndroidMobileCapabilityType;
 import io.appium.java_client.remote.MobileBrowserType;
+import io.appium.java_client.remote.MobileCapabilityType;
 
 public class Base {
 
@@ -49,6 +51,28 @@ public class Base {
 		dc.setCapability("deviceQuery",
 				"@os='android' and @version='" + prop.getProperty("android_version") + "' and @category='PHONE'");
 		dc.setBrowserName(MobileBrowserType.CHROMIUM);
+		dc.setCapability("autoDismissAlerts", true);
+		}
+		return dc;
+		
+	}
+	
+	public DesiredCapabilities sendAndroidChilisAppCapabilities() throws Exception {
+
+		if(prop.getProperty("Android").equals("true"))
+		{
+		dc.setCapability("accessKey", accessKey);
+		dc.setCapability("testName", "Quick Start Android Browser Demo");
+		dc.setCapability("deviceQuery",
+				"@os='android' and @version='" + prop.getProperty("android_version") + "' and @category='PHONE'");
+		dc.setCapability(MobileCapabilityType.UDID,prop.getProperty("udid"));
+		dc.setCapability(MobileCapabilityType.APP,prop.getProperty("app_name"));
+        dc.setCapability(AndroidMobileCapabilityType.APP_PACKAGE,prop.getProperty("app_package"));
+        dc.setCapability(AndroidMobileCapabilityType.APP_ACTIVITY,prop.getProperty("app_activity"));
+        dc.setCapability("appBuildVersion",prop.getProperty("appBuildVersion"));
+        dc.setCapability("appReleaseVersion",prop.getProperty("appReleaseVersion"));
+        dc.setCapability("installOnlyForUpdate", true);
+        dc.setCapability("autoDismissAlerts", true);
 		}
 		return dc;
 		
@@ -60,7 +84,7 @@ public class Base {
        {
 		dcIOS.setCapability("accessKey", accessKey);
 		dcIOS.setCapability("testName", "Quick Start iOS Browser Demo");
-		dcIOS.setCapability("deviceQuery", "@os='ios' and @version='"+prop.getProperty("IOS_version")+"' and @category='PHONE'");
+		dcIOS.setCapability("deviceQuery", "@os='ios' and @version='14.4' and @category='PHONE'");
 		dcIOS.setBrowserName(MobileBrowserType.SAFARI);
        }
 		return dcIOS;
@@ -87,6 +111,12 @@ public class Base {
 	{
 		System.out.println("Report URL: " + driver.getCapabilities().getCapability("reportUrl"));
 	    driver.quit();
+		
+	}
+	
+	public boolean getEnableStatus(String testSummary)
+	{
+		return true;
 		
 	}
 	

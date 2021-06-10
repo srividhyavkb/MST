@@ -6,7 +6,7 @@ import org.testng.ITestResult;
 public class RetryAnalyzer implements IRetryAnalyzer {
 	
 	private int retryCount = 0;
-	private static final int maxRetryCount = 1;
+	private static final int maxRetryCount = 0;
 
 	public boolean retry(ITestResult result) {
 		if(retryCount<maxRetryCount)
@@ -18,9 +18,4 @@ public class RetryAnalyzer implements IRetryAnalyzer {
 		// TODO Auto-generated method stub
 		return false;
 	}
-	
-	
-	
-	
-
 }

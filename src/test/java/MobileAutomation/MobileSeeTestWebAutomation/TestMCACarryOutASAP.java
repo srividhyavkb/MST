@@ -49,8 +49,8 @@ public class TestMCACarryOutASAP extends Base {
 		ob.clickMenuButton();
 		ob.selectLocationsOption();
 		ob.enterRestaurantLocationForLoggedInOrder();
-		ob.clickSearchButton();
-		ob.clickOrderNow();
+		ob.clickSearchButtonForLoggedInOrder();
+		ob.orderNow();
 		ob.AddChilisFavouriteToCart();
 		ob.clickViewCart();
 		ob.clickCheckOut();

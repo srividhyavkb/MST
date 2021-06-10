@@ -1,0 +1,350 @@
+09:54:36.138 [main] INFO  TestMcaDelivery-Asap - ******STARTING TEST MCA DELIVERY-ASAP******
+09:54:38.366 [main] INFO  TestMcaDelivery-Asap - Starting QA site validation
+09:54:40.517 [main] INFO  TestMcaDelivery-Asap - QA site launch is successful, Site Name : https://qa3.chilis.com/
+09:54:44.668 [main] INFO  TestMcaDelivery-Asap - Pop up closed
+09:54:49.486 [main] INFO  TestMcaDelivery-Asap - Menu button clicked
+09:54:54.212 [main] INFO  TestMcaDelivery-Asap - Login option selected
+09:55:04.214 [main] INFO  TestMcaDelivery-Asap - User name (512) 212-1212 entered
+09:55:10.473 [main] INFO  TestMcaDelivery-Asap - Password Brinkers@2021 entered
+09:55:14.831 [main] INFO  TestMcaDelivery-Asap - Sign in button clicked
+09:55:26.129 [main] INFO  TestMcaDelivery-Asap - Menu button clicked
+09:55:31.050 [main] INFO  TestMcaDelivery-Asap - Location option selected
+09:55:37.531 [main] INFO  TestMcaDelivery-Asap - Restaurant location entered as Delray Beach, FL, USA
+09:55:43.106 [main] INFO  TestMcaDelivery-Asap - Search button clicked
+09:55:48.945 [main] INFO  TestMcaDelivery-Asap - Restaurant name CHILI'S RESTAURANTS IN DELRAY BEACH, FLORIDA is displayed
+09:56:05.929 [main] INFO  TestMcaDelivery-Asap - Site scrolled and order button clicked
+09:56:24.790 [main] INFO  TestMcaDelivery-Asap - Chilis favourite Item Mix & Match Fajitas selected
+09:56:36.145 [main] INFO  TestMcaDelivery-Asap - View Cart clicked
+09:56:45.359 [main] INFO  TestMcaDelivery-Asap - Silver ware opted in
+09:56:50.917 [main] INFO  TestMcaDelivery-Asap - Order checked Out
+09:57:05.952 [main] INFO  TestMcaDelivery-Asap - Site scrolled and Delivery mode is selected
+09:57:19.556 [main] INFO  TestMcaDelivery-Asap - Delivery location entered as 14534 South Military Trail Delray Beach, FL 33484, USA
+09:57:28.845 [main] INFO  TestMcaDelivery-Asap - Apartment no. entered as : 23
+09:57:32.053 [main] INFO  TestMcaDelivery-Asap - Delivery Instruction given as Anything
+09:57:40.900 [main] INFO  TestMcaDelivery-Asap - Delivery Option selected as ASAP
+09:57:49.400 [main] INFO  TestMcaDelivery-Asap - Payment button clicked
+09:58:03.993 [main] ERROR TestMcaDelivery-Asap - Failed to enter Card Number
+09:58:03.996 [main] ERROR TestMcaDelivery-Asap - no such element (An element could not be located on the page using the given search parameters (XPATH='//*[@id='card-number']'))  (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.12.0', revision: '7c6e0b3', time: '2018-05-08T14:04:26.12Z'
+System info: host: 'LAPTOP-2HJFJ1OT', ip: '192.168.29.230', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_281'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {appBuildVersion: , appReleaseVersion: , appiumVersion: 1.8.0, applicationClearData: false, autoAcceptAlerts: false, autoDismissAlerts: true, autoGrantPermissions: false, autoWebview: false, browserName: Chromium, cloudViewLink: https://cloud.seetest.io:44..., commandTimeouts: 120000, desired: {autoDismissAlerts: true, browserName: Chromium, deviceQuery: @os='android' and @version=..., platformName: Android, testName: Quick Start Android Browser...}, device.category: PHONE, device.majorVersion: 8, device.manufacture: samsung, device.model: SM-G930F, device.name: samsung Galaxy S7 IO IL 086, device.os: Android, device.screenSize: 1080x1920, device.serialNumber: 98866742375a394e33, device.version: 8.0.0, deviceQuery: @os='android' and @version=..., deviceUDID: 98866742375a394e33, dontGoHomeOnQuit: false, dontStopAppOnReset: false, ehmPrefixUrl: /agent-6292135, ehmUrl: https://cloud.seetest.io:44..., fullReset: false, gridNodePort: 7816, install.only.for.update: false, installOnlyForUpdate: false, instrumentApp: false, javascriptEnabled: true, keystorePath: ~/.android/debug.keystore, locationServicesAuthorized: false, newSessionWaitTimeout: 600.0, noReset: false, platform: ANDROID, platformName: Android, projectName: , reportDirectory: reports, reportFormat: xml, reportTestId: 1715.0, reportUrl: https://cloud.seetest.io:44..., reservationDuration: 240.0, takeScreenshots: true, test.type: Mobile, testName: Quick Start Android Browser..., udid: 98866742375a394e33, useKeystore: false, waitForDeviceTimeout: 120000.0}
+Session ID: CLOUD-SID:2021-06-10_00-24-07-c1451bcd-518f-4ce9-a62c-d141e7fea98b
+*** Element info: {Using=xpath, value=//*[@id='card-number']}
+10:04:27.741 [main] INFO  TestMcaDelivery-Asap - ******STARTING TEST MCA DELIVERY-ASAP******
+10:04:28.963 [main] INFO  TestMcaDelivery-Asap - Starting QA site validation
+10:04:31.231 [main] INFO  TestMcaDelivery-Asap - QA site launch is successful, Site Name : https://qa3.chilis.com/
+10:04:35.398 [main] INFO  TestMcaDelivery-Asap - Pop up closed
+10:04:40.021 [main] INFO  TestMcaDelivery-Asap - Menu button clicked
+10:04:44.822 [main] INFO  TestMcaDelivery-Asap - Login option selected
+10:04:52.838 [main] INFO  TestMcaDelivery-Asap - User name (512) 212-1212 entered
+10:04:58.929 [main] INFO  TestMcaDelivery-Asap - Password Brinkers@2021 entered
+10:05:03.265 [main] INFO  TestMcaDelivery-Asap - Sign in button clicked
+10:05:15.316 [main] INFO  TestMcaDelivery-Asap - Menu button clicked
+10:05:20.798 [main] INFO  TestMcaDelivery-Asap - Location option selected
+10:05:26.056 [main] INFO  TestMcaDelivery-Asap - Restaurant location entered as Delray Beach, FL, USA
+10:05:32.164 [main] INFO  TestMcaDelivery-Asap - Search button clicked
+10:05:39.082 [main] INFO  TestMcaDelivery-Asap - Restaurant name CHILI'S RESTAURANTS IN DELRAY BEACH, FLORIDA is displayed
+10:05:55.681 [main] INFO  TestMcaDelivery-Asap - Site scrolled and order button clicked
+10:06:14.323 [main] INFO  TestMcaDelivery-Asap - Chilis favourite Item Mix & Match Fajitas selected
+10:06:25.806 [main] INFO  TestMcaDelivery-Asap - View Cart clicked
+10:06:35.670 [main] INFO  TestMcaDelivery-Asap - Silver ware opted in
+10:06:41.208 [main] INFO  TestMcaDelivery-Asap - Order checked Out
+10:06:55.613 [main] INFO  TestMcaDelivery-Asap - Site scrolled and Delivery mode is selected
+10:07:12.672 [main] INFO  TestMcaDelivery-Asap - Delivery location entered as 14534 South Military Trail Delray Beach, FL 33484, USA
+10:07:22.177 [main] INFO  TestMcaDelivery-Asap - Apartment no. entered as : 23
+10:07:25.683 [main] INFO  TestMcaDelivery-Asap - Delivery Instruction given as Anything
+10:07:35.323 [main] INFO  TestMcaDelivery-Asap - Delivery Option selected as ASAP
+10:07:44.243 [main] INFO  TestMcaDelivery-Asap - Payment button clicked
+10:07:58.913 [main] ERROR TestMcaDelivery-Asap - Failed to enter Card Number
+10:07:58.916 [main] ERROR TestMcaDelivery-Asap - no such element (An element could not be located on the page using the given search parameters (XPATH='//*[@id='card-number']'))  (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.12.0', revision: '7c6e0b3', time: '2018-05-08T14:04:26.12Z'
+System info: host: 'LAPTOP-2HJFJ1OT', ip: '192.168.29.230', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_281'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {appBuildVersion: , appReleaseVersion: , appiumVersion: 1.8.0, applicationClearData: false, autoAcceptAlerts: false, autoDismissAlerts: true, autoGrantPermissions: false, autoWebview: false, browserName: Chromium, cloudViewLink: https://cloud.seetest.io:44..., commandTimeouts: 120000, desired: {autoDismissAlerts: true, browserName: Chromium, deviceQuery: @os='android' and @version=..., platformName: Android, testName: Quick Start Android Browser...}, device.category: PHONE, device.majorVersion: 8, device.manufacture: samsung, device.model: SM-G930F, device.name: samsung Galaxy S7 IO IL 086, device.os: Android, device.screenSize: 1080x1920, device.serialNumber: 98866742375a394e33, device.version: 8.0.0, deviceQuery: @os='android' and @version=..., deviceUDID: 98866742375a394e33, dontGoHomeOnQuit: false, dontStopAppOnReset: false, ehmPrefixUrl: /agent-6292135, ehmUrl: https://cloud.seetest.io:44..., fullReset: false, gridNodePort: 7818, install.only.for.update: false, installOnlyForUpdate: false, instrumentApp: false, javascriptEnabled: true, keystorePath: ~/.android/debug.keystore, locationServicesAuthorized: false, newSessionWaitTimeout: 600.0, noReset: false, platform: ANDROID, platformName: Android, projectName: , reportDirectory: reports, reportFormat: xml, reportTestId: 1716.0, reportUrl: https://cloud.seetest.io:44..., reservationDuration: 240.0, takeScreenshots: true, test.type: Mobile, testName: Quick Start Android Browser..., udid: 98866742375a394e33, useKeystore: false, waitForDeviceTimeout: 120000.0}
+Session ID: CLOUD-SID:2021-06-10_00-33-58-5911fc0b-9ea6-4353-86e5-ce62cc66d759
+*** Element info: {Using=xpath, value=//*[@id='card-number']}
+10:25:17.513 [main] INFO  TestMcaDelivery-Asap - ******STARTING TEST MCA DELIVERY-ASAP******
+10:25:18.646 [main] INFO  TestMcaDelivery-Asap - Starting QA site validation
+10:25:20.706 [main] INFO  TestMcaDelivery-Asap - QA site launch is successful, Site Name : https://qa3.chilis.com/
+10:25:25.106 [main] INFO  TestMcaDelivery-Asap - Pop up closed
+10:25:29.711 [main] INFO  TestMcaDelivery-Asap - Menu button clicked
+10:25:34.887 [main] INFO  TestMcaDelivery-Asap - Login option selected
+10:25:44.424 [main] INFO  TestMcaDelivery-Asap - User name (512) 212-1212 entered
+10:25:50.805 [main] INFO  TestMcaDelivery-Asap - Password Brinkers@2021 entered
+10:25:55.150 [main] INFO  TestMcaDelivery-Asap - Sign in button clicked
+10:26:08.826 [main] INFO  TestMcaDelivery-Asap - Menu button clicked
+10:26:13.846 [main] INFO  TestMcaDelivery-Asap - Location option selected
+10:26:20.295 [main] INFO  TestMcaDelivery-Asap - Restaurant location entered as Delray Beach, FL, USA
+10:26:26.242 [main] INFO  TestMcaDelivery-Asap - Search button clicked
+10:26:33.420 [main] INFO  TestMcaDelivery-Asap - Restaurant name CHILI'S RESTAURANTS IN DELRAY BEACH, FLORIDA is displayed
+10:26:50.810 [main] INFO  TestMcaDelivery-Asap - Site scrolled and order button clicked
+10:27:09.118 [main] INFO  TestMcaDelivery-Asap - Chilis favourite Item Mix & Match Fajitas selected
+10:27:21.071 [main] INFO  TestMcaDelivery-Asap - View Cart clicked
+10:27:30.644 [main] INFO  TestMcaDelivery-Asap - Silver ware opted in
+10:27:36.277 [main] INFO  TestMcaDelivery-Asap - Order checked Out
+10:27:40.357 [main] ERROR TestMcaDelivery-Asap - Site scrolled but Delivery mode is not selected
+10:27:40.376 [main] ERROR TestMcaDelivery-Asap - no such element (An element could not be located on the page using the given search parameters (XPATH='//*[text()='Delivery']'))  (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.12.0', revision: '7c6e0b3', time: '2018-05-08T14:04:26.12Z'
+System info: host: 'LAPTOP-2HJFJ1OT', ip: '192.168.29.230', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_281'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {appBuildVersion: , appReleaseVersion: , appiumVersion: 1.8.0, applicationClearData: false, autoAcceptAlerts: false, autoDismissAlerts: true, autoGrantPermissions: false, autoWebview: false, browserName: Chromium, cloudViewLink: https://cloud.seetest.io:44..., commandTimeouts: 120000, desired: {autoDismissAlerts: true, browserName: Chromium, deviceQuery: @os='android' and @version=..., platformName: Android, testName: Quick Start Android Browser...}, device.category: PHONE, device.majorVersion: 8, device.manufacture: samsung, device.model: SM-G930F, device.name: samsung Galaxy S7 IO IL 086, device.os: Android, device.screenSize: 1080x1920, device.serialNumber: 98866742375a394e33, device.version: 8.0.0, deviceQuery: @os='android' and @version=..., deviceUDID: 98866742375a394e33, dontGoHomeOnQuit: false, dontStopAppOnReset: false, ehmPrefixUrl: /agent-6292135, ehmUrl: https://cloud.seetest.io:44..., fullReset: false, gridNodePort: 7821, install.only.for.update: false, installOnlyForUpdate: false, instrumentApp: false, javascriptEnabled: true, keystorePath: ~/.android/debug.keystore, locationServicesAuthorized: false, newSessionWaitTimeout: 600.0, noReset: false, platform: ANDROID, platformName: Android, projectName: , reportDirectory: reports, reportFormat: xml, reportTestId: 1717.0, reportUrl: https://cloud.seetest.io:44..., reservationDuration: 240.0, takeScreenshots: true, test.type: Mobile, testName: Quick Start Android Browser..., udid: 98866742375a394e33, useKeystore: false, waitForDeviceTimeout: 120000.0}
+Session ID: CLOUD-SID:2021-06-10_00-54-45-057bf78a-0fd8-4531-9706-d150142b946a
+*** Element info: {Using=xpath, value=//*[text()='Delivery']}
+10:34:08.373 [main] INFO  TestMcaDelivery-Asap - ******STARTING TEST MCA DELIVERY-ASAP******
+10:34:10.010 [main] INFO  TestMcaDelivery-Asap - Starting QA site validation
+10:34:12.363 [main] INFO  TestMcaDelivery-Asap - QA site launch is successful, Site Name : https://qa3.chilis.com/
+10:34:16.998 [main] INFO  TestMcaDelivery-Asap - Pop up closed
+10:34:21.446 [main] INFO  TestMcaDelivery-Asap - Menu button clicked
+10:34:26.367 [main] INFO  TestMcaDelivery-Asap - Login option selected
+10:34:36.127 [main] INFO  TestMcaDelivery-Asap - User name (512) 212-1212 entered
+10:34:42.258 [main] INFO  TestMcaDelivery-Asap - Password Brinkers@2021 entered
+10:34:46.735 [main] INFO  TestMcaDelivery-Asap - Sign in button clicked
+10:35:13.498 [main] INFO  TestMcaDelivery-Asap - Menu button clicked
+10:35:18.353 [main] INFO  TestMcaDelivery-Asap - Location option selected
+10:35:23.987 [main] INFO  TestMcaDelivery-Asap - Restaurant location entered as Delray Beach, FL, USA
+10:35:30.089 [main] INFO  TestMcaDelivery-Asap - Search button clicked
+10:35:35.951 [main] INFO  TestMcaDelivery-Asap - Restaurant name CHILI'S RESTAURANTS IN DELRAY BEACH, FLORIDA is displayed
+10:35:53.307 [main] INFO  TestMcaDelivery-Asap - Site scrolled and order button clicked
+10:36:03.999 [main] INFO  TestMcaDelivery-Asap - Chilis favourite Item Mix & Match Fajitas selected
+10:36:41.557 [main] ERROR TestMcaDelivery-Asap - Failed to click View Cart
+10:36:41.567 [main] ERROR TestMcaDelivery-Asap - Expected condition failed: waiting for element to be clickable: By.xpath: //a[@id='mini-cart-view-upsell'] (tried for 30 second(s) with 500 milliseconds interval)
+10:37:51.519 [main] INFO  TestMcaDelivery-Asap - ******STARTING TEST MCA DELIVERY-ASAP******
+10:37:52.595 [main] INFO  TestMcaDelivery-Asap - Starting QA site validation
+10:37:54.822 [main] INFO  TestMcaDelivery-Asap - QA site launch is successful, Site Name : https://qa3.chilis.com/
+10:37:59.594 [main] INFO  TestMcaDelivery-Asap - Pop up closed
+10:38:04.512 [main] INFO  TestMcaDelivery-Asap - Menu button clicked
+10:38:09.425 [main] INFO  TestMcaDelivery-Asap - Login option selected
+10:38:18.961 [main] INFO  TestMcaDelivery-Asap - User name (512) 212-1212 entered
+10:38:25.396 [main] INFO  TestMcaDelivery-Asap - Password Brinkers@2021 entered
+10:38:29.948 [main] INFO  TestMcaDelivery-Asap - Sign in button clicked
+10:38:45.981 [main] INFO  TestMcaDelivery-Asap - Menu button clicked
+10:38:51.512 [main] INFO  TestMcaDelivery-Asap - Location option selected
+10:38:57.917 [main] INFO  TestMcaDelivery-Asap - Restaurant location entered as Delray Beach, FL, USA
+10:39:03.768 [main] INFO  TestMcaDelivery-Asap - Search button clicked
+10:39:10.762 [main] INFO  TestMcaDelivery-Asap - Restaurant name CHILI'S RESTAURANTS IN DELRAY BEACH, FLORIDA is displayed
+10:39:28.579 [main] INFO  TestMcaDelivery-Asap - Site scrolled and order button clicked
+10:39:48.335 [main] INFO  TestMcaDelivery-Asap - Chilis favourite Item Mix & Match Fajitas selected
+10:40:00.116 [main] INFO  TestMcaDelivery-Asap - View Cart clicked
+10:40:10.668 [main] INFO  TestMcaDelivery-Asap - Silver ware opted in
+10:40:16.363 [main] INFO  TestMcaDelivery-Asap - Order checked Out
+10:40:33.235 [main] INFO  TestMcaDelivery-Asap - Site scrolled and Delivery mode is selected
+10:40:43.965 [main] ERROR TestMcaDelivery-Asap - Failed to enter Delivery location
+10:40:43.966 [main] ERROR TestMcaDelivery-Asap - javascript error (javascript error. An unknown server-side error occurred. status='false'. Failed to complete internal method: 'elementListPick args: [WEB, id=autocomplete, WEB, text=14534 South Military Trail Delray Beach, FL 33484, USA, 0, true]', details: Failed to list select 'text=14534 South Military Trail Delray Beach, FL 33484, USA' in list id=autocomplete. The ElementListPick command is supported only for native\Web recognition methods.)  (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+Build info: version: '3.12.0', revision: '7c6e0b3', time: '2018-05-08T14:04:26.12Z'
+System info: host: 'LAPTOP-2HJFJ1OT', ip: '192.168.29.230', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_281'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {appBuildVersion: , appReleaseVersion: , appiumVersion: 1.8.0, applicationClearData: false, autoAcceptAlerts: false, autoDismissAlerts: true, autoGrantPermissions: false, autoWebview: false, browserName: Chromium, cloudViewLink: https://cloud.seetest.io:44..., commandTimeouts: 120000, desired: {autoDismissAlerts: true, browserName: Chromium, deviceQuery: @os='android' and @version=..., platformName: Android, testName: Quick Start Android Browser...}, device.category: PHONE, device.majorVersion: 8, device.manufacture: samsung, device.model: SM-G930F, device.name: samsung Galaxy S7 IO IL 086, device.os: Android, device.screenSize: 1080x1920, device.serialNumber: 98866742375a394e33, device.version: 8.0.0, deviceQuery: @os='android' and @version=..., deviceUDID: 98866742375a394e33, dontGoHomeOnQuit: false, dontStopAppOnReset: false, ehmPrefixUrl: /agent-6292135, ehmUrl: https://cloud.seetest.io:44..., fullReset: false, gridNodePort: 7824, install.only.for.update: false, installOnlyForUpdate: false, instrumentApp: false, javascriptEnabled: true, keystorePath: ~/.android/debug.keystore, locationServicesAuthorized: false, newSessionWaitTimeout: 600.0, noReset: false, platform: ANDROID, platformName: Android, projectName: , reportDirectory: reports, reportFormat: xml, reportTestId: 1720.0, reportUrl: https://cloud.seetest.io:44..., reservationDuration: 240.0, takeScreenshots: true, test.type: Mobile, testName: Quick Start Android Browser..., udid: 98866742375a394e33, useKeystore: false, waitForDeviceTimeout: 120000.0}
+Session ID: CLOUD-SID:2021-06-10_01-07-24-51ec9ddb-2646-4a97-b913-aa7fd4e6e5ba
+10:48:09.258 [main] INFO  TestMcaDelivery-Asap - ******STARTING TEST MCA DELIVERY-ASAP******
+10:48:10.290 [main] INFO  TestMcaDelivery-Asap - Starting QA site validation
+10:48:12.362 [main] INFO  TestMcaDelivery-Asap - QA site launch is successful, Site Name : https://qa3.chilis.com/
+10:48:16.561 [main] INFO  TestMcaDelivery-Asap - Pop up closed
+10:48:21.175 [main] INFO  TestMcaDelivery-Asap - Menu button clicked
+10:48:26.149 [main] INFO  TestMcaDelivery-Asap - Login option selected
+10:48:34.880 [main] INFO  TestMcaDelivery-Asap - User name (512) 212-1212 entered
+10:48:40.829 [main] INFO  TestMcaDelivery-Asap - Password Brinkers@2021 entered
+10:48:44.927 [main] INFO  TestMcaDelivery-Asap - Sign in button clicked
+10:48:57.072 [main] INFO  TestMcaDelivery-Asap - Menu button clicked
+10:49:02.211 [main] INFO  TestMcaDelivery-Asap - Location option selected
+10:49:08.171 [main] INFO  TestMcaDelivery-Asap - Restaurant location entered as Delray Beach, FL, USA
+10:49:13.660 [main] INFO  TestMcaDelivery-Asap - Search button clicked
+10:49:20.311 [main] INFO  TestMcaDelivery-Asap - Restaurant name CHILI'S RESTAURANTS IN DELRAY BEACH, FLORIDA is displayed
+10:49:36.536 [main] INFO  TestMcaDelivery-Asap - Site scrolled and order button clicked
+10:49:56.729 [main] INFO  TestMcaDelivery-Asap - Chilis favourite Item Mix & Match Fajitas selected
+10:50:08.385 [main] INFO  TestMcaDelivery-Asap - View Cart clicked
+10:50:17.580 [main] INFO  TestMcaDelivery-Asap - Silver ware opted in
+10:50:22.659 [main] INFO  TestMcaDelivery-Asap - Order checked Out
+10:50:26.836 [main] ERROR TestMcaDelivery-Asap - Site scrolled but Delivery mode is not selected
+10:50:26.846 [main] ERROR TestMcaDelivery-Asap - no such element (An element could not be located on the page using the given search parameters (XPATH='//*[text()='Delivery']'))  (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.12.0', revision: '7c6e0b3', time: '2018-05-08T14:04:26.12Z'
+System info: host: 'LAPTOP-2HJFJ1OT', ip: '192.168.29.230', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_281'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {appBuildVersion: , appReleaseVersion: , appiumVersion: 1.8.0, applicationClearData: false, autoAcceptAlerts: false, autoDismissAlerts: true, autoGrantPermissions: false, autoWebview: false, browserName: Chromium, cloudViewLink: https://cloud.seetest.io:44..., commandTimeouts: 120000, desired: {autoDismissAlerts: true, browserName: Chromium, deviceQuery: @os='android' and @version=..., platformName: Android, testName: Quick Start Android Browser...}, device.category: PHONE, device.majorVersion: 8, device.manufacture: samsung, device.model: SM-N950F, device.name: galaxy NOTE 8 IO IL 058, device.os: Android, device.screenSize: 1080x2220, device.serialNumber: ce061716e0a9dcc00c7e, device.version: 8.0.0, deviceQuery: @os='android' and @version=..., deviceUDID: ce061716e0a9dcc00c7e, dontGoHomeOnQuit: false, dontStopAppOnReset: false, ehmPrefixUrl: /agent-6292135, ehmUrl: https://cloud.seetest.io:44..., fullReset: false, gridNodePort: 7826, install.only.for.update: false, installOnlyForUpdate: false, instrumentApp: false, javascriptEnabled: true, keystorePath: ~/.android/debug.keystore, locationServicesAuthorized: false, newSessionWaitTimeout: 600.0, noReset: false, platform: ANDROID, platformName: Android, projectName: , reportDirectory: reports, reportFormat: xml, reportTestId: 1722.0, reportUrl: https://cloud.seetest.io:44..., reservationDuration: 240.0, takeScreenshots: true, test.type: Mobile, testName: Quick Start Android Browser..., udid: ce061716e0a9dcc00c7e, useKeystore: false, waitForDeviceTimeout: 120000.0}
+Session ID: CLOUD-SID:2021-06-10_01-17-43-c6cf4758-8655-4bf7-b30b-155a39d3322e
+*** Element info: {Using=xpath, value=//*[text()='Delivery']}
+10:51:28.281 [main] INFO  TestMcaDelivery-Asap - ******STARTING TEST MCA DELIVERY-ASAP******
+10:51:29.396 [main] INFO  TestMcaDelivery-Asap - Starting QA site validation
+10:51:31.502 [main] INFO  TestMcaDelivery-Asap - QA site launch is successful, Site Name : https://qa3.chilis.com/
+10:51:36.138 [main] INFO  TestMcaDelivery-Asap - Pop up closed
+10:51:41.228 [main] INFO  TestMcaDelivery-Asap - Menu button clicked
+10:51:46.382 [main] INFO  TestMcaDelivery-Asap - Login option selected
+10:51:55.690 [main] INFO  TestMcaDelivery-Asap - User name (512) 212-1212 entered
+10:52:02.007 [main] INFO  TestMcaDelivery-Asap - Password Brinkers@2021 entered
+10:52:06.551 [main] INFO  TestMcaDelivery-Asap - Sign in button clicked
+10:52:18.534 [main] INFO  TestMcaDelivery-Asap - Menu button clicked
+10:52:23.450 [main] INFO  TestMcaDelivery-Asap - Location option selected
+10:52:30.459 [main] INFO  TestMcaDelivery-Asap - Restaurant location entered as Delray Beach, FL, USA
+10:52:35.796 [main] INFO  TestMcaDelivery-Asap - Search button clicked
+10:52:42.335 [main] INFO  TestMcaDelivery-Asap - Restaurant name CHILI'S RESTAURANTS IN DELRAY BEACH, FLORIDA is displayed
+10:52:59.886 [main] INFO  TestMcaDelivery-Asap - Site scrolled and order button clicked
+10:53:18.644 [main] INFO  TestMcaDelivery-Asap - Chilis favourite Item Mix & Match Fajitas selected
+10:53:30.317 [main] INFO  TestMcaDelivery-Asap - View Cart clicked
+10:53:41.685 [main] INFO  TestMcaDelivery-Asap - Silver ware opted in
+10:53:47.421 [main] INFO  TestMcaDelivery-Asap - Order checked Out
+10:54:04.123 [main] INFO  TestMcaDelivery-Asap - Site scrolled and Delivery mode is selected
+10:54:21.117 [main] INFO  TestMcaDelivery-Asap - Delivery location entered as 14534 South Military Trail Delray Beach, FL 33484, USA
+10:54:28.994 [main] INFO  TestMcaDelivery-Asap - Apartment no. entered as : 23
+10:54:33.240 [main] INFO  TestMcaDelivery-Asap - Delivery Instruction given as Anything
+10:54:43.124 [main] INFO  TestMcaDelivery-Asap - Delivery Option selected as ASAP
+10:54:52.035 [main] INFO  TestMcaDelivery-Asap - Payment button clicked
+10:55:06.762 [main] ERROR TestMcaDelivery-Asap - Failed to enter Card Number
+10:55:06.769 [main] ERROR TestMcaDelivery-Asap - no such element (An element could not be located on the page using the given search parameters (XPATH='//*[@id='card-number']'))  (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.12.0', revision: '7c6e0b3', time: '2018-05-08T14:04:26.12Z'
+System info: host: 'LAPTOP-2HJFJ1OT', ip: '192.168.29.230', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_281'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {appBuildVersion: , appReleaseVersion: , appiumVersion: 1.8.0, applicationClearData: false, autoAcceptAlerts: false, autoDismissAlerts: true, autoGrantPermissions: false, autoWebview: false, browserName: Chromium, cloudViewLink: https://cloud.seetest.io:44..., commandTimeouts: 120000, desired: {autoDismissAlerts: true, browserName: Chromium, deviceQuery: @os='android' and @version=..., platformName: Android, testName: Quick Start Android Browser...}, device.category: PHONE, device.majorVersion: 8, device.manufacture: samsung, device.model: SM-G930F, device.name: samsung Galaxy S7 IO IL 086, device.os: Android, device.screenSize: 1080x1920, device.serialNumber: 98866742375a394e33, device.version: 8.0.0, deviceQuery: @os='android' and @version=..., deviceUDID: 98866742375a394e33, dontGoHomeOnQuit: false, dontStopAppOnReset: false, ehmPrefixUrl: /agent-6292135, ehmUrl: https://cloud.seetest.io:44..., fullReset: false, gridNodePort: 7827, install.only.for.update: false, installOnlyForUpdate: false, instrumentApp: false, javascriptEnabled: true, keystorePath: ~/.android/debug.keystore, locationServicesAuthorized: false, newSessionWaitTimeout: 600.0, noReset: false, platform: ANDROID, platformName: Android, projectName: , reportDirectory: reports, reportFormat: xml, reportTestId: 1723.0, reportUrl: https://cloud.seetest.io:44..., reservationDuration: 240.0, takeScreenshots: true, test.type: Mobile, testName: Quick Start Android Browser..., udid: 98866742375a394e33, useKeystore: false, waitForDeviceTimeout: 120000.0}
+Session ID: CLOUD-SID:2021-06-10_01-20-58-b72a5f8b-eb31-4a59-b6bc-a3978b903cb3
+*** Element info: {Using=xpath, value=//*[@id='card-number']}
+11:01:12.787 [main] INFO  TestAddMyVisit - ******TC07_ANDROID : Starting to verify user is able to submit Add my visit form for login member******
+11:01:14.413 [main] INFO  TestAddMyVisit - Starting QA site validation
+11:01:20.545 [main] INFO  TestAddMyVisit - QA site launch is successful, Site Name : https://qa3.chilis.com/
+11:01:41.949 [main] INFO  TestAddMyVisit - Pop up closed
+11:02:00.020 [main] INFO  TestAddMyVisit - Menu button clicked
+11:02:17.994 [main] INFO  TestAddMyVisit - Login option selected
+11:02:55.017 [main] INFO  TestAddMyVisit - User name (512) 212-1212 entered
+11:03:28.956 [main] INFO  TestAddMyVisit - Password Brinkers@2021 entered
+11:03:53.533 [main] INFO  TestAddMyVisit - Sign in button clicked
+11:04:24.434 [main] INFO  TestAddMyVisit - Add my visit button clicked
+11:05:08.497 [main] INFO  TestAddMyVisit - Restaurant location entered as : Addison, TX 75001, USA
+11:05:53.969 [main] ERROR TestAddMyVisit - Chillis location selection failed
+11:05:53.976 [main] ERROR TestAddMyVisit - Expected condition failed: waiting for element to be clickable: By.xpath: //*[text()='Addison - 4500 Beltline Rd., Dallas, TX 75001'] (tried for 25 second(s) with 500 milliseconds interval)
+Build info: version: '3.12.0', revision: '7c6e0b3', time: '2018-05-08T14:04:26.12Z'
+System info: host: 'LAPTOP-2HJFJ1OT', ip: '192.168.29.230', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_281'
+Driver info: io.appium.java_client.ios.IOSDriver
+Capabilities {appBuildVersion: , appReleaseVersion: , appiumVersion: 1.8.0, applicationClearData: false, autoAcceptAlerts: false, autoDismissAlerts: false, autoGrantPermissions: false, autoWebview: false, automationName: XCUITest, browserName: Safari, cloudViewLink: https://au-1.seetest.io:443..., commandTimeouts: 120000, desired: {browserName: Safari, deviceQuery: @os='ios' and @version='14...., platformName: iOS, testName: Quick Start iOS Browser Demo}, device.category: PHONE, device.majorVersion: 14, device.manufacture: Apple, device.model: iPhone 8, device.name: iPhone 8 IO-AU 08, device.os: iOS, device.screenSize: 750x1334, device.serialNumber: 9e4bcdc00b8fd59f13e859b6fd2..., device.version: 14.4, deviceQuery: @os='ios' and @version='14...., deviceUDID: 9e4bcdc00b8fd59f13e859b6fd2..., dontGoHomeOnQuit: false, dontStopAppOnReset: false, ehmPrefixUrl: /agent-5937317, ehmUrl: https://au-1.seetest.io:443..., fullReset: false, gridNodePort: 7805, install.only.for.update: false, installOnlyForUpdate: false, instrumentApp: false, javascriptEnabled: true, keystorePath: ~/.android/debug.keystore, locationServicesAuthorized: false, newSessionWaitTimeout: 600.0, noReset: false, platform: IOS, platformName: iOS, projectName: , reportDirectory: reports, reportFormat: xml, reportTestId: 1724.0, reportUrl: https://cloud.seetest.io:44..., reservationDuration: 240.0, takeScreenshots: true, test.type: Mobile, testName: Quick Start iOS Browser Demo, udid: 9e4bcdc00b8fd59f13e859b6fd2..., useKeystore: false, waitForDeviceTimeout: 120000.0}
+Session ID: CLOUD-SID:2021-06-10_01-30-02-123943a2-5885-41b9-a90d-6b44582bdca8
+11:08:06.120 [main] INFO  TestAddMyVisit - ******TC07_ANDROID : Starting to verify user is able to submit Add my visit form for login member******
+11:08:07.731 [main] INFO  TestAddMyVisit - Starting QA site validation
+11:08:35.359 [main] ERROR TestAddMyVisit - QA site launch failed
+11:08:35.364 [main] ERROR TestAddMyVisit - Connection prematurely closed BEFORE response (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+Build info: version: '3.12.0', revision: '7c6e0b3', time: '2018-05-08T14:04:26.12Z'
+System info: host: 'LAPTOP-2HJFJ1OT', ip: '192.168.29.230', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_281'
+Driver info: io.appium.java_client.ios.IOSDriver
+Capabilities {appBuildVersion: , appReleaseVersion: , appiumVersion: 1.8.0, applicationClearData: false, autoAcceptAlerts: false, autoDismissAlerts: false, autoGrantPermissions: false, autoWebview: false, automationName: XCUITest, browserName: Safari, cloudViewLink: https://cloud.seetest.io:44..., commandTimeouts: 120000, desired: {browserName: Safari, deviceQuery: @os='ios' and @version='14...., platformName: iOS, testName: Quick Start iOS Browser Demo}, device.category: PHONE, device.majorVersion: 14, device.manufacture: Apple, device.model: iPhone 6s+, device.name: iPhone 6S Plus IO-IL 064, device.os: iOS, device.screenSize: 1242x2208, device.serialNumber: bb5f832e3ee56f952af3f8ae198..., device.version: 14.4, deviceQuery: @os='ios' and @version='14...., deviceUDID: bb5f832e3ee56f952af3f8ae198..., dontGoHomeOnQuit: false, dontStopAppOnReset: false, ehmPrefixUrl: /agent-5937141, ehmUrl: https://cloud.seetest.io:44..., fullReset: false, gridNodePort: 7806, install.only.for.update: false, installOnlyForUpdate: false, instrumentApp: false, javascriptEnabled: true, keystorePath: ~/.android/debug.keystore, locationServicesAuthorized: false, newSessionWaitTimeout: 600.0, noReset: false, platform: IOS, platformName: iOS, projectName: , reportDirectory: reports, reportFormat: xml, reportTestId: 1725.0, reportUrl: https://cloud.seetest.io:44..., reservationDuration: 240.0, takeScreenshots: true, test.type: Mobile, testName: Quick Start iOS Browser Demo, udid: bb5f832e3ee56f952af3f8ae198..., useKeystore: false, waitForDeviceTimeout: 120000.0}
+Session ID: CLOUD-SID:2021-06-10_01-37-27-5ede174b-a9b3-40f9-8c88-26eac370910f
+*** Element info: {Using=class name, value=close-btn}
+11:10:11.482 [main] INFO  TestAddMyVisit - ******TC07_ANDROID : Starting to verify user is able to submit Add my visit form for login member******
+11:10:13.236 [main] INFO  TestAddMyVisit - Starting QA site validation
+11:10:19.279 [main] INFO  TestAddMyVisit - QA site launch is successful, Site Name : https://qa3.chilis.com/
+11:10:40.888 [main] INFO  TestAddMyVisit - Pop up closed
+11:10:58.360 [main] INFO  TestAddMyVisit - Menu button clicked
+11:11:15.906 [main] INFO  TestAddMyVisit - Login option selected
+11:11:51.848 [main] INFO  TestAddMyVisit - User name (512) 212-1212 entered
+11:12:24.924 [main] INFO  TestAddMyVisit - Password Brinkers@2021 entered
+11:12:48.847 [main] INFO  TestAddMyVisit - Sign in button clicked
+11:13:18.436 [main] INFO  TestAddMyVisit - Add my visit button clicked
+11:14:01.436 [main] INFO  TestAddMyVisit - Restaurant location entered as : Addison, TX 75001, USA
+11:14:36.920 [main] INFO  TestAddMyVisit - Chilis location selected as : Addison - 4500 Beltline Rd., Dallas, TX 75001
+11:15:18.904 [main] INFO  TestAddMyVisit - Visit month selected as :April
+11:15:58.860 [main] ERROR TestAddMyVisit - Visit day selection failed
+11:15:58.867 [main] ERROR TestAddMyVisit - javascript error (javascript error. An unknown server-side error occurred. status='false'. Failed to complete internal method: 'click args: [NATIVE, xpath=//*[@id='Done'], 0, 1]', details: Element was not identified: 'xpath=//*[@id='Done']' at zone NATIVE)  (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+Build info: version: '3.12.0', revision: '7c6e0b3', time: '2018-05-08T14:04:26.12Z'
+System info: host: 'LAPTOP-2HJFJ1OT', ip: '192.168.29.230', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_281'
+Driver info: io.appium.java_client.ios.IOSDriver
+Capabilities {appBuildVersion: , appReleaseVersion: , appiumVersion: 1.8.0, applicationClearData: false, autoAcceptAlerts: false, autoDismissAlerts: false, autoGrantPermissions: false, autoWebview: false, automationName: XCUITest, browserName: Safari, cloudViewLink: https://au-1.seetest.io:443..., commandTimeouts: 120000, desired: {browserName: Safari, deviceQuery: @os='ios' and @version='14...., platformName: iOS, testName: Quick Start iOS Browser Demo}, device.category: PHONE, device.majorVersion: 14, device.manufacture: Apple, device.model: iPhone 8, device.name: iPhone 8 IO-AU 08, device.os: iOS, device.screenSize: 750x1334, device.serialNumber: 9e4bcdc00b8fd59f13e859b6fd2..., device.version: 14.4, deviceQuery: @os='ios' and @version='14...., deviceUDID: 9e4bcdc00b8fd59f13e859b6fd2..., dontGoHomeOnQuit: false, dontStopAppOnReset: false, ehmPrefixUrl: /agent-5937317, ehmUrl: https://au-1.seetest.io:443..., fullReset: false, gridNodePort: 7806, install.only.for.update: false, installOnlyForUpdate: false, instrumentApp: false, javascriptEnabled: true, keystorePath: ~/.android/debug.keystore, locationServicesAuthorized: false, newSessionWaitTimeout: 600.0, noReset: false, platform: IOS, platformName: iOS, projectName: , reportDirectory: reports, reportFormat: xml, reportTestId: 1726.0, reportUrl: https://cloud.seetest.io:44..., reservationDuration: 240.0, takeScreenshots: true, test.type: Mobile, testName: Quick Start iOS Browser Demo, udid: 9e4bcdc00b8fd59f13e859b6fd2..., useKeystore: false, waitForDeviceTimeout: 120000.0}
+Session ID: CLOUD-SID:2021-06-10_01-39-02-fb8f97b7-8bcf-46d2-97ed-12b4efd1d280
+11:34:37.957 [main] INFO  TestAddMyVisit - ******TC07_ANDROID : Starting to verify user is able to submit Add my visit form for login member******
+11:34:39.586 [main] INFO  TestAddMyVisit - Starting QA site validation
+11:35:04.013 [main] ERROR TestAddMyVisit - QA site launch failed
+11:35:04.017 [main] ERROR TestAddMyVisit - syscall:getsockopt(..) failed: Connection refused: localhost/127.0.0.1:7807 (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+Build info: version: '3.12.0', revision: '7c6e0b3', time: '2018-05-08T14:04:26.12Z'
+System info: host: 'LAPTOP-2HJFJ1OT', ip: '192.168.29.230', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_281'
+Driver info: io.appium.java_client.ios.IOSDriver
+Capabilities {appBuildVersion: , appReleaseVersion: , appiumVersion: 1.8.0, applicationClearData: false, autoAcceptAlerts: false, autoDismissAlerts: false, autoGrantPermissions: false, autoWebview: false, automationName: XCUITest, browserName: Safari, cloudViewLink: https://cloud.seetest.io:44..., commandTimeouts: 120000, desired: {browserName: Safari, deviceQuery: @os='ios' and @version='14...., platformName: iOS, testName: Quick Start iOS Browser Demo}, device.category: PHONE, device.majorVersion: 14, device.manufacture: Apple, device.model: iPhone 6s+, device.name: iPhone 6S Plus IO-IL 064, device.os: iOS, device.screenSize: 1242x2208, device.serialNumber: bb5f832e3ee56f952af3f8ae198..., device.version: 14.4, deviceQuery: @os='ios' and @version='14...., deviceUDID: bb5f832e3ee56f952af3f8ae198..., dontGoHomeOnQuit: false, dontStopAppOnReset: false, ehmPrefixUrl: /agent-5937141, ehmUrl: https://cloud.seetest.io:44..., fullReset: false, gridNodePort: 7807, install.only.for.update: false, installOnlyForUpdate: false, instrumentApp: false, javascriptEnabled: true, keystorePath: ~/.android/debug.keystore, locationServicesAuthorized: false, newSessionWaitTimeout: 600.0, noReset: false, platform: IOS, platformName: iOS, projectName: , reportDirectory: reports, reportFormat: xml, reportTestId: 1728.0, reportUrl: https://cloud.seetest.io:44..., reservationDuration: 240.0, takeScreenshots: true, test.type: Mobile, testName: Quick Start iOS Browser Demo, udid: bb5f832e3ee56f952af3f8ae198..., useKeystore: false, waitForDeviceTimeout: 120000.0}
+Session ID: CLOUD-SID:2021-06-10_02-03-59-b35c620c-c67d-4ce7-9645-56e880685a07
+*** Element info: {Using=class name, value=close-btn}
+11:36:09.710 [main] INFO  TestAddMyVisit - ******TC07_ANDROID : Starting to verify user is able to submit Add my visit form for login member******
+11:36:11.525 [main] INFO  TestAddMyVisit - Starting QA site validation
+11:36:47.835 [main] ERROR TestAddMyVisit - QA site launch failed
+11:36:47.841 [main] ERROR TestAddMyVisit - Expected condition failed: waiting for presence of element located by: By.className: close-btn (tried for 25 second(s) with 500 milliseconds interval)
+11:38:47.971 [main] INFO  TestAddMyVisit - ******TC07_ANDROID : Starting to verify user is able to submit Add my visit form for login member******
+11:38:49.487 [main] INFO  TestAddMyVisit - Starting QA site validation
+11:38:56.132 [main] INFO  TestAddMyVisit - QA site launch is successful, Site Name : https://qa3.chilis.com/
+11:39:16.434 [main] INFO  TestAddMyVisit - Pop up closed
+11:39:34.855 [main] INFO  TestAddMyVisit - Menu button clicked
+11:39:52.918 [main] INFO  TestAddMyVisit - Login option selected
+11:41:36.486 [main] INFO  TestAddMyVisit - ******TC07_ANDROID : Starting to verify user is able to submit Add my visit form for login member******
+11:41:37.646 [main] INFO  TestAddMyVisit - Starting QA site validation
+11:43:21.753 [main] INFO  TestAddMyVisit - ******TC07_ANDROID : Starting to verify user is able to submit Add my visit form for login member******
+11:43:22.989 [main] INFO  TestAddMyVisit - Starting QA site validation
+11:44:01.112 [main] ERROR TestAddMyVisit - QA site launch failed
+11:44:01.118 [main] ERROR TestAddMyVisit - Expected condition failed: waiting for presence of element located by: By.className: close-btn (tried for 25 second(s) with 500 milliseconds interval)
+11:45:47.337 [main] INFO  TestAddMyVisit - ******TC07_ANDROID : Starting to verify user is able to submit Add my visit form for login member******
+11:45:48.847 [main] INFO  TestAddMyVisit - Starting QA site validation
+11:46:06.037 [main] ERROR TestAddMyVisit - QA site launch failed
+11:46:06.042 [main] ERROR TestAddMyVisit - Your session was disconnected - Device Reservation Ended (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+Build info: version: '3.12.0', revision: '7c6e0b3', time: '2018-05-08T14:04:26.12Z'
+System info: host: 'LAPTOP-2HJFJ1OT', ip: '192.168.29.230', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_281'
+Driver info: io.appium.java_client.ios.IOSDriver
+Capabilities {appBuildVersion: , appReleaseVersion: , appiumVersion: 1.8.0, applicationClearData: false, autoAcceptAlerts: false, autoDismissAlerts: false, autoGrantPermissions: false, autoWebview: false, automationName: XCUITest, browserName: Safari, cloudViewLink: https://cloud.seetest.io:44..., commandTimeouts: 120000, desired: {browserName: Safari, deviceQuery: @os='ios' and @version='14...., platformName: iOS, testName: Quick Start iOS Browser Demo}, device.category: PHONE, device.majorVersion: 14, device.manufacture: Apple, device.model: iPhone 6s+, device.name: iPhone 6S Plus IO-IL 064, device.os: iOS, device.screenSize: 1242x2208, device.serialNumber: bb5f832e3ee56f952af3f8ae198..., device.version: 14.4, deviceQuery: @os='ios' and @version='14...., deviceUDID: bb5f832e3ee56f952af3f8ae198..., dontGoHomeOnQuit: false, dontStopAppOnReset: false, ehmPrefixUrl: /agent-5937141, ehmUrl: https://cloud.seetest.io:44..., fullReset: false, gridNodePort: 7809, install.only.for.update: false, installOnlyForUpdate: false, instrumentApp: false, javascriptEnabled: true, keystorePath: ~/.android/debug.keystore, locationServicesAuthorized: false, newSessionWaitTimeout: 600.0, noReset: false, platform: IOS, platformName: iOS, projectName: , reportDirectory: reports, reportFormat: xml, reportTestId: 1733.0, reportUrl: https://cloud.seetest.io:44..., reservationDuration: 240.0, takeScreenshots: true, test.type: Mobile, testName: Quick Start iOS Browser Demo, udid: bb5f832e3ee56f952af3f8ae198..., useKeystore: false, waitForDeviceTimeout: 120000.0}
+Session ID: CLOUD-SID:2021-06-10_02-15-08-6257fb46-4272-45eb-a8e6-ed1cf7d1bc85
+*** Element info: {Using=class name, value=close-btn}
+11:48:22.249 [main] INFO  TestAddMyVisit - ******TC07_ANDROID : Starting to verify user is able to submit Add my visit form for login member******
+11:48:24.869 [main] INFO  TestAddMyVisit - Starting QA site validation
+11:49:02.821 [main] ERROR TestAddMyVisit - QA site launch failed
+11:49:02.826 [main] ERROR TestAddMyVisit - Expected condition failed: waiting for presence of element located by: By.className: close-btn (tried for 25 second(s) with 500 milliseconds interval)
+11:55:16.624 [main] INFO  TestAddMyVisit - ******TC07_ANDROID : Starting to verify user is able to submit Add my visit form for login member******
+11:55:17.853 [main] INFO  TestAddMyVisit - Starting QA site validation
+11:55:21.750 [main] INFO  TestAddMyVisit - QA site launch is successful, Site Name : https://qa3.chilis.com/
+11:55:32.297 [main] INFO  TestAddMyVisit - Pop up closed
+11:55:41.901 [main] INFO  TestAddMyVisit - Menu button clicked
+11:55:51.150 [main] INFO  TestAddMyVisit - Login option selected
+11:56:07.916 [main] INFO  TestAddMyVisit - User name (512) 212-1212 entered
+11:56:23.457 [main] INFO  TestAddMyVisit - Password Brinkers@2021 entered
+11:56:34.966 [main] INFO  TestAddMyVisit - Sign in button clicked
+11:56:53.899 [main] INFO  TestAddMyVisit - Add my visit button clicked
+11:57:18.484 [main] INFO  TestAddMyVisit - Restaurant location entered as : Addison, TX 75001, USA
+11:57:45.423 [main] INFO  TestAddMyVisit - Chilis location selected as : Addison - 4500 Beltline Rd., Dallas, TX 75001
+11:58:04.729 [main] ERROR TestAddMyVisit - Visit month selection failed
+11:58:04.735 [main] ERROR TestAddMyVisit - Connection prematurely closed BEFORE response (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+Build info: version: '3.12.0', revision: '7c6e0b3', time: '2018-05-08T14:04:26.12Z'
+System info: host: 'LAPTOP-2HJFJ1OT', ip: '192.168.29.230', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_281'
+Driver info: io.appium.java_client.ios.IOSDriver
+Capabilities {appBuildVersion: , appReleaseVersion: , appiumVersion: 1.8.0, applicationClearData: false, autoAcceptAlerts: false, autoDismissAlerts: false, autoGrantPermissions: false, autoWebview: false, automationName: XCUITest, browserName: Safari, cloudViewLink: https://uk-1.seetest.io:443..., commandTimeouts: 120000, desired: {browserName: Safari, deviceQuery: @os='ios' and @version='12...., platformName: iOS, testName: Quick Start iOS Browser Demo}, device.category: PHONE, device.majorVersion: 12, device.manufacture: Apple, device.model: iPhone XS Max, device.name: iPhone XS Max IO-UK-30, device.os: iOS, device.screenSize: 1242x2688, device.serialNumber: 00008020-001A74C136F2002E, device.version: 12.4, deviceQuery: @os='ios' and @version='12...., deviceUDID: 00008020-001A74C136F2002E, dontGoHomeOnQuit: false, dontStopAppOnReset: false, ehmPrefixUrl: /agent-9691635, ehmUrl: https://uk-1.seetest.io:443..., fullReset: false, gridNodePort: 7860, install.only.for.update: false, installOnlyForUpdate: false, instrumentApp: false, javascriptEnabled: true, keystorePath: ~/.android/debug.keystore, locationServicesAuthorized: false, newSessionWaitTimeout: 600.0, noReset: false, platform: IOS, platformName: iOS, projectName: , reportDirectory: reports, reportFormat: xml, reportTestId: 1736.0, reportUrl: https://cloud.seetest.io:44..., reservationDuration: 240.0, takeScreenshots: true, test.type: Mobile, testName: Quick Start iOS Browser Demo, udid: 00008020-001A74C136F2002E, useKeystore: false, waitForDeviceTimeout: 120000.0}
+Session ID: CLOUD-SID:2021-06-10_02-24-35-c1f0b7f8-c956-441e-b816-7170e83fd940
+12:35:14.937 [main] INFO  TestAddMyVisit - ******TC07_ANDROID : Starting to verify user is able to submit Add my visit form for login member******
+12:35:19.019 [main] INFO  TestAddMyVisit - Starting QA site validation
+12:35:54.798 [main] ERROR TestAddMyVisit - QA site launch failed
+12:35:54.827 [main] ERROR TestAddMyVisit - Expected condition failed: waiting for presence of element located by: By.className: close-btn (tried for 25 second(s) with 500 milliseconds interval)
+12:37:33.385 [main] INFO  TestAddMyVisit - ******TC07_ANDROID : Starting to verify user is able to submit Add my visit form for login member******
+12:37:35.431 [main] INFO  TestAddMyVisit - Starting QA site validation
+12:38:10.775 [main] ERROR TestAddMyVisit - QA site launch failed
+12:38:10.779 [main] ERROR TestAddMyVisit - Expected condition failed: waiting for presence of element located by: By.className: close-btn (tried for 25 second(s) with 500 milliseconds interval)
+12:42:04.024 [main] INFO  TestAddMyVisit - ******TC07_ANDROID : Starting to verify user is able to submit Add my visit form for login member******
+12:42:05.295 [main] INFO  TestAddMyVisit - Starting QA site validation
+12:42:11.710 [main] INFO  TestAddMyVisit - QA site launch is successful, Site Name : https://qa3.chilis.com/
+12:42:32.129 [main] INFO  TestAddMyVisit - Pop up closed
+12:42:49.516 [main] INFO  TestAddMyVisit - Menu button clicked
+12:43:06.228 [main] INFO  TestAddMyVisit - Login option selected
+12:43:39.825 [main] INFO  TestAddMyVisit - User name (512) 212-1212 entered
+12:44:11.316 [main] INFO  TestAddMyVisit - Password Brinkers@2021 entered
+12:44:35.015 [main] INFO  TestAddMyVisit - Sign in button clicked
+12:45:04.711 [main] INFO  TestAddMyVisit - Add my visit button clicked
+12:45:47.323 [main] INFO  TestAddMyVisit - Restaurant location entered as : Addison, TX 75001, USA
+12:46:23.355 [main] INFO  TestAddMyVisit - Chilis location selected as : Addison - 4500 Beltline Rd., Dallas, TX 75001
+12:47:02.759 [main] INFO  TestAddMyVisit - Visit month selected as :April
+12:47:40.202 [main] ERROR TestAddMyVisit - Visit day selection failed
+12:47:40.205 [main] ERROR TestAddMyVisit - javascript error (javascript error. An unknown server-side error occurred. status='false'. Failed to complete internal method: 'click args: [NATIVE, xpath=//*[@id='Done'], 0, 1]', details: Element was not identified: 'xpath=//*[@id='Done']' at zone NATIVE)  (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+Build info: version: '3.12.0', revision: '7c6e0b3', time: '2018-05-08T14:04:26.12Z'
+System info: host: 'LAPTOP-2HJFJ1OT', ip: '192.168.29.230', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_281'
+Driver info: io.appium.java_client.ios.IOSDriver
+Capabilities {appBuildVersion: , appReleaseVersion: , appiumVersion: 1.8.0, applicationClearData: false, autoAcceptAlerts: false, autoDismissAlerts: false, autoGrantPermissions: false, autoWebview: false, automationName: XCUITest, browserName: Safari, cloudViewLink: https://au-1.seetest.io:443..., commandTimeouts: 120000, desired: {browserName: Safari, deviceQuery: @os='ios' and @version='14...., platformName: iOS, testName: Quick Start iOS Browser Demo}, device.category: PHONE, device.majorVersion: 14, device.manufacture: Apple, device.model: iPhone 8, device.name: iPhone 8 IO-AU 08, device.os: iOS, device.screenSize: 750x1334, device.serialNumber: 9e4bcdc00b8fd59f13e859b6fd2..., device.version: 14.4, deviceQuery: @os='ios' and @version='14...., deviceUDID: 9e4bcdc00b8fd59f13e859b6fd2..., dontGoHomeOnQuit: false, dontStopAppOnReset: false, ehmPrefixUrl: /agent-5937317, ehmUrl: https://au-1.seetest.io:443..., fullReset: false, gridNodePort: 7810, install.only.for.update: false, installOnlyForUpdate: false, instrumentApp: false, javascriptEnabled: true, keystorePath: ~/.android/debug.keystore, locationServicesAuthorized: false, newSessionWaitTimeout: 600.0, noReset: false, platform: IOS, platformName: iOS, projectName: , reportDirectory: reports, reportFormat: xml, reportTestId: 1740.0, reportUrl: https://cloud.seetest.io:44..., reservationDuration: 240.0, takeScreenshots: true, test.type: Mobile, testName: Quick Start iOS Browser Demo, udid: 9e4bcdc00b8fd59f13e859b6fd2..., useKeystore: false, waitForDeviceTimeout: 120000.0}
+Session ID: CLOUD-SID:2021-06-10_03-10-53-426f35e2-b883-4871-a9b6-4afc2f6ec7fa

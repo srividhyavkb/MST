@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -38,7 +38,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-Suite">
-              <span class="suite-name border-passed">Suite</span>
+              <span class="suite-name border-failed">Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -91,7 +91,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">0 methods,   </span>
+                    <span class="method-stats">1 method, 1 failed,   </span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Suite" class="hide-methods failed suite-Suite"> (hide)</a> <!-- hide-methods failed suite-Suite -->
+                      <a href="#" panel-name="suite-Suite" class="show-methods failed suite-Suite"> (show)</a> <!-- show-methods failed suite-Suite -->
+                    </span>
+                    <div class="method-list-content failed suite-Suite">
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="MobileAutomation.MobileSeeTestWebAutomation.TestAddMyVisit" hash-for-method="testAddMyVisit">testAddMyVisit</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Suite -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -103,6 +117,27 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Suite" class="panel Suite">
+          <div class="suite-Suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">MobileAutomation.MobileSeeTestWebAutomation.TestAddMyVisit</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testAddMyVisit">
+                  </a> <!-- testAddMyVisit -->
+                  <span class="method-name">testAddMyVisit</span>
+                  <div class="stack-trace">java.lang.NullPointerException
+	at Resources.Base.stopTest(Base.java:112)
+	at Resources.FunctionalComponents.selectVisitDayIOS(FunctionalComponents.java:1030)
+	at MobileAutomation.MobileSeeTestWebAutomation.TestAddMyVisit.testAddMyVisit(TestAddMyVisit.java:56)
+... Removed 25 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-failed -->
         </div> <!-- panel Suite -->
         <div panel-name="test-xml-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
@@ -115,10 +150,11 @@
 &lt;suite guice-stage=&quot;DEVELOPMENT&quot; name=&quot;Suite&quot;&gt;
   &lt;listeners&gt;
     &lt;listener class-name=&quot;Resources.Listeners&quot;/&gt;
+    &lt;listener class-name=&quot;Resources.Transformer&quot;/&gt;
   &lt;/listeners&gt;
   &lt;test name=&quot;Test Chilis WebApp&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;MobileAutomation.MobileSeeTestWebAutomation.TestMCACarryOutASAP&quot;/&gt;
+      &lt;class name=&quot;MobileAutomation.MobileSeeTestWebAutomation.TestAddMyVisit&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Test Chilis WebApp --&gt;
 &lt;/suite&gt; &lt;!-- Suite --&gt;
@@ -158,11 +194,16 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(0);
+data.addRows(1);
+data.setCell(0, 0, 0)
+data.setCell(0, 1, 'testAddMyVisit')
+data.setCell(0, 2, 'MobileAutomation.MobileSeeTestWebAutomation.TestAddMyVisit')
+data.setCell(0, 3, 337254);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
+              <span class="suite-total-time">Total running time: 5 minutes</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -188,17 +229,21 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">MobileAutomation.MobileSeeTestWebAutomation.TestMCACarryOutASAP</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">MobileAutomation.MobileSeeTestWebAutomation.TestAddMyVisit</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
-                <img src="failed.png">
-                </img>
                 <span class="method-name">initialize</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">testMCACarryoutASAP</span>
-                <span class="method-start">307891 ms</span>
+                <img src="failed.png">
+                </img>
+                <span class="method-name">testAddMyVisit</span>
+                <span class="method-start">73216 ms</span>
               </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">410478 ms</span>
+              </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->

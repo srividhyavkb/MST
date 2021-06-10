@@ -32,7 +32,7 @@ public class TestChilisIOS extends Base
 		
 	}
 	
-	@Test(enabled = true)
+	@Test(enabled = false)
 	public void testLoginFeature() throws Exception {
 		Logger log = LogManager.getLogger("TestLoginLogout");
 		log.info("******TC10_IOS : Starting to Validate Login and Logout functionality of Chilis WebApp******");
@@ -49,7 +49,7 @@ public class TestChilisIOS extends Base
 		System.out.println(func.validateLogout());
 	}
 
-	@Test(enabled = true)
+	@Test(enabled = false)
 	public void testRewardsFeature() throws InterruptedException {
 		Logger log = LogManager.getLogger("TestRewards");
 		log.info("******TC11_IOS : Starting to validate Rewards details page for logged in user******");
@@ -100,7 +100,7 @@ public class TestChilisIOS extends Base
 
 	}
 
-	@Test(enabled = true)
+	@Test(enabled = false)
 	public void testFavouriteItems() throws InterruptedException {
 		Logger log = LogManager.getLogger("TestFavouriteItems");
 		log.info("******TC13_IOS : Starting to verify Favorites items is displaying on menu page******");
@@ -117,7 +117,7 @@ public class TestChilisIOS extends Base
 		func5.getAllChilisFavouriteItemsIOS();
 	}
 
-	@Test(enabled = true)
+	@Test(enabled = false)
 	public void testLocationFeature() throws Exception {
 		Logger log = LogManager.getLogger("TestLocationSearch");
 		log.info("******TC14_IOS : Starting to validate location search fields and links for guest user******");
@@ -132,7 +132,7 @@ public class TestChilisIOS extends Base
 		System.out.println(result);
 	}
 
-	@Test(enabled = true)
+	@Test(enabled = false)
 	public void testCurbsideAsapOrder() throws Exception {
 
 		Logger log = LogManager.getLogger("TestMcaCurbside-ASAPOrder");
@@ -197,7 +197,7 @@ public class TestChilisIOS extends Base
 		System.out.println(func6.retrieveSuccessMessage());
 	}
 
-	@Test(enabled = true)
+	@Test(enabled = false)
 	public void testLoggedInOrderFeature() throws InterruptedException {
 		Logger log = LogManager.getLogger("TestLoggedInOrder");
 		log.info("******TC17_IOS : Starting to validate user is able order placement with existing log in user******");
@@ -234,7 +234,7 @@ public class TestChilisIOS extends Base
 		Assert.assertEquals(priceBeforePlacingOrder, priceAfterPlacingOrder, "Incorrect price displayed");
 	}
 
-	@Test(enabled = true)
+	@Test(enabled = false)
 	public void testMCACarryoutLaterToday() throws InterruptedException {
 		Logger log = LogManager.getLogger("TestMCACarryoutLaterToday");
 		log.info("******TC18_IOS : Starting to validate user is able to place Carry out-Later Today order with MCA users******");

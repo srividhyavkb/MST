@@ -3,16 +3,17 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
   <listeners>
     <listener class-name="Resources.Listeners"/>
+    <listener class-name="Resources.Transformer"/>
   </listeners>
   <test name="Test Chilis WebApp(failed)">
     <classes>
-      <class name="MobileAutomation.MobileSeeTestWebAutomation.TestGuestCurbSide">
+      <class name="MobileAutomation.MobileSeeTestWebAutomation.TestAddMyVisit">
         <methods>
+          <include name="testAddMyVisit"/>
           <include name="tearDown"/>
           <include name="initialize"/>
-          <include name="testGuestCurbSideASAP"/>
         </methods>
-      </class> <!-- MobileAutomation.MobileSeeTestWebAutomation.TestGuestCurbSide -->
+      </class> <!-- MobileAutomation.MobileSeeTestWebAutomation.TestAddMyVisit -->
     </classes>
   </test> <!-- Test Chilis WebApp(failed) -->
 </suite> <!-- Failed suite [Suite] -->

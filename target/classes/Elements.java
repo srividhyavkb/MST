@@ -81,17 +81,16 @@ public class Elements {
 	public static final By reorderOption = By.xpath("//*[@id='header-order-history']");
 	public static final By quantity = By.xpath("//*[@id='items0.quantity']");
 	public static final By reOrder = By.xpath("//div[contains(@class,'first-order')]/div[4]/div[2]/form/button");
-	public static final By quantityOption = By.xpath("//*[text()='4']");
 	//Guest Delivery-ASAP //Ayushman
 	public static final By orderNowButtonDallas = By.xpath("//a[@id='location-select-001.005.0002']");
 	public static final By bigMouthBurgersCategory = By.xpath("//*[@id='menu-category-name-big-mouth-burgers']");
 	public static final By baconRancher = By.xpath("//*[@id='menu-item-button-P110316']");
 	public static final By addThisItem = By.xpath("//*[@id='item-add-to-order']");
 	public static final By selectDeliveryMode = By.xpath("//*[text()='Delivery']");
-	public static final By deliveryAddress = By.xpath("//*[@name='deliveryAddrPretty']");
+	public static final By deliveryAddress = By.xpath("//*[@id='autocomplete']");
 	public static final By aptNo = By.xpath("//*[@id='suite-no']");
 	public static final By delDate = By.xpath("//*[@id='delivery-date']");
-	public static final By dateInputASAP = By.xpath("//*[text()='ASAP']");
+	public static final By dateInputASAP = By.xpath("//select[@id='delivery-date']/option[contains(@value,'ASAP')]");
 	public static final By dateInputLT = By.xpath("//*[text()='Later Today']");
 	public static final By delTime = By.xpath("//*[@id='delivery-time']");
 	public static final By timeInputLT = By.xpath("//*[text()='12:30 PM']");
@@ -155,4 +154,8 @@ public class Elements {
 		//*[@id="place-dinein-order"]
 		//*[@id="order-type-dine-in-btn"]
 
+		//*[@id="delivery-confirmation"]/a
+		//*[@id="order-delivery-status"]
+		
+		//*[@id='infobar_close_button']
 }
