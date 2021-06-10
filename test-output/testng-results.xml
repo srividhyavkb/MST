@@ -1,59 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" ignored="0" total="1" passed="0">
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="473358" started-at="2021-06-10T07:10:49Z" finished-at="2021-06-10T07:18:43Z">
+  <suite name="Suite" duration-ms="48842" started-at="2021-06-10T14:28:24Z" finished-at="2021-06-10T14:29:12Z">
     <groups>
     </groups>
-    <test name="Test Chilis WebApp" duration-ms="473358" started-at="2021-06-10T07:10:49Z" finished-at="2021-06-10T07:18:43Z">
-      <class name="MobileAutomation.MobileSeeTestWebAutomation.TestAddMyVisit">
-        <test-method status="PASS" signature="initialize()[pri:0, instance:MobileAutomation.MobileSeeTestWebAutomation.TestAddMyVisit@212bf671]" name="initialize" is-config="true" duration-ms="73216" started-at="2021-06-10T12:40:49Z" finished-at="2021-06-10T12:42:02Z">
+    <test name="Test Chilis WebApp" duration-ms="48842" started-at="2021-06-10T14:28:24Z" finished-at="2021-06-10T14:29:12Z">
+      <class name="MobileAutomation.MobileSeeTestWebAutomation.TestChilisApp">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:MobileAutomation.MobileSeeTestWebAutomation.TestChilisApp@17c386de]" name="initialize" is-config="true" duration-ms="17922" started-at="2021-06-10T19:58:24Z" finished-at="2021-06-10T19:58:41Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="FAIL" signature="testAddMyVisit()[pri:0, instance:MobileAutomation.MobileSeeTestWebAutomation.TestAddMyVisit@212bf671]" name="testAddMyVisit" duration-ms="337254" started-at="2021-06-10T12:42:02Z" finished-at="2021-06-10T12:47:40Z">
-          <exception class="java.lang.NullPointerException">
-            <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException
-	at Resources.Base.stopTest(Base.java:112)
-	at Resources.FunctionalComponents.selectVisitDayIOS(FunctionalComponents.java:1030)
-	at MobileAutomation.MobileSeeTestWebAutomation.TestAddMyVisit.testAddMyVisit(TestAddMyVisit.java:56)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:851)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1177)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
-	at org.testng.TestRunner.privateRun(TestRunner.java:756)
-	at org.testng.TestRunner.run(TestRunner.java:610)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:387)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:382)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1293)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1218)
-	at org.testng.TestNG.runSuites(TestNG.java:1133)
-	at org.testng.TestNG.run(TestNG.java:1104)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
+        <test-method status="PASS" signature="launchApp()[pri:0, instance:MobileAutomation.MobileSeeTestWebAutomation.TestChilisApp@17c386de]" name="launchApp" duration-ms="24766" started-at="2021-06-10T19:58:41Z" finished-at="2021-06-10T19:59:06Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testAddMyVisit -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:MobileAutomation.MobileSeeTestWebAutomation.TestAddMyVisit@212bf671]" name="tearDown" is-config="true" duration-ms="62852" started-at="2021-06-10T12:47:40Z" finished-at="2021-06-10T12:48:43Z">
+        </test-method> <!-- launchApp -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:MobileAutomation.MobileSeeTestWebAutomation.TestChilisApp@17c386de]" name="tearDown" is-config="true" duration-ms="6111" started-at="2021-06-10T19:59:06Z" finished-at="2021-06-10T19:59:12Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- MobileAutomation.MobileSeeTestWebAutomation.TestAddMyVisit -->
+      </class> <!-- MobileAutomation.MobileSeeTestWebAutomation.TestChilisApp -->
     </test> <!-- Test Chilis WebApp -->
   </suite> <!-- Suite -->
 </testng-results>

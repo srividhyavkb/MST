@@ -84,7 +84,7 @@ public class Base {
        {
 		dcIOS.setCapability("accessKey", accessKey);
 		dcIOS.setCapability("testName", "Quick Start iOS Browser Demo");
-		dcIOS.setCapability("deviceQuery", "@os='ios' and @version='14.4' and @category='PHONE'");
+		dcIOS.setCapability("deviceQuery", "@os='ios' and @version='13.2.3' and @category='PHONE'");
 		dcIOS.setBrowserName(MobileBrowserType.SAFARI);
        }
 		return dcIOS;

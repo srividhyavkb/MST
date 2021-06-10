@@ -158,4 +158,17 @@ public class Elements {
 		//*[@id="order-delivery-status"]
 		
 		//*[@id='infobar_close_button']
+		
+//Android App Automation : Login Logout
+	public static final String appPopUpCloseXpath = "//*[@id='cancel_btn']";
+	public static final String appwelcomeMessageXpath = "//android.widget.TextView[@text='FEED YOUR WHOLE FAMILY WITH']";
+	public static final String appLoginButtonXpath = "//android.widget.Button[@id='card_home_logged_out_login']";
+	public static final String appUserNameTextBoxXpath = "//android.widget.EditText[@id='login_username_field']";
+	public static final String appPassWordTextBoxXpath = "//android.widget.EditText[@id='login_password_field']";
+	public static final String appSigninButtonXpath = "//android.widget.Button[@id='login_btn']";
+	public static final String apploginHeaderXpath = "//*[@text='LOG IN TO YOUR ACCOUNT']";
+	public static final String appMoreButtonXpath = "//*[@id='icon' and ./parent::*[@id='menu_bottom_nav_more']]";
+	public static final String appLogoutButtonXpath = "//android.widget.TextView[@text='Log Out']";
+	public static final String signOutConfirmButtonXpath = "//android.widget.Button[@text='YES']";
+	public static final String applogoutValXpath = "//*[@id='card_home_logged_out_login']";
 }

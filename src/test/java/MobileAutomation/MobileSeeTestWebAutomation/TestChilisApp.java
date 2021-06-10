@@ -3,6 +3,8 @@ package MobileAutomation.MobileSeeTestWebAutomation;
 import java.net.URL;
 import java.util.concurrent.TimeUnit;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.ScreenOrientation;
 import org.openqa.selenium.remote.DesiredCapabilities;
@@ -13,6 +15,7 @@ import org.testng.annotations.Test;
 import com.experitest.appium.SeeTestClient;
 
 import Resources.Base;
+import Resources.FunctionalComponents;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
 
@@ -36,8 +39,16 @@ public class TestChilisApp extends Base{
 	@Test
 	public void launchApp() throws InterruptedException
 	{
-		Thread.sleep(10000);
-		System.out.println("Test Completed");
+		Logger log = LogManager.getLogger("TestChilisApp");
+		log.info("******Starting to test chilis app******");
+		FunctionalComponents obj = new FunctionalComponents(driver, log);
+		obj.androidAppClosePopUp();
+		obj.appClickLoginButton();
+		obj.appEnterUserName();
+		obj.appEnterPassword();
+		obj.appClickSignIn();
+		obj.appClickMoreButton();
+		obj.appClickLogoutButton();
 		
 	}
 	

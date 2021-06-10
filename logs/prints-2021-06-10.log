@@ -348,3 +348,168 @@ System info: host: 'LAPTOP-2HJFJ1OT', ip: '192.168.29.230', os.name: 'Windows 10
 Driver info: io.appium.java_client.ios.IOSDriver
 Capabilities {appBuildVersion: , appReleaseVersion: , appiumVersion: 1.8.0, applicationClearData: false, autoAcceptAlerts: false, autoDismissAlerts: false, autoGrantPermissions: false, autoWebview: false, automationName: XCUITest, browserName: Safari, cloudViewLink: https://au-1.seetest.io:443..., commandTimeouts: 120000, desired: {browserName: Safari, deviceQuery: @os='ios' and @version='14...., platformName: iOS, testName: Quick Start iOS Browser Demo}, device.category: PHONE, device.majorVersion: 14, device.manufacture: Apple, device.model: iPhone 8, device.name: iPhone 8 IO-AU 08, device.os: iOS, device.screenSize: 750x1334, device.serialNumber: 9e4bcdc00b8fd59f13e859b6fd2..., device.version: 14.4, deviceQuery: @os='ios' and @version='14...., deviceUDID: 9e4bcdc00b8fd59f13e859b6fd2..., dontGoHomeOnQuit: false, dontStopAppOnReset: false, ehmPrefixUrl: /agent-5937317, ehmUrl: https://au-1.seetest.io:443..., fullReset: false, gridNodePort: 7810, install.only.for.update: false, installOnlyForUpdate: false, instrumentApp: false, javascriptEnabled: true, keystorePath: ~/.android/debug.keystore, locationServicesAuthorized: false, newSessionWaitTimeout: 600.0, noReset: false, platform: IOS, platformName: iOS, projectName: , reportDirectory: reports, reportFormat: xml, reportTestId: 1740.0, reportUrl: https://cloud.seetest.io:44..., reservationDuration: 240.0, takeScreenshots: true, test.type: Mobile, testName: Quick Start iOS Browser Demo, udid: 9e4bcdc00b8fd59f13e859b6fd2..., useKeystore: false, waitForDeviceTimeout: 120000.0}
 Session ID: CLOUD-SID:2021-06-10_03-10-53-426f35e2-b883-4871-a9b6-4afc2f6ec7fa
+14:55:23.174 [main] INFO  TestChilisApp - ******Starting to test chilis app******
+14:55:27.652 [main] INFO  TestChilisApp - Pop up closed
+15:40:08.117 [main] INFO  TestAddMyVisit - ******TC07_ANDROID : Starting to verify user is able to submit Add my visit form for login member******
+15:40:10.979 [main] INFO  TestAddMyVisit - Starting QA site validation
+15:40:17.776 [main] INFO  TestAddMyVisit - QA site launch is successful, Site Name : https://qa3.chilis.com/
+15:40:38.267 [main] INFO  TestAddMyVisit - Pop up closed
+15:40:55.910 [main] INFO  TestAddMyVisit - Menu button clicked
+15:41:14.012 [main] INFO  TestAddMyVisit - Login option selected
+15:41:47.846 [main] INFO  TestAddMyVisit - User name (512) 212-1212 entered
+15:42:19.584 [main] INFO  TestAddMyVisit - Password Brinkers@2021 entered
+15:42:43.772 [main] INFO  TestAddMyVisit - Sign in button clicked
+15:43:12.741 [main] INFO  TestAddMyVisit - Add my visit button clicked
+15:43:57.316 [main] INFO  TestAddMyVisit - Restaurant location entered as : Addison, TX 75001, USA
+15:44:33.712 [main] INFO  TestAddMyVisit - Chilis location selected as : Addison - 4500 Beltline Rd., Dallas, TX 75001
+15:45:16.242 [main] INFO  TestAddMyVisit - Visit month selected as :April
+15:56:30.518 [main] INFO  TestAddMyVisit - ******TC07_ANDROID : Starting to verify user is able to submit Add my visit form for login member******
+15:56:32.182 [main] INFO  TestAddMyVisit - Starting QA site validation
+15:57:05.739 [main] ERROR TestAddMyVisit - QA site launch failed
+15:57:05.765 [main] ERROR TestAddMyVisit - Expected condition failed: waiting for presence of element located by: By.className: close-btn (tried for 25 second(s) with 500 milliseconds interval)
+15:59:35.852 [main] INFO  TestAddMyVisit - ******TC07_ANDROID : Starting to verify user is able to submit Add my visit form for login member******
+15:59:37.174 [main] INFO  TestAddMyVisit - Starting QA site validation
+15:59:44.036 [main] INFO  TestAddMyVisit - QA site launch is successful, Site Name : https://qa3.chilis.com/
+16:00:05.106 [main] INFO  TestAddMyVisit - Pop up closed
+16:00:22.160 [main] INFO  TestAddMyVisit - Menu button clicked
+16:00:39.037 [main] INFO  TestAddMyVisit - Login option selected
+16:01:14.536 [main] INFO  TestAddMyVisit - User name (512) 212-1212 entered
+16:01:46.974 [main] INFO  TestAddMyVisit - Password Brinkers@2021 entered
+16:02:11.115 [main] INFO  TestAddMyVisit - Sign in button clicked
+16:02:40.017 [main] INFO  TestAddMyVisit - Add my visit button clicked
+16:03:22.519 [main] INFO  TestAddMyVisit - Restaurant location entered as : Addison, TX 75001, USA
+16:03:47.069 [main] INFO  TestAddMyVisit - Chilis location selected as : Addison - 4500 Beltline Rd., Dallas, TX 75001
+16:04:27.525 [main] INFO  TestAddMyVisit - Visit month selected as :April
+16:27:16.594 [main] INFO  TestAddMyVisit - ******TC07_ANDROID : Starting to verify user is able to submit Add my visit form for login member******
+16:27:17.923 [main] INFO  TestAddMyVisit - Starting QA site validation
+16:27:24.406 [main] INFO  TestAddMyVisit - QA site launch is successful, Site Name : https://qa3.chilis.com/
+16:27:45.092 [main] INFO  TestAddMyVisit - Pop up closed
+16:28:02.908 [main] INFO  TestAddMyVisit - Menu button clicked
+16:28:20.781 [main] INFO  TestAddMyVisit - Login option selected
+16:28:55.951 [main] INFO  TestAddMyVisit - User name (512) 212-1212 entered
+16:29:28.411 [main] INFO  TestAddMyVisit - Password Brinkers@2021 entered
+16:29:50.940 [main] INFO  TestAddMyVisit - Sign in button clicked
+16:30:20.842 [main] INFO  TestAddMyVisit - Add my visit button clicked
+16:31:03.243 [main] INFO  TestAddMyVisit - Restaurant location entered as : Addison, TX 75001, USA
+16:31:37.028 [main] INFO  TestAddMyVisit - Chilis location selected as : Addison - 4500 Beltline Rd., Dallas, TX 75001
+16:32:16.658 [main] INFO  TestAddMyVisit - Visit month selected as :April
+16:32:54.835 [main] INFO  TestAddMyVisit - Visit day selected as : 4
+16:33:32.332 [main] INFO  TestAddMyVisit - Visit year selected as : 2018
+16:34:04.076 [main] INFO  TestAddMyVisit - Check Number entered as : 6767789
+16:34:21.485 [main] INFO  TestAddMyVisit - Check total entered as : 12
+16:34:37.459 [main] INFO  TestAddMyVisit - Visit submitted
+16:35:02.655 [main] ERROR TestAddMyVisit - Success message for add my visit not displayed
+16:35:02.660 [main] ERROR TestAddMyVisit - Expected condition failed: waiting for presence of element located by: By.xpath: //span[@class='server-success-message'] (tried for 25 second(s) with 500 milliseconds interval)
+17:03:08.453 [main] INFO  TestAddMyVisit - ******TC07_ANDROID : Starting to verify user is able to submit Add my visit form for login member******
+17:03:10.085 [main] INFO  TestAddMyVisit - Starting QA site validation
+17:03:16.369 [main] INFO  TestAddMyVisit - QA site launch is successful, Site Name : https://qa3.chilis.com/
+17:03:37.230 [main] INFO  TestAddMyVisit - Pop up closed
+17:03:54.411 [main] INFO  TestAddMyVisit - Menu button clicked
+17:04:12.319 [main] INFO  TestAddMyVisit - Login option selected
+17:04:47.471 [main] INFO  TestAddMyVisit - User name (512) 212-1212 entered
+17:05:19.915 [main] INFO  TestAddMyVisit - Password Brinkers@2021 entered
+17:05:41.878 [main] INFO  TestAddMyVisit - Sign in button clicked
+17:06:11.226 [main] INFO  TestAddMyVisit - Add my visit button clicked
+17:06:53.462 [main] INFO  TestAddMyVisit - Restaurant location entered as : Addison, TX 75001, USA
+17:07:17.242 [main] ERROR TestAddMyVisit - Chillis location selection failed
+17:07:17.252 [main] ERROR TestAddMyVisit - javascript error (javascript error. An unknown server-side error occurred. status='false'. Failed to complete internal method: 'elementSetProperty args: [WEB, xpath=//*[@id='visit-day'], 0, text, Addison - 4500 Beltline Rd., Dallas, TX 75001]', details: Failed to set property for 'xpath=//*[@id='visit-day']'. missing ; before statement (line#1). missing ; before statement (line#1))  (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+Build info: version: '3.12.0', revision: '7c6e0b3', time: '2018-05-08T14:04:26.12Z'
+System info: host: 'LAPTOP-2HJFJ1OT', ip: '192.168.29.230', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_281'
+Driver info: io.appium.java_client.ios.IOSDriver
+Capabilities {appBuildVersion: , appReleaseVersion: , appiumVersion: 1.8.0, applicationClearData: false, autoAcceptAlerts: false, autoDismissAlerts: false, autoGrantPermissions: false, autoWebview: false, automationName: XCUITest, browserName: Safari, cloudViewLink: https://au-1.seetest.io:443..., commandTimeouts: 120000, desired: {browserName: Safari, deviceQuery: @os='ios' and @version='14...., platformName: iOS, testName: Quick Start iOS Browser Demo}, device.category: PHONE, device.majorVersion: 14, device.manufacture: Apple, device.model: iPhone 8, device.name: iPhone 8 IO-AU 08, device.os: iOS, device.screenSize: 750x1334, device.serialNumber: 9e4bcdc00b8fd59f13e859b6fd2..., device.version: 14.4, deviceQuery: @os='ios' and @version='14...., deviceUDID: 9e4bcdc00b8fd59f13e859b6fd2..., dontGoHomeOnQuit: false, dontStopAppOnReset: false, ehmPrefixUrl: /agent-5937317, ehmUrl: https://au-1.seetest.io:443..., fullReset: false, gridNodePort: 7817, install.only.for.update: false, installOnlyForUpdate: false, instrumentApp: false, javascriptEnabled: true, keystorePath: ~/.android/debug.keystore, locationServicesAuthorized: false, newSessionWaitTimeout: 600.0, noReset: false, platform: IOS, platformName: iOS, projectName: , reportDirectory: reports, reportFormat: xml, reportTestId: 1762.0, reportUrl: https://cloud.seetest.io:44..., reservationDuration: 240.0, takeScreenshots: true, test.type: Mobile, testName: Quick Start iOS Browser Demo, udid: 9e4bcdc00b8fd59f13e859b6fd2..., useKeystore: false, waitForDeviceTimeout: 120000.0}
+Session ID: CLOUD-SID:2021-06-10_07-29-43-fe5def67-c9f2-4eb5-97db-14e4ac80f0a1
+17:16:01.498 [main] INFO  TestAddMyVisit - ******TC07_ANDROID : Starting to verify user is able to submit Add my visit form for login member******
+17:16:02.778 [main] INFO  TestAddMyVisit - Starting QA site validation
+17:16:09.398 [main] INFO  TestAddMyVisit - QA site launch is successful, Site Name : https://qa3.chilis.com/
+17:16:30.182 [main] INFO  TestAddMyVisit - Pop up closed
+17:16:47.897 [main] INFO  TestAddMyVisit - Menu button clicked
+17:17:04.997 [main] INFO  TestAddMyVisit - Login option selected
+17:17:42.170 [main] INFO  TestAddMyVisit - User name (512) 212-1212 entered
+17:18:14.631 [main] INFO  TestAddMyVisit - Password Brinkers@2021 entered
+17:18:36.134 [main] INFO  TestAddMyVisit - Sign in button clicked
+17:19:05.524 [main] INFO  TestAddMyVisit - Add my visit button clicked
+17:19:49.063 [main] INFO  TestAddMyVisit - Restaurant location entered as : Addison, TX 75001, USA
+17:20:10.668 [main] ERROR TestAddMyVisit - Chillis location selection failed
+17:20:10.674 [main] ERROR TestAddMyVisit - javascript error (javascript error. An unknown server-side error occurred. status='false'. Failed to complete internal method: 'elementSetProperty args: [WEB, xpath=//*[@id='store-number'], 0, text, Addison - 4500 Beltline Rd., Dallas, TX 75001]', details: Failed to set property for 'xpath=//*[@id='store-number']'. missing ; before statement (line#1). missing ; before statement (line#1))  (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+Build info: version: '3.12.0', revision: '7c6e0b3', time: '2018-05-08T14:04:26.12Z'
+System info: host: 'LAPTOP-2HJFJ1OT', ip: '192.168.29.230', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_281'
+Driver info: io.appium.java_client.ios.IOSDriver
+Capabilities {appBuildVersion: , appReleaseVersion: , appiumVersion: 1.8.0, applicationClearData: false, autoAcceptAlerts: false, autoDismissAlerts: false, autoGrantPermissions: false, autoWebview: false, automationName: XCUITest, browserName: Safari, cloudViewLink: https://au-1.seetest.io:443..., commandTimeouts: 120000, desired: {browserName: Safari, deviceQuery: @os='ios' and @version='14...., platformName: iOS, testName: Quick Start iOS Browser Demo}, device.category: PHONE, device.majorVersion: 14, device.manufacture: Apple, device.model: iPhone 8, device.name: iPhone 8 IO-AU 08, device.os: iOS, device.screenSize: 750x1334, device.serialNumber: 9e4bcdc00b8fd59f13e859b6fd2..., device.version: 14.4, deviceQuery: @os='ios' and @version='14...., deviceUDID: 9e4bcdc00b8fd59f13e859b6fd2..., dontGoHomeOnQuit: false, dontStopAppOnReset: false, ehmPrefixUrl: /agent-5937317, ehmUrl: https://au-1.seetest.io:443..., fullReset: false, gridNodePort: 7818, install.only.for.update: false, installOnlyForUpdate: false, instrumentApp: false, javascriptEnabled: true, keystorePath: ~/.android/debug.keystore, locationServicesAuthorized: false, newSessionWaitTimeout: 600.0, noReset: false, platform: IOS, platformName: iOS, projectName: , reportDirectory: reports, reportFormat: xml, reportTestId: 1766.0, reportUrl: https://cloud.seetest.io:44..., reservationDuration: 240.0, takeScreenshots: true, test.type: Mobile, testName: Quick Start iOS Browser Demo, udid: 9e4bcdc00b8fd59f13e859b6fd2..., useKeystore: false, waitForDeviceTimeout: 120000.0}
+Session ID: CLOUD-SID:2021-06-10_07-41-17-c152e1cd-9da1-47f4-b959-10408c796460
+17:31:37.598 [main] INFO  TestAddMyVisit - ******TC07_ANDROID : Starting to verify user is able to submit Add my visit form for login member******
+17:31:39.590 [main] INFO  TestAddMyVisit - Starting QA site validation
+17:31:42.061 [main] ERROR TestAddMyVisit - QA site launch failed
+17:31:42.065 [main] ERROR TestAddMyVisit - Connection prematurely closed BEFORE response (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+Build info: version: '3.12.0', revision: '7c6e0b3', time: '2018-05-08T14:04:26.12Z'
+System info: host: 'LAPTOP-2HJFJ1OT', ip: '192.168.29.230', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_281'
+Driver info: io.appium.java_client.ios.IOSDriver
+Capabilities {appBuildVersion: , appReleaseVersion: , appiumVersion: 1.8.0, applicationClearData: false, autoAcceptAlerts: false, autoDismissAlerts: false, autoGrantPermissions: false, autoWebview: false, automationName: XCUITest, browserName: Safari, cloudViewLink: https://cloud.seetest.io:44..., commandTimeouts: 120000, desired: {browserName: Safari, deviceQuery: @os='ios' and @version='14...., platformName: iOS, testName: Quick Start iOS Browser Demo}, device.category: PHONE, device.majorVersion: 14, device.manufacture: Apple, device.model: iPhone 6s+, device.name: iPhone 6S Plus IO-IL 064, device.os: iOS, device.screenSize: 1242x2208, device.serialNumber: bb5f832e3ee56f952af3f8ae198..., device.version: 14.4, deviceQuery: @os='ios' and @version='14...., deviceUDID: bb5f832e3ee56f952af3f8ae198..., dontGoHomeOnQuit: false, dontStopAppOnReset: false, ehmPrefixUrl: /agent-5937141, ehmUrl: https://cloud.seetest.io:44..., fullReset: false, gridNodePort: 7815, install.only.for.update: false, installOnlyForUpdate: false, instrumentApp: false, javascriptEnabled: true, keystorePath: ~/.android/debug.keystore, locationServicesAuthorized: false, newSessionWaitTimeout: 600.0, noReset: false, platform: IOS, platformName: iOS, projectName: , reportDirectory: reports, reportFormat: xml, reportTestId: 1770.0, reportUrl: https://cloud.seetest.io:44..., reservationDuration: 240.0, takeScreenshots: true, test.type: Mobile, testName: Quick Start iOS Browser Demo, udid: bb5f832e3ee56f952af3f8ae198..., useKeystore: false, waitForDeviceTimeout: 120000.0}
+Session ID: CLOUD-SID:2021-06-10_07-59-05-b527d8d0-b3be-4ebd-9257-14bbf3223e0a
+*** Element info: {Using=class name, value=close-btn}
+17:33:19.545 [main] INFO  TestAddMyVisit - ******TC07_ANDROID : Starting to verify user is able to submit Add my visit form for login member******
+17:33:22.058 [main] INFO  TestAddMyVisit - Starting QA site validation
+17:33:28.367 [main] INFO  TestAddMyVisit - QA site launch is successful, Site Name : https://qa3.chilis.com/
+17:33:47.934 [main] INFO  TestAddMyVisit - Pop up closed
+17:34:05.595 [main] INFO  TestAddMyVisit - Menu button clicked
+17:34:22.072 [main] INFO  TestAddMyVisit - Login option selected
+17:34:56.806 [main] INFO  TestAddMyVisit - User name (512) 212-1212 entered
+17:35:28.403 [main] INFO  TestAddMyVisit - Password Brinkers@2021 entered
+17:35:50.545 [main] INFO  TestAddMyVisit - Sign in button clicked
+17:36:19.630 [main] INFO  TestAddMyVisit - Add my visit button clicked
+17:37:01.976 [main] INFO  TestAddMyVisit - Restaurant location entered as : Addison, TX 75001, USA
+17:37:27.505 [main] INFO  TestAddMyVisit - Chilis location selected as : Addison - 4500 Beltline Rd., Dallas, TX 75001
+17:37:55.927 [main] ERROR TestAddMyVisit - Visit month selection failed
+17:37:55.932 [main] ERROR TestAddMyVisit - javascript error (javascript error. An unknown server-side error occurred. status='false'. Failed to complete internal method: 'elementSetProperty args: [WEB, xpath=//*[@id='visit-month'], 0, text, April]', details: )  (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+Build info: version: '3.12.0', revision: '7c6e0b3', time: '2018-05-08T14:04:26.12Z'
+System info: host: 'LAPTOP-2HJFJ1OT', ip: '192.168.29.230', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_281'
+Driver info: io.appium.java_client.ios.IOSDriver
+Capabilities {appBuildVersion: , appReleaseVersion: , appiumVersion: 1.8.0, applicationClearData: false, autoAcceptAlerts: false, autoDismissAlerts: false, autoGrantPermissions: false, autoWebview: false, automationName: XCUITest, browserName: Safari, cloudViewLink: https://au-1.seetest.io:443..., commandTimeouts: 120000, desired: {browserName: Safari, deviceQuery: @os='ios' and @version='14...., platformName: iOS, testName: Quick Start iOS Browser Demo}, device.category: PHONE, device.majorVersion: 14, device.manufacture: Apple, device.model: iPhone 8, device.name: iPhone 8 IO-AU 08, device.os: iOS, device.screenSize: 750x1334, device.serialNumber: 9e4bcdc00b8fd59f13e859b6fd2..., device.version: 14.4, deviceQuery: @os='ios' and @version='14...., deviceUDID: 9e4bcdc00b8fd59f13e859b6fd2..., dontGoHomeOnQuit: false, dontStopAppOnReset: false, ehmPrefixUrl: /agent-5937317, ehmUrl: https://au-1.seetest.io:443..., fullReset: false, gridNodePort: 7820, install.only.for.update: false, installOnlyForUpdate: false, instrumentApp: false, javascriptEnabled: true, keystorePath: ~/.android/debug.keystore, locationServicesAuthorized: false, newSessionWaitTimeout: 600.0, noReset: false, platform: IOS, platformName: iOS, projectName: , reportDirectory: reports, reportFormat: xml, reportTestId: 1771.0, reportUrl: https://cloud.seetest.io:44..., reservationDuration: 240.0, takeScreenshots: true, test.type: Mobile, testName: Quick Start iOS Browser Demo, udid: 9e4bcdc00b8fd59f13e859b6fd2..., useKeystore: false, waitForDeviceTimeout: 120000.0}
+Session ID: CLOUD-SID:2021-06-10_08-02-08-67bbafe4-6d53-413d-bbed-27c721cd3097
+18:28:40.973 [main] INFO  TestAddMyVisit - ******TC07_ANDROID : Starting to verify user is able to submit Add my visit form for login member******
+18:28:42.564 [main] INFO  TestAddMyVisit - Starting QA site validation
+18:28:45.400 [main] INFO  TestAddMyVisit - QA site launch is successful, Site Name : https://qa3.chilis.com/
+18:28:54.460 [main] INFO  TestAddMyVisit - Pop up closed
+18:29:03.184 [main] INFO  TestAddMyVisit - Menu button clicked
+18:29:11.271 [main] INFO  TestAddMyVisit - Login option selected
+18:29:28.027 [main] INFO  TestAddMyVisit - User name (512) 212-1212 entered
+18:29:41.060 [main] INFO  TestAddMyVisit - Password Brinkers@2021 entered
+18:29:51.421 [main] INFO  TestAddMyVisit - Sign in button clicked
+18:30:08.205 [main] INFO  TestAddMyVisit - Add my visit button clicked
+18:30:28.062 [main] INFO  TestAddMyVisit - Restaurant location entered as : Addison, TX 75001, USA
+18:30:40.719 [main] INFO  TestAddMyVisit - Chilis location selected as : Addison - 4500 Beltline Rd., Dallas, TX 75001
+18:30:55.794 [main] ERROR TestAddMyVisit - Visit month selection failed
+18:30:55.799 [main] ERROR TestAddMyVisit - javascript error (javascript error. An unknown server-side error occurred. status='false'. Failed to complete internal method: 'elementSetProperty args: [WEB, xpath=//*[@id='visit-month'], 0, text, April]', details: )  (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+Build info: version: '3.12.0', revision: '7c6e0b3', time: '2018-05-08T14:04:26.12Z'
+System info: host: 'LAPTOP-2HJFJ1OT', ip: '192.168.29.230', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_281'
+Driver info: io.appium.java_client.ios.IOSDriver
+Capabilities {appBuildVersion: , appReleaseVersion: , appiumVersion: 1.8.0, applicationClearData: false, autoAcceptAlerts: false, autoDismissAlerts: false, autoGrantPermissions: false, autoWebview: false, automationName: XCUITest, browserName: Safari, cloudViewLink: https://uk-1.seetest.io:443..., commandTimeouts: 120000, desired: {browserName: Safari, deviceQuery: @os='ios' and @version='13...., platformName: iOS, testName: Quick Start iOS Browser Demo}, device.category: PHONE, device.majorVersion: 13, device.manufacture: Apple, device.model: iPhone 11 Pro, device.name: iPhone 11 pro IO-UK 08, device.os: iOS, device.screenSize: 1125x2436, device.serialNumber: 00008030-001105691184802E, device.version: 13.2.3, deviceQuery: @os='ios' and @version='13...., deviceUDID: 00008030-001105691184802E, dontGoHomeOnQuit: false, dontStopAppOnReset: false, ehmPrefixUrl: /agent-9691635, ehmUrl: https://uk-1.seetest.io:443..., fullReset: false, gridNodePort: 7867, install.only.for.update: false, installOnlyForUpdate: false, instrumentApp: false, javascriptEnabled: true, keystorePath: ~/.android/debug.keystore, locationServicesAuthorized: false, newSessionWaitTimeout: 600.0, noReset: false, platform: IOS, platformName: iOS, projectName: , reportDirectory: reports, reportFormat: xml, reportTestId: 2.0, reportUrl: https://cloud.seetest.io:44..., reservationDuration: 240.0, takeScreenshots: true, test.type: Mobile, testName: Quick Start iOS Browser Demo, udid: 00008030-001105691184802E, useKeystore: false, waitForDeviceTimeout: 120000.0}
+Session ID: CLOUD-SID:2021-06-10_08-58-00-18ef81aa-e622-4961-ac8f-6a99b66426b2
+18:58:21.937 [main] INFO  TestChilisApp - ******Starting to test chilis app******
+18:58:25.640 [main] INFO  TestChilisApp - Pop up closed
+18:58:28.314 [main] INFO  TestChilisApp - Login button clicked
+19:23:59.899 [main] INFO  TestChilisApp - ******Starting to test chilis app******
+19:24:03.680 [main] INFO  TestChilisApp - Pop up closed
+19:24:06.410 [main] INFO  TestChilisApp - Login button clicked
+19:24:07.648 [main] INFO  TestChilisApp - User name (512) 212-1212 entered
+19:24:09.080 [main] INFO  TestChilisApp - PasswordBrinkers@2021 entered
+19:24:10.311 [main] INFO  TestChilisApp - Sign in button clicked
+19:56:09.478 [main] INFO  TestChilisApp - ******Starting to test chilis app******
+19:56:13.321 [main] INFO  TestChilisApp - Pop up closed
+19:56:16.027 [main] INFO  TestChilisApp - Login button clicked
+19:56:17.341 [main] INFO  TestChilisApp - User name (512) 212-1212 entered
+19:56:18.848 [main] INFO  TestChilisApp - PasswordBrinkers@2021 entered
+19:56:20.049 [main] INFO  TestChilisApp - Sign in button clicked
+19:56:27.504 [main] INFO  TestChilisApp - More button clicked
+19:58:43.044 [main] INFO  TestChilisApp - ******Starting to test chilis app******
+19:58:46.928 [main] INFO  TestChilisApp - Pop up closed
+19:58:49.839 [main] INFO  TestChilisApp - Login button clicked
+19:58:51.050 [main] INFO  TestChilisApp - User name (512) 212-1212 entered
+19:58:52.518 [main] INFO  TestChilisApp - PasswordBrinkers@2021 entered
+19:58:53.877 [main] INFO  TestChilisApp - Sign in button clicked
+19:59:02.008 [main] INFO  TestChilisApp - More button clicked
+19:59:06.761 [main] INFO  TestChilisApp - Logout button clicked and log out successful
