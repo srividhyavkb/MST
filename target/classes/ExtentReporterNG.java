@@ -20,7 +20,29 @@ public class ExtentReporterNG {
 	static Properties prop;
 	
 	@SuppressWarnings("deprecation")
-	public static ExtentReports getReportObject() 
+	public static ExtentReports getReportObjectAndroidBrowser() 
+	{
+	base = new Base();
+	prop = base.returnProperty();
+	
+	DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyyMMddHHmmss");  
+	LocalDateTime now = LocalDateTime.now();  
+	String path = System.getProperty("user.dir")+"/reports/index-"+dtf.format(now)+".html";
+	ExtentHtmlReporter reporter = new ExtentHtmlReporter(path);
+	reporter.config().setReportName("Mobile SeeTest Android Browser Automation Results");
+	reporter.config().setDocumentTitle("Test Results");
+	reporter.config().setTheme(Theme.STANDARD);
+	extent = new ExtentReports();
+	extent.attachReporter(reporter);
+	extent.setSystemInfo("Tester","Somnath Baul");
+	extent.setSystemInfo("Environment","QA");
+	extent.setSystemInfo("Platform","Android Browser");
+	extent.setSystemInfo("Application_URL",prop.getProperty("url"));
+	return extent;
+	}
+	
+	@SuppressWarnings("deprecation")
+	public static ExtentReports getReportObjectIOSBrowser() 
 	{
 	base = new Base();
 	prop = base.returnProperty();
@@ -28,13 +50,35 @@ public class ExtentReporterNG {
 	LocalDateTime now = LocalDateTime.now();  
 	String path = System.getProperty("user.dir")+"/reports/index-"+dtf.format(now)+".html";
 	ExtentHtmlReporter reporter = new ExtentHtmlReporter(path);
-	reporter.config().setReportName("Mobile SeeTest Web Automation Results");
+	reporter.config().setReportName("Mobile SeeTest IOS Browser Automation Results");
 	reporter.config().setDocumentTitle("Test Results");
 	reporter.config().setTheme(Theme.STANDARD);
 	extent = new ExtentReports();
 	extent.attachReporter(reporter);
 	extent.setSystemInfo("Tester","Somnath Baul");
 	extent.setSystemInfo("Environment","QA");
+	extent.setSystemInfo("Platform","IOS Browser");
+	extent.setSystemInfo("Application_URL",prop.getProperty("url"));
+	return extent;
+	}
+	
+	@SuppressWarnings("deprecation")
+	public static ExtentReports getReportObjectAndroidApp() 
+	{
+	base = new Base();
+	prop = base.returnProperty();
+	DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyyMMddHHmmss");  
+	LocalDateTime now = LocalDateTime.now();  
+	String path = System.getProperty("user.dir")+"/reports/index-"+dtf.format(now)+".html";
+	ExtentHtmlReporter reporter = new ExtentHtmlReporter(path);
+	reporter.config().setReportName("Mobile SeeTest IOS Browser Automation Results");
+	reporter.config().setDocumentTitle("Test Results");
+	reporter.config().setTheme(Theme.STANDARD);
+	extent = new ExtentReports();
+	extent.attachReporter(reporter);
+	extent.setSystemInfo("Tester","Somnath Baul");
+	extent.setSystemInfo("Environment","QA");
+	extent.setSystemInfo("Platform","Android App");
 	extent.setSystemInfo("Application_URL",prop.getProperty("url"));
 	return extent;
 	}

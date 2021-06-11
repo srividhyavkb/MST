@@ -26,13 +26,17 @@ public class TestChilisIOS extends Base
 		getDriver(IOSdriver);
 		IOSdriver.rotate(ScreenOrientation.PORTRAIT);
 		prop = returnProperty();
+		editProperties(prop, "Android_Browser", "false");
+		editProperties(prop, "IOS_Browser", "true");
+		editProperties(prop, "Android_App", "false");
+		editProperties(prop, "IOS_App", "false");
 		IOSdriver.get(prop.getProperty("url"));
 		IOSdriver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		IOSdriver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
 		
 	}
 	
-	@Test(enabled = false)
+	@Test(enabled = true)
 	public void testLoginFeature() throws Exception {
 		Logger log = LogManager.getLogger("TestLoginLogout");
 		log.info("******TC10_IOS : Starting to Validate Login and Logout functionality of Chilis WebApp******");
@@ -67,7 +71,7 @@ public class TestChilisIOS extends Base
 		func3.getRewardTitleIOS();
 	}
 
-	@Test(enabled = true)
+	@Test(enabled = false)
 	public void testUpdateAccountFeature() throws InterruptedException {
 		Logger log = LogManager.getLogger("TestUpdateAccount");
 		log.info("******TC12_IOS : Starting to validate user is able to update my Account******");
@@ -173,7 +177,7 @@ public class TestChilisIOS extends Base
 		Assert.assertEquals(priceBeforePlacingOrder, priceAfterPlacingOrder, "Incorrect price displayed");
 	}
 
-	@Test(enabled = true)
+	@Test(enabled = false)
 	public void testAddMyVisit() throws Exception {
 		Logger log = LogManager.getLogger("TestAddMyVisit");
 		log.info("******TC16_IOS : Starting to verify user is able to submit Add my visit form for login member******");

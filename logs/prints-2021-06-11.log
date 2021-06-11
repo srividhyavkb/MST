@@ -1,0 +1,97 @@
+19:37:57.767 [main] INFO  TestLoginLogout - ******TC01_ANDROID : Starting to Validate Login and Logout functionality of Chilis WebApp******
+19:37:59.074 [main] INFO  TestLoginLogout - Starting QA site validation
+19:38:01.134 [main] INFO  TestLoginLogout - QA site launch is successful, Site Name : https://qa3.chilis.com/
+19:38:05.572 [main] INFO  TestLoginLogout - Pop up closed
+19:38:10.072 [main] INFO  TestLoginLogout - Menu button clicked
+19:38:15.021 [main] INFO  TestLoginLogout - Login option selected
+19:38:24.581 [main] INFO  TestLoginLogout - User name (512) 212-1212 entered
+19:38:30.602 [main] INFO  TestLoginLogout - Password Brinkers@2021 entered
+19:38:34.963 [main] INFO  TestLoginLogout - Sign in button clicked
+19:38:46.842 [main] INFO  TestLoginLogout - Menu button clicked
+19:38:50.904 [main] INFO  TestLoginLogout - Logout button clicked
+19:38:55.655 [main] INFO  TestLoginLogout - Login header displayed : LOG IN
+19:49:47.904 [main] INFO  TestLoginLogout - ******TC10_IOS : Starting to Validate Login and Logout functionality of Chilis WebApp******
+19:49:49.573 [main] INFO  TestLoginLogout - Starting QA site validation
+19:49:52.748 [main] INFO  TestLoginLogout - QA site launch is successful, Site Name : https://qa3.chilis.com/
+19:50:01.422 [main] INFO  TestLoginLogout - Pop up closed
+19:50:10.127 [main] INFO  TestLoginLogout - Menu button clicked
+19:50:18.445 [main] INFO  TestLoginLogout - Login option selected
+19:50:36.499 [main] INFO  TestLoginLogout - User name (512) 212-1212 entered
+19:50:51.234 [main] INFO  TestLoginLogout - Password Brinkers@2021 entered
+19:51:00.826 [main] INFO  TestLoginLogout - Sign in button clicked
+19:51:08.907 [main] INFO  TestLoginLogout - Menu button clicked
+19:51:14.304 [main] INFO  TestLoginLogout - Logout button clicked
+19:51:19.360 [main] INFO  TestLoginLogout - Login header displayed : LOG IN
+19:52:08.029 [main] INFO  TestLoginLogout - ******TC01_ANDROID : Starting to Validate Login and Logout functionality of Chilis WebApp******
+19:52:08.229 [main] INFO  TestLoginLogout - Starting QA site validation
+19:52:10.946 [main] INFO  TestLoginLogout - QA site launch is successful, Site Name : https://qa3.chilis.com/
+19:52:15.041 [main] INFO  TestLoginLogout - Pop up closed
+19:52:19.557 [main] INFO  TestLoginLogout - Menu button clicked
+19:52:24.511 [main] INFO  TestLoginLogout - Login option selected
+19:52:34.197 [main] INFO  TestLoginLogout - User name (512) 212-1212 entered
+19:52:40.469 [main] INFO  TestLoginLogout - Password Brinkers@2021 entered
+19:52:44.863 [main] INFO  TestLoginLogout - Sign in button clicked
+19:52:57.794 [main] INFO  TestLoginLogout - Menu button clicked
+19:53:00.376 [main] INFO  TestLoginLogout - Logout button clicked
+19:53:05.776 [main] INFO  TestLoginLogout - Login header displayed : LOG IN
+20:13:52.853 [main] INFO  TestLoginLogout - ******TC10_IOS : Starting to Validate Login and Logout functionality of Chilis WebApp******
+20:13:53.983 [main] INFO  TestLoginLogout - Starting QA site validation
+20:13:57.352 [main] INFO  TestLoginLogout - QA site launch is successful, Site Name : https://qa3.chilis.com/
+20:14:06.005 [main] INFO  TestLoginLogout - Pop up closed
+20:14:14.514 [main] INFO  TestLoginLogout - Menu button clicked
+20:14:22.525 [main] INFO  TestLoginLogout - Login option selected
+20:14:38.734 [main] INFO  TestLoginLogout - User name (512) 212-1212 entered
+20:14:51.097 [main] INFO  TestLoginLogout - Password Brinkers@2021 entered
+20:15:00.602 [main] INFO  TestLoginLogout - Sign in button clicked
+20:15:08.569 [main] INFO  TestLoginLogout - Menu button clicked
+20:15:14.178 [main] INFO  TestLoginLogout - Logout button clicked
+20:15:18.657 [main] INFO  TestLoginLogout - Login header displayed : LOG IN
+20:16:08.303 [main] INFO  TestLoginLogout - ******TC01_ANDROID : Starting to Validate Login and Logout functionality of Chilis WebApp******
+20:16:08.959 [main] INFO  TestLoginLogout - Starting QA site validation
+20:16:10.930 [main] INFO  TestLoginLogout - QA site launch is successful, Site Name : https://qa3.chilis.com/
+20:16:15.102 [main] INFO  TestLoginLogout - Pop up closed
+20:16:19.703 [main] INFO  TestLoginLogout - Menu button clicked
+20:16:24.579 [main] INFO  TestLoginLogout - Login option selected
+20:16:34.064 [main] INFO  TestLoginLogout - User name (512) 212-1212 entered
+20:16:41.693 [main] ERROR TestLoginLogout - Could not enter password
+20:16:41.707 [main] ERROR TestLoginLogout - unknown error (An unknown server-side error occurred. status='false'. Failed to complete internal method: 'elementSendText args: [WEB, xpath=(//*[cmd:equalsIgnoreCase(@nodeName,'input')][@id='password'])[1], 0, ]', details: )  (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+Build info: version: '3.12.0', revision: '7c6e0b3', time: '2018-05-08T14:04:26.12Z'
+System info: host: 'LAPTOP-2HJFJ1OT', ip: '192.168.29.230', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_281'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {appBuildVersion: , appReleaseVersion: , appiumVersion: 1.8.0, applicationClearData: false, autoAcceptAlerts: false, autoDismissAlerts: true, autoGrantPermissions: false, autoWebview: false, browserName: Chromium, cloudViewLink: https://cloud.seetest.io:44..., commandTimeouts: 120000, desired: {autoDismissAlerts: true, browserName: Chromium, deviceQuery: @os='android' and @version=..., platformName: Android, testName: Quick Start Android Browser...}, device.category: PHONE, device.majorVersion: 8, device.manufacture: samsung, device.model: SM-G930F, device.name: samsung Galaxy S7 IO IL 086, device.os: Android, device.screenSize: 1080x1920, device.serialNumber: 98866742375a394e33, device.version: 8.0.0, deviceQuery: @os='android' and @version=..., deviceUDID: 98866742375a394e33, dontGoHomeOnQuit: false, dontStopAppOnReset: false, ehmPrefixUrl: /agent-6292135, ehmUrl: https://cloud.seetest.io:44..., fullReset: false, gridNodePort: 7789, install.only.for.update: false, installOnlyForUpdate: false, instrumentApp: false, javascriptEnabled: true, keystorePath: ~/.android/debug.keystore, locationServicesAuthorized: false, newSessionWaitTimeout: 600.0, noReset: false, platform: ANDROID, platformName: Android, projectName: , reportDirectory: reports, reportFormat: xml, reportTestId: 1812.0, reportUrl: https://cloud.seetest.io:44..., reservationDuration: 240.0, takeScreenshots: true, test.type: Mobile, testName: Quick Start Android Browser..., udid: 98866742375a394e33, useKeystore: false, waitForDeviceTimeout: 120000.0}
+Session ID: CLOUD-SID:2021-06-11_10-45-40-37f24823-0134-415d-8224-31a661e5e5f5
+20:20:38.643 [main] INFO  TestLoginLogout - ******TC01_ANDROID : Starting to Validate Login and Logout functionality of Chilis WebApp******
+20:20:43.632 [main] INFO  TestLoginLogout - Starting QA site validation
+20:20:45.822 [main] INFO  TestLoginLogout - QA site launch is successful, Site Name : https://qa3.chilis.com/
+20:20:49.964 [main] INFO  TestLoginLogout - Pop up closed
+20:20:54.657 [main] INFO  TestLoginLogout - Menu button clicked
+20:20:59.694 [main] INFO  TestLoginLogout - Login option selected
+20:21:09.049 [main] INFO  TestLoginLogout - User name (512) 212-1212 entered
+20:21:14.935 [main] INFO  TestLoginLogout - Password Brinkers@2021 entered
+20:21:19.141 [main] INFO  TestLoginLogout - Sign in button clicked
+20:21:34.017 [main] INFO  TestLoginLogout - Menu button clicked
+20:21:36.668 [main] INFO  TestLoginLogout - Logout button clicked
+20:21:42.154 [main] INFO  TestLoginLogout - Login header displayed : LOG IN
+20:24:44.359 [main] INFO  TestLoginLogout - ******TC01_ANDROID : Starting to Validate Login and Logout functionality of Chilis WebApp******
+20:24:51.312 [main] INFO  TestLoginLogout - Starting QA site validation
+20:24:53.622 [main] INFO  TestLoginLogout - QA site launch is successful, Site Name : https://qa3.chilis.com/
+20:24:57.984 [main] INFO  TestLoginLogout - Pop up closed
+20:25:02.951 [main] INFO  TestLoginLogout - Menu button clicked
+20:25:07.897 [main] INFO  TestLoginLogout - Login option selected
+20:25:18.150 [main] INFO  TestLoginLogout - User name (512) 212-1212 entered
+20:25:24.343 [main] INFO  TestLoginLogout - Password Brinkers@2021 entered
+20:25:28.788 [main] INFO  TestLoginLogout - Sign in button clicked
+20:25:41.315 [main] INFO  TestLoginLogout - Menu button clicked
+20:25:43.989 [main] INFO  TestLoginLogout - Logout button clicked
+20:25:49.654 [main] INFO  TestLoginLogout - Login header displayed : LOG IN
+20:57:41.188 [main] INFO  AppTestLocationSearch - ******Starting to test Location Search Functionality of Chilis App******
+20:57:46.475 [main] INFO  AppTestLocationSearch - Pop up closed
+20:57:50.668 [main] INFO  AppTestLocationSearch - Find Restaurant link clicked
+20:58:00.907 [main] INFO  AppTestLocationSearch - Restaurant location entered as : Delray Beach, FL, USA
+22:04:53.523 [main] INFO  TestAddMyVisit - ******TC07_ANDROID : Starting to verify user is able to submit Add my visit form for login member******
+22:04:54.822 [main] INFO  TestAddMyVisit - Starting QA site validation
+22:04:57.789 [main] INFO  TestAddMyVisit - QA site launch is successful, Site Name : https://qa3.chilis.com/
+22:05:06.582 [main] INFO  TestAddMyVisit - Pop up closed
+22:05:15.802 [main] INFO  TestAddMyVisit - Menu button clicked
+22:05:23.881 [main] INFO  TestAddMyVisit - Login option selected

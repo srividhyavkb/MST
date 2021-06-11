@@ -24,8 +24,7 @@ import io.appium.java_client.android.AndroidElement;
 
 public class Listeners extends TestListenerAdapter implements ITestListener {
 	ExtentTest test;
-	ExtentReports extent = ExtentReporterNG.getReportObject();
-	static ThreadLocal<ExtentTest> extentTest = new ThreadLocal<ExtentTest>();
+	ExtentReports extent;
 	public int testPassed = 0;
 	public int testFailed = 0;
 	public int testSkipped = 0;
@@ -45,24 +44,34 @@ public class Listeners extends TestListenerAdapter implements ITestListener {
 
 	public void onTestStart(ITestResult result) {
 // TODO Auto-generated method stub
-		System.setProperty("xmlrpc.connTimeout", "30000");
-		System.setProperty("xmlrpc.replyTimeout", "30000");
+		if(prop.getProperty("Android_Browser").equals("true"))
+			{
+			extent = ExtentReporterNG.getReportObjectAndroidBrowser();
+			}
+		else if(prop.getProperty("IOS_Browser").equals("true")) 
+		{
+			extent = ExtentReporterNG.getReportObjectIOSBrowser();
+		}
+		else if(prop.getProperty("Android_App").equals("true"))
+		{
+			extent = ExtentReporterNG.getReportObjectAndroidApp();
+		}
 		test = extent.createTest(result.getMethod().getMethodName());
-		extentTest.set(test);
-		FunctionalComponents.getExtentTest(extentTest);
+	
+		FunctionalComponents.getExtentTest(test);
 		testExecuted++;
 	}
 
 	public void onTestSuccess(ITestResult result) {
 		// TODO Auto-generated method stub
-		extentTest.get().log(Status.PASS,
+		test.log(Status.PASS,
 				MarkupHelper.createLabel(result.getName() + " - Test Case PASSED", ExtentColor.GREEN));
 		testPassed++;
 
 	}
 
 	public void onTestFailure(ITestResult result) {
-		extentTest.get().log(Status.FAIL,
+		test.log(Status.FAIL,
 				MarkupHelper.createLabel(result.getName() + " - Test Case Failed", ExtentColor.RED));
 		testFailed++;
 
@@ -72,7 +81,7 @@ public class Listeners extends TestListenerAdapter implements ITestListener {
 		if (result.getThrowable().getMessage() == null)
 			extent.removeTest(test);
 		else {
-			extentTest.get().log(Status.SKIP,
+			test.log(Status.SKIP,
 					MarkupHelper.createLabel(result.getName() + " - Test Case Skipped", ExtentColor.ORANGE));
 			testSkipped++;
 		}
@@ -96,7 +105,7 @@ public class Listeners extends TestListenerAdapter implements ITestListener {
 		try {
 			GenerateTestSummary.createTestExecutionTable(testExecuted, testPassed, testFailed, testSkipped);
 			if (prop.getProperty("sendEmail").equals("true"))
-				extentTest.get().log(Status.INFO,
+				test.log(Status.INFO,
 						MarkupHelper.createLabel("Email sent to recipients", ExtentColor.LIME));
 		} catch (Exception e) {
 			// TODO Auto-generated catch block

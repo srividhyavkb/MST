@@ -3,6 +3,8 @@ package Resources;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
 import org.apache.poi.ss.usermodel.CellStyle;
 import org.apache.poi.ss.usermodel.Font;
@@ -26,6 +28,8 @@ public class GenerateTestSummary  {
 	public static String projectPath = System.getProperty("user.dir");
 	public static void createTestExecutionTable(int testExecuted,int testPassed,int testFailed, int testSkipped) throws FileNotFoundException, IOException {
 		
+		DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyyMMddHHmmss");  
+		LocalDateTime now = LocalDateTime.now();  
 		/* Start with Creating a workbook and worksheet object */
 		Workbook wb = new XSSFWorkbook();
 		XSSFSheet sheet = (XSSFSheet) wb.createSheet();
@@ -95,7 +99,8 @@ public class GenerateTestSummary  {
 		localXSSFCell23.setCellValue(testFailed);
 		localXSSFCell24.setCellValue(testSkipped);
 		/* Write output as File */
-		FileOutputStream fileOut = new FileOutputStream(projectPath+"/TestSummary.xlsx");
+		
+		FileOutputStream fileOut = new FileOutputStream(projectPath+"/TestSummary"+dtf.format(now)+".xlsx");
 		wb.write(fileOut);
 		fileOut.close();
 	}

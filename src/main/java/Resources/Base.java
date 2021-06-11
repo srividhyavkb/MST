@@ -1,6 +1,8 @@
 package Resources;
 
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.net.URL;
 import java.util.HashMap;
 import java.util.Map;
@@ -44,23 +46,19 @@ public class Base {
 
 	public DesiredCapabilities sendAndroidBrowserCapabilities() throws Exception {
 
-		if(prop.getProperty("Android").equals("true"))
-		{
+		
 		dc.setCapability("accessKey", accessKey);
 		dc.setCapability("testName", "Quick Start Android Browser Demo");
 		dc.setCapability("deviceQuery",
 				"@os='android' and @version='" + prop.getProperty("android_version") + "' and @category='PHONE'");
 		dc.setBrowserName(MobileBrowserType.CHROMIUM);
 		dc.setCapability("autoDismissAlerts", true);
-		}
 		return dc;
 		
 	}
 	
 	public DesiredCapabilities sendAndroidChilisAppCapabilities() throws Exception {
 
-		if(prop.getProperty("Android").equals("true"))
-		{
 		dc.setCapability("accessKey", accessKey);
 		dc.setCapability("testName", "Quick Start Android Browser Demo");
 		dc.setCapability("deviceQuery",
@@ -73,20 +71,16 @@ public class Base {
         dc.setCapability("appReleaseVersion",prop.getProperty("appReleaseVersion"));
         dc.setCapability("installOnlyForUpdate", true);
         dc.setCapability("autoDismissAlerts", true);
-		}
 		return dc;
 		
 	}
 
 	public DesiredCapabilities sendIOSBrowserCapabilities() throws Exception {
 		
-       if(prop.getProperty("IOS").equals("true"))
-       {
 		dcIOS.setCapability("accessKey", accessKey);
 		dcIOS.setCapability("testName", "Quick Start iOS Browser Demo");
 		dcIOS.setCapability("deviceQuery", "@os='ios' and @version='13.2.3' and @category='PHONE'");
 		dcIOS.setBrowserName(MobileBrowserType.SAFARI);
-       }
 		return dcIOS;
 	}
 
@@ -100,6 +94,20 @@ public class Base {
 			e.printStackTrace();
 		}
 		return prop;
+	}
+	
+	public void editProperties(Properties prop,String key, String value)
+	{
+		FileOutputStream out;
+		try {
+			 out = new FileOutputStream(projectPath + "/src/main/java/Resources/data.properties");
+			prop.setProperty(key, value);
+			prop.store(out,null);
+			out.close();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 	
 	public void getDriver(AppiumDriver driver)

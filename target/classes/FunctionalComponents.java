@@ -22,6 +22,7 @@ import static io.appium.java_client.touch.TapOptions.tapOptions;
 import static io.appium.java_client.touch.offset.ElementOption.element;
 
 import io.appium.java_client.AppiumDriver;
+import io.appium.java_client.MobileBy;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.TouchAction;
 import io.appium.java_client.android.AndroidDriver;
@@ -40,9 +41,9 @@ public class FunctionalComponents extends Base {
 
 	public AppiumDriver driver = null;
 	Properties property = returnProperty();
-	ExtentReports extent = ExtentReporterNG.getReportObject();
+	
 	Listeners listen;
-	static ThreadLocal<ExtentTest> extTestObj;
+	static ExtentTest extTestObj;
 	public WebDriverWait wait;
 	Logger log;
 	ExcelUtils excel;
@@ -77,7 +78,7 @@ public class FunctionalComponents extends Base {
 	}
 
 	/* To obtain the Extent Test object for logging in Extent Report */
-	public static void getExtentTest(ThreadLocal<ExtentTest> extentTest) {
+	public static void getExtentTest(ExtentTest extentTest) {
 		extTestObj = extentTest;
 	}
 
@@ -160,17 +161,17 @@ public class FunctionalComponents extends Base {
 
 	/* function to validate QA site launch */
 	public void validateQASite() {
-		extTestObj.get().createNode("Starting QA site validation").info("INFO");
+		extTestObj.createNode("Starting QA site validation").info("INFO");
 		log.info("Starting QA site validation");
 		try {
 			explicitWait(Elements.popUpCloseButton);
 			log.info("QA site launch is successful, Site Name : " + driver.getCurrentUrl());
-			extTestObj.get().createNode("QA site launch is successful, Site Name : " + driver.getCurrentUrl())
+			extTestObj.createNode("QA site launch is successful, Site Name : " + driver.getCurrentUrl())
 					.pass("PASSED");
 
 		} catch (Exception e) {
 			log.error("QA site launch failed");
-			extTestObj.get().createNode("QA site launch failed")
+			extTestObj.createNode("QA site launch failed")
 					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
 			log.error(e.getMessage());
 			stopTest();
@@ -185,10 +186,10 @@ public class FunctionalComponents extends Base {
 			clickableWait(Elements.popUpCloseButton);
 			explicitWait(Elements.subHeader);
 			log.info("Pop up closed");
-			extTestObj.get().createNode("Pop up closed").pass("PASSED");
+			extTestObj.createNode("Pop up closed").pass("PASSED");
 		} catch (Exception e) {
 			log.error("Pop up close failed");
-			extTestObj.get().createNode("Pop up close failed")
+			extTestObj.createNode("Pop up close failed")
 					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
 			log.error(e.getMessage());
 			stopTest();
@@ -201,10 +202,10 @@ public class FunctionalComponents extends Base {
 		try {
 			clickableWait(Elements.menuButton);
 			log.info("Menu button clicked");
-			extTestObj.get().createNode("Menu button clicked").pass("PASSED");
+			extTestObj.createNode("Menu button clicked").pass("PASSED");
 		} catch (Exception e) {
 			log.error("Menu button click failed");
-			extTestObj.get().createNode("Menu button click failed")
+			extTestObj.createNode("Menu button click failed")
 					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
 			log.error(e.getMessage());
 			stopTest();
@@ -216,10 +217,10 @@ public class FunctionalComponents extends Base {
 		try {
 			clickableWait(Elements.loginButton);
 			log.info("Login option selected");
-			extTestObj.get().createNode("Login option selected").pass("PASSED");
+			extTestObj.createNode("Login option selected").pass("PASSED");
 		} catch (Exception e) {
 			log.error("Login option not selected");
-			extTestObj.get().createNode("Login option not selected")
+			extTestObj.createNode("Login option not selected")
 					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
 			log.error(e.getMessage());
 
@@ -234,10 +235,10 @@ public class FunctionalComponents extends Base {
 			explicitWait(Elements.userNameTextBox);
 			sendKeysWait(Elements.userNameTextBox, username);
 			log.info("User name " + username + " entered");
-			extTestObj.get().createNode("User name " + username + " entered").pass("PASSED");
+			extTestObj.createNode("User name " + username + " entered").pass("PASSED");
 		} catch (Exception e) {
 			log.error("Could not enter user name");
-			extTestObj.get().createNode("Could not enter user name")
+			extTestObj.createNode("Could not enter user name")
 					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
 			log.error(e.getMessage());
 
@@ -252,10 +253,10 @@ public class FunctionalComponents extends Base {
 			String password = excel.getCellData("Credentials", "Password", 2);
 			sendKeysWait(Elements.passwordTextBox, password);
 			log.info("Password " + password + " entered");
-			extTestObj.get().createNode("Password " + password + " entered").pass("PASSED");
+			extTestObj.createNode("Password " + password + " entered").pass("PASSED");
 		} catch (Exception e) {
 			log.error("Could not enter password");
-			extTestObj.get().createNode("Enter password")
+			extTestObj.createNode("Enter password")
 					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
 			log.error(e.getMessage());
 
@@ -270,10 +271,10 @@ public class FunctionalComponents extends Base {
 			scrollIntoViewBottom(Elements.signinButton);
 			clickableWait(Elements.signinButton);
 			log.info("Sign in button clicked");
-			extTestObj.get().createNode("Sign in button clicked").pass("PASSED");
+			extTestObj.createNode("Sign in button clicked").pass("PASSED");
 		} catch (Exception e) {
 			log.error("Sign in button click failed");
-			extTestObj.get().createNode("Sign in button click failed")
+			extTestObj.createNode("Sign in button click failed")
 					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
 			log.error(e.getMessage());
 
@@ -287,10 +288,10 @@ public class FunctionalComponents extends Base {
 		try {
 			clickableWait(Elements.logoutButton);
 			log.info("Logout button clicked");
-			extTestObj.get().createNode("Logout button clicked").pass("PASSED");
+			extTestObj.createNode("Logout button clicked").pass("PASSED");
 		} catch (Exception e) {
 			log.info("Logout button click failed");
-			extTestObj.get().createNode("Logout button click failed")
+			extTestObj.createNode("Logout button click failed")
 					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
 			log.error(e.getMessage());
 
@@ -307,12 +308,12 @@ public class FunctionalComponents extends Base {
 		try {
 			explicitWait(Elements.loginHeader);
 			log.info("Login header displayed : " + driver.findElement(Elements.loginHeader).getText());
-			extTestObj.get()
+			extTestObj
 					.createNode("Login header displayed : " + driver.findElement(Elements.loginHeader).getText())
 					.pass("PASSED");
 		} catch (Exception e) {
 			log.error("Login header not displayed");
-			extTestObj.get().createNode("Login header not displayed")
+			extTestObj.createNode("Login header not displayed")
 					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
 			log.error(e.getMessage());
 
@@ -327,10 +328,10 @@ public class FunctionalComponents extends Base {
 		try {
 			clickableWait(Elements.locationsButton);
 			log.info("Location option selected");
-			extTestObj.get().createNode("Location option selected").pass("PASSED");
+			extTestObj.createNode("Location option selected").pass("PASSED");
 		} catch (Exception e) {
 			log.error("Location button selection failed");
-			extTestObj.get().createNode("Location button selection failed")
+			extTestObj.createNode("Location button selection failed")
 					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
 			log.error(e.getMessage());
 
@@ -346,11 +347,11 @@ public class FunctionalComponents extends Base {
 			String locn = excel.getCellData("Locations", "Location", 2);
 			driver.getKeyboard().sendKeys(locn);
 			log.info("Restaurant location " + locn + " entered");
-			extTestObj.get().createNode("Restaurant location " + locn + " entered").pass("PASSED");
+			extTestObj.createNode("Restaurant location " + locn + " entered").pass("PASSED");
 
 		} catch (Exception e) {
 			log.error("Failed to enter Restaurant location");
-			extTestObj.get().createNode("Failed to enter Restaurant location")
+			extTestObj.createNode("Failed to enter Restaurant location")
 					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
 			log.error(e.getMessage());
 
@@ -366,10 +367,10 @@ public class FunctionalComponents extends Base {
 		try {
 			clickableWait(Elements.searchButton);
 			log.info("Search button clicked");
-			extTestObj.get().createNode("Search button clicked").pass("PASSED");
+			extTestObj.createNode("Search button clicked").pass("PASSED");
 		} catch (Exception e) {
 			log.error("Search button click failed");
-			extTestObj.get().createNode("Search button click failed")
+			extTestObj.createNode("Search button click failed")
 					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
 			log.error(e.getMessage());
 			stopTest();
@@ -381,12 +382,12 @@ public class FunctionalComponents extends Base {
 		try {
 			explicitWait(Elements.restaurantName);
 			log.info("Restaurant name " + driver.findElement(Elements.restaurantName).getText() + " is displayed");
-			extTestObj.get().createNode(
+			extTestObj.createNode(
 					"Restaurant name " + driver.findElement(Elements.restaurantName).getText() + " is displayed")
 					.pass("PASSED");
 		} catch (Exception e) {
 			log.error("Restaurant Name not displayed");
-			extTestObj.get().createNode("Restaurant Name not displayed")
+			extTestObj.createNode("Restaurant Name not displayed")
 					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
 			log.error(e.getMessage());
 
@@ -407,10 +408,10 @@ public class FunctionalComponents extends Base {
 			explicitWait(Elements.noOfRewards);
 			displayedCount = driver.findElement(Elements.noOfRewards).getText();
 			log.info("Displayed rewards count obtained : " + displayedCount);
-			extTestObj.get().createNode("Displayed rewards count obtained : " + displayedCount).pass("PASSED");
+			extTestObj.createNode("Displayed rewards count obtained : " + displayedCount).pass("PASSED");
 		} catch (Exception e) {
 			log.error("Displayed rewards count couldn't be obtained");
-			extTestObj.get().createNode("Displayed rewards count couldn't be obtained")
+			extTestObj.createNode("Displayed rewards count couldn't be obtained")
 					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
 			log.error(e.getMessage());
 
@@ -428,10 +429,10 @@ public class FunctionalComponents extends Base {
 		try {
 			count = driver.findElements(Elements.actualRewardsCount).size();
 			log.info("Actual rewards count obtained");
-			extTestObj.get().createNode("Actual rewards count obtained : " + count).pass("PASSED");
+			extTestObj.createNode("Actual rewards count obtained : " + count).pass("PASSED");
 		} catch (Exception e) {
 			log.error("Actual rewards count couldn't be obtained");
-			extTestObj.get().createNode("Actual rewards count couldn't be obtained")
+			extTestObj.createNode("Actual rewards count couldn't be obtained")
 					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
 			log.error(e.getMessage());
 
@@ -449,18 +450,18 @@ public class FunctionalComponents extends Base {
 		String rewardsTitle = "";
 		try {
 			log.info("Reward Titles :");
-			extTestObj.get().log(Status.INFO, "Reward Titles :");
+			extTestObj.log(Status.INFO, "Reward Titles :");
 			for (AndroidElement reward : rewards) {
 				rewardsTitle = reward.findElement(By.xpath("//div[@class='rewards-active-title item-title']"))
 						.getText();
 				log.info(rewardsTitle);
-				extTestObj.get().log(Status.INFO, rewardsTitle);
+				extTestObj.log(Status.INFO, rewardsTitle);
 			}
 			log.info("Reward Titles displayed");
-			extTestObj.get().createNode("Reward Titles displayed").pass("PASSED");
+			extTestObj.createNode("Reward Titles displayed").pass("PASSED");
 		} catch (Exception e) {
 			log.error("Reward titles couldn't be obtained");
-			extTestObj.get().createNode("Reward titles couldn't be obtained")
+			extTestObj.createNode("Reward titles couldn't be obtained")
 					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
 			log.error(e.getMessage());
 
@@ -472,18 +473,18 @@ public class FunctionalComponents extends Base {
 		String rewardsTitle = "";
 		try {
 			log.info("Reward Titles :");
-			extTestObj.get().log(Status.INFO, "Reward Titles :");
+			extTestObj.log(Status.INFO, "Reward Titles :");
 			for (IOSElement reward : rewards) {
 				rewardsTitle = reward.findElement(By.xpath("//div[@class='rewards-active-title item-title']"))
 						.getText();
 				log.info(rewardsTitle);
-				extTestObj.get().log(Status.INFO, rewardsTitle);
+				extTestObj.log(Status.INFO, rewardsTitle);
 			}
 			log.info("Reward Titles displayed");
-			extTestObj.get().createNode("Reward Titles displayed").pass("PASSED");
+			extTestObj.createNode("Reward Titles displayed").pass("PASSED");
 		} catch (Exception e) {
 			log.error("Reward titles couldn't be obtained");
-			extTestObj.get().createNode("Reward titles couldn't be obtained")
+			extTestObj.createNode("Reward titles couldn't be obtained")
 					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
 			log.error(e.getMessage());
 
@@ -498,10 +499,10 @@ public class FunctionalComponents extends Base {
 		try {
 			clickableWait(Elements.myAccountOption);
 			log.info("My Account option selected");
-			extTestObj.get().createNode("My Account option selected").pass("PASSED");
+			extTestObj.createNode("My Account option selected").pass("PASSED");
 		} catch (Exception e) {
 			log.error("My Account option selection failed");
-			extTestObj.get().createNode("My Account option selection failed")
+			extTestObj.createNode("My Account option selection failed")
 					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
 			log.error(e.getMessage());
 
@@ -517,10 +518,10 @@ public class FunctionalComponents extends Base {
 			explicitWait(Elements.firstNameTextBox);
 			initialFirstName = driver.findElement(Elements.firstNameTextBox).getAttribute("value");
 			log.info("First Name before update obtained as : " + initialFirstName);
-			extTestObj.get().createNode("First Name before update obtained as : " + initialFirstName).pass("PASSED");
+			extTestObj.createNode("First Name before update obtained as : " + initialFirstName).pass("PASSED");
 		} catch (Exception e) {
 			log.error("First Name before update not obtained");
-			extTestObj.get().createNode("First Name before update not obtained")
+			extTestObj.createNode("First Name before update not obtained")
 					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
 			log.error(e.getMessage());
 
@@ -535,10 +536,10 @@ public class FunctionalComponents extends Base {
 			explicitWait(Elements.lastNameTextBox);
 			initialLastName = driver.findElement(Elements.lastNameTextBox).getAttribute("value");
 			log.info("Last Name before update obtained as : " + initialLastName);
-			extTestObj.get().createNode("Last Name before update obtained as : " + initialLastName).pass("PASSED");
+			extTestObj.createNode("Last Name before update obtained as : " + initialLastName).pass("PASSED");
 		} catch (Exception e) {
 			log.error("Last Name before update not obtained");
-			extTestObj.get().createNode("Last Name before update not obtained")
+			extTestObj.createNode("Last Name before update not obtained")
 					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
 			log.error(e.getMessage());
 
@@ -552,10 +553,10 @@ public class FunctionalComponents extends Base {
 			explicitWait(Elements.emailTextBox);
 			initialEmail = driver.findElement(Elements.emailTextBox).getAttribute("value");
 			log.info("Email before update obtained as : " + initialEmail);
-			extTestObj.get().createNode("Email before update obtained as : " + initialEmail).pass("PASSED");
+			extTestObj.createNode("Email before update obtained as : " + initialEmail).pass("PASSED");
 		} catch (Exception e) {
 			log.error("Email before update not obtained");
-			extTestObj.get().createNode("Email before update not obtained")
+			extTestObj.createNode("Email before update not obtained")
 					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
 			log.error(e.getMessage());
 
@@ -569,10 +570,10 @@ public class FunctionalComponents extends Base {
 			explicitWait(Elements.zipCodeTextBox);
 			initialZipCode = driver.findElement(Elements.zipCodeTextBox).getAttribute("value");
 			log.info("Zip Code before update obtained as : " + initialZipCode);
-			extTestObj.get().createNode("Zip Code before update obtained as : " + initialZipCode).pass("PASSED");
+			extTestObj.createNode("Zip Code before update obtained as : " + initialZipCode).pass("PASSED");
 		} catch (Exception e) {
 			log.error("Zip Code before update not obtained");
-			extTestObj.get().createNode("Zip Code before update not obtained")
+			extTestObj.createNode("Zip Code before update not obtained")
 					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
 			log.error(e.getMessage());
 
@@ -584,11 +585,11 @@ public class FunctionalComponents extends Base {
 			String email = excel.getCellData("UpdateMyAccount", "Email", 2);
 			sendKeysWait(Elements.emailTextBox, email);
 			log.info("Email updated with : " + email);
-			extTestObj.get().createNode("Email updated with : " + email).pass("PASSED");
+			extTestObj.createNode("Email updated with : " + email).pass("PASSED");
 
 		} catch (Exception e) {
 			log.error("Email updation failed");
-			extTestObj.get().createNode("Email updation failed")
+			extTestObj.createNode("Email updation failed")
 					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
 			log.error(e.getMessage());
 
@@ -601,10 +602,10 @@ public class FunctionalComponents extends Base {
 			String firstName = excel.getCellData("UpdateMyAccount", "First Name", 2);
 			sendKeysWait(Elements.firstNameTextBox, firstName);
 			log.info("First Name updated with : " + firstName);
-			extTestObj.get().createNode("First Name updated with : " + firstName).pass("PASSED");
+			extTestObj.createNode("First Name updated with : " + firstName).pass("PASSED");
 		} catch (Exception e) {
 			log.error("First Name updation failed");
-			extTestObj.get().createNode("First Name updation failed")
+			extTestObj.createNode("First Name updation failed")
 					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
 			log.error(e.getMessage());
 
@@ -617,10 +618,10 @@ public class FunctionalComponents extends Base {
 			String lastName = excel.getCellData("UpdateMyAccount", "Last Name", 2);
 			sendKeysWait(Elements.lastNameTextBox, lastName);
 			log.info("Last Name updated with : " + lastName);
-			extTestObj.get().createNode("Last Name updated with : " + lastName).pass("PASSED");
+			extTestObj.createNode("Last Name updated with : " + lastName).pass("PASSED");
 		} catch (Exception e) {
 			log.error("Last Name updation failed");
-			extTestObj.get().createNode("Last Name updation failed")
+			extTestObj.createNode("Last Name updation failed")
 					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
 			log.error(e.getMessage());
 
@@ -633,10 +634,10 @@ public class FunctionalComponents extends Base {
 			String zipCode = excel.getCellData("UpdateMyAccount", "Zip Code", 2);
 			sendKeysWait(Elements.zipCodeTextBox, zipCode);
 			log.info("Zip Code updated with : " + zipCode);
-			extTestObj.get().createNode("Zip Code updated with : " + zipCode).pass("PASSED");
+			extTestObj.createNode("Zip Code updated with : " + zipCode).pass("PASSED");
 		} catch (Exception e) {
 			log.error("Zip Code updation failed");
-			extTestObj.get().createNode("Zip Code updation failed")
+			extTestObj.createNode("Zip Code updation failed")
 					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
 			log.error(e.getMessage());
 
@@ -647,10 +648,10 @@ public class FunctionalComponents extends Base {
 		try {
 			clickableWait(Elements.consentCheckBox);
 			log.info("Consent checked");
-			extTestObj.get().createNode("Consent checked").pass("PASSED");
+			extTestObj.createNode("Consent checked").pass("PASSED");
 		} catch (Exception e) {
 			log.error("Consent check failed");
-			extTestObj.get().createNode("Consent check failed")
+			extTestObj.createNode("Consent check failed")
 					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
 			log.error(e.getMessage());
 
@@ -661,10 +662,10 @@ public class FunctionalComponents extends Base {
 		try {
 			clickableWait(Elements.updateButton);
 			log.info("Update button clicked");
-			extTestObj.get().createNode("Update button clicked").pass("PASSED");
+			extTestObj.createNode("Update button clicked").pass("PASSED");
 		} catch (Exception e) {
 			log.error("Update button click failed");
-			extTestObj.get().createNode("Update button click failed")
+			extTestObj.createNode("Update button click failed")
 					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
 			log.error(e.getMessage());
 
@@ -678,10 +679,10 @@ public class FunctionalComponents extends Base {
 			explicitWait(Elements.successMessageforUpdate);
 			successMessage = driver.findElement(Elements.successMessageforUpdate).getText();
 			log.info("Success message obtained as : " + successMessage);
-			extTestObj.get().createNode("Success message obtained as : " + successMessage).pass("PASSED");
+			extTestObj.createNode("Success message obtained as : " + successMessage).pass("PASSED");
 		} catch (Exception e) {
 			log.error("Success message not obtained");
-			extTestObj.get().createNode("Success message not obtained")
+			extTestObj.createNode("Success message not obtained")
 					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
 			log.error(e.getMessage());
 
@@ -695,10 +696,10 @@ public class FunctionalComponents extends Base {
 			explicitWait(Elements.firstNameTextBox);
 			finalFirstName = driver.findElement(Elements.firstNameTextBox).getAttribute("value");
 			log.info("First Name after update obtained as : " + finalFirstName);
-			extTestObj.get().createNode("First Name after update obtained as : " + finalFirstName).pass("PASSED");
+			extTestObj.createNode("First Name after update obtained as : " + finalFirstName).pass("PASSED");
 		} catch (Exception e) {
 			log.error("First Name after update not obtained");
-			extTestObj.get().createNode("First Name after update not obtained")
+			extTestObj.createNode("First Name after update not obtained")
 					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
 			log.error(e.getMessage());
 
@@ -712,10 +713,10 @@ public class FunctionalComponents extends Base {
 			explicitWait(Elements.lastNameTextBox);
 			finalLastName = driver.findElement(Elements.lastNameTextBox).getAttribute("value");
 			log.info("Last Name after update obtained as : " + finalLastName);
-			extTestObj.get().createNode("Last Name after update obtained as : " + finalLastName).pass("PASSED");
+			extTestObj.createNode("Last Name after update obtained as : " + finalLastName).pass("PASSED");
 		} catch (Exception e) {
 			log.error("Last Name after update not obtained");
-			extTestObj.get().createNode("Last Name after update not obtained")
+			extTestObj.createNode("Last Name after update not obtained")
 					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
 			log.error(e.getMessage());
 
@@ -729,10 +730,10 @@ public class FunctionalComponents extends Base {
 			explicitWait(Elements.emailTextBox);
 			finalEmail = driver.findElement(Elements.emailTextBox).getAttribute("value");
 			log.info("Email after update obtained as : " + finalEmail);
-			extTestObj.get().createNode("Email after update obtained as : " + finalEmail).pass("PASSED");
+			extTestObj.createNode("Email after update obtained as : " + finalEmail).pass("PASSED");
 		} catch (Exception e) {
 			log.error("Email after update not obtained");
-			extTestObj.get().createNode("Email after update not obtained")
+			extTestObj.createNode("Email after update not obtained")
 					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
 			log.error(e.getMessage());
 
@@ -746,10 +747,10 @@ public class FunctionalComponents extends Base {
 			explicitWait(Elements.zipCodeTextBox);
 			finalZipCode = driver.findElement(Elements.zipCodeTextBox).getAttribute("value");
 			log.info("Zip Code after update obtained as : " + finalZipCode);
-			extTestObj.get().createNode("Zip Code after update obtained as : " + finalZipCode).pass("PASSED");
+			extTestObj.createNode("Zip Code after update obtained as : " + finalZipCode).pass("PASSED");
 		} catch (Exception e) {
 			log.error("Zip Code after update not obtained");
-			extTestObj.get().createNode("Zip Code after update not obtained")
+			extTestObj.createNode("Zip Code after update not obtained")
 					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
 			log.error(e.getMessage());
 
@@ -768,10 +769,10 @@ public class FunctionalComponents extends Base {
 			Assert.assertEquals(excel.getCellData("UpdateMyAccount", "Email", 2), emailAfterUpdate);
 			Assert.assertEquals(excel.getCellData("UpdateMyAccount", "Zip Code", 2), zipCodeAfterUpdate);
 			log.info("All fields are updated");
-			extTestObj.get().createNode("All fields are updated").pass("PASSED");
+			extTestObj.createNode("All fields are updated").pass("PASSED");
 		} catch (Exception e) {
 			log.info("Error observed in fields updation");
-			extTestObj.get().createNode("Error observed in fields updation")
+			extTestObj.createNode("Error observed in fields updation")
 					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
 			log.error(e.getMessage());
 
@@ -784,10 +785,10 @@ public class FunctionalComponents extends Base {
 		try {
 			clickableWait(Elements.menuOption);
 			log.info("Menu Option selected");
-			extTestObj.get().createNode("Menu Option selected").pass("PASSED");
+			extTestObj.createNode("Menu Option selected").pass("PASSED");
 		} catch (Exception e) {
 			log.error("Menu Option selection failed");
-			extTestObj.get().createNode("Menu Option selection failed")
+			extTestObj.createNode("Menu Option selection failed")
 					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
 			log.error(e.getMessage());
 
@@ -801,16 +802,16 @@ public class FunctionalComponents extends Base {
 		try {
 			items = driver.findElements(Elements.favouriteMenu);
 			log.info("Chillis favourite Items : ");
-			extTestObj.get().log(Status.INFO, "Chillis favourite Items : ");
+			extTestObj.log(Status.INFO, "Chillis favourite Items : ");
 			for (AndroidElement el : items) {
 				log.info(el.findElement(Elements.favouriteItemsTitle).getText());
-				extTestObj.get().log(Status.INFO, el.findElement(Elements.favouriteItemsTitle).getText());
+				extTestObj.log(Status.INFO, el.findElement(Elements.favouriteItemsTitle).getText());
 			}
 			log.info("All chilis favourite items obtained");
-			extTestObj.get().createNode("All chilis favourite items obtained").pass("PASSED");
+			extTestObj.createNode("All chilis favourite items obtained").pass("PASSED");
 		} catch (Exception e) {
 			log.error("Couldn't obtain chilis favourite items");
-			extTestObj.get().createNode("Couldn't obtain chilis favourite items")
+			extTestObj.createNode("Couldn't obtain chilis favourite items")
 					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
 			log.error(e.getMessage());
 
@@ -824,16 +825,16 @@ public class FunctionalComponents extends Base {
 		try {
 			items = driver.findElements(Elements.favouriteMenu);
 			log.info("Chillis favourite Items : ");
-			extTestObj.get().log(Status.INFO, "Chillis favourite Items : ");
+			extTestObj.log(Status.INFO, "Chillis favourite Items : ");
 			for (IOSElement el : items) {
 				log.info(el.findElement(Elements.favouriteItemsTitle).getText());
-				extTestObj.get().log(Status.INFO, el.findElement(Elements.favouriteItemsTitle).getText());
+				extTestObj.log(Status.INFO, el.findElement(Elements.favouriteItemsTitle).getText());
 			}
 			log.info("All chilis favourite items obtained");
-			extTestObj.get().createNode("All chilis favourite items obtained").pass("PASSED");
+			extTestObj.createNode("All chilis favourite items obtained").pass("PASSED");
 		} catch (Exception e) {
 			log.error("Couldn't obtain chilis favourite items");
-			extTestObj.get().createNode("Couldn't obtain chilis favourite items")
+			extTestObj.createNode("Couldn't obtain chilis favourite items")
 					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
 			log.error(e.getMessage());
 
@@ -849,10 +850,10 @@ public class FunctionalComponents extends Base {
 			scrollIntoViewBottom(Elements.addMyVisitButton);
 			clickableWait(Elements.addMyVisitButton);
 			log.info("Add my visit button clicked");
-			extTestObj.get().createNode("Add my visit button clicked").pass("PASSED");
+			extTestObj.createNode("Add my visit button clicked").pass("PASSED");
 		} catch (Exception e) {
 			log.error("Add my visit button click failed");
-			extTestObj.get().createNode("Add my visit button click failed")
+			extTestObj.createNode("Add my visit button click failed")
 					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
 			log.error(e.getMessage());
 
@@ -870,11 +871,11 @@ public class FunctionalComponents extends Base {
 			scrollIntoViewBottom(By.xpath("//*[text()='" + loc + "']"));
 			((PressesKey) driver).pressKeyCode(AndroidKeyCode.ENTER);
 			log.info("Restaurant location entered as : " + loc);
-			extTestObj.get().createNode("Restaurant location entered as : " + loc).pass("PASSED");
+			extTestObj.createNode("Restaurant location entered as : " + loc).pass("PASSED");
 			Thread.sleep(3000);
 		} catch (Exception e) {
 			log.error("Failed to enter restaurant location");
-			extTestObj.get().createNode("Failed to enter restaurant location")
+			extTestObj.createNode("Failed to enter restaurant location")
 					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
 			log.error(e.getMessage());
 
@@ -892,11 +893,11 @@ public class FunctionalComponents extends Base {
 			scrollIntoViewBottom(By.xpath("//*[text()='" + loc + "']"));
 			seetest.click("WEB","xpath=//*[text()='" + loc + "']",0, 1);
 			log.info("Restaurant location entered as : " + loc);
-			extTestObj.get().createNode("Restaurant location entered as : " + loc).pass("PASSED");
+			extTestObj.createNode("Restaurant location entered as : " + loc).pass("PASSED");
 			Thread.sleep(3000);
 		} catch (Exception e) {
 			log.error("Failed to enter restaurant location");
-			extTestObj.get().createNode("Failed to enter restaurant location")
+			extTestObj.createNode("Failed to enter restaurant location")
 					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
 			log.error(e.getMessage());
 
@@ -911,12 +912,12 @@ public class FunctionalComponents extends Base {
 			scrollIntoViewBottom(By.xpath("//*[text()='" + locFromDropDown + "']"));
 			clickElement(By.xpath("//*[text()='" + locFromDropDown + "']"));
 			log.info("Chilis location selected as : " + locFromDropDown);
-			extTestObj.get().createNode("Chilis location selected as : " + locFromDropDown).pass("PASSED");
+			extTestObj.createNode("Chilis location selected as : " + locFromDropDown).pass("PASSED");
 			Thread.sleep(3000);
 
 		} catch (Exception e) {
 			log.error("Chillis location selection failed");
-			extTestObj.get().createNode("Chillis location selection failed")
+			extTestObj.createNode("Chillis location selection failed")
 					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
 			log.error(e.getMessage());
 
@@ -943,12 +944,12 @@ public class FunctionalComponents extends Base {
 			seetest.click("NATIVE", "xpath=//*[@id='Done']", 0, 1);
 //			clickableWait(By.xpath("//*[@id='Done']"));
 			log.info("Chilis location selected as : " + locFromDropDown);
-			extTestObj.get().createNode("Chilis location selected as : " + locFromDropDown).pass("PASSED");
+			extTestObj.createNode("Chilis location selected as : " + locFromDropDown).pass("PASSED");
 			Thread.sleep(3000);
 
 		} catch (Exception e) {
 			log.error("Chillis location selection failed");
-			extTestObj.get().createNode("Chillis location selection failed")
+			extTestObj.createNode("Chillis location selection failed")
 					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
 			log.error(e.getMessage());
 
@@ -964,10 +965,10 @@ public class FunctionalComponents extends Base {
 			scrollIntoViewBottom(By.xpath("//*[text()='" + visitMonth + "']"));
 			clickElement(By.xpath("//*[text()='" + visitMonth + "']"));
 			log.info("Visit month selected as :" + visitMonth);
-			extTestObj.get().createNode("Visit month selected as :" + visitMonth).pass("PASSED");
+			extTestObj.createNode("Visit month selected as :" + visitMonth).pass("PASSED");
 		} catch (Exception e) {
 			log.error("Visit month selection failed");
-			extTestObj.get().createNode("Visit month selection failed")
+			extTestObj.createNode("Visit month selection failed")
 					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
 			log.error(e.getMessage());
 
@@ -984,10 +985,10 @@ public class FunctionalComponents extends Base {
 //			seetest.setPickerValues("WEB", "xpath=//*[@id='visit-month']", 0, 1,visitMonth);
 			seetest.click("NATIVE", "xpath=//*[@id='Done']", 0, 1);
 			log.info("Visit month selected as :" + visitMonth);
-			extTestObj.get().createNode("Visit month selected as :" + visitMonth).pass("PASSED");
+			extTestObj.createNode("Visit month selected as :" + visitMonth).pass("PASSED");
 		} catch (Exception e) {
 			log.error("Visit month selection failed");
-			extTestObj.get().createNode("Visit month selection failed")
+			extTestObj.createNode("Visit month selection failed")
 					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
 			log.error(e.getMessage());
 
@@ -1003,10 +1004,10 @@ public class FunctionalComponents extends Base {
 			scrollIntoViewBottom(By.xpath("//*[text()='" + visitDay + "']"));
 			clickElement(By.xpath("//*[text()='" + visitDay + "']"));
 			log.info("Visit day selected as : " + visitDay);
-			extTestObj.get().createNode("Visit day selected as : " + visitDay).pass("PASSED");
+			extTestObj.createNode("Visit day selected as : " + visitDay).pass("PASSED");
 		} catch (Exception e) {
 			log.error("Visit day selection failed");
-			extTestObj.get().createNode("Visit day selection failed")
+			extTestObj.createNode("Visit day selection failed")
 					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
 			log.error(e.getMessage());
 
@@ -1023,10 +1024,10 @@ public class FunctionalComponents extends Base {
 //			seetest.setPickerValues("WEB", "xpath=//*[@id='visit-day']", 0, 1,visitDay);
 			seetest.click("NATIVE", "xpath=//*[@id='Done']", 0, 1);
 			log.info("Visit day selected as : " + visitDay);
-			extTestObj.get().createNode("Visit day selected as : " + visitDay).pass("PASSED");
+			extTestObj.createNode("Visit day selected as : " + visitDay).pass("PASSED");
 		} catch (Exception e) {
 			log.error("Visit day selection failed");
-			extTestObj.get().createNode("Visit day selection failed")
+			extTestObj.createNode("Visit day selection failed")
 					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
 			log.error(e.getMessage());
 
@@ -1041,10 +1042,10 @@ public class FunctionalComponents extends Base {
 			scrollIntoViewBottom(By.xpath("//*[text()='" + visitYear + "']"));
 			clickElement(By.xpath("//*[text()='" + visitYear + "']"));
 			log.info("Visit year selected as : " + visitYear);
-			extTestObj.get().createNode("Visit year selected as : " + visitYear).pass("PASSED");
+			extTestObj.createNode("Visit year selected as : " + visitYear).pass("PASSED");
 		} catch (Exception e) {
 			log.error("Visit year selection failed");
-			extTestObj.get().createNode("Visit year selection failed")
+			extTestObj.createNode("Visit year selection failed")
 					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
 			log.error(e.getMessage());
 
@@ -1061,10 +1062,10 @@ public class FunctionalComponents extends Base {
 //			seetest.setPickerValues("WEB", "xpath=//*[@id='visit-year']", 0, 1,visitYear);
 			seetest.click("NATIVE", "xpath=//*[@id='Done']", 0, 1);
 			log.info("Visit year selected as : " + visitYear);
-			extTestObj.get().createNode("Visit year selected as : " + visitYear).pass("PASSED");
+			extTestObj.createNode("Visit year selected as : " + visitYear).pass("PASSED");
 		} catch (Exception e) {
 			log.error("Visit year selection failed");
-			extTestObj.get().createNode("Visit year selection failed")
+			extTestObj.createNode("Visit year selection failed")
 					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
 			log.error(e.getMessage());
 
@@ -1079,10 +1080,10 @@ public class FunctionalComponents extends Base {
 		try {
 			sendKeysWait(Elements.checkNumberTextBox, checkNo);
 			log.info("Check Number entered as : " + checkNo);
-			extTestObj.get().createNode("Check Number entered as : " + checkNo).pass("PASSED");
+			extTestObj.createNode("Check Number entered as : " + checkNo).pass("PASSED");
 		} catch (Exception e) {
 			log.error("Failed to enter check number");
-			extTestObj.get().createNode("Failed to enter check number")
+			extTestObj.createNode("Failed to enter check number")
 					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
 			log.error(e.getMessage());
 
@@ -1097,10 +1098,10 @@ public class FunctionalComponents extends Base {
 			clickableWait(Elements.checkTotalTextBox);
 			driver.getKeyboard().sendKeys(checkTotal);
 			log.info("Check total entered as : " + checkTotal);
-			extTestObj.get().createNode("Check total entered as : " + checkTotal).pass("PASSED");
+			extTestObj.createNode("Check total entered as : " + checkTotal).pass("PASSED");
 		} catch (Exception e) {
 			log.error("Failed to enter check total");
-			extTestObj.get().createNode("Failed to enter check total")
+			extTestObj.createNode("Failed to enter check total")
 					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
 			log.error(e.getMessage());
 
@@ -1111,10 +1112,10 @@ public class FunctionalComponents extends Base {
 		try {
 			clickableWait(Elements.visitSubmitButton);
 			log.info("Visit submitted");
-			extTestObj.get().createNode("Visit submitted").pass("PASSED");
+			extTestObj.createNode("Visit submitted").pass("PASSED");
 		} catch (Exception e) {
 			log.error("Failed to submit visit");
-			extTestObj.get().createNode("Failed to submit visit")
+			extTestObj.createNode("Failed to submit visit")
 					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
 			log.error(e.getMessage());
 
@@ -1129,10 +1130,10 @@ public class FunctionalComponents extends Base {
 			explicitWait(Elements.getSuccessMessageforAddMyVisit);
 			successMsg = driver.findElement(Elements.getSuccessMessageforAddMyVisit).getText();
 			log.info("Success message for add my visit displayed as : " + successMsg);
-			extTestObj.get().createNode("Success message for add my visit displayed as : " + successMsg).pass("PASSED");
+			extTestObj.createNode("Success message for add my visit displayed as : " + successMsg).pass("PASSED");
 		} catch (Exception e) {
 			log.error("Success message for add my visit not displayed");
-			extTestObj.get().createNode("Success message for add my visit not displayed")
+			extTestObj.createNode("Success message for add my visit not displayed")
 					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
 			log.error(e.getMessage());
 
@@ -1151,10 +1152,10 @@ public class FunctionalComponents extends Base {
 			clickableWait(Elements.locationSearchTextBox);
 			driver.getKeyboard().sendKeys(restLocation);
 			log.info("Restaurant location entered as " + restLocation);
-			extTestObj.get().createNode("Restaurant location entered as " + restLocation).pass("PASSED");
+			extTestObj.createNode("Restaurant location entered as " + restLocation).pass("PASSED");
 		} catch (Exception e) {
 			log.error("Failed to enter Restaurant location");
-			extTestObj.get().createNode("Failed to enter Restaurant location")
+			extTestObj.createNode("Failed to enter Restaurant location")
 					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
 			log.error(e.getMessage());
 
@@ -1168,10 +1169,10 @@ public class FunctionalComponents extends Base {
 			scrollUp("200");
 			clickableWait(Elements.searchButton);
 			log.info("Search button clicked");
-			extTestObj.get().createNode("Search button clicked").pass("PASSED");
+			extTestObj.createNode("Search button clicked").pass("PASSED");
 		} catch (Exception e) {
 			log.error("Search button click failed");
-			extTestObj.get().createNode("Search button click failed")
+			extTestObj.createNode("Search button click failed")
 					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
 			log.error(e.getMessage());
 
@@ -1188,11 +1189,11 @@ public class FunctionalComponents extends Base {
 			Thread.sleep(3000);
 			clickElement(By.xpath("//a[contains(@href,'" + storeName + "')]/following-sibling::a[text()='Order Now']"));
 			log.info("Site scrolled and order button clicked");
-			extTestObj.get().createNode("Site scrolled and order button clicked").pass("PASSED");
+			extTestObj.createNode("Site scrolled and order button clicked").pass("PASSED");
 
 		} catch (Exception e) {
 			log.error("Order Now button click failed");
-			extTestObj.get().createNode("Order Now button click failed")
+			extTestObj.createNode("Order Now button click failed")
 					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
 			log.error(e.getMessage());
 
@@ -1219,10 +1220,10 @@ public class FunctionalComponents extends Base {
 				}
 			}
 			log.info("Chilis favourite Item " + chilisFavItem + " selected");
-			extTestObj.get().createNode("Chilis favourite Item " + chilisFavItem + " selected").pass("PASSED");
+			extTestObj.createNode("Chilis favourite Item " + chilisFavItem + " selected").pass("PASSED");
 		} catch (Exception e) {
 			log.error("Failed to select chilis favourite item");
-			extTestObj.get().createNode("Failed to select chilis favourite item")
+			extTestObj.createNode("Failed to select chilis favourite item")
 					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
 			log.error(e.getMessage());
 
@@ -1247,10 +1248,10 @@ public class FunctionalComponents extends Base {
 				}
 			}
 			log.info("Chilis favourite Item " + chilisFavItem + " selected");
-			extTestObj.get().createNode("Chilis favourite Item " + chilisFavItem + " selected").pass("PASSED");
+			extTestObj.createNode("Chilis favourite Item " + chilisFavItem + " selected").pass("PASSED");
 		} catch (Exception e) {
 			log.error("Failed to select chilis favourite item");
-			extTestObj.get().createNode("Failed to select chilis favourite item")
+			extTestObj.createNode("Failed to select chilis favourite item")
 					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
 			log.error(e.getMessage());
 
@@ -1263,10 +1264,10 @@ public class FunctionalComponents extends Base {
 			clickableWait(Elements.cartIcon);
 			clickableWait(Elements.viewCartButton);
 			log.info("View Cart clicked");
-			extTestObj.get().createNode("View Cart clicked").pass("PASSED");
+			extTestObj.createNode("View Cart clicked").pass("PASSED");
 		} catch (Exception e) {
 			log.error("Failed to click View Cart");
-			extTestObj.get().createNode("Failed to click View Cart")
+			extTestObj.createNode("Failed to click View Cart")
 					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
 			log.error(e.getMessage());
 
@@ -1278,10 +1279,10 @@ public class FunctionalComponents extends Base {
 		try {
 			clickableWait(Elements.viewCartButton);
 			log.info("View Cart clicked");
-			extTestObj.get().createNode("View Cart clicked").pass("PASSED");
+			extTestObj.createNode("View Cart clicked").pass("PASSED");
 		} catch (Exception e) {
 			log.error("Failed to click View Cart");
-			extTestObj.get().createNode("Failed to click View Cart")
+			extTestObj.createNode("Failed to click View Cart")
 					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
 			log.error(e.getMessage());
 
@@ -1297,10 +1298,10 @@ public class FunctionalComponents extends Base {
 			explicitWait(Elements.silverWareCheckBox);
 			clickableWait(Elements.optSilverWareCheckBox);
 			log.info("Silver ware opted in");
-			extTestObj.get().createNode("Silver ware opted in").pass("PASSED");
+			extTestObj.createNode("Silver ware opted in").pass("PASSED");
 		} catch (Exception e) {
 			log.error("Silver ware opt in failed");
-			extTestObj.get().createNode("Silver ware opt in failed")
+			extTestObj.createNode("Silver ware opt in failed")
 					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
 			log.error(e.getMessage());
 
@@ -1315,10 +1316,10 @@ public class FunctionalComponents extends Base {
 			scrollIntoViewBottom(Elements.checkOutButton);
 			clickableWait(Elements.checkOutButton);
 			log.info("Order checked Out");
-			extTestObj.get().createNode("Order checked Out").pass("PASSED");
+			extTestObj.createNode("Order checked Out").pass("PASSED");
 		} catch (Exception e) {
 			log.error("Order check out failed");
-			extTestObj.get().createNode("Order check out failed")
+			extTestObj.createNode("Order check out failed")
 					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
 			log.error(e.getMessage());
 
@@ -1332,10 +1333,10 @@ public class FunctionalComponents extends Base {
 			scrollIntoViewBottom(Elements.paymentButton);
 			clickableWait(Elements.paymentButton);
 			log.info("Payment button clicked");
-			extTestObj.get().createNode("Payment button clicked").pass("PASSED");
+			extTestObj.createNode("Payment button clicked").pass("PASSED");
 		} catch (Exception e) {
 			log.error("Failed to click Payment button");
-			extTestObj.get().createNode("Failed to click Payment button")
+			extTestObj.createNode("Failed to click Payment button")
 					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
 			log.error(e.getMessage());
 
@@ -1353,10 +1354,10 @@ public class FunctionalComponents extends Base {
 			clickableWait(Elements.cardNo);
 			driver.getKeyboard().sendKeys(cardNo);
 			log.info("Card Number entered as : " + cardNo);
-			extTestObj.get().createNode("Card Number entered as : " + cardNo).pass("PASSED");
+			extTestObj.createNode("Card Number entered as : " + cardNo).pass("PASSED");
 		} catch (Exception e) {
 			log.error("Failed to enter Card Number");
-			extTestObj.get().createNode("Failed to enter Card Number")
+			extTestObj.createNode("Failed to enter Card Number")
 					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
 			log.error(e.getMessage());
 
@@ -1369,10 +1370,10 @@ public class FunctionalComponents extends Base {
 		try {
 			sendKeysWait(Elements.cvvTextBox, cvv);
 			log.info("CVV entered as : " + cvv);
-			extTestObj.get().createNode("CVV entered as : " + cvv).pass("PASSED");
+			extTestObj.createNode("CVV entered as : " + cvv).pass("PASSED");
 		} catch (Exception e) {
 			log.error("Failed to enter CVV");
-			extTestObj.get().createNode("Failed to enter CVV")
+			extTestObj.createNode("Failed to enter CVV")
 					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
 			log.error(e.getMessage());
 
@@ -1388,10 +1389,10 @@ public class FunctionalComponents extends Base {
 			scrollIntoViewBottom(By.xpath("//*[contains(text(),'(0" + month + ")')]"));
 			clickElement(By.xpath("//*[contains(text(),'(0" + month + ")')]"));
 			log.info("Expiration Month selected as : " + month);
-			extTestObj.get().createNode("Expiration Month selected as : " + month).pass("PASSED");
+			extTestObj.createNode("Expiration Month selected as : " + month).pass("PASSED");
 		} catch (Exception e) {
 			log.error("Failed to select Expiration Month");
-			extTestObj.get().createNode("Failed to select Expiration Month")
+			extTestObj.createNode("Failed to select Expiration Month")
 					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
 			log.error(e.getMessage());
 
@@ -1406,10 +1407,10 @@ public class FunctionalComponents extends Base {
 			scrollIntoViewBottom(By.xpath("//*[text()='" + year + "']"));
 			clickElement(By.xpath("//*[text()='" + year + "']"));
 			log.info("Expiration Year selected as : " + year);
-			extTestObj.get().createNode("Expiration Year selected as : " + year).pass("PASSED");
+			extTestObj.createNode("Expiration Year selected as : " + year).pass("PASSED");
 		} catch (Exception e) {
 			log.error("Failed to select Expiration Year");
-			extTestObj.get().createNode("Failed to select Expiration Year")
+			extTestObj.createNode("Failed to select Expiration Year")
 					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
 			log.error(e.getMessage());
 
@@ -1426,10 +1427,10 @@ public class FunctionalComponents extends Base {
 			clickableWait(Elements.nameOnCard);
 			driver.getKeyboard().sendKeys(nameOnCard);
 			log.info("Name on Card entered as : " + nameOnCard);
-			extTestObj.get().createNode("Name on Card entered as : " + nameOnCard);
+			extTestObj.createNode("Name on Card entered as : " + nameOnCard);
 		} catch (Exception e) {
 			log.error("Failed to enter Name on Card");
-			extTestObj.get().createNode("Failed to enter Name on Card")
+			extTestObj.createNode("Failed to enter Name on Card")
 					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
 			;
 			log.error(e.getMessage());
@@ -1447,10 +1448,10 @@ public class FunctionalComponents extends Base {
 			clickableWait(Elements.billingZip);
 			driver.getKeyboard().sendKeys(zipCode);
 			log.info("Billing zip code entered as : " + zipCode);
-			extTestObj.get().createNode("Billing zip code entered as : " + zipCode).pass("PASSED");
+			extTestObj.createNode("Billing zip code entered as : " + zipCode).pass("PASSED");
 		} catch (Exception e) {
 			log.error("Failed to enter Billing zip code");
-			extTestObj.get().createNode("Failed to enter Billing zip code")
+			extTestObj.createNode("Failed to enter Billing zip code")
 					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
 			log.error(e.getMessage());
 			stopTest();
@@ -1463,10 +1464,10 @@ public class FunctionalComponents extends Base {
 			scrollIntoViewBottom(Elements.tipTextBox);
 			sendKeysWait(Elements.tipTextBox, tip);
 			log.info("Tip given as : " + tip);
-			extTestObj.get().createNode("Tip has entered").pass("PASSED");
+			extTestObj.createNode("Tip has entered").pass("PASSED");
 		} catch (Exception e) {
 			log.error("Failed to enter tip");
-			extTestObj.get().createNode("Failed to enter tip")
+			extTestObj.createNode("Failed to enter tip")
 					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
 			log.error(e.getMessage());
 
@@ -1478,12 +1479,12 @@ public class FunctionalComponents extends Base {
 			scrollIntoViewBottom(Elements.pickUpCost);
 			explicitWait(Elements.pickUpCost);
 			log.info("Pick up cost displayed as : " + driver.findElement(Elements.pickUpCost).getText());
-			extTestObj.get()
+			extTestObj
 					.createNode("Order Total  cost displayed as : " + driver.findElement(Elements.pickUpCost).getText())
 					.pass("PASSED");
 		} catch (Exception e) {
 			log.error("Pick up cost not displayed");
-			extTestObj.get().createNode("Order Total cost not displayed")
+			extTestObj.createNode("Order Total cost not displayed")
 					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
 			log.error(e.getMessage());
 
@@ -1496,10 +1497,10 @@ public class FunctionalComponents extends Base {
 			scrollIntoViewBottom(Elements.donationCheckBox);
 			clickableWait(Elements.donationCheckBox);
 			log.info("Donation checked");
-			extTestObj.get().createNode("Donation checked").pass("PASSED");
+			extTestObj.createNode("Donation checked").pass("PASSED");
 		} catch (Exception e) {
 			log.error("Failed to check donation check box");
-			extTestObj.get().createNode("Failed to check donation check box")
+			extTestObj.createNode("Failed to check donation check box")
 					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
 			log.error(e.getMessage());
 		}
@@ -1511,10 +1512,10 @@ public class FunctionalComponents extends Base {
 			clickableWait(Elements.placeOrder);
 			seetest.click("NATIVE", "xpath=//*[@text='No, thanks']", 0, 1);
 			log.info("Place order button clicked");
-			extTestObj.get().createNode("Place order button clicked").pass("PASSED");
+			extTestObj.createNode("Place order button clicked").pass("PASSED");
 		} catch (Exception e) {
 			log.error("Failed to click place order button");
-			extTestObj.get().createNode("Failed to click place order button")
+			extTestObj.createNode("Failed to click place order button")
 					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
 			log.error(e.getMessage());
 			stopTest();
@@ -1529,11 +1530,11 @@ public class FunctionalComponents extends Base {
 			log.info("Success message displayed as : "
 					+ driver.findElement(Elements.successMessageforLoggedInOrder).getText());
 
-			extTestObj.get().createNode("Success message displayed as : "
+			extTestObj.createNode("Success message displayed as : "
 					+ driver.findElement(Elements.successMessageforLoggedInOrder).getText()).pass("PASSED");
 		} catch (Exception e) {
 			log.error("Success message not displayed");
-			extTestObj.get().createNode("Success message not displayed")
+			extTestObj.createNode("Success message not displayed")
 					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
 			log.error(e.getMessage());
 			stopTest();
@@ -1547,12 +1548,12 @@ public class FunctionalComponents extends Base {
 			scrollIntoViewBottom(Elements.orderPrice);
 			explicitWait(Elements.orderPrice);
 			log.info("Order price displayed as  : " + driver.findElement(Elements.orderPrice).getText());
-			extTestObj.get().createNode(
+			extTestObj.createNode(
 					"Order price after payment displayed as  : " + driver.findElement(Elements.orderPrice).getText())
 					.pass("PASSED");
 		} catch (Exception e) {
 			log.error("Order price not displayed");
-			extTestObj.get().createNode("Order price after payment not displayed")
+			extTestObj.createNode("Order price after payment not displayed")
 					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
 			log.error(e.getMessage());
 			stopTest();
@@ -1567,27 +1568,44 @@ public class FunctionalComponents extends Base {
 			clickableWait(Elements.reorderOption);
 			Thread.sleep(3000);
 			log.info("Reorder option selected");
-			extTestObj.get().createNode("Reorder option selected").pass("PASSED");
+			extTestObj.createNode("Reorder option selected").pass("PASSED");
 		} catch (Exception e) {
 			log.error("Failed to select reorder option");
 			log.error(e.getMessage());
-			extTestObj.get().createNode("Failed to select reorder option")
+			extTestObj.createNode("Failed to select reorder option")
 					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
 			stopTest();
 		}
 	}
-
+	public void selectPickupForFuture() {
+	      String futureTime = excel.getCellData("Future Order", "Future Date", 2);
+	      try {
+	      scrollIntoViewHalf(Elements.pickDate);
+	      clickableWait(Elements.pickDate);
+	      Thread.sleep(3000);
+	      clickElement(By.xpath("//*[contains(text(),'"+futureTime+"')]"));
+	      log.info("Pickup future time is selected as "+futureTime);
+	      extTestObj.createNode("Pickup future time is selected as "+futureTime).pass("PASSED");
+	      } 
+	      catch (Exception e) {
+	      log.error("Failed to select pick up future time");
+	      
+	      extTestObj.createNode("Failed to select pick up future time").
+	      fail("Method Name : "+Thread.currentThread().getStackTrace()[1].getMethodName
+	      ()+"()").error(e); log.error(e.getMessage()); stopTest();
+	      }
+	        }
 	public void clickReorderforanOrder() {
 		try {
 			scrollIntoViewBottom(Elements.reOrder);
 			clickableWait(Elements.reOrder);
 			log.info("Clicked reorder for a particular order");
 			Thread.sleep(3000);
-			extTestObj.get().createNode("Clicked reorder for a particular order").pass("PASSED");
+			extTestObj.createNode("Clicked reorder for a particular order").pass("PASSED");
 		} catch (Exception e) {
 			log.error("Failed to click reorder");
 			log.error(e.getMessage());
-			extTestObj.get().createNode("Failed to click reorder")
+			extTestObj.createNode("Failed to click reorder")
 					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
 			stopTest();
 		}
@@ -1600,11 +1618,11 @@ public class FunctionalComponents extends Base {
 			scrollIntoViewBottom(By.xpath("//*[text()='" + quantity + "']"));
 			clickElement(By.xpath("//*[text()='" + quantity + "']"));
 			log.info("Quantity changed");
-			extTestObj.get().createNode("Quantity changed").pass("PASSED");
+			extTestObj.createNode("Quantity changed").pass("PASSED");
 		} catch (Exception e) {
 			log.error("Failed to select and change quantity");
 			log.error(e.getMessage());
-			extTestObj.get().createNode("Failed to select and change quantity")
+			extTestObj.createNode("Failed to select and change quantity")
 					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
 			stopTest();
 		}
@@ -1620,11 +1638,11 @@ public class FunctionalComponents extends Base {
 			Thread.sleep(2000);
 			clickableWait(By.xpath("//a[@id='location-select-" + restID + "]"));
 			log.info("Site scrolled and order button clicked");
-			extTestObj.get().createNode("Site scrolled and order button clicked").pass("PASSED");
+			extTestObj.createNode("Site scrolled and order button clicked").pass("PASSED");
 		} catch (Exception e) {
 			log.error("Site scrolled but order button not clicked");
 			log.error(e.getMessage());
-			extTestObj.get().createNode("Order now button not clicked")
+			extTestObj.createNode("Order now button not clicked")
 					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
 			stopTest();
 		}
@@ -1638,10 +1656,10 @@ public class FunctionalComponents extends Base {
 			Thread.sleep(3000);
 			clickElement(By.xpath("//a[@title='" + category + "']"));
 			log.info("Site scrolled and category " + category + " selected");
-			extTestObj.get().createNode("Site scrolled and category " + category + " selected").pass("PASSED");
+			extTestObj.createNode("Site scrolled and category " + category + " selected").pass("PASSED");
 		} catch (Exception e) {
 			log.error("Site scrolled but selected catagory button not clicked");
-			extTestObj.get().createNode("Selected catagory button not clicked")
+			extTestObj.createNode("Selected catagory button not clicked")
 					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
 			log.error(e.getMessage());
 			stopTest();
@@ -1656,10 +1674,10 @@ public class FunctionalComponents extends Base {
 			Thread.sleep(2000);
 			clickElement(By.xpath("//a[@title='" + item + "']"));
 			log.info("Site scrolled and item" + item + "clicked");
-			extTestObj.get().createNode("Site scrolled and item" + item + "clicked").pass("PASSED");
+			extTestObj.createNode("Site scrolled and item" + item + "clicked").pass("PASSED");
 		} catch (Exception e) {
 			log.error("Site scrolled but item not selected");
-			extTestObj.get().createNode("Item not selected")
+			extTestObj.createNode("Item not selected")
 					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
 			log.error(e.getMessage());
 			stopTest();
@@ -1668,15 +1686,14 @@ public class FunctionalComponents extends Base {
 
 	public void clickAddItem() {
 		try {
-			Thread.sleep(2000);
 			scrollIntoViewBottom(Elements.addThisItem);
-			Thread.sleep(2000);
+			explicitWait(Elements.addThisItem);
 			clickElement(Elements.addThisItem);
 			log.info("Item added to cart");
-			extTestObj.get().createNode("Item added to cart").pass("PASSED");
+			extTestObj.createNode("Item added to cart").pass("PASSED");
 		} catch (Exception e) {
 			log.error("Failed to add item to cart");
-			extTestObj.get().createNode("Failed to add item to cart")
+			extTestObj.createNode("Failed to add item to cart")
 					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
 			log.error(e.getMessage());
 			stopTest();
@@ -1686,13 +1703,12 @@ public class FunctionalComponents extends Base {
 	public void clickCheckOutforGuestUser() {
 		try {
 			scrollIntoViewBottom(Elements.checkOutButton);
-			explicitWait(Elements.cartTotal);
 			clickableWait(Elements.checkOutButton);
 			log.info("Order checked Out");
-			extTestObj.get().createNode("Order checked Out").pass("PASSED");
+			extTestObj.createNode("Order checked Out").pass("PASSED");
 		} catch (Exception e) {
 			log.error("Order check out failed");
-			extTestObj.get().createNode("Order check out failed")
+			extTestObj.createNode("Order check out failed")
 					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
 			log.error(e.getMessage());
 			stopTest();
@@ -1706,43 +1722,40 @@ public class FunctionalComponents extends Base {
 			Thread.sleep(2000);
 			clickableWait(Elements.selectDeliveryMode);
 			log.info("Site scrolled and Delivery mode is selected");
-			extTestObj.get().createNode("Site scrolled and Delivery mode is selected").pass("PASSED");
+			extTestObj.createNode("Site scrolled and Delivery mode is selected").pass("PASSED");
 		} catch (Exception e) {
 			log.error("Site scrolled but Delivery mode is not selected");
-			extTestObj.get().createNode("Delivery mode is not selected")
+			extTestObj.createNode("Delivery mode is not selected")
 					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
 			log.error(e.getMessage());
 			stopTest();
 		}
 	}
 
+	
 	@SuppressWarnings("deprecation")
-	public void enterDeliveryLocation() throws InterruptedException {
-		String location = excel.getCellData("DeliveryASAP", "Restaurant Address", 2);
-		try {
-			scrollIntoViewBottom(Elements.deliveryAddress);
-			explicitWait(Elements.deliveryAddress);
-			driver.findElement(Elements.deliveryAddress).sendKeys(location);
-			Thread.sleep(2000);
-			try {
-//			seetest.click("WEB","xpath=//*[@text='14534 South Military Trail']",0,1);
-			seetest.click("WEB","xpath=//*[@text='"+location+"']",0,1);
-			}
-			catch(Exception e)
-			{
-				seetest.click("NATIVE","xpath=//*[@text='14534 South Military Trail']",0,1);
-			}
-			Thread.sleep(2000);
-			log.info("Delivery location entered as " + location);
-			extTestObj.get().createNode("Delivery location entered as " + location).pass("PASSED");
-		} catch (Exception e) {
-			log.error("Failed to enter Delivery location");
-			log.error(e.getMessage());
-			extTestObj.get().createNode("Failed to enter Delivery location")
-					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
-			stopTest();
-		}
-	}
+    public void enterDeliveryLocation() throws InterruptedException {
+        String location = excel.getCellData("DeliveryASAP", "Restaurant Address", 2);
+        try {
+            scrollIntoViewBottom(Elements.deliveryAddress);
+            explicitWait(Elements.deliveryAddress);
+            driver.findElement(Elements.deliveryAddress).sendKeys(location);
+            Thread.sleep(2000);
+
+ 
+
+            seetest.click("WEB", "xpath=//*[@text='14534 South Military Trail']", 0, 1);
+            Thread.sleep(2000);
+            log.info("Delivery location entered as " + location);
+            extTestObj.createNode("Delivery location entered as " + location).pass("PASSED");
+        } catch (Exception e) {
+            log.error("Failed to enter Delivery location");
+            log.error(e.getMessage());
+            extTestObj.createNode("Failed to enter Delivery location")
+                    .fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
+            stopTest();
+        }
+    }
 
 	public void enterApartmentNo() throws InterruptedException {
 		String aptNo = excel.getCellData("DeliveryASAP", "Apt. no", 2);
@@ -1752,10 +1765,10 @@ public class FunctionalComponents extends Base {
 			clickableWait(Elements.aptNo);
 			driver.getKeyboard().sendKeys(aptNo);
 			log.info("Apartment no. entered as : " + aptNo);
-			extTestObj.get().createNode("Apartment no. entered as : " + aptNo).pass("PASSED");
+			extTestObj.createNode("Apartment no. entered as : " + aptNo).pass("PASSED");
 		} catch (Exception e) {
 			log.error("Failed to enter Apartment no.");
-			extTestObj.get().createNode("Failed to enter Apartment no.")
+			extTestObj.createNode("Failed to enter Apartment no.")
 					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
 			log.error(e.getMessage());
 			stopTest();
@@ -1768,10 +1781,10 @@ public class FunctionalComponents extends Base {
 			scrollIntoViewBottom(Elements.dateInputASAP);
 			clickElement(Elements.dateInputASAP);
 			log.info("Delivery Option selected as ASAP");
-			extTestObj.get().createNode("Delivery Option selected as ASAP").pass("PASSED");
+			extTestObj.createNode("Delivery Option selected as ASAP").pass("PASSED");
 		} catch (Exception e) {
 			log.error("Failed to select Delivery Option as ASAP");
-			extTestObj.get().createNode("Failed to select Delivery Option as ASAP")
+			extTestObj.createNode("Failed to select Delivery Option as ASAP")
 					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
 			log.error(e.getMessage());
 			stopTest();
@@ -1783,18 +1796,17 @@ public class FunctionalComponents extends Base {
 	public void selectDeliveryDate() {
 		String dateInput = excel.getCellData("Delivery", "Delivery Date", 2);
 		try {
-			scrollIntoViewHalf(Elements.delDate);
-			clickableWait(Elements.delDate);
+			scrollIntoViewBottom(Elements.delDate);
 			Thread.sleep(2000);
-			scrollIntoViewHalf(By.xpath("//*[contains(text(), '" + dateInput + "')]"));
-			clickableWait(By.xpath("//*[contains(text(), '" + dateInput + "')]"));
+			scrollIntoViewBottom(By.xpath("//*[contains(text(), '" + dateInput + "')]"));
+			clickElement(By.xpath("//*[contains(text(), '" + dateInput + "')]"));
 			Thread.sleep(2000);
 			log.info("Delivery date selected as " + dateInput);
-			extTestObj.get().createNode("Delivery date selected as " + dateInput).pass("PASSED");
+			extTestObj.createNode("Delivery date selected as " + dateInput).pass("PASSED");
 		} catch (Exception e) {
 			log.error("Failed to select Delivery date");
 			log.error(e.getMessage());
-			extTestObj.get().createNode("Failed to select Delivery date")
+			extTestObj.createNode("Failed to select Delivery date")
 					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
 			stopTest();
 		}
@@ -1807,12 +1819,13 @@ public class FunctionalComponents extends Base {
 			scrollIntoViewHalf(Elements.firstName);
 			explicitWait(Elements.firstName);
 			clickableWait(Elements.firstName);
+			Thread.sleep(1000);
 			driver.getKeyboard().sendKeys(firstName);
 			log.info("First name entered as : " + firstName);
-			extTestObj.get().createNode("First name entered as : " + firstName).pass("PASSED");
+			extTestObj.createNode("First name entered as : " + firstName).pass("PASSED");
 		} catch (Exception e) {
 			log.error("Failed to enter First name");
-			extTestObj.get().createNode("Failed to enter First name")
+			extTestObj.createNode("Failed to enter First name")
 					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
 			log.error(e.getMessage());
 			stopTest();
@@ -1827,10 +1840,10 @@ public class FunctionalComponents extends Base {
 			clickableWait(Elements.lastName);
 			driver.getKeyboard().sendKeys(LastName);
 			log.info("Last name entered as : " + LastName);
-			extTestObj.get().createNode("Last name entered as : " + LastName).pass("PASSED");
+			extTestObj.createNode("Last name entered as : " + LastName).pass("PASSED");
 		} catch (Exception e) {
 			log.error("Failed to enter Last name");
-			extTestObj.get().createNode("Failed to enter Last name")
+			extTestObj.createNode("Failed to enter Last name")
 					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
 			log.error(e.getMessage());
 			stopTest();
@@ -1846,10 +1859,10 @@ public class FunctionalComponents extends Base {
 			clickableWait(Elements.contantNumber);
 			driver.getKeyboard().sendKeys(contactNum);
 			log.info("Contact Number entered as : " + contactNum);
-			extTestObj.get().createNode("Contact Number entered as : " + contactNum).pass("PASSED");
+			extTestObj.createNode("Contact Number entered as : " + contactNum).pass("PASSED");
 		} catch (Exception e) {
 			log.error("Failed to enter Contact number");
-			extTestObj.get().createNode("Failed to enter Contact number")
+			extTestObj.createNode("Failed to enter Contact number")
 					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
 			log.error(e.getMessage());
 			stopTest();
@@ -1864,10 +1877,10 @@ public class FunctionalComponents extends Base {
 			clickableWait(Elements.eMail);
 			driver.getKeyboard().sendKeys(email);
 			log.info("Email address entered as : " + email);
-			extTestObj.get().createNode("Email address entered as : " + email).pass("PASSED");
+			extTestObj.createNode("Email address entered as : " + email).pass("PASSED");
 		} catch (Exception e) {
 			log.error("Failed to enter Email id");
-			extTestObj.get().createNode("Failed to enter Email id")
+			extTestObj.createNode("Failed to enter Email id")
 					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
 			log.error(e.getMessage());
 
@@ -1876,26 +1889,25 @@ public class FunctionalComponents extends Base {
 	}
 
 	/* Validate user is able to place Delivery-Later today order. For Guest user */
-	public void selectDeliveryTime() {
-		String timeInput = excel.getCellData("Delivery", "Delivery Time", 2);
-		try {
-
-			scrollIntoViewHalf(Elements.delTime);
-			clickableWait(Elements.delTime);
-			Thread.sleep(2000);
-			scrollIntoViewHalf(By.xpath("//*[contains(text(), '" + timeInput + "')]"));
-			clickableWait(By.xpath("//*[contains(text(), '" + timeInput + "')]"));
-			Thread.sleep(2000);
-			log.info("Delivery time selected as " + timeInput);
-			extTestObj.get().createNode("Delivery time selected as " + timeInput).pass("PASSED");
-		} catch (Exception e) {
-			log.error("Failed to select Delivery time");
-			log.error(e.getMessage());
-			extTestObj.get().createNode("Failed to select Delivery time")
-					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
-			stopTest();
-		}
-	}
+	public void selectDeliveryTime() { // Ayushman01
+        String timeInput = excel.getCellData("Delivery", "Delivery Time", 2);
+        try {
+            scrollIntoViewHalf(Elements.delTime);
+            // clickableWait(Elements.delTime);
+            Thread.sleep(2000);
+            scrollIntoViewBottom(By.xpath("//select[@id='delivery-time']/option[text()='" + timeInput + "']"));
+            clickElement(By.xpath("//select[@id='delivery-time']/option[text()='" + timeInput + "']"));
+            Thread.sleep(2000);
+            log.info("Delivery time selected as " + timeInput);
+            extTestObj.createNode("Delivery time selected as " + timeInput).pass("PASSED");
+        } catch (Exception e) {
+            log.error("Failed to select Delivery time");
+            log.error(e.getMessage());
+            extTestObj.createNode("Failed to select Delivery time")
+                    .fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
+            stopTest();
+        }
+    }
 
 	/* Validate user is able to place Delivery-ASAP order. For MCA user */
 	public void enterDeliveryInstrBox() {
@@ -1905,11 +1917,11 @@ public class FunctionalComponents extends Base {
 			clickableWait(Elements.deliveryInstrTextbox);
 			driver.getKeyboard().sendKeys(deliveryInstruction);
 			log.info("Delivery Instruction given as " + deliveryInstruction);
-			extTestObj.get().createNode("Delivery Instruction given as " + deliveryInstruction).pass("PASSED");
+			extTestObj.createNode("Delivery Instruction given as " + deliveryInstruction).pass("PASSED");
 
 		} catch (Exception e) {
 			log.error("Failed to provide Delivery Instructions");
-			extTestObj.get().createNode("Failed to provide Delivery Instructions")
+			extTestObj.createNode("Failed to provide Delivery Instructions")
 					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
 			log.error(e.getMessage());
 			stopTest();
@@ -1924,11 +1936,11 @@ public class FunctionalComponents extends Base {
 			Thread.sleep(2000);
 			clickableWait(Elements.selectCurbsideMode);
 			log.info("Site scrolled and Curbside mode is selected");
-			extTestObj.get().createNode("Site scrolled and Curbside mode is selected").pass("PASSED");
+			extTestObj.createNode("Site scrolled and Curbside mode is selected").pass("PASSED");
 
 		} catch (Exception e) {
 			log.error("Site scrolled but Curbside mode is not selected");
-			extTestObj.get().createNode("Curbside mode is not selected")
+			extTestObj.createNode("Curbside mode is not selected")
 					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
 			log.error(e.getMessage());
 			stopTest();
@@ -1945,11 +1957,11 @@ public class FunctionalComponents extends Base {
 			clickableWait(By.xpath("//*[contains(text(), '" + dateInput + "')]"));
 			Thread.sleep(2000);
 			log.info("Pickup date selected as " + dateInput);
-			extTestObj.get().createNode("Pickup date selected as " + dateInput).pass("PASSED");
+			extTestObj.createNode("Pickup date selected as " + dateInput).pass("PASSED");
 		} catch (Exception e) {
 			log.error("Failed to select Pickup date");
 			log.error(e.getMessage());
-			extTestObj.get().createNode("Failed to select Pickup date")
+			extTestObj.createNode("Failed to select Pickup date")
 					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
 			stopTest();
 		}
@@ -1962,10 +1974,10 @@ public class FunctionalComponents extends Base {
 			scrollIntoViewBottom(By.xpath("//select[@id='pickup-time']/option[text()='" + timeInput + "']"));
 			clickElement(By.xpath("//select[@id='pickup-time']/option[text()='" + timeInput + "']"));
 			log.info("Pickup time selected as " + timeInput);
-			extTestObj.get().createNode("Pickup time selected as " + timeInput).pass("PASSED");
+			extTestObj.createNode("Pickup time selected as " + timeInput).pass("PASSED");
 		} catch (Exception e) {
 			log.error("Failed to select Pickup time");
-			extTestObj.get().createNode("Failed to select Pickup time")
+			extTestObj.createNode("Failed to select Pickup time")
 					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
 			log.error(e.getMessage());
 			stopTest();
@@ -1981,10 +1993,10 @@ public class FunctionalComponents extends Base {
 			clickableWait(Elements.vehicleMake);
 			driver.getKeyboard().sendKeys(vehicle);
 			log.info("Vehicle make entered as " + vehicle);
-			extTestObj.get().createNode("Vehicle make entered as " + vehicle).pass("PASSED");
+			extTestObj.createNode("Vehicle make entered as " + vehicle).pass("PASSED");
 		} catch (Exception e) {
 			log.error("Failed to enter Vehicle make");
-			extTestObj.get().createNode("Failed to enter Vehicle make")
+			extTestObj.createNode("Failed to enter Vehicle make")
 					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
 			log.error(e.getMessage());
 			stopTest();
@@ -2000,11 +2012,11 @@ public class FunctionalComponents extends Base {
 			clickableWait(Elements.vehicleModel);
 			driver.getKeyboard().sendKeys(vehicleModel);
 			log.info("Vehicle model entered as : " + vehicleModel);
-			extTestObj.get().createNode("Vehicle model entered as : " + vehicleModel).pass("PASSED");
+			extTestObj.createNode("Vehicle model entered as : " + vehicleModel).pass("PASSED");
 
 		} catch (Exception e) {
 			log.error("Failed to enter Vehicle model");
-			extTestObj.get().createNode("Failed to enter Vehicle model")
+			extTestObj.createNode("Failed to enter Vehicle model")
 					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
 			log.error(e.getMessage());
 			stopTest();
@@ -2020,10 +2032,10 @@ public class FunctionalComponents extends Base {
 			clickableWait(Elements.vehicleColor);
 			driver.getKeyboard().sendKeys(vehicleColor);
 			log.info("Vehicle Color entered as " + vehicleColor);
-			extTestObj.get().createNode("Vehicle Color entered as " + vehicleColor).pass("PASSED");
+			extTestObj.createNode("Vehicle Color entered as " + vehicleColor).pass("PASSED");
 		} catch (Exception e) {
 			log.error("Failed to enter Vehicle Color");
-			extTestObj.get().createNode("Failed to enter Vehicle Color")
+			extTestObj.createNode("Failed to enter Vehicle Color")
 					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
 			log.error(e.getMessage());
 			stopTest();
@@ -2038,10 +2050,10 @@ public class FunctionalComponents extends Base {
 			Thread.sleep(3000);
 			clickElement(Elements.LaterToday);
 			log.info("Later Today delivery time is selected");
-			extTestObj.get().createNode("Later Today delivery time is selecte").pass("PASSED");
+			extTestObj.createNode("Later Today delivery time is selecte").pass("PASSED");
 		} catch (Exception e) {
 			log.error("Failed to select delivery time Later Today");
-			extTestObj.get().createNode("Failed to select delivery time Later Today")
+			extTestObj.createNode("Failed to select delivery time Later Today")
 					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
 			log.error(e.getMessage());
 			stopTest();
@@ -2055,10 +2067,10 @@ public class FunctionalComponents extends Base {
 			scrollIntoViewBottom(Elements.pickupAsapOrder);
 			clickElement(Elements.pickupAsapOrder);
 			log.info("'ASAP' pickup time is selected");
-			extTestObj.get().createNode("'ASAP' pickup time is selected").pass("PASSED");
+			extTestObj.createNode("'ASAP' pickup time is selected").pass("PASSED");
 		} catch (Exception e) {
 			log.error("Failed to select pickup time 'ASAP'");
-			extTestObj.get().createNode("Failed to select pickup time 'ASAP'")
+			extTestObj.createNode("Failed to select pickup time 'ASAP'")
 					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
 			log.error(e.getMessage());
 			stopTest();
@@ -2075,16 +2087,17 @@ public class FunctionalComponents extends Base {
 			explicitWait(Elements.selectCarryOutMode);
 			clickElement(Elements.selectCarryOutMode);
 			log.info("Carryout Button is Clicked");
-			extTestObj.get().createNode("Carryout Button is Clicked").pass("PASSED");
+			extTestObj.createNode("Carryout Button is Clicked").pass("PASSED");
 		} catch (Exception e) {
 			log.error("Carryout Button click failed");
-			extTestObj.get().createNode("Carryout Button click failed")
+			extTestObj.createNode("Carryout Button click failed")
 					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
 			log.error(e.getMessage());
 			stopTest();
 		}
 
 	}
+	
 
 	/*
 	 * 
@@ -2092,10 +2105,10 @@ public class FunctionalComponents extends Base {
 	 * clickableWait(Elements.pickDate); Thread.sleep(3000);
 	 * clickElement(By.xpath("//*[text()='"+futureTime+"']"));
 	 * log.info("Pickup future time is selected as "+futureTime);
-	 * extTestObj.get().createNode("Pickup future time is selected as "+
+	 * extTestObj.createNode("Pickup future time is selected as "+
 	 * futureTime).pass("PASSED"); } catch (Exception e) {
 	 * log.error("Failed to select pick up future time");
-	 * extTestObj.get().createNode("Failed to select pick up future time").
+	 * extTestObj.createNode("Failed to select pick up future time").
 	 * fail("Method Name : "+Thread.currentThread().getStackTrace()[1].getMethodName
 	 * ()+"()").error(e); log.error(e.getMessage()); stopTest(); } }
 	 * 
@@ -2107,10 +2120,10 @@ public class FunctionalComponents extends Base {
 			scrollIntoViewBottom(Elements.LaterToday);
 			clickElement(Elements.LaterToday);
 			log.info("Later Today pickup time is selected");
-			extTestObj.get().createNode("Later Today pickup time is selected").pass("PASSED");
+			extTestObj.createNode("Later Today pickup time is selected").pass("PASSED");
 		} catch (Exception e) {
 			log.error("Failed to select Later Today");
-			extTestObj.get().createNode("Failed to select Later Today")
+			extTestObj.createNode("Failed to select Later Today")
 					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
 			log.error(e.getMessage());
 			stopTest();
@@ -2122,10 +2135,10 @@ public class FunctionalComponents extends Base {
 		try {
 			clickableWait(Elements.addRewards);
 			log.info("Reward added");
-			extTestObj.get().createNode("Reward added").pass("PASSED");
+			extTestObj.createNode("Reward added").pass("PASSED");
 		} catch (Exception e) {
 			log.error("Failed to add reward");
-			extTestObj.get().createNode("Failed to add reward")
+			extTestObj.createNode("Failed to add reward")
 					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
 			log.error(e.getMessage());
 			stopTest();
@@ -2139,10 +2152,10 @@ public class FunctionalComponents extends Base {
 	 * clickableWait(By.xpath("//*[contains(text(),'"+rewarditem+"')]"));
 	 * clickableWait(Elements.addThisItem);
 	 * log.info("Reward item "+rewarditem+" added");
-	 * extTestObj.get().createNode("Reward item "+ rewarditem
+	 * extTestObj.createNode("Reward item "+ rewarditem
 	 * +" added").pass("PASSED"); } catch(Exception e) {
 	 * log.error("Failed to add reward item");
-	 * extTestObj.get().createNode("Failed to add reward item").
+	 * extTestObj.createNode("Failed to add reward item").
 	 * fail("Method Name : "+Thread.currentThread().getStackTrace()[1].getMethodName
 	 * ()+"()").error(e); log.error(e.getMessage()); stopTest(); } }
 	 */
@@ -2152,9 +2165,9 @@ public class FunctionalComponents extends Base {
 	 * 
 	 * try { driver.findElement(Elements.discount).isDisplayed();
 	 * log.info("Discount is applied");
-	 * extTestObj.get().createNode("Discount is applied").pass("PASSED"); } catch
+	 * extTestObj.createNode("Discount is applied").pass("PASSED"); } catch
 	 * (Exception e) { log.error("Failed to apply discount");
-	 * extTestObj.get().createNode("Failed to apply discount").fail("Method Name : "
+	 * extTestObj.createNode("Failed to apply discount").fail("Method Name : "
 	 * +Thread.currentThread().getStackTrace()[1].getMethodName()+"()").error(e);
 	 * log.error(e.getMessage()); stopTest(); }
 	 * 
@@ -2167,36 +2180,48 @@ public class FunctionalComponents extends Base {
 	 * For Guest user
 	 */
 
-	/*
-	 * public void customizeOrder() { String custItem = excel.getCellData(sheetName,
-	 * colName, rowNum); try { clickableWait(Elements.customizeOrderButton);
-	 * clickableWait(Elements.sauceDropDown);
-	 * clickElement(By.xpath("//*[text()='"+custItem+"']"));
-	 * clickableWait(Elements.addExtraSauce);
-	 * log.info("Order customized with "+custItem);
-	 * extTestObj.get().createNode("Order customized with "+custItem).pass("PASSED")
-	 * ; } catch(Exception e) { log.error("Failed to customize order");
-	 * extTestObj.get().createNode("Failed to customize order").
-	 * fail("Method Name : "+Thread.currentThread().getStackTrace()[1].getMethodName
-	 * ()+"()").error(e); log.error(e.getMessage()); stopTest(); } }
-	 */
+	public void customizeOrder() {
+	      String custItem = excel.getCellData("Order Customization","Custom Item",2);
+	      System.out.println(custItem);
+	     
+	      try {
+	      scrollIntoViewHalf(Elements.customizeOrderButton); //added
+	      clickableWait(Elements.customizeOrderButton);
+	     // clickableWait(Elements.sauceDropDown);
+	      clickElement(By.xpath("//*[text()='"+custItem+"']"));
+	      clickableWait(Elements.addExtraSauce);
+	         //added
+	      log.info("Order customized with "+custItem);
+	      extTestObj.createNode("Order customized with "+custItem).pass("PASSED");
+	      } catch(Exception e) { log.error("Failed to customize order");
+	      extTestObj.createNode("Failed to customize order").fail("Method Name : "+Thread.currentThread().getStackTrace()[1].getMethodName()+"()").error(e); log.error(e.getMessage()); stopTest();
+	      stopTest();
+	       }
+	      }
+	 public void validateCustomization() {
+         String custItem =excel.getCellData("Order Customization","Custom Item", 2);
+         System.out.println(custItem);
+         try {
+           
+             scrollIntoViewBottom(Elements.customItem);
+           //span[text()='Avocado-Ranch Dressing - Extra']
+             explicitWait(Elements.customItem);
+             String custInfo = driver.findElement(Elements.customItem).getText();
+             System.out.println(custInfo);
+            
+             if(custInfo.contains(custItem)&&(custInfo.contains("Extra"))) {
+             log.info("The item added for customization is "+custInfo);
+             extTestObj.createNode("The item added for customization is "+ custInfo).pass("PASSED");
+              }
+         }
+             catch(Exception e){
+             log.error("Incorrect Customization Info");
+             extTestObj.createNode("Incorrect Customization Info").
+             fail("Method Name : "+Thread.currentThread().getStackTrace()[1].getMethodName()+"()").error(e); log.error(e.getMessage()); stopTest();
+             stopTest();
+              }
+         }
 
-	/*
-	 * public void validateCustomization() { String custItem =
-	 * excel.getCellData(sheetName, colName, rowNum); try {
-	 * explicitWait(Elements.customItem); String custInfo =
-	 * driver.findElement(Elements.customItem).getText();
-	 * if(custInfo.contains(custItem)&&(custInfo.contains("Extra")));
-	 * log.info("The item added for customization is "+custInfo);
-	 * extTestObj.get().createNode("The item added for customization is "+
-	 * custInfo).pass("PASSED"); } catch(Exception e) {
-	 * log.error("Incorrect Customization Info");
-	 * extTestObj.get().createNode("Incorrect Customization Info").
-	 * fail("Method Name : "+Thread.currentThread().getStackTrace()[1].getMethodName
-	 * ()+"()").error(e); log.error(e.getMessage()); stopTest();
-	 * 
-	 * } }
-	 */
 
 	/*
 	 * Dine In : Place Dine-In order as MCA user (Join the Line thru Join Line
@@ -2211,12 +2236,12 @@ public class FunctionalComponents extends Base {
 			Thread.sleep(2000);
 			clickableWait(By.xpath("//a[@id='location-join-line-" + restID + "']"));
 			log.info("Site scrolled and join line button clicked");
-			extTestObj.get().createNode("Site scrolled and join line button clicked").pass("PASSED");
+			extTestObj.createNode("Site scrolled and join line button clicked").pass("PASSED");
 
 		} catch (Exception e) {
 			log.error("Site scrolled but join line button not clicked");
 			log.error(e.getMessage());
-			extTestObj.get().createNode("Join line button not clicked")
+			extTestObj.createNode("Join line button not clicked")
 					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
 			stopTest();
 		}
@@ -2226,13 +2251,13 @@ public class FunctionalComponents extends Base {
 	 * scrollIntoViewHalf(Elements.partySizeOne); Thread.sleep(2000);
 	 * clickableWait(Elements.partySizeOne);
 	 * log.info("Site scrolled and party size selected(1)");
-	 * extTestObj.get().createNode("Site scrolled and party size selected(1)").pass(
+	 * extTestObj.createNode("Site scrolled and party size selected(1)").pass(
 	 * "PASSED");
 	 * 
 	 * } catch (Exception e) {
 	 * log.error("Site scrolled but party size not selected");
 	 * log.error(e.getMessage());
-	 * extTestObj.get().createNode("Party size not selected").fail("Method Name : "
+	 * extTestObj.createNode("Party size not selected").fail("Method Name : "
 	 * +Thread.currentThread().getStackTrace()[1].getMethodName()+"()").error(e);
 	 * stopTest(); }
 	 * 
@@ -2246,11 +2271,11 @@ public class FunctionalComponents extends Base {
 	 * explicitWait(Elements.joinLineName); clickableWait(Elements.joinLineName);
 	 * driver.getKeyboard().sendKeys(nameJoinLine);
 	 * log.info("Name on join line entered");
-	 * extTestObj.get().createNode("Name on join line entered").pass("PASSED");
+	 * extTestObj.createNode("Name on join line entered").pass("PASSED");
 	 * 
 	 * } catch (Exception e) { log.error("Failed to enter Name on join line");
 	 * log.error(e.getMessage());
-	 * extTestObj.get().createNode("Failed to enter Name on join line").
+	 * extTestObj.createNode("Failed to enter Name on join line").
 	 * fail("Method Name : "+Thread.currentThread().getStackTrace()[1].getMethodName
 	 * ()+"()").error(e); stopTest(); } }
 	 */
@@ -2262,10 +2287,10 @@ public class FunctionalComponents extends Base {
 	 * explicitWait(Elements.joinLineContactNumber);
 	 * clickableWait(Elements.joinLineContactNumber);
 	 * driver.getKeyboard().sendKeys(cNumber); log.info("Mobile number entered");
-	 * extTestObj.get().createNode("Mobile no on join line entered").pass("PASSED");
+	 * extTestObj.createNode("Mobile no on join line entered").pass("PASSED");
 	 * } catch (Exception e) { log.error("Failed to enter Mobile number");
 	 * log.error(e.getMessage());
-	 * extTestObj.get().createNode("Failed to enter Mobile number").
+	 * extTestObj.createNode("Failed to enter Mobile number").
 	 * fail("Method Name : "+Thread.currentThread().getStackTrace()[1].getMethodName
 	 * ()+"()").error(e); stopTest(); } }
 	 */
@@ -2275,10 +2300,10 @@ public class FunctionalComponents extends Base {
 	 * scrollIntoViewHalf(Elements.clickJoinLine); Thread.sleep(2000);
 	 * clickableWait(Elements.clickJoinLine);
 	 * log.info("Site scrolled and joined the line");
-	 * extTestObj.get().createNode("Site scrolled and joined the line").pass(
+	 * extTestObj.createNode("Site scrolled and joined the line").pass(
 	 * "PASSED"); } catch (Exception e) {
 	 * log.error("Site scrolled but not joined line"); log.error(e.getMessage());
-	 * extTestObj.get().createNode("Joined line is failed").fail("Method Name : "
+	 * extTestObj.createNode("Joined line is failed").fail("Method Name : "
 	 * +Thread.currentThread().getStackTrace()[1].getMethodName()+"()").error(e);
 	 * stopTest(); }
 	 * 
@@ -2286,41 +2311,21 @@ public class FunctionalComponents extends Base {
 	 */
 /*****************************************************************************************************************/
 
-public void appClickableWait(String element)
-{
-	seetest.waitForElement("NATIVE","xpath="+element,0,10000);
-	seetest.click("NATIVE","xpath="+element,0, 1);
-	
-}
-public boolean visibilityWait(String element)
-{
-	seetest.waitForElement("NATIVE","xpath="+element,0,10000);
-	if(seetest.isElementFound("NATIVE",element, 0))
-		return true;
-	else 
-		return false;
-	
-		
-}
 
-public void appSendKeysWait(String value,String element)
-{
-	seetest.waitForElement("NATIVE","xpath="+element,0,10000);
-	seetest.elementSendText("NATIVE",element,0,value);
-}
 public void androidAppClosePopUp()
 {
 	try {
-	appClickableWait(Elements.appPopUpCloseXpath);
-	if(visibilityWait(Elements.appwelcomeMessageXpath)==true)
+	clickableWait(By.xpath("//*[@id='cancel_btn']"));
+	explicitWait(Elements.appwelcomeMessageXpath);
+	if(driver.findElement(Elements.appwelcomeMessageXpath).isDisplayed())
 	{log.info("Pop up closed");
-	extTestObj.get().createNode("Pop up closed").pass("PASSED");
+	extTestObj.createNode("Pop up closed").pass("PASSED");
 	}
 	}
 	catch(Exception e)
 	{
 		log.error("Failed to close pop up");
-		extTestObj.get().createNode("Failed to close pop up")
+		extTestObj.createNode("Failed to close pop up")
 				.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
 		log.error(e.getMessage());
 		stopTest();
@@ -2331,16 +2336,17 @@ public void androidAppClosePopUp()
 public void appClickLoginButton()
 {
 	try {
-		appClickableWait(Elements.appLoginButtonXpath);
-		if(visibilityWait(Elements.apploginHeaderXpath)==true)
+		clickableWait(Elements.appLoginButtonXpath);
+		explicitWait(Elements.apploginHeaderXpath);
+		if(driver.findElement(Elements.apploginHeaderXpath).isDisplayed())
 		{	log.info("Login button clicked");
-			extTestObj.get().createNode("Login button clicked").pass("PASSED");
+			extTestObj.createNode("Login button clicked").pass("PASSED");
 		}
 	}
 	catch(Exception e)
 	{
 		log.error("Login button clicked");
-		extTestObj.get().createNode("Login button clicked")
+		extTestObj.createNode("Login button clicked")
 				.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
 		log.error(e.getMessage());
 		stopTest();
@@ -2353,13 +2359,13 @@ public void appEnterUserName()
 	String username = excel.getCellData("Credentials","UserName",2);
 	try
 	{
-		appSendKeysWait(username,Elements.appUserNameTextBoxXpath);
+		sendKeysWait(Elements.appUserNameTextBoxXpath, username);
 		log.info("User name " + username + " entered");
-		extTestObj.get().createNode("User name " + username + " entered").pass("PASSED");
+		extTestObj.createNode("User name " + username + " entered").pass("PASSED");
 	}
 	catch (Exception e) {
 		log.error("Could not enter user name");
-		extTestObj.get().createNode("Could not enter user name")
+		extTestObj.createNode("Could not enter user name")
 				.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
 		log.error(e.getMessage());
 		stopTest();
@@ -2371,13 +2377,13 @@ public void appEnterPassword()
 	String password = excel.getCellData("Credentials","Password",2);
 	try
 	{
-		appSendKeysWait(password,Elements.appPassWordTextBoxXpath);
+		sendKeysWait(Elements.appPassWordTextBoxXpath,password);
 		log.info("Password" + password + " entered");
-		extTestObj.get().createNode("Password " + password + " entered").pass("PASSED");
+		extTestObj.createNode("Password " + password + " entered").pass("PASSED");
 	}
 	catch (Exception e) {
 		log.error("Could not enter Password");
-		extTestObj.get().createNode("Could not enter Password")
+		extTestObj.createNode("Could not enter Password")
 				.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
 		log.error(e.getMessage());
 		stopTest();
@@ -2388,13 +2394,13 @@ public void appClickSignIn()
 {
 	try
 	{
-		appClickableWait(Elements.appSigninButtonXpath);
+		clickableWait(Elements.appSigninButtonXpath);
 		log.info("Sign in button clicked");
-		extTestObj.get().createNode("Sign in button clicked").pass("PASSED");
+		extTestObj.createNode("Sign in button clicked").pass("PASSED");
 	}
 	catch (Exception e) {
 		log.error("Failed to click Sign in button");
-		extTestObj.get().createNode("Failed to click Sign in button")
+		extTestObj.createNode("Failed to click Sign in button")
 				.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
 		log.error(e.getMessage());
 		stopTest();
@@ -2405,16 +2411,17 @@ public void appClickMoreButton()
 {
 	try
 	{
-		appClickableWait(Elements.appMoreButtonXpath);
-		if(visibilityWait(Elements.appLogoutButtonXpath))
+		clickableWait(Elements.appMoreButtonXpath);
+		explicitWait(Elements.appLogoutButtonXpath);
+		if(driver.findElement(Elements.appLogoutButtonXpath).isDisplayed())
 		{
 		log.info("More button clicked");
-		extTestObj.get().createNode("More button clicked").pass("PASSED");
+		extTestObj.createNode("More button clicked").pass("PASSED");
 		}
 	}
 	catch (Exception e) {
 		log.error("Failed to click More button");
-		extTestObj.get().createNode("Failed to click More button")
+		extTestObj.createNode("Failed to click More button")
 				.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
 		log.error(e.getMessage());
 		stopTest();
@@ -2425,23 +2432,78 @@ public void appClickLogoutButton()
 {
 	try
 	{
-		appClickableWait(Elements.appLogoutButtonXpath);
-		appClickableWait(Elements.signOutConfirmButtonXpath);
-		if(visibilityWait(Elements.applogoutValXpath))
+		clickableWait(Elements.appLogoutButtonXpath);
+		clickableWait(Elements.signOutConfirmButtonXpath);
+		explicitWait(Elements.applogoutValXpath);
+		if(driver.findElement(Elements.applogoutValXpath).isDisplayed())
 		{
 		log.info("Logout button clicked and log out successful");
-		extTestObj.get().createNode("Logout button clicked and log out successful").pass("PASSED");
+		extTestObj.createNode("Logout button clicked and log out successful").pass("PASSED");
 		}
 	}
 	catch (Exception e) {
 		log.error("Logout button clicked and log out successful");
-		extTestObj.get().createNode("Logout button clicked and log out successful")
+		extTestObj.createNode("Logout button clicked and log out successful")
 				.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
 		log.error(e.getMessage());
 		stopTest();
 	}
 	
 }
+
+public void appClickFindRestaurant()
+{
+	try {
+		clickableWait(Elements.appfindRestaurantLinkXpath);
+		explicitWait(Elements.appResSearchTextBoxXpath);
+		if(driver.findElement(Elements.appResSearchTextBoxXpath).isDisplayed())
+		{
+		log.info("Find Restaurant link clicked");
+		extTestObj.createNode("Find Restaurant link clicked").pass("PASSED");
+	}
+}
+	catch(Exception e)
+	{
+		log.error("Failed to click Find Restaurant link");
+		extTestObj.createNode("Failed to click Find Restaurant link")
+				.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
+		log.error(e.getMessage());
+		stopTest();
+	}
+}
+
+public void appEnterRestaurantLocation()
+{
+	String restaurantLocation = excel.getCellData("Locations","Location",2);
+	String[] str = restaurantLocation.split(",");
+	try {
+		clickableWait(Elements.appResSearchTextBoxXpath);
+		sendKeysWait(Elements.appResSearchAutocompleteTextBoxXpath,restaurantLocation);
+		clickElement(MobileBy.xpath("//android.widget.TextView[@text='"+str[0]+"']"));
+		String displayedAddress = driver.findElement(Elements.appResSearchTextBoxXpath).getAttribute("text");
+		String[] dispString = displayedAddress.split(",");
+		if(str[0].equalsIgnoreCase(dispString[0]))
+		{
+		log.info("Restaurant location entered as : "+restaurantLocation);
+		extTestObj.createNode("Restaurant location entered as : "+restaurantLocation).pass("PASSED");	
+	}
+	}
+	
+	catch(Exception e)
+	{
+		log.error("Failed to enter Restaurant Location");
+		extTestObj.createNode("Failed to enter Restaurant Location")
+				.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
+		log.error(e.getMessage());
+		stopTest();
+		
+	}
+}
+
+
+
+
+
 
 	
 }

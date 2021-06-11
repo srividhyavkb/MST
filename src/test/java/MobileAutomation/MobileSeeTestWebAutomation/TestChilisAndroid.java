@@ -30,6 +30,10 @@ public class TestChilisAndroid extends Base {
 		getDriver(driver);
 		driver.rotate(ScreenOrientation.PORTRAIT);
 		prop = returnProperty();
+		editProperties(prop, "Android_Browser", "true");
+		editProperties(prop, "IOS_Browser", "false");
+		editProperties(prop, "Android_App", "false");
+		editProperties(prop, "IOS_App", "false");
 		driver.get(prop.getProperty("url"));
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);

@@ -3,6 +3,7 @@ package MobileAutomation.MobileSeeTestWebAutomation;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import Resources.Base;
@@ -25,7 +26,7 @@ public void testGuestDeliveryASAP() throws InterruptedException
 	ob.clickMenuCatagory();
 	ob.clickItemOrder();
 	ob.clickAddItem();
-	ob.noClickViewCart();
+	ob.guestClickViewCart();
 	ob.clickCheckOutforGuestUser();
 	ob.selectDelivery();
 	ob.enterDeliveryLocation();
@@ -39,9 +40,14 @@ public void testGuestDeliveryASAP() throws InterruptedException
 	ob.enterCardNo();
 	ob.enterCVV();
 	ob.selectExpirationMonth();
-	ob.selectExpirationMonth();
+	ob.selectExpirationYear();
 	ob.enterNameOnCard();
 	ob.enterBillingZipCode();
+	String priceBeforePlacingOrder = ob.OrderTotal();
 	ob.placeOrder();
+	System.out.println(ob.getSuccessMessageforLoggedInOrder());
+	String priceAfterPlacingOrder = ob.returnOrderPrice();
+	Assert.assertEquals(priceBeforePlacingOrder, priceAfterPlacingOrder, "Incorrect price displayed");
+
 }
 }

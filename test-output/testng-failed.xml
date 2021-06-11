@@ -7,13 +7,19 @@
   </listeners>
   <test name="Test Chilis WebApp(failed)">
     <classes>
-      <class name="MobileAutomation.MobileSeeTestWebAutomation.TestAddMyVisit">
+      <class name="MobileAutomation.MobileSeeTestWebAutomation.TestChilisIOS">
         <methods>
-          <include name="testAddMyVisit"/>
           <include name="tearDown"/>
           <include name="initialize"/>
         </methods>
-      </class> <!-- MobileAutomation.MobileSeeTestWebAutomation.TestAddMyVisit -->
+      </class> <!-- MobileAutomation.MobileSeeTestWebAutomation.TestChilisIOS -->
+      <class name="MobileAutomation.MobileSeeTestWebAutomation.TestChilisAndroid">
+        <methods>
+          <include name="testLoginFeature"/>
+          <include name="tearDown"/>
+          <include name="initialize"/>
+        </methods>
+      </class> <!-- MobileAutomation.MobileSeeTestWebAutomation.TestChilisAndroid -->
     </classes>
   </test> <!-- Test Chilis WebApp(failed) -->
 </suite> <!-- Failed suite [Suite] -->

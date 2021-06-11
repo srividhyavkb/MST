@@ -15,7 +15,9 @@ import org.testng.annotations.Test;
 import com.experitest.appium.SeeTestClient;
 
 import Resources.Base;
+import Resources.Elements;
 import Resources.FunctionalComponents;
+import io.appium.java_client.MobileBy;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
 
@@ -30,17 +32,21 @@ public class TestChilisApp extends Base{
 		driver = new AndroidDriver<>(new URL(prop.getProperty("CloudDeviceURL")), dc);
 		seetest = new SeeTestClient(driver);
 		driver.rotate(ScreenOrientation.PORTRAIT);
-		seetest.click("NATIVE","xpath=//*[text()='OK']", 0,1);
-		seetest.click("NATIVE","xpath=//*[text()='CANCEL']", 0,1);
+		driver.findElement(Elements.appOkButtonXpath).click();
+		driver.findElement(Elements.appCancelButtonXpath).click();
 		getDriver(driver);	
 		prop = returnProperty();
+		editProperties(prop, "Android_Browser", "false");
+		editProperties(prop, "IOS_Browser", "false");
+		editProperties(prop, "Android_App", "true");
+		editProperties(prop, "IOS_App", "false");
 	}
 	
-	@Test
-	public void launchApp() throws InterruptedException
+	@Test(enabled=false)
+	public void appLoginLogout() throws InterruptedException
 	{
-		Logger log = LogManager.getLogger("TestChilisApp");
-		log.info("******Starting to test chilis app******");
+		Logger log = LogManager.getLogger("AppTestLoginLogout");
+		log.info("******Starting to login logout functionality in Chilis App******");
 		FunctionalComponents obj = new FunctionalComponents(driver, log);
 		obj.androidAppClosePopUp();
 		obj.appClickLoginButton();
@@ -49,6 +55,18 @@ public class TestChilisApp extends Base{
 		obj.appClickSignIn();
 		obj.appClickMoreButton();
 		obj.appClickLogoutButton();
+		
+	}
+	@Test(enabled=true)
+	public void appLocationSearch() throws InterruptedException
+	{
+		Logger log = LogManager.getLogger("AppTestLocationSearch");
+		log.info("******Starting to test Location Search Functionality of Chilis App******");
+		FunctionalComponents obj = new FunctionalComponents(driver, log);
+		obj.androidAppClosePopUp();
+		obj.appClickFindRestaurant();
+		obj.appEnterRestaurantLocation();
+		
 		
 	}
 	

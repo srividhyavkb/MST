@@ -1,6 +1,8 @@
 package Resources;
 import org.openqa.selenium.By;
 
+import io.appium.java_client.MobileBy;
+
 public class Elements {
 	//Login Logout
 	public static final By popUpCloseButton = By.className("close-btn");
@@ -160,15 +162,36 @@ public class Elements {
 		//*[@id='infobar_close_button']
 		
 //Android App Automation : Login Logout
-	public static final String appPopUpCloseXpath = "//*[@id='cancel_btn']";
-	public static final String appwelcomeMessageXpath = "//android.widget.TextView[@text='FEED YOUR WHOLE FAMILY WITH']";
-	public static final String appLoginButtonXpath = "//android.widget.Button[@id='card_home_logged_out_login']";
-	public static final String appUserNameTextBoxXpath = "//android.widget.EditText[@id='login_username_field']";
-	public static final String appPassWordTextBoxXpath = "//android.widget.EditText[@id='login_password_field']";
-	public static final String appSigninButtonXpath = "//android.widget.Button[@id='login_btn']";
-	public static final String apploginHeaderXpath = "//*[@text='LOG IN TO YOUR ACCOUNT']";
-	public static final String appMoreButtonXpath = "//*[@id='icon' and ./parent::*[@id='menu_bottom_nav_more']]";
-	public static final String appLogoutButtonXpath = "//android.widget.TextView[@text='Log Out']";
-	public static final String signOutConfirmButtonXpath = "//android.widget.Button[@text='YES']";
-	public static final String applogoutValXpath = "//*[@id='card_home_logged_out_login']";
+	public static final By appOkButtonXpath = MobileBy.xpath("//android.widget.Button[@text='OK']");
+	public static final By appCancelButtonXpath = MobileBy.xpath("//android.widget.Button[@text='CANCEL']");
+	public static final By appPopUpCloseXpath = MobileBy.xpath("//*[@id='cancel_btn']");
+	public static final By appwelcomeMessageXpath = MobileBy.xpath("//android.widget.TextView[@text='FEED YOUR WHOLE FAMILY WITH']");
+	public static final By appLoginButtonXpath = MobileBy.xpath("//android.widget.Button[@id='card_home_logged_out_login']");
+	public static final By appUserNameTextBoxXpath = MobileBy.xpath("//android.widget.EditText[@id='login_username_field']");
+	public static final By appPassWordTextBoxXpath = MobileBy.xpath("//android.widget.EditText[@id='login_password_field']");
+	public static final By appSigninButtonXpath =MobileBy.xpath("//android.widget.Button[@id='login_btn']");
+	public static final By apploginHeaderXpath =MobileBy.xpath("//*[@text='LOG IN TO YOUR ACCOUNT']");
+	public static final By appMoreButtonXpath = MobileBy.xpath("//*[@id='icon' and ./parent::*[@id='menu_bottom_nav_more']]");
+	public static final By appLogoutButtonXpath = MobileBy.xpath("//android.widget.TextView[@text='Log Out']");
+	public static final By signOutConfirmButtonXpath = MobileBy.xpath("//android.widget.Button[@text='YES']");
+	public static final By applogoutValXpath = MobileBy.xpath("//*[@id='card_home_logged_out_login']");
+	
+	
+//Location Search
+	public static final By appfindRestaurantLinkXpath = MobileBy.xpath("//android.widget.Button[@id='card_home_restaurant_not_selected_find']");
+	public static final By appResSearchTextBoxXpath = MobileBy.xpath("//android.widget.EditText[@id='address_text_field']");
+	public static final By appResSearchAutocompleteTextBoxXpath = MobileBy.xpath("//android.widget.EditText[@id='places_autocomplete_edit_text']");
+	public static final By appRestaurantNameXpath = MobileBy.xpath("//android.widget.TextView[@id='restaurant_name']");
+	public static final By appRestaurantSelectedAddressXpath = MobileBy.xpath("//android.widget.TextView[@id='card_home_restaurant_selected_address']");
+	public static final By appRestaurantChangeButtonXpath = MobileBy.xpath("//android.widget.Button[@text='CHANGE']");
+	
+		//*[@text='SELECT' and ./parent::*[(./preceding-sibling::* | ./following-sibling::*)[./*[@text='Delray Beach']]]]
+	//*[@text='SELECT' and ./parent::*[(./preceding-sibling::* | ./following-sibling::*)[./*[@text='2202 N. Congress']]]]
+	//*[@text='DELRAY BEACH - 14534 S Military Trail']
+	//android.widget.Button[@text='CHANGE']
+	//*[@text='Current Location' and ./parent::*[(./preceding-sibling::* | ./following-sibling::*)[./*[@text='Delray Beach']]]]
+//	14534 S Military Trail
 }
+
+
+
