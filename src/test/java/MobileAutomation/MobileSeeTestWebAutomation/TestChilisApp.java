@@ -57,7 +57,7 @@ public class TestChilisApp extends Base{
 		obj.appClickLogoutButton();
 		
 	}
-	@Test(enabled=true)
+	@Test(enabled=false)
 	public void appLocationSearch() throws InterruptedException
 	{
 		Logger log = LogManager.getLogger("AppTestLocationSearch");
@@ -70,6 +70,69 @@ public class TestChilisApp extends Base{
 		
 	}
 	
+	@Test(enabled=false)
+	public void appValidateRewards() throws InterruptedException
+	{
+		Logger log = LogManager.getLogger("AppTestLoginLogout");
+		log.info("******Starting to validate Rewards for sign in users******");
+		FunctionalComponents obj = new FunctionalComponents(driver, log);
+		obj.androidAppClosePopUp();
+		obj.appClickLoginButton();
+		obj.appEnterUserName();
+		obj.appEnterPassword();
+		obj.appClickSignIn();
+		obj.appClickRewardsButton();
+		obj.appValidateRewardsCount();
+		obj.appViewRewardNames();
+		
+	}
+	
+	@Test(enabled=false)
+	public void appValidateChilisFavouriteItems() throws InterruptedException
+	{
+		Logger log = LogManager.getLogger("AppTestLoginLogout");
+		log.info("******Starting to validate Chilis Favourite Items for sign in users******");
+		FunctionalComponents obj = new FunctionalComponents(driver, log);
+		obj.androidAppClosePopUp();
+		obj.appClickLoginButton();
+		obj.appEnterUserName();
+		obj.appEnterPassword();
+		obj.appClickSignIn();
+		obj.appgetChilisFavouriteItems(driver);
+		
+	}
+	
+	@Test(enabled=true)
+	public void appUpdateMyAccount()
+	{
+		Logger log = LogManager.getLogger("AppTestMyAccountUpdate");
+		log.info("******Starting to validate user is able to update my Account******");
+		FunctionalComponents obj = new FunctionalComponents(driver, log);
+		obj.androidAppClosePopUp();
+		obj.appClickLoginButton();
+		obj.appEnterUserName();
+		obj.appEnterPassword();
+		obj.appClickSignIn();
+		obj.appClickMoreButton();
+		obj.appSelectMyAccountOption();
+		obj.appgetFirstNameBeforeUpdate(driver);
+		obj.appgetLastNameBeforeUpdate(driver);
+		obj.appgetEmailBeforeUpdate(driver);
+		obj.appgetZipCodeBeforeUpdate(driver);
+		obj.appUpdateFirstName(driver);
+		obj.appUpdateLastName(driver);
+		obj.appUpdateEmail(driver);
+		obj.appUpdateZipCode(driver);
+		obj.appCheckConsent();
+		obj.appClickUpdate();
+		obj.appRetrieveSuccessMessage();
+		obj.appgetFirstNameAfterUpdate(driver);
+		obj.appgetLastNameAfterUpdate(driver);
+		obj.appgetEmailAfterUpdate(driver);
+		obj.appgetZipCodeAfterUpdate(driver);
+		obj.appValidateUpdate(driver);
+		
+	}
 	@AfterMethod
 	public void tearDown() {
 		System.out.println("Report URL: " + driver.getCapabilities().getCapability("reportUrl"));

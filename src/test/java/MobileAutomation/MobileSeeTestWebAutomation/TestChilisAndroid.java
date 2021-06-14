@@ -40,7 +40,7 @@ public class TestChilisAndroid extends Base {
 	}
 	
 	
-	@Test(enabled = true,priority=1)
+	@Test(enabled = false,priority=1)
 	public void testLoginFeature() throws Exception {
 		Logger log = LogManager.getLogger("TestLoginLogout");
 		log.info("******TC01_ANDROID : Starting to Validate Login and Logout functionality of Chilis WebApp******");
@@ -57,7 +57,7 @@ public class TestChilisAndroid extends Base {
 		System.out.println(func.validateLogout());
 	}
 
-	@Test(enabled = false,priority=2)
+	@Test(enabled = true,priority=2)
 	public void testRewardsFeature() throws InterruptedException {
 		Logger log = LogManager.getLogger("TestRewards");
 		log.info("******TC02_ANDROID : Starting to validate Rewards details page for logged in user******");

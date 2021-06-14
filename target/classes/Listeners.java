@@ -56,6 +56,10 @@ public class Listeners extends TestListenerAdapter implements ITestListener {
 		{
 			extent = ExtentReporterNG.getReportObjectAndroidApp();
 		}
+		else if(prop.getProperty("IOS_App").equals("true"))
+		{
+			extent = ExtentReporterNG.getReportObjectIOSApp();
+		}
 		test = extent.createTest(result.getMethod().getMethodName());
 	
 		FunctionalComponents.getExtentTest(test);
@@ -79,7 +83,9 @@ public class Listeners extends TestListenerAdapter implements ITestListener {
 
 	public void onTestSkipped(ITestResult result) {
 		if (result.getThrowable().getMessage() == null)
-			extent.removeTest(test);
+		{	extent.removeTest(test);
+		    testExecuted--;
+		}
 		else {
 			test.log(Status.SKIP,
 					MarkupHelper.createLabel(result.getName() + " - Test Case Skipped", ExtentColor.ORANGE));

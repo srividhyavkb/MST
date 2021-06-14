@@ -12,9 +12,11 @@ import java.util.concurrent.TimeUnit;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.ScreenOrientation;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.AfterTest;
@@ -27,6 +29,7 @@ import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.ios.IOSDriver;
 import io.appium.java_client.ios.IOSElement;
 import io.appium.java_client.remote.AndroidMobileCapabilityType;
+import io.appium.java_client.remote.IOSMobileCapabilityType;
 import io.appium.java_client.remote.MobileBrowserType;
 import io.appium.java_client.remote.MobileCapabilityType;
 
@@ -35,7 +38,7 @@ public class Base {
 	private String accessKey = "eyJhbGciOiJIUzI1NiJ9.eyJ4cC51Ijo5NDY2NzQxLCJ4cC5wIjo5NDY2NzQwLCJ4cC5tIjoxNjAxNTI2MzAxODAxLCJleHAiOjE5MTY4OTI5NDQsImlzcyI6ImNvbS5leHBlcml0ZXN0In0.H9SHgMkl1nXr3WVmM5BPwU4nX05Qt9IVSVItBur8WE0";
 	DesiredCapabilities dc = new DesiredCapabilities();
 	DesiredCapabilities dcIOS = new DesiredCapabilities();
-	public AppiumDriver driver = null;
+	public RemoteWebDriver driver = null;
 	String projectPath = System.getProperty("user.dir");
 	protected Properties prop;
 	
@@ -60,7 +63,7 @@ public class Base {
 	public DesiredCapabilities sendAndroidChilisAppCapabilities() throws Exception {
 
 		dc.setCapability("accessKey", accessKey);
-		dc.setCapability("testName", "Quick Start Android Browser Demo");
+		dc.setCapability("testName", "Quick Start Android App Demo");
 		dc.setCapability("deviceQuery",
 				"@os='android' and @version='" + prop.getProperty("android_version") + "' and @category='PHONE'");
 		dc.setCapability(MobileCapabilityType.UDID,prop.getProperty("udid"));
@@ -74,7 +77,21 @@ public class Base {
 		return dc;
 		
 	}
-
+	public DesiredCapabilities sendIOSChilisAppCapabilities() throws Exception
+	{
+		dc.setCapability("accessKey", accessKey);
+		dc.setCapability("testName", "Quick Start IOS App Demo");
+		dc.setCapability("deviceQuery",
+				"@os='ios' and @version='14.4' and @category='PHONE'");
+		dc.setCapability(MobileCapabilityType.UDID,prop.getProperty("udid_IOS"));
+		dc.setCapability(MobileCapabilityType.APP,prop.getProperty("IOS_app_name"));
+		dc.setCapability(IOSMobileCapabilityType.BUNDLE_ID,prop.getProperty("bundle_id"));
+		dc.setCapability("appBuildVersion",prop.getProperty("IOS_build_version"));
+        dc.setCapability("installOnlyForUpdate", true);
+        dc.setCapability("autoDismissAlerts", true);
+		return dc;
+		
+	}	
 	public DesiredCapabilities sendIOSBrowserCapabilities() throws Exception {
 		
 		dcIOS.setCapability("accessKey", accessKey);
@@ -82,6 +99,13 @@ public class Base {
 		dcIOS.setCapability("deviceQuery", "@os='ios' and @version='13.2.3' and @category='PHONE'");
 		dcIOS.setBrowserName(MobileBrowserType.SAFARI);
 		return dcIOS;
+	}
+	
+public RemoteWebDriver initializeWebDriver() throws Exception {
+
+	System.setProperty("webdriver.chrome.driver",projectPath+"/chromedriver/chromedriver.exe");
+	driver = new ChromeDriver();
+   return driver;	
 	}
 
 	public Properties returnProperty() {
@@ -110,7 +134,7 @@ public class Base {
 		}
 	}
 	
-	public void getDriver(AppiumDriver driver)
+	public void getDriver(RemoteWebDriver driver)
 	{
 		this.driver = driver;
 	}

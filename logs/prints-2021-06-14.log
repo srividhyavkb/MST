@@ -1,0 +1,9 @@
+19:04:07.383 [main] INFO  IOSAppTestLoginLogout - ******Starting to login logout functionality in IOS Chilis App******
+19:04:30.505 [main] INFO  IOSAppTestLoginLogout - Pop up closed
+19:04:51.579 [main] INFO  IOSAppTestLoginLogout - Login button clicked
+19:05:16.800 [main] INFO  IOSAppTestLoginLogout - User name (512) 212-1212 entered
+19:05:43.433 [main] INFO  IOSAppTestLoginLogout - PasswordBrinkers@2021 entered
+19:05:55.368 [main] INFO  IOSAppTestLoginLogout - Sign in button clicked
+19:06:15.790 [main] INFO  IOSAppTestLoginLogout - More button clicked
+19:06:55.478 [main] ERROR IOSAppTestLoginLogout - Logout button clicked and log out successful
+19:06:55.482 [main] ERROR IOSAppTestLoginLogout - Expected condition failed: waiting for element to be clickable: By.xpath: //*[@text='YES'] (tried for 25 second(s) with 500 milliseconds interval)

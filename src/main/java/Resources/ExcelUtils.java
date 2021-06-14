@@ -38,7 +38,7 @@ public class ExcelUtils
             row = sheet.getRow(0);
             for(int i = 0; i < row.getLastCellNum(); i++)
             {
-                if(row.getCell(i).getStringCellValue().trim().equals(colName.trim()))
+            	if(row.getCell(i).getStringCellValue().trim().equals(colName.trim()))
                     col_Num = i;
             }
  

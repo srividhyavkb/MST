@@ -36,7 +36,7 @@ public class TestChilisIOS extends Base
 		
 	}
 	
-	@Test(enabled = true)
+	@Test(enabled = false)
 	public void testLoginFeature() throws Exception {
 		Logger log = LogManager.getLogger("TestLoginLogout");
 		log.info("******TC10_IOS : Starting to Validate Login and Logout functionality of Chilis WebApp******");
@@ -53,7 +53,7 @@ public class TestChilisIOS extends Base
 		System.out.println(func.validateLogout());
 	}
 
-	@Test(enabled = false)
+	@Test(enabled = true)
 	public void testRewardsFeature() throws InterruptedException {
 		Logger log = LogManager.getLogger("TestRewards");
 		log.info("******TC11_IOS : Starting to validate Rewards details page for logged in user******");
@@ -68,7 +68,7 @@ public class TestChilisIOS extends Base
 		int noOfRewardsDisplayed = func3.noOfRewards();
 		int ActualrewardCount = func3.ActualRewardsCount();
 		Assert.assertEquals(noOfRewardsDisplayed, ActualrewardCount, "Discrepancy observed in Rewards Count");
-		func3.getRewardTitleIOS();
+		func3.getRewardTitle();
 	}
 
 	@Test(enabled = false)
@@ -118,7 +118,7 @@ public class TestChilisIOS extends Base
 		func5.clickSignin();
 		func5.clickMenuButton();
 		func5.selectMenuOption();
-		func5.getAllChilisFavouriteItemsIOS();
+		func5.getAllChilisFavouriteItems();
 	}
 
 	@Test(enabled = false)
@@ -155,7 +155,7 @@ public class TestChilisIOS extends Base
 		curb.clickSearchButtonForLoggedInOrder();
 		curb.getRestaurantName();
 		curb.orderNow();
-		curb.AddChilisFavouriteToCartIOS();
+		curb.AddChilisFavouriteToCart();
 		curb.clickViewCart();
 		curb.selectSilverWare();
 		curb.clickCheckOut();
@@ -218,7 +218,7 @@ public class TestChilisIOS extends Base
 		ob.enterRestaurantLocationForLoggedInOrder();
 		ob.clickSearchButtonForLoggedInOrder();
 		ob.orderNow();
-		ob.AddChilisFavouriteToCartIOS();
+		ob.AddChilisFavouriteToCart();
 		ob.clickViewCart();
 		ob.selectSilverWare();
 		ob.clickCheckOut();
@@ -255,7 +255,7 @@ public class TestChilisIOS extends Base
 		ob.enterRestaurantLocationForLoggedInOrder();
 		ob.clickSearchButtonForLoggedInOrder();
 		ob.orderNow();
-		ob.AddChilisFavouriteToCartIOS();
+		ob.AddChilisFavouriteToCart();
 		ob.clickViewCart();
 		ob.clickCheckOut();
 		ob.clickOnCarryOut();

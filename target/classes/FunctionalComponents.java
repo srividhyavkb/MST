@@ -1,19 +1,24 @@
 package Resources;
 
+import java.time.Duration;
 import java.util.List;
 import java.util.Properties;
 
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Dimension;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.interactions.touch.TouchActions;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
-
+import static io.appium.java_client.touch.LongPressOptions.longPressOptions;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
@@ -34,14 +39,16 @@ import io.appium.java_client.ios.IOSDriver;
 import io.appium.java_client.ios.IOSElement;
 import io.appium.java_client.ios.IOSTouchAction;
 import io.appium.java_client.touch.LongPressOptions;
+import io.appium.java_client.touch.WaitOptions;
 import io.appium.java_client.touch.offset.ElementOption;
+import io.appium.java_client.touch.offset.PointOption;
 
 @SuppressWarnings("rawtypes")
 public class FunctionalComponents extends Base {
 
-	public AppiumDriver driver = null;
+	public RemoteWebDriver driver = null;
 	Properties property = returnProperty();
-	
+
 	Listeners listen;
 	static ExtentTest extTestObj;
 	public WebDriverWait wait;
@@ -166,8 +173,7 @@ public class FunctionalComponents extends Base {
 		try {
 			explicitWait(Elements.popUpCloseButton);
 			log.info("QA site launch is successful, Site Name : " + driver.getCurrentUrl());
-			extTestObj.createNode("QA site launch is successful, Site Name : " + driver.getCurrentUrl())
-					.pass("PASSED");
+			extTestObj.createNode("QA site launch is successful, Site Name : " + driver.getCurrentUrl()).pass("PASSED");
 
 		} catch (Exception e) {
 			log.error("QA site launch failed");
@@ -308,8 +314,7 @@ public class FunctionalComponents extends Base {
 		try {
 			explicitWait(Elements.loginHeader);
 			log.info("Login header displayed : " + driver.findElement(Elements.loginHeader).getText());
-			extTestObj
-					.createNode("Login header displayed : " + driver.findElement(Elements.loginHeader).getText())
+			extTestObj.createNode("Login header displayed : " + driver.findElement(Elements.loginHeader).getText())
 					.pass("PASSED");
 		} catch (Exception e) {
 			log.error("Login header not displayed");
@@ -446,39 +451,16 @@ public class FunctionalComponents extends Base {
 	 * MCA user getRewardTitle() : for Android getRewardTitleIOS() : for IOS
 	 */
 	public void getRewardTitle() {
-		List<AndroidElement> rewards = driver.findElements(Elements.actualRewardsCount);
+		List<WebElement> rewards = driver.findElements(Elements.actualRewardsCount);
 		String rewardsTitle = "";
 		try {
 			log.info("Reward Titles :");
-			extTestObj.log(Status.INFO, "Reward Titles :");
-			for (AndroidElement reward : rewards) {
+			extTestObj.createNode("Reward Titles :").info("INFO");
+			for (WebElement reward : rewards) {
 				rewardsTitle = reward.findElement(By.xpath("//div[@class='rewards-active-title item-title']"))
 						.getText();
 				log.info(rewardsTitle);
-				extTestObj.log(Status.INFO, rewardsTitle);
-			}
-			log.info("Reward Titles displayed");
-			extTestObj.createNode("Reward Titles displayed").pass("PASSED");
-		} catch (Exception e) {
-			log.error("Reward titles couldn't be obtained");
-			extTestObj.createNode("Reward titles couldn't be obtained")
-					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
-			log.error(e.getMessage());
-
-		}
-	}
-
-	public void getRewardTitleIOS() {
-		List<IOSElement> rewards = driver.findElements(Elements.actualRewardsCount);
-		String rewardsTitle = "";
-		try {
-			log.info("Reward Titles :");
-			extTestObj.log(Status.INFO, "Reward Titles :");
-			for (IOSElement reward : rewards) {
-				rewardsTitle = reward.findElement(By.xpath("//div[@class='rewards-active-title item-title']"))
-						.getText();
-				log.info(rewardsTitle);
-				extTestObj.log(Status.INFO, rewardsTitle);
+				extTestObj.createNode(rewardsTitle).pass("PASSED");
 			}
 			log.info("Reward Titles displayed");
 			extTestObj.createNode("Reward Titles displayed").pass("PASSED");
@@ -798,35 +780,12 @@ public class FunctionalComponents extends Base {
 
 	public void getAllChilisFavouriteItems() {
 
-		List<AndroidElement> items = null;
+		List<WebElement> items = null;
 		try {
 			items = driver.findElements(Elements.favouriteMenu);
 			log.info("Chillis favourite Items : ");
 			extTestObj.log(Status.INFO, "Chillis favourite Items : ");
-			for (AndroidElement el : items) {
-				log.info(el.findElement(Elements.favouriteItemsTitle).getText());
-				extTestObj.log(Status.INFO, el.findElement(Elements.favouriteItemsTitle).getText());
-			}
-			log.info("All chilis favourite items obtained");
-			extTestObj.createNode("All chilis favourite items obtained").pass("PASSED");
-		} catch (Exception e) {
-			log.error("Couldn't obtain chilis favourite items");
-			extTestObj.createNode("Couldn't obtain chilis favourite items")
-					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
-			log.error(e.getMessage());
-
-		}
-
-	}
-
-	public void getAllChilisFavouriteItemsIOS() {
-
-		List<IOSElement> items = null;
-		try {
-			items = driver.findElements(Elements.favouriteMenu);
-			log.info("Chillis favourite Items : ");
-			extTestObj.log(Status.INFO, "Chillis favourite Items : ");
-			for (IOSElement el : items) {
+			for (WebElement el : items) {
 				log.info(el.findElement(Elements.favouriteItemsTitle).getText());
 				extTestObj.log(Status.INFO, el.findElement(Elements.favouriteItemsTitle).getText());
 			}
@@ -891,7 +850,7 @@ public class FunctionalComponents extends Base {
 			clickableWait(Elements.restaurantLocTextBox);
 			driver.getKeyboard().sendKeys(loc);
 			scrollIntoViewBottom(By.xpath("//*[text()='" + loc + "']"));
-			seetest.click("WEB","xpath=//*[text()='" + loc + "']",0, 1);
+			seetest.click("WEB", "xpath=//*[text()='" + loc + "']", 0, 1);
 			log.info("Restaurant location entered as : " + loc);
 			extTestObj.createNode("Restaurant location entered as : " + loc).pass("PASSED");
 			Thread.sleep(3000);
@@ -932,11 +891,9 @@ public class FunctionalComponents extends Base {
 			clickableWait(Elements.chillisLocDropDown);
 			try {
 //			seetest.elementSendText("WEB","xpath=//*[@id='store-number']", 0,locFromDropDown);
-			seetest.setPickerValues("WEB", "xpath=//*[@id='store-number']", 0, 0,locFromDropDown);
-			}
-			catch(Exception e)
-			{
-				seetest.elementListSelect("xpath=//*[@id='store-number']", "text=" +locFromDropDown , 0, true);
+				seetest.setPickerValues("WEB", "xpath=//*[@id='store-number']", 0, 0, locFromDropDown);
+			} catch (Exception e) {
+				seetest.elementListSelect("xpath=//*[@id='store-number']", "text=" + locFromDropDown, 0, true);
 			}
 //			seetest.elementSetProperty("WEB","xpath=//*[@id='store-number']",0,"text", locFromDropDown);
 //			clickElement(By.xpath("//*[text()='" + locFromDropDown + "']"));
@@ -981,7 +938,7 @@ public class FunctionalComponents extends Base {
 		try {
 			scrollIntoViewBottom(Elements.visitMonthDropDown);
 			clickableWait(Elements.visitMonthDropDown);
-			seetest.elementSetProperty("WEB","xpath=//*[@id='visit-month']",0,"text", visitMonth);
+			seetest.elementSetProperty("WEB", "xpath=//*[@id='visit-month']", 0, "text", visitMonth);
 //			seetest.setPickerValues("WEB", "xpath=//*[@id='visit-month']", 0, 1,visitMonth);
 			seetest.click("NATIVE", "xpath=//*[@id='Done']", 0, 1);
 			log.info("Visit month selected as :" + visitMonth);
@@ -1020,7 +977,7 @@ public class FunctionalComponents extends Base {
 		try {
 			scrollIntoViewBottom(Elements.visitDayDropDown);
 			clickableWait(Elements.visitDayDropDown);
-			seetest.elementSetProperty("WEB","xpath=//*[@id='visit-day']",0,"text", visitDay);
+			seetest.elementSetProperty("WEB", "xpath=//*[@id='visit-day']", 0, "text", visitDay);
 //			seetest.setPickerValues("WEB", "xpath=//*[@id='visit-day']", 0, 1,visitDay);
 			seetest.click("NATIVE", "xpath=//*[@id='Done']", 0, 1);
 			log.info("Visit day selected as : " + visitDay);
@@ -1058,7 +1015,7 @@ public class FunctionalComponents extends Base {
 		try {
 			scrollIntoViewBottom(Elements.visitYearDropDown);
 			clickableWait(Elements.visitYearDropDown);
-			seetest.elementSetProperty("WEB","xpath=//*[@id='visit-year']",0,"text", visitYear);
+			seetest.elementSetProperty("WEB", "xpath=//*[@id='visit-year']", 0, "text", visitYear);
 //			seetest.setPickerValues("WEB", "xpath=//*[@id='visit-year']", 0, 1,visitYear);
 			seetest.click("NATIVE", "xpath=//*[@id='Done']", 0, 1);
 			log.info("Visit year selected as : " + visitYear);
@@ -1207,35 +1164,7 @@ public class FunctionalComponents extends Base {
 		String chilisFavItem = excel.getCellData("LoggedInOrder", "Chilis Favourite Items", 2).trim();
 		try {
 
-			List<AndroidElement> itemNames = driver
-					.findElements(By.xpath("//div[@class='heading-tertiary heading-favorite']"));
-			for (int i = 0; i < itemNames.size(); i++) {
-				String name = itemNames.get(i).getText().trim();
-				if (name.equalsIgnoreCase(chilisFavItem)) {
-					AndroidElement ele = (AndroidElement) driver
-							.findElements(By.xpath("//div[@class='favorite-action']/button")).get(i);
-					scrollIntoViewBottomByElement(ele);
-					ele.click();
-					break;
-				}
-			}
-			log.info("Chilis favourite Item " + chilisFavItem + " selected");
-			extTestObj.createNode("Chilis favourite Item " + chilisFavItem + " selected").pass("PASSED");
-		} catch (Exception e) {
-			log.error("Failed to select chilis favourite item");
-			extTestObj.createNode("Failed to select chilis favourite item")
-					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
-			log.error(e.getMessage());
-
-			stopTest();
-		}
-	}
-
-	public void AddChilisFavouriteToCartIOS() throws InterruptedException {
-
-		String chilisFavItem = excel.getCellData("LoggedInOrder", "Chilis Favourite Items", 2).trim();
-		try {
-			List<IOSElement> itemNames = driver
+			List<WebElement> itemNames = driver
 					.findElements(By.xpath("//div[@class='heading-tertiary heading-favorite']"));
 			for (int i = 0; i < itemNames.size(); i++) {
 				String name = itemNames.get(i).getText().trim();
@@ -1577,24 +1506,26 @@ public class FunctionalComponents extends Base {
 			stopTest();
 		}
 	}
+
 	public void selectPickupForFuture() {
-	      String futureTime = excel.getCellData("Future Order", "Future Date", 2);
-	      try {
-	      scrollIntoViewHalf(Elements.pickDate);
-	      clickableWait(Elements.pickDate);
-	      Thread.sleep(3000);
-	      clickElement(By.xpath("//*[contains(text(),'"+futureTime+"')]"));
-	      log.info("Pickup future time is selected as "+futureTime);
-	      extTestObj.createNode("Pickup future time is selected as "+futureTime).pass("PASSED");
-	      } 
-	      catch (Exception e) {
-	      log.error("Failed to select pick up future time");
-	      
-	      extTestObj.createNode("Failed to select pick up future time").
-	      fail("Method Name : "+Thread.currentThread().getStackTrace()[1].getMethodName
-	      ()+"()").error(e); log.error(e.getMessage()); stopTest();
-	      }
-	        }
+		String futureTime = excel.getCellData("Future Order", "Future Date", 2);
+		try {
+			scrollIntoViewHalf(Elements.pickDate);
+			clickableWait(Elements.pickDate);
+			Thread.sleep(3000);
+			clickElement(By.xpath("//*[contains(text(),'" + futureTime + "')]"));
+			log.info("Pickup future time is selected as " + futureTime);
+			extTestObj.createNode("Pickup future time is selected as " + futureTime).pass("PASSED");
+		} catch (Exception e) {
+			log.error("Failed to select pick up future time");
+
+			extTestObj.createNode("Failed to select pick up future time")
+					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
+			log.error(e.getMessage());
+			stopTest();
+		}
+	}
+
 	public void clickReorderforanOrder() {
 		try {
 			scrollIntoViewBottom(Elements.reOrder);
@@ -1732,30 +1663,27 @@ public class FunctionalComponents extends Base {
 		}
 	}
 
-	
 	@SuppressWarnings("deprecation")
-    public void enterDeliveryLocation() throws InterruptedException {
-        String location = excel.getCellData("DeliveryASAP", "Restaurant Address", 2);
-        try {
-            scrollIntoViewBottom(Elements.deliveryAddress);
-            explicitWait(Elements.deliveryAddress);
-            driver.findElement(Elements.deliveryAddress).sendKeys(location);
-            Thread.sleep(2000);
+	public void enterDeliveryLocation() throws InterruptedException {
+		String location = excel.getCellData("DeliveryASAP", "Restaurant Address", 2);
+		try {
+			scrollIntoViewBottom(Elements.deliveryAddress);
+			explicitWait(Elements.deliveryAddress);
+			driver.findElement(Elements.deliveryAddress).sendKeys(location);
+			Thread.sleep(2000);
 
- 
-
-            seetest.click("WEB", "xpath=//*[@text='14534 South Military Trail']", 0, 1);
-            Thread.sleep(2000);
-            log.info("Delivery location entered as " + location);
-            extTestObj.createNode("Delivery location entered as " + location).pass("PASSED");
-        } catch (Exception e) {
-            log.error("Failed to enter Delivery location");
-            log.error(e.getMessage());
-            extTestObj.createNode("Failed to enter Delivery location")
-                    .fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
-            stopTest();
-        }
-    }
+			seetest.click("WEB", "xpath=//*[@text='14534 South Military Trail']", 0, 1);
+			Thread.sleep(2000);
+			log.info("Delivery location entered as " + location);
+			extTestObj.createNode("Delivery location entered as " + location).pass("PASSED");
+		} catch (Exception e) {
+			log.error("Failed to enter Delivery location");
+			log.error(e.getMessage());
+			extTestObj.createNode("Failed to enter Delivery location")
+					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
+			stopTest();
+		}
+	}
 
 	public void enterApartmentNo() throws InterruptedException {
 		String aptNo = excel.getCellData("DeliveryASAP", "Apt. no", 2);
@@ -1890,24 +1818,24 @@ public class FunctionalComponents extends Base {
 
 	/* Validate user is able to place Delivery-Later today order. For Guest user */
 	public void selectDeliveryTime() { // Ayushman01
-        String timeInput = excel.getCellData("Delivery", "Delivery Time", 2);
-        try {
-            scrollIntoViewHalf(Elements.delTime);
-            // clickableWait(Elements.delTime);
-            Thread.sleep(2000);
-            scrollIntoViewBottom(By.xpath("//select[@id='delivery-time']/option[text()='" + timeInput + "']"));
-            clickElement(By.xpath("//select[@id='delivery-time']/option[text()='" + timeInput + "']"));
-            Thread.sleep(2000);
-            log.info("Delivery time selected as " + timeInput);
-            extTestObj.createNode("Delivery time selected as " + timeInput).pass("PASSED");
-        } catch (Exception e) {
-            log.error("Failed to select Delivery time");
-            log.error(e.getMessage());
-            extTestObj.createNode("Failed to select Delivery time")
-                    .fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
-            stopTest();
-        }
-    }
+		String timeInput = excel.getCellData("Delivery", "Delivery Time", 2);
+		try {
+			scrollIntoViewHalf(Elements.delTime);
+			// clickableWait(Elements.delTime);
+			Thread.sleep(2000);
+			scrollIntoViewBottom(By.xpath("//select[@id='delivery-time']/option[text()='" + timeInput + "']"));
+			clickElement(By.xpath("//select[@id='delivery-time']/option[text()='" + timeInput + "']"));
+			Thread.sleep(2000);
+			log.info("Delivery time selected as " + timeInput);
+			extTestObj.createNode("Delivery time selected as " + timeInput).pass("PASSED");
+		} catch (Exception e) {
+			log.error("Failed to select Delivery time");
+			log.error(e.getMessage());
+			extTestObj.createNode("Failed to select Delivery time")
+					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
+			stopTest();
+		}
+	}
 
 	/* Validate user is able to place Delivery-ASAP order. For MCA user */
 	public void enterDeliveryInstrBox() {
@@ -2097,7 +2025,6 @@ public class FunctionalComponents extends Base {
 		}
 
 	}
-	
 
 	/*
 	 * 
@@ -2152,9 +2079,8 @@ public class FunctionalComponents extends Base {
 	 * clickableWait(By.xpath("//*[contains(text(),'"+rewarditem+"')]"));
 	 * clickableWait(Elements.addThisItem);
 	 * log.info("Reward item "+rewarditem+" added");
-	 * extTestObj.createNode("Reward item "+ rewarditem
-	 * +" added").pass("PASSED"); } catch(Exception e) {
-	 * log.error("Failed to add reward item");
+	 * extTestObj.createNode("Reward item "+ rewarditem +" added").pass("PASSED"); }
+	 * catch(Exception e) { log.error("Failed to add reward item");
 	 * extTestObj.createNode("Failed to add reward item").
 	 * fail("Method Name : "+Thread.currentThread().getStackTrace()[1].getMethodName
 	 * ()+"()").error(e); log.error(e.getMessage()); stopTest(); } }
@@ -2181,47 +2107,52 @@ public class FunctionalComponents extends Base {
 	 */
 
 	public void customizeOrder() {
-	      String custItem = excel.getCellData("Order Customization","Custom Item",2);
-	      System.out.println(custItem);
-	     
-	      try {
-	      scrollIntoViewHalf(Elements.customizeOrderButton); //added
-	      clickableWait(Elements.customizeOrderButton);
-	     // clickableWait(Elements.sauceDropDown);
-	      clickElement(By.xpath("//*[text()='"+custItem+"']"));
-	      clickableWait(Elements.addExtraSauce);
-	         //added
-	      log.info("Order customized with "+custItem);
-	      extTestObj.createNode("Order customized with "+custItem).pass("PASSED");
-	      } catch(Exception e) { log.error("Failed to customize order");
-	      extTestObj.createNode("Failed to customize order").fail("Method Name : "+Thread.currentThread().getStackTrace()[1].getMethodName()+"()").error(e); log.error(e.getMessage()); stopTest();
-	      stopTest();
-	       }
-	      }
-	 public void validateCustomization() {
-         String custItem =excel.getCellData("Order Customization","Custom Item", 2);
-         System.out.println(custItem);
-         try {
-           
-             scrollIntoViewBottom(Elements.customItem);
-           //span[text()='Avocado-Ranch Dressing - Extra']
-             explicitWait(Elements.customItem);
-             String custInfo = driver.findElement(Elements.customItem).getText();
-             System.out.println(custInfo);
-            
-             if(custInfo.contains(custItem)&&(custInfo.contains("Extra"))) {
-             log.info("The item added for customization is "+custInfo);
-             extTestObj.createNode("The item added for customization is "+ custInfo).pass("PASSED");
-              }
-         }
-             catch(Exception e){
-             log.error("Incorrect Customization Info");
-             extTestObj.createNode("Incorrect Customization Info").
-             fail("Method Name : "+Thread.currentThread().getStackTrace()[1].getMethodName()+"()").error(e); log.error(e.getMessage()); stopTest();
-             stopTest();
-              }
-         }
+		String custItem = excel.getCellData("Order Customization", "Custom Item", 2);
+		System.out.println(custItem);
 
+		try {
+			scrollIntoViewHalf(Elements.customizeOrderButton); // added
+			clickableWait(Elements.customizeOrderButton);
+			// clickableWait(Elements.sauceDropDown);
+			clickElement(By.xpath("//*[text()='" + custItem + "']"));
+			clickableWait(Elements.addExtraSauce);
+			// added
+			log.info("Order customized with " + custItem);
+			extTestObj.createNode("Order customized with " + custItem).pass("PASSED");
+		} catch (Exception e) {
+			log.error("Failed to customize order");
+			extTestObj.createNode("Failed to customize order")
+					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
+			log.error(e.getMessage());
+			stopTest();
+			stopTest();
+		}
+	}
+
+	public void validateCustomization() {
+		String custItem = excel.getCellData("Order Customization", "Custom Item", 2);
+		System.out.println(custItem);
+		try {
+
+			scrollIntoViewBottom(Elements.customItem);
+			// span[text()='Avocado-Ranch Dressing - Extra']
+			explicitWait(Elements.customItem);
+			String custInfo = driver.findElement(Elements.customItem).getText();
+			System.out.println(custInfo);
+
+			if (custInfo.contains(custItem) && (custInfo.contains("Extra"))) {
+				log.info("The item added for customization is " + custInfo);
+				extTestObj.createNode("The item added for customization is " + custInfo).pass("PASSED");
+			}
+		} catch (Exception e) {
+			log.error("Incorrect Customization Info");
+			extTestObj.createNode("Incorrect Customization Info")
+					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
+			log.error(e.getMessage());
+			stopTest();
+			stopTest();
+		}
+	}
 
 	/*
 	 * Dine In : Place Dine-In order as MCA user (Join the Line thru Join Line
@@ -2287,8 +2218,8 @@ public class FunctionalComponents extends Base {
 	 * explicitWait(Elements.joinLineContactNumber);
 	 * clickableWait(Elements.joinLineContactNumber);
 	 * driver.getKeyboard().sendKeys(cNumber); log.info("Mobile number entered");
-	 * extTestObj.createNode("Mobile no on join line entered").pass("PASSED");
-	 * } catch (Exception e) { log.error("Failed to enter Mobile number");
+	 * extTestObj.createNode("Mobile no on join line entered").pass("PASSED"); }
+	 * catch (Exception e) { log.error("Failed to enter Mobile number");
 	 * log.error(e.getMessage());
 	 * extTestObj.createNode("Failed to enter Mobile number").
 	 * fail("Method Name : "+Thread.currentThread().getStackTrace()[1].getMethodName
@@ -2300,213 +2231,733 @@ public class FunctionalComponents extends Base {
 	 * scrollIntoViewHalf(Elements.clickJoinLine); Thread.sleep(2000);
 	 * clickableWait(Elements.clickJoinLine);
 	 * log.info("Site scrolled and joined the line");
-	 * extTestObj.createNode("Site scrolled and joined the line").pass(
-	 * "PASSED"); } catch (Exception e) {
-	 * log.error("Site scrolled but not joined line"); log.error(e.getMessage());
+	 * extTestObj.createNode("Site scrolled and joined the line").pass( "PASSED"); }
+	 * catch (Exception e) { log.error("Site scrolled but not joined line");
+	 * log.error(e.getMessage());
 	 * extTestObj.createNode("Joined line is failed").fail("Method Name : "
 	 * +Thread.currentThread().getStackTrace()[1].getMethodName()+"()").error(e);
 	 * stopTest(); }
 	 * 
 	 * }
 	 */
-/*****************************************************************************************************************/
+	/*****************************************************************************************************************/
 
+	public void androidAppClosePopUp() {
+		try {
+			clickableWait(By.xpath("//*[@id='cancel_btn']"));
+			explicitWait(Elements.appwelcomeMessageXpath);
+			if (driver.findElement(Elements.appwelcomeMessageXpath).isDisplayed()) {
+				log.info("Pop up closed");
+				extTestObj.createNode("Pop up closed").pass("PASSED");
+			}
+		} catch (Exception e) {
+			log.error("Failed to close pop up");
+			extTestObj.createNode("Failed to close pop up")
+					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
+			log.error(e.getMessage());
+			stopTest();
+		}
 
-public void androidAppClosePopUp()
-{
-	try {
-	clickableWait(By.xpath("//*[@id='cancel_btn']"));
-	explicitWait(Elements.appwelcomeMessageXpath);
-	if(driver.findElement(Elements.appwelcomeMessageXpath).isDisplayed())
-	{log.info("Pop up closed");
-	extTestObj.createNode("Pop up closed").pass("PASSED");
 	}
-	}
-	catch(Exception e)
-	{
-		log.error("Failed to close pop up");
-		extTestObj.createNode("Failed to close pop up")
-				.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
-		log.error(e.getMessage());
-		stopTest();
-	}
-	
-}
 
-public void appClickLoginButton()
-{
-	try {
-		clickableWait(Elements.appLoginButtonXpath);
-		explicitWait(Elements.apploginHeaderXpath);
-		if(driver.findElement(Elements.apploginHeaderXpath).isDisplayed())
-		{	log.info("Login button clicked");
-			extTestObj.createNode("Login button clicked").pass("PASSED");
+	public void appClickLoginButton() {
+		try {
+			clickableWait(Elements.appLoginButtonXpath);
+			explicitWait(Elements.apploginHeaderXpath);
+			if (driver.findElement(Elements.apploginHeaderXpath).isDisplayed()) {
+				log.info("Login button clicked");
+				extTestObj.createNode("Login button clicked").pass("PASSED");
+			}
+		} catch (Exception e) {
+			log.error("Login button clicked");
+			extTestObj.createNode("Login button clicked")
+					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
+			log.error(e.getMessage());
+			stopTest();
+
+		}
+
+	}
+
+	public void appEnterUserName() {
+		String username = excel.getCellData("Credentials", "UserName", 2);
+		try {
+			sendKeysWait(Elements.appUserNameTextBoxXpath, username);
+			log.info("User name " + username + " entered");
+			extTestObj.createNode("User name " + username + " entered").pass("PASSED");
+		} catch (Exception e) {
+			log.error("Could not enter user name");
+			extTestObj.createNode("Could not enter user name")
+					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
+			log.error(e.getMessage());
+			stopTest();
 		}
 	}
-	catch(Exception e)
+
+	public void appEnterPassword() {
+		String password = excel.getCellData("Credentials", "Password", 2);
+		try {
+			sendKeysWait(Elements.appPassWordTextBoxXpath, password);
+			log.info("Password" + password + " entered");
+			extTestObj.createNode("Password " + password + " entered").pass("PASSED");
+		} catch (Exception e) {
+			log.error("Could not enter Password");
+			extTestObj.createNode("Could not enter Password")
+					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
+			log.error(e.getMessage());
+			stopTest();
+		}
+	}
+
+	public void appClickSignIn() {
+		try {
+			clickableWait(Elements.appSigninButtonXpath);
+//			clickableWait(Elements.appCancelButtonXpath);
+			log.info("Sign in button clicked");
+			extTestObj.createNode("Sign in button clicked").pass("PASSED");
+		} catch (Exception e) {
+			log.error("Failed to click Sign in button");
+			extTestObj.createNode("Failed to click Sign in button")
+					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
+			log.error(e.getMessage());
+			stopTest();
+		}
+	}
+
+	public void appClickMoreButton() {
+		try {
+			clickableWait(Elements.appMoreButtonXpath);
+			explicitWait(Elements.appLogoutButtonXpath);
+			if (driver.findElement(Elements.appLogoutButtonXpath).isDisplayed()) {
+				log.info("More button clicked");
+				extTestObj.createNode("More button clicked").pass("PASSED");
+			}
+		} catch (Exception e) {
+			log.error("Failed to click More button");
+			extTestObj.createNode("Failed to click More button")
+					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
+			log.error(e.getMessage());
+			stopTest();
+		}
+	}
+
+	public void appClickLogoutButton() {
+		try {
+			clickableWait(Elements.appLogoutButtonXpath);
+			clickableWait(Elements.signOutConfirmButtonXpath);
+			explicitWait(Elements.applogoutValXpath);
+			if (driver.findElement(Elements.applogoutValXpath).isDisplayed()) {
+				log.info("Logout button clicked and log out successful");
+				extTestObj.createNode("Logout button clicked and log out successful").pass("PASSED");
+			}
+		} catch (Exception e) {
+			log.error("Logout button clicked and log out successful");
+			extTestObj.createNode("Logout button clicked and log out successful")
+					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
+			log.error(e.getMessage());
+			stopTest();
+		}
+
+	}
+
+	public void appClickFindRestaurant() {
+		try {
+			clickableWait(Elements.appfindRestaurantLinkXpath);
+			explicitWait(Elements.appResSearchTextBoxXpath);
+			if (driver.findElement(Elements.appResSearchTextBoxXpath).isDisplayed()) {
+				log.info("Find Restaurant link clicked");
+				extTestObj.createNode("Find Restaurant link clicked").pass("PASSED");
+			}
+		} catch (Exception e) {
+			log.error("Failed to click Find Restaurant link");
+			extTestObj.createNode("Failed to click Find Restaurant link")
+					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
+			log.error(e.getMessage());
+			stopTest();
+		}
+	}
+
+	public void appEnterRestaurantLocation() {
+		String restaurantLocation = excel.getCellData("Locations", "Location", 2);
+		String[] str = restaurantLocation.split(",");
+		try {
+			clickableWait(Elements.appResSearchTextBoxXpath);
+			sendKeysWait(Elements.appResSearchAutocompleteTextBoxXpath, restaurantLocation);
+			clickElement(MobileBy.xpath("//android.widget.TextView[@text='" + str[0] + "']"));
+			String displayedAddress = driver.findElement(Elements.appResSearchTextBoxXpath).getAttribute("text");
+			String[] dispString = displayedAddress.split(",");
+			if (str[0].equalsIgnoreCase(dispString[0])) {
+				log.info("Restaurant location entered as : " + restaurantLocation);
+				extTestObj.createNode("Restaurant location entered as : " + restaurantLocation).pass("PASSED");
+			}
+		}
+
+		catch (Exception e) {
+			log.error("Failed to enter Restaurant Location");
+			extTestObj.createNode("Failed to enter Restaurant Location")
+					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
+			log.error(e.getMessage());
+			stopTest();
+
+		}
+	}
+
+	// Rewards
+	public void appClickRewardsButton() {
+		try {
+			clickableWait(Elements.appRewardButtonXpath);
+			explicitWait(Elements.appRewardsHeaderXpath);
+			if (driver.findElement(Elements.appRewardsHeaderXpath).isDisplayed()) {
+				log.info("Rewards button clicked");
+				extTestObj.createNode("Rewards button clicked").pass("PASSED");
+
+			}
+		}
+
+		catch (Exception e) {
+			log.error("Rewards button clicked");
+			extTestObj.createNode("Rewards button clicked")
+					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
+			log.error(e.getMessage());
+			stopTest();
+		}
+	}
+
+	public void appValidateRewardsCount() {
+		try {
+			explicitWait(Elements.appdisplayedRewardCountXpath);
+			int displayedCount = Integer.parseInt(driver.findElement(Elements.appdisplayedRewardCountXpath).getText());
+			List<WebElement> displayedRewards = driver.findElements(Elements.appActiveRewardXpath);
+			int actualCount = displayedRewards.size();
+			log.info("Displayed reward count : " + displayedCount);
+			log.info("Actual reward count : " + actualCount);
+			extTestObj.createNode("Displayed reward count : " + displayedCount).info("INFO");
+			extTestObj.createNode("Actual reward count : " + actualCount).info("INFO");
+			if (displayedCount == actualCount) {
+				log.info("Rewards count matched");
+				extTestObj.createNode("Rewards count matched").pass("PASSED");
+			}
+		}
+
+		catch (Exception e) {
+			log.error("Rewards count did not match");
+			extTestObj.createNode("Rewards count did not match")
+					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
+			log.error(e.getMessage());
+			stopTest();
+
+		}
+	}
+
+	public void appViewRewardNames() {
+		try {
+			List<WebElement> displayedRewards = driver.findElements(Elements.appActiveRewardXpath);
+
+			for (int i = 0; i < displayedRewards.size(); i++) {
+				AndroidElement element = (AndroidElement) driver.findElements(Elements.appTapToViewXpath).get(i);
+				element.click();
+				explicitWait(Elements.appActiveRewardName);
+				log.info("Reward Name : " + driver.findElement(Elements.appActiveRewardName).getText());
+				extTestObj.createNode("Reward Name : " + driver.findElement(Elements.appActiveRewardName).getText())
+						.info("INFO");
+				clickableWait(Elements.appCloseRewardsPopUp);
+
+			}
+		} catch (Exception e) {
+			log.error("Failed to retrieve Reward names");
+			extTestObj.createNode("Failed to retrieve Reward names")
+					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
+			log.error(e.getMessage());
+			stopTest();
+
+		}
+
+	}
+
+	// Chilis Favourite Items
+	public void appgetChilisFavouriteItems(AndroidDriver<AndroidElement> androidDriver) {
+		System.out.println("Starting chilis fav");
+		String []favoriteItems =new String[5];
+		TouchAction action = new TouchAction(androidDriver);
+		for(int i=0;i<favoriteItems.length;i++)
+			favoriteItems[i]=excel.getCellData("Menu","ChilisFavourites",i+2);
+		try {
+			explicitWait(Elements.appfindRestaurantLinkXpath);
+			androidDriver.findElementByAndroidUIAutomator(
+					"new UiScrollable(new UiSelector()).scrollIntoView(text(\"SELECT ITEMS\"))");
+			
+			for(int i =0;i<favoriteItems.length;i++)
+			{
+				String fav = favoriteItems[i];
+			   if(driver.findElement(MobileBy.xpath("//*[@text='"+fav+"']")).isDisplayed())
+			   {
+				   String dispItem = driver.findElement(MobileBy.xpath("//*[@text='"+fav+"']")).getText();
+				   log.info(" Favourite Item Name : " +dispItem);
+					extTestObj.createNode("Favourite Item Name : " +dispItem).info("INFO");
+			   }
+			   else
+			   {
+				   String prevItem = favoriteItems[i-1];
+				   System.out.println("Prev Item : "+prevItem);
+				   String nextItem = favoriteItems[i];
+				   System.out.println("Next Item : "+nextItem);
+				   WebElement prevItemElement = driver.findElement(MobileBy.xpath("//*[@text='"+prevItem+"']"));
+				   WebElement nextItemElement = driver.findElement(MobileBy.xpath("//*[@text='"+nextItem+"']"));
+				   action.longPress(longPressOptions().withElement(element(prevItemElement)).
+						   withDuration(Duration.ofSeconds(2))).
+				   moveTo(element(nextItemElement)).release().perform();
+			   }
+			}
+			log.info("Chilis Favourite Item names obtained");
+			extTestObj.createNode("Chilis Favourite Item names obtained").pass("PASSED");
+		} catch (Exception e) {
+			log.error("Failed to retrieve Reward names");
+			extTestObj.createNode("Failed to retrieve Reward names")
+					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
+			log.error(e.getMessage());
+			stopTest();
+
+		}
+	}
+	
+	public void appSelectMyAccountOption()
 	{
-		log.error("Login button clicked");
-		extTestObj.createNode("Login button clicked")
-				.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
-		log.error(e.getMessage());
-		stopTest();
+		try {
+			clickableWait(Elements.appMyAccountOptionXpath);
+			explicitWait(Elements.appMyAccountPageHeaderXpath);
+			if(driver.findElement(Elements.appMyAccountPageHeaderXpath).isDisplayed())
+			{
+				log.info("My Account option selected");
+				extTestObj.createNode("My Account option selected").pass("PASSED");
+			}
+		}
+		catch(Exception e)
+		{
+			log.error("My Account option selected");
+			extTestObj.createNode("My Account option selected")
+					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
+			log.error(e.getMessage());
+			stopTest();
+
+		}
+	}
+	public void appCheckConsent()
+	{
+		try {
+			clickableWait(Elements.appConsentCheckBoxXpath);
+			if(driver.findElement(Elements.appConsentCheckBoxXpath).getAttribute("checked").equalsIgnoreCase("true"))
+			{
+			log.info("Consent checked");
+			extTestObj.createNode("Consent checked").pass("PASSED");
+			}
+		} catch (Exception e) {
+			log.error("Consent check failed");
+			extTestObj.createNode("Consent check failed")
+					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
+			log.error(e.getMessage());
+			stopTest();
+
+		}
+	}
+	
+	public void appClickUpdate()
+	{
+		try {
+			clickableWait(Elements.appUpdateButtonXpath);
+			explicitWait(Elements.appSuccessMessageXpath);
+			if(driver.findElement(Elements.appSuccessMessageXpath).isDisplayed())
+			{
+				log.info("Update button click successful");
+				extTestObj.createNode("Update button click successful").pass("PASSED");
+			}
+		}
+		catch (Exception e) {
+			log.error("Update button click failed");
+			extTestObj.createNode("Update button click failed")
+					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
+			log.error(e.getMessage());
+			stopTest();
+
+		}
 		
 	}
 	
-}
-public void appEnterUserName()
-{
-	String username = excel.getCellData("Credentials","UserName",2);
-	try
+	public void appRetrieveSuccessMessage()
 	{
-		sendKeysWait(Elements.appUserNameTextBoxXpath, username);
-		log.info("User name " + username + " entered");
-		extTestObj.createNode("User name " + username + " entered").pass("PASSED");
-	}
-	catch (Exception e) {
-		log.error("Could not enter user name");
-		extTestObj.createNode("Could not enter user name")
-				.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
-		log.error(e.getMessage());
-		stopTest();
-	}
-}
-	
-public void appEnterPassword()
-{
-	String password = excel.getCellData("Credentials","Password",2);
-	try
-	{
-		sendKeysWait(Elements.appPassWordTextBoxXpath,password);
-		log.info("Password" + password + " entered");
-		extTestObj.createNode("Password " + password + " entered").pass("PASSED");
-	}
-	catch (Exception e) {
-		log.error("Could not enter Password");
-		extTestObj.createNode("Could not enter Password")
-				.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
-		log.error(e.getMessage());
-		stopTest();
-	}
-}
-
-public void appClickSignIn()
-{
-	try
-	{
-		clickableWait(Elements.appSigninButtonXpath);
-		log.info("Sign in button clicked");
-		extTestObj.createNode("Sign in button clicked").pass("PASSED");
-	}
-	catch (Exception e) {
-		log.error("Failed to click Sign in button");
-		extTestObj.createNode("Failed to click Sign in button")
-				.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
-		log.error(e.getMessage());
-		stopTest();
-	}
-}
-
-public void appClickMoreButton()
-{
-	try
-	{
-		clickableWait(Elements.appMoreButtonXpath);
-		explicitWait(Elements.appLogoutButtonXpath);
-		if(driver.findElement(Elements.appLogoutButtonXpath).isDisplayed())
-		{
-		log.info("More button clicked");
-		extTestObj.createNode("More button clicked").pass("PASSED");
+		try {
+			String msg = driver.findElement(Elements.appSuccessMessageXpath).getText();
+				log.info("Success Message : "+msg);
+				extTestObj.createNode("Success Message : "+msg).pass("PASSED");
 		}
-	}
-	catch (Exception e) {
-		log.error("Failed to click More button");
-		extTestObj.createNode("Failed to click More button")
-				.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
-		log.error(e.getMessage());
-		stopTest();
-	}
-}
+		catch (Exception e) {
+			log.error("Success Message not displayed");
+			extTestObj.createNode("Success Message not displayed")
+					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
+			log.error(e.getMessage());
+			stopTest();
 
-public void appClickLogoutButton()
-{
-	try
-	{
-		clickableWait(Elements.appLogoutButtonXpath);
-		clickableWait(Elements.signOutConfirmButtonXpath);
-		explicitWait(Elements.applogoutValXpath);
-		if(driver.findElement(Elements.applogoutValXpath).isDisplayed())
-		{
-		log.info("Logout button clicked and log out successful");
-		extTestObj.createNode("Logout button clicked and log out successful").pass("PASSED");
 		}
-	}
-	catch (Exception e) {
-		log.error("Logout button clicked and log out successful");
-		extTestObj.createNode("Logout button clicked and log out successful")
-				.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
-		log.error(e.getMessage());
-		stopTest();
-	}
-	
-}
-
-public void appClickFindRestaurant()
-{
-	try {
-		clickableWait(Elements.appfindRestaurantLinkXpath);
-		explicitWait(Elements.appResSearchTextBoxXpath);
-		if(driver.findElement(Elements.appResSearchTextBoxXpath).isDisplayed())
-		{
-		log.info("Find Restaurant link clicked");
-		extTestObj.createNode("Find Restaurant link clicked").pass("PASSED");
-	}
-}
-	catch(Exception e)
-	{
-		log.error("Failed to click Find Restaurant link");
-		extTestObj.createNode("Failed to click Find Restaurant link")
-				.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
-		log.error(e.getMessage());
-		stopTest();
-	}
-}
-
-public void appEnterRestaurantLocation()
-{
-	String restaurantLocation = excel.getCellData("Locations","Location",2);
-	String[] str = restaurantLocation.split(",");
-	try {
-		clickableWait(Elements.appResSearchTextBoxXpath);
-		sendKeysWait(Elements.appResSearchAutocompleteTextBoxXpath,restaurantLocation);
-		clickElement(MobileBy.xpath("//android.widget.TextView[@text='"+str[0]+"']"));
-		String displayedAddress = driver.findElement(Elements.appResSearchTextBoxXpath).getAttribute("text");
-		String[] dispString = displayedAddress.split(",");
-		if(str[0].equalsIgnoreCase(dispString[0]))
-		{
-		log.info("Restaurant location entered as : "+restaurantLocation);
-		extTestObj.createNode("Restaurant location entered as : "+restaurantLocation).pass("PASSED");	
-	}
-	}
-	
-	catch(Exception e)
-	{
-		log.error("Failed to enter Restaurant Location");
-		extTestObj.createNode("Failed to enter Restaurant Location")
-				.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
-		log.error(e.getMessage());
-		stopTest();
 		
 	}
-}
-
-
-
-
-
-
 	
+	/* function to retrieve the first name before My Account update */
+	public void appgetFirstNameBeforeUpdate(AndroidDriver<AndroidElement> androidDriver) {
+		String initialFirstName = "";
+		try {
+			androidDriver.findElementByAndroidUIAutomator(
+					"new UiScrollable(new UiSelector()).scrollIntoView(resourceId(\"firstName\"))");
+			explicitWait(Elements.firstNameTextBox);
+			initialFirstName = driver.findElement(Elements.firstNameTextBox).getAttribute("text");
+			log.info("First Name before update obtained as : " + initialFirstName);
+			extTestObj.createNode("First Name before update obtained as : " + initialFirstName).pass("PASSED");
+		} catch (Exception e) {
+			log.error("First Name before update not obtained");
+			extTestObj.createNode("First Name before update not obtained")
+					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
+			log.error(e.getMessage());
+
+		}
+
+	}
+	
+	public void appgetLastNameBeforeUpdate(AndroidDriver<AndroidElement> androidDriver) {
+		String initialLastName = "";
+		try {
+			androidDriver.findElementByAndroidUIAutomator(
+					"new UiScrollable(new UiSelector()).scrollIntoView(resourceId(\"lastName\"))");
+			explicitWait(Elements.lastNameTextBox);
+			initialLastName = driver.findElement(Elements.lastNameTextBox).getAttribute("text");
+			log.info("Last Name before update obtained as : " + initialLastName);
+			extTestObj.createNode("Last Name before update obtained as : " + initialLastName).pass("PASSED");
+		} catch (Exception e) {
+			log.error("Last Name before update not obtained");
+			extTestObj.createNode("Last Name before update not obtained")
+					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
+			log.error(e.getMessage());
+
+		}
+	}
+	public void appgetEmailBeforeUpdate(AndroidDriver<AndroidElement> androidDriver) {
+		String initialEmail = "";
+		try {
+			androidDriver.findElementByAndroidUIAutomator(
+					"new UiScrollable(new UiSelector()).scrollIntoView(resourceId(\"email\"))");
+			explicitWait(Elements.emailTextBox);
+			initialEmail = driver.findElement(Elements.emailTextBox).getAttribute("text");
+			log.info("Email before update obtained as : " + initialEmail);
+			extTestObj.createNode("Email before update obtained as : " + initialEmail).pass("PASSED");
+		} catch (Exception e) {
+			log.error("Email before update not obtained");
+			extTestObj.createNode("Email before update not obtained")
+					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
+			log.error(e.getMessage());
+
+		}
+	}
+	
+	public void appgetZipCodeBeforeUpdate(AndroidDriver<AndroidElement> androidDriver) {
+		String initialZipCode = "";
+		try {
+			androidDriver.findElementByAndroidUIAutomator(
+					"new UiScrollable(new UiSelector()).scrollIntoView(resourceId(\"postalCode\"))");
+			explicitWait(Elements.zipCodeTextBox);
+			initialZipCode = driver.findElement(Elements.zipCodeTextBox).getAttribute("text");
+			log.info("Zip Code before update obtained as : " + initialZipCode);
+			extTestObj.createNode("Zip Code before update obtained as : " + initialZipCode).pass("PASSED");
+		} catch (Exception e) {
+			log.error("Zip Code before update not obtained");
+			extTestObj.createNode("Zip Code before update not obtained")
+					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
+			log.error(e.getMessage());
+
+		}
+	}
+	
+	public void appUpdateFirstName(AndroidDriver<AndroidElement> androidDriver) {
+		try {
+			
+			String firstName = excel.getCellData("UpdateMyAccount", "First Name", 2);
+			androidDriver.findElementByAndroidUIAutomator(
+					"new UiScrollable(new UiSelector()).scrollIntoView(resourceId(\"firstName\"))");
+			sendKeysWait(Elements.firstNameTextBox, firstName);
+			log.info("First Name updated with : " + firstName);
+			extTestObj.createNode("First Name updated with : " + firstName).pass("PASSED");
+		} catch (Exception e) {
+			log.error("First Name updation failed");
+			extTestObj.createNode("First Name updation failed")
+					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
+			log.error(e.getMessage());
+
+		}
+
+	}
+	
+	public void appUpdateLastName(AndroidDriver<AndroidElement> androidDriver) {
+		try {
+			String lastName = excel.getCellData("UpdateMyAccount", "Last Name", 2);
+			androidDriver.findElementByAndroidUIAutomator(
+					"new UiScrollable(new UiSelector()).scrollIntoView(resourceId(\"lastName\"))");
+			sendKeysWait(Elements.lastNameTextBox, lastName);
+			log.info("Last Name updated with : " + lastName);
+			extTestObj.createNode("Last Name updated with : " + lastName).pass("PASSED");
+		} catch (Exception e) {
+			log.error("Last Name updation failed");
+			extTestObj.createNode("Last Name updation failed")
+					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
+			log.error(e.getMessage());
+
+		}
+
+	}
+	
+	public void appUpdateEmail(AndroidDriver<AndroidElement> androidDriver) {
+		try {
+			String email = excel.getCellData("UpdateMyAccount", "Email", 2);
+			androidDriver.findElementByAndroidUIAutomator(
+					"new UiScrollable(new UiSelector()).scrollIntoView(resourceId(\"email\"))");
+			sendKeysWait(Elements.emailTextBox, email);
+			log.info("Email updated with : " + email);
+			extTestObj.createNode("Email updated with : " + email).pass("PASSED");
+
+		} catch (Exception e) {
+			log.error("Email updation failed");
+			extTestObj.createNode("Email updation failed")
+					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
+			log.error(e.getMessage());
+
+		}
+
+	}
+	public void appUpdateZipCode(AndroidDriver<AndroidElement> androidDriver) {
+		try {
+			String zipCode = excel.getCellData("UpdateMyAccount", "Zip Code", 2);
+			androidDriver.findElementByAndroidUIAutomator(
+					"new UiScrollable(new UiSelector()).scrollIntoView(resourceId(\"postalCode\"))");
+			sendKeysWait(Elements.zipCodeTextBox, zipCode);
+			log.info("Zip Code updated with : " + zipCode);
+			extTestObj.createNode("Zip Code updated with : " + zipCode).pass("PASSED");
+		} catch (Exception e) {
+			log.error("Zip Code updation failed");
+			extTestObj.createNode("Zip Code updation failed")
+					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
+			log.error(e.getMessage());
+
+		}
+	}
+	
+	public String appgetFirstNameAfterUpdate(AndroidDriver<AndroidElement> androidDriver) {
+		String finalFirstName = "";
+		try {
+			androidDriver.findElementByAndroidUIAutomator(
+					"new UiScrollable(new UiSelector()).scrollIntoView(resourceId(\"firstName\"))");
+			explicitWait(Elements.firstNameTextBox);
+			finalFirstName = driver.findElement(Elements.firstNameTextBox).getAttribute("text");
+			log.info("First Name after update obtained as : " + finalFirstName);
+			extTestObj.createNode("First Name after update obtained as : " + finalFirstName).pass("PASSED");
+		} catch (Exception e) {
+			log.error("First Name after update not obtained");
+			extTestObj.createNode("First Name after update not obtained")
+					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
+			log.error(e.getMessage());
+
+		}
+		return finalFirstName;
+	}
+	
+	public String appgetLastNameAfterUpdate(AndroidDriver<AndroidElement> androidDriver) {
+		String finalLastName = "";
+		try {
+			androidDriver.findElementByAndroidUIAutomator(
+					"new UiScrollable(new UiSelector()).scrollIntoView(resourceId(\"lastName\"))");
+			explicitWait(Elements.lastNameTextBox);
+			finalLastName = driver.findElement(Elements.lastNameTextBox).getAttribute("text");
+			log.info("Last Name after update obtained as : " + finalLastName);
+			extTestObj.createNode("Last Name after update obtained as : " + finalLastName).pass("PASSED");
+		} catch (Exception e) {
+			log.error("Last Name after update not obtained");
+			extTestObj.createNode("Last Name after update not obtained")
+					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
+			log.error(e.getMessage());
+
+		}
+		return finalLastName;
+	}
+	
+	public String appgetEmailAfterUpdate(AndroidDriver<AndroidElement> androidDriver) {
+		String finalEmail = "";
+		try {
+			androidDriver.findElementByAndroidUIAutomator(
+					"new UiScrollable(new UiSelector()).scrollIntoView(resourceId(\"email\"))");
+			explicitWait(Elements.emailTextBox);
+			finalEmail = driver.findElement(Elements.emailTextBox).getAttribute("text");
+			log.info("Email after update obtained as : " + finalEmail);
+			extTestObj.createNode("Email after update obtained as : " + finalEmail).pass("PASSED");
+		} catch (Exception e) {
+			log.error("Email after update not obtained");
+			extTestObj.createNode("Email after update not obtained")
+					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
+			log.error(e.getMessage());
+
+		}
+		return finalEmail;
+	}
+	
+	public String appgetZipCodeAfterUpdate(AndroidDriver<AndroidElement> androidDriver) {
+		String finalZipCode = "";
+		try {
+			androidDriver.findElementByAndroidUIAutomator(
+					"new UiScrollable(new UiSelector()).scrollIntoView(resourceId(\"postalCode\"))");
+			explicitWait(Elements.zipCodeTextBox);
+			finalZipCode = driver.findElement(Elements.zipCodeTextBox).getAttribute("text");
+			log.info("Zip Code after update obtained as : " + finalZipCode);
+			extTestObj.createNode("Zip Code after update obtained as : " + finalZipCode).pass("PASSED");
+		} catch (Exception e) {
+			log.error("Zip Code after update not obtained");
+			extTestObj.createNode("Zip Code after update not obtained")
+					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
+			log.error(e.getMessage());
+
+		}
+		return finalZipCode;
+	}
+	
+	public void appValidateUpdate(AndroidDriver<AndroidElement> androidDriver) {
+		try {
+			String firstNameAfterUpdate = appgetFirstNameAfterUpdate(androidDriver);
+			String lastNameAfterUpdate = appgetLastNameAfterUpdate(androidDriver);
+			String emailAfterUpdate = appgetEmailAfterUpdate(androidDriver);
+			String zipCodeAfterUpdate = appgetZipCodeAfterUpdate(androidDriver);
+			Assert.assertEquals(excel.getCellData("UpdateMyAccount", "First Name", 2), firstNameAfterUpdate);
+			Assert.assertEquals(excel.getCellData("UpdateMyAccount", "Last Name", 2), lastNameAfterUpdate);
+			Assert.assertEquals(excel.getCellData("UpdateMyAccount", "Email", 2), emailAfterUpdate);
+			Assert.assertEquals(excel.getCellData("UpdateMyAccount", "Zip Code", 2), zipCodeAfterUpdate);
+			log.info("All fields are updated");
+			extTestObj.createNode("All fields are updated").pass("PASSED");
+		} catch (Exception e) {
+			log.info("Error observed in fields updation");
+			extTestObj.createNode("Error observed in fields updation")
+					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
+			log.error(e.getMessage());
+
+		}
+
+	}
+	
+	public void appClosePopUpIOS() {
+		try {
+			clickableWait(Elements.iosPopUpClose);
+			explicitWait(Elements.ioswelcomeMessageXpath);
+			if (driver.findElement(Elements.ioswelcomeMessageXpath).isDisplayed()) {
+				log.info("Pop up closed");
+				extTestObj.createNode("Pop up closed").pass("PASSED");
+			}
+		} catch (Exception e) {
+			log.error("Failed to close pop up");
+			extTestObj.createNode("Failed to close pop up")
+					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
+			log.error(e.getMessage());
+			stopTest();
+		}
+
+	}
+	public void appClickLoginButtonIOS() {
+		try {
+			clickableWait(Elements.iosLoginButton);
+			explicitWait(Elements.iosloginHeaderXpath);
+			if (driver.findElement(Elements.iosloginHeaderXpath).isDisplayed()) {
+				log.info("Login button clicked");
+				extTestObj.createNode("Login button clicked").pass("PASSED");
+			}
+		} catch (Exception e) {
+			log.error("Login button clicked");
+			extTestObj.createNode("Login button clicked")
+					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
+			log.error(e.getMessage());
+			stopTest();
+
+		}
+
+	}
+	public void appEnterUserNameIOS() {
+		String username = excel.getCellData("Credentials", "UserName", 2);
+		try {
+			sendKeysWait(Elements.iosUserNameTextBoxXpath, username);
+			log.info("User name " + username + " entered");
+			extTestObj.createNode("User name " + username + " entered").pass("PASSED");
+		} catch (Exception e) {
+			log.error("Could not enter user name");
+			extTestObj.createNode("Could not enter user name")
+					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
+			log.error(e.getMessage());
+			stopTest();
+		}
+	}
+	
+	public void appEnterPasswordIOS() {
+		String password = excel.getCellData("Credentials", "Password", 2);
+		try {
+			sendKeysWait(Elements.iosPaswordTextBoxXpath, password);
+			log.info("Password" + password + " entered");
+			extTestObj.createNode("Password " + password + " entered").pass("PASSED");
+		} catch (Exception e) {
+			log.error("Could not enter Password");
+			extTestObj.createNode("Could not enter Password")
+					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
+			log.error(e.getMessage());
+			stopTest();
+		}
+	}
+	
+	public void appClickSignInIOS() {
+		try {
+			clickableWait(Elements.iosSignInButtonXpath);
+//			clickableWait(Elements.appCancelButtonXpath);
+			log.info("Sign in button clicked");
+			extTestObj.createNode("Sign in button clicked").pass("PASSED");
+		} catch (Exception e) {
+			log.error("Failed to click Sign in button");
+			extTestObj.createNode("Failed to click Sign in button")
+					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
+			log.error(e.getMessage());
+			stopTest();
+		}
+	}
+	
+	public void appClickMoreButtonIOS() {
+		try {
+			clickableWait(Elements.iosMoreButtonXpath);
+			explicitWait(Elements.iosLogOutButtonXpath);
+			if (driver.findElement(Elements.iosLogOutButtonXpath).isDisplayed()) {
+				log.info("More button clicked");
+				extTestObj.createNode("More button clicked").pass("PASSED");
+			}
+		} catch (Exception e) {
+			log.error("Failed to click More button");
+			extTestObj.createNode("Failed to click More button")
+					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
+			log.error(e.getMessage());
+			stopTest();
+		}
+	}
+	
+	public void appClickLogoutButtonIOS() {
+		try {
+			clickableWait(Elements.iosLogOutButtonXpath);
+			clickableWait(Elements.signOutConfirmButtonXpath);
+			explicitWait(Elements.ioslogoutValXpath);
+			if (driver.findElement(Elements.ioslogoutValXpath).isDisplayed()) {
+				log.info("Logout button clicked and log out successful");
+				extTestObj.createNode("Logout button clicked and log out successful").pass("PASSED");
+			}
+		} catch (Exception e) {
+			log.error("Logout button clicked and log out successful");
+			extTestObj.createNode("Logout button clicked and log out successful")
+					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
+			log.error(e.getMessage());
+			stopTest();
+		}
+
+	}
+
+
 }
-
-
-

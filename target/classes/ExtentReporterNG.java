@@ -82,5 +82,24 @@ public class ExtentReporterNG {
 	extent.setSystemInfo("Application_URL",prop.getProperty("url"));
 	return extent;
 	}
+	@SuppressWarnings("deprecation")
+	public static ExtentReports getReportObjectIOSApp() 
+	{
+	base = new Base();
+	prop = base.returnProperty();
+	DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyyMMddHHmmss");  
+	LocalDateTime now = LocalDateTime.now();  
+	String path = System.getProperty("user.dir")+"/reports/index-"+dtf.format(now)+".html";
+	ExtentHtmlReporter reporter = new ExtentHtmlReporter(path);
+	reporter.config().setReportName("Mobile SeeTest IOS App Automation Results");
+	reporter.config().setDocumentTitle("Test Results");
+	reporter.config().setTheme(Theme.STANDARD);
+	extent = new ExtentReports();
+	extent.attachReporter(reporter);
+	extent.setSystemInfo("Tester","Somnath Baul");
+	extent.setSystemInfo("Environment","QA");
+	extent.setSystemInfo("Platform","IOS App");
+	return extent;
+	}
 
 }

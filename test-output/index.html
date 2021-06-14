@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -38,7 +38,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-Suite">
-              <span class="suite-name border-passed">Suite</span>
+              <span class="suite-name border-failed">Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -91,21 +91,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">1 method, 1 failed,   </span>
                   </li>
                   <li>
-                    <span class="method-list-title passed">Passed methods</span>
-                    <span class="show-or-hide-methods passed">
-                      <a href="#" panel-name="suite-Suite" class="hide-methods passed suite-Suite"> (hide)</a> <!-- hide-methods passed suite-Suite -->
-                      <a href="#" panel-name="suite-Suite" class="show-methods passed suite-Suite"> (show)</a> <!-- show-methods passed suite-Suite -->
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Suite" class="hide-methods failed suite-Suite"> (hide)</a> <!-- hide-methods failed suite-Suite -->
+                      <a href="#" panel-name="suite-Suite" class="show-methods failed suite-Suite"> (show)</a> <!-- show-methods failed suite-Suite -->
                     </span>
-                    <div class="method-list-content passed suite-Suite">
+                    <div class="method-list-content failed suite-Suite">
                       <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="MobileAutomation.MobileSeeTestWebAutomation.TestChilisApp" hash-for-method="appLocationSearch">appLocationSearch</a> <!-- method navigator-link -->
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="MobileAutomation.MobileSeeTestWebAutomation.TestChilisIOSApp" hash-for-method="iosLoginLogout">iosLoginLogout</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content passed suite-Suite -->
+                    </div> <!-- method-list-content failed suite-Suite -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -117,21 +117,27 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Suite" class="panel Suite">
-          <div class="suite-Suite-class-passed">
+          <div class="suite-Suite-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">MobileAutomation.MobileSeeTestWebAutomation.TestChilisApp</span>
+              <img src="failed.png"/>
+              <span class="class-name">MobileAutomation.MobileSeeTestWebAutomation.TestChilisIOSApp</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="appLocationSearch">
-                  </a> <!-- appLocationSearch -->
-                  <span class="method-name">appLocationSearch</span>
+                  <a name="iosLoginLogout">
+                  </a> <!-- iosLoginLogout -->
+                  <span class="method-name">iosLoginLogout</span>
+                  <div class="stack-trace">java.lang.NullPointerException
+	at Resources.Base.stopTest(Base.java:144)
+	at Resources.FunctionalComponents.appClickLogoutButtonIOS(FunctionalComponents.java:2957)
+	at MobileAutomation.MobileSeeTestWebAutomation.TestChilisIOSApp.iosLoginLogout(TestChilisIOSApp.java:54)
+... Removed 25 stack frames
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-passed -->
+          </div> <!-- suite-Suite-class-failed -->
         </div> <!-- panel Suite -->
         <div panel-name="test-xml-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
@@ -148,7 +154,7 @@
   &lt;/listeners&gt;
   &lt;test name=&quot;Test Chilis WebApp&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;MobileAutomation.MobileSeeTestWebAutomation.TestChilisApp&quot;/&gt;
+      &lt;class name=&quot;MobileAutomation.MobileSeeTestWebAutomation.TestChilisIOSApp&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Test Chilis WebApp --&gt;
 &lt;/suite&gt; &lt;!-- Suite --&gt;
@@ -190,14 +196,14 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'appLocationSearch')
-data.setCell(0, 2, 'MobileAutomation.MobileSeeTestWebAutomation.TestChilisApp')
-data.setCell(0, 3, 21081);
+data.setCell(0, 1, 'iosLoginLogout')
+data.setCell(0, 2, 'MobileAutomation.MobileSeeTestWebAutomation.TestChilisIOSApp')
+data.setCell(0, 3, 169251);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 21 seconds</span>
+              <span class="suite-total-time">Total running time: 2 minutes</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -212,16 +218,9 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">1 ignored method</span>
+            <span class="header-content">0 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
-            <div class="ignored-class-div">
-              <span class="ignored-class-name">MobileAutomation.MobileSeeTestWebAutomation.TestChilisApp</span>
-              <div class="ignored-methods-div">
-                <span class="ignored-method-name">appLoginLogout</span>
-                <br/>
-              </div> <!-- ignored-methods-div -->
-            </div> <!-- ignored-class-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="chronological-Suite" class="panel">
@@ -230,18 +229,20 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">MobileAutomation.MobileSeeTestWebAutomation.TestChilisApp</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">MobileAutomation.MobileSeeTestWebAutomation.TestChilisIOSApp</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">initialize</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">appLocationSearch</span>
-                <span class="method-start">40955 ms</span>
+                <img src="failed.png">
+                </img>
+                <span class="method-name">iosLoginLogout</span>
+                <span class="method-start">73906 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">62048 ms</span>
+                <span class="method-start">243166 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

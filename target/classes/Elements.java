@@ -173,7 +173,7 @@ public class Elements {
 	public static final By apploginHeaderXpath =MobileBy.xpath("//*[@text='LOG IN TO YOUR ACCOUNT']");
 	public static final By appMoreButtonXpath = MobileBy.xpath("//*[@id='icon' and ./parent::*[@id='menu_bottom_nav_more']]");
 	public static final By appLogoutButtonXpath = MobileBy.xpath("//android.widget.TextView[@text='Log Out']");
-	public static final By signOutConfirmButtonXpath = MobileBy.xpath("//android.widget.Button[@text='YES']");
+	public static final By signOutConfirmButtonXpath = MobileBy.xpath("//*[@text='YES']");
 	public static final By applogoutValXpath = MobileBy.xpath("//*[@id='card_home_logged_out_login']");
 	
 	
@@ -191,7 +191,54 @@ public class Elements {
 	//android.widget.Button[@text='CHANGE']
 	//*[@text='Current Location' and ./parent::*[(./preceding-sibling::* | ./following-sibling::*)[./*[@text='Delray Beach']]]]
 //	14534 S Military Trail
+	
+//Validate Rewards Details
+	public static final By appRewardButtonXpath = MobileBy.xpath("//*[@id='icon' and ./parent::*[@id='menu_bottom_nav_rewards']]");
+	public static final By appRewardsHeaderXpath = MobileBy.xpath("//android.widget.TextView[@text='My Rewards']");
+	public static final By appdisplayedRewardCountXpath = MobileBy.xpath("//android.widget.TextView[@id='myrewards_dashboard_account_rewards_available']");
+	public static final By appActiveRewardXpath = MobileBy.xpath("//*[@id='card_active_reward_image']");
+	public static final By appTapToViewXpath = MobileBy.xpath("//*[@id='card_active_reward_scan']");
+	public static final By appActiveRewardName = MobileBy.xpath("//android.widget.TextView[@id='active_reward_name']");
+	public static final By appCloseRewardsPopUp = MobileBy.xpath("//android.widget.ImageButton[@contentDescription='Navigate up']");
+
+//Favourite Items 
+	public static final By appFavouriteItems = MobileBy.xpath("//*[@id='card_order_summary']");
+	
+//My Account Update
+	public static final By appMyAccountOptionXpath = MobileBy.xpath("//android.widget.TextView[@text='My Account']");
+	public static final By appUpdateButtonXpath = MobileBy.xpath("//android.widget.Button[@text='UPDATE']");
+	public static final By appConsentCheckBoxXpath = MobileBy.xpath("//*[@id='mobile-opt-in']");
+	public static final By appMyAccountPageHeaderXpath = MobileBy.xpath("//*[@text='UPDATE PROFILE']");
+	public static final By appSuccessMessageXpath = MobileBy.xpath("//*[@text='Account successfully updated']");
+	
+	
+	
+//IOS 
+//Login Logout
+	public static final By iosDontAllowButtonXpath=MobileBy.xpath("//*[@text='Horizontal scroll bar, 1 page' and (./preceding-sibling::* | ./following-sibling::*)[./*[./*[./*[@text='Allow Once']]]]]");
+	public static final By iosnotificationDontAllowButtonXpath = MobileBy.xpath("//*[@text='Don’t Allow']");
+	public static final By iosPopUpClose=MobileBy.xpath("//*[@id='CancelButton']");
+	public static final By iosLoginButton=MobileBy.xpath("((//*[@class='UIAScrollView']/*[@class='UIAView'])[2]/*/*/*/*[@text='LOG IN'])[1]");
+	public static final By iosUserNameTextBoxXpath=MobileBy.xpath("//*[@id='Mobile Number']");
+	public static final By iosPaswordTextBoxXpath=MobileBy.xpath("//*[@id='Password']");
+	public static final By iosloginHeaderXpath=MobileBy.xpath("//*[@text='LOG IN TO YOUR ACCOUNT']");
+	public static final By ioswelcomeMessageXpath=MobileBy.xpath("(((//*[@class='UIAScrollView']/*[@class='UIAView'])[2]/*/*[@class='UIAView' and ./parent::*[@class='UIAView']])[13]/*[@class='UIAStaticText' and @width>0])[1]");
+	public static final By iosSignInButtonXpath=MobileBy.xpath("//*[@text='LOG IN' and @class='UIAStaticText' and ./parent::*[@accessibilityLabel='LogInButton']]");
+	public static final By iosMoreButtonXpath=MobileBy.xpath("//*[@id='MORE']");
+	public static final By iosLogOutButtonXpath=MobileBy.xpath("//*[@id='LOG OUT']");
+	public static final By ioslogoutValXpath=MobileBy.xpath("((//*[@class='UIAScrollView']/*[@class='UIAView'])[1]/*/*/*[@text='Log in'])[1]");
+	
+	
+	
+	
 }
+
+
+
+
+
+
+
 
 
 
