@@ -302,6 +302,68 @@ public class TestChilisApp extends Base{
 		obj.appPlaceOrder(driver);
 	}
 
+	@Test(enabled = false)
+    public void appGuestDeliveryASAPTest() throws InterruptedException {
+        Logger log = LogManager.getLogger("AppGuestDeliveryASAPTest");
+        log.info("******Starting to validate user is able to to place Delivery-ASAP order as Guest user******");
+        FunctionalComponents obj = new FunctionalComponents(driver, log);
+        obj.androidAppClosePopUp();
+        obj.appClickFindRestaurant();
+        obj.appEnterRestaurantLocation();
+        obj.appSelectResturent(driver);
+        obj.appClickOnOrderButton();
+        obj.appSelectMenuCategory(driver);
+        obj.appSelectMenuItem(driver);
+        obj.appAddToOrder(driver);
+        obj.appClickCheckout(driver);
+        obj.appSelectDelivery();                //Ayushman03
+        obj.appEnterDeliveryLocation(driver);    //Ayushman03
+        obj.appEnterApartmentNo(driver);        //Ayushman03   
+        obj.appSelectDeliveryAsap(driver);        //Ayushman03
+        obj.appEnterFirstName(driver);            //Ayushman03
+        obj.appEnterLastName(driver);            //Ayushman03
+        obj.appEnterContactNumber(driver);        //Ayushman03
+        obj.appEnterEMail(driver);                //Ayushman03
+        obj.appContinueToPayment(driver);
+        obj.appEnterCardNumber(driver);
+        obj.appEnterCVV(driver);
+        obj.appSelectExpirationYear(driver);
+        obj.appEnterNameOnCard(driver);
+        obj.appEnterZipcode(driver);
+        obj.appPlaceOrder(driver);
+    }
+   
+    @Test(enabled = false)
+    public void appGuestDeliveryLTTest() throws InterruptedException {
+        Logger log = LogManager.getLogger("AppGuestDeliveryASAPTest");
+        log.info("******Starting to validate user is able to to place Delivery-ASAP order as Guest user******");
+        FunctionalComponents obj = new FunctionalComponents(driver, log);
+        obj.androidAppClosePopUp();
+        obj.appClickFindRestaurant();
+        obj.appEnterRestaurantLocation();
+        obj.appSelectResturent(driver);
+        obj.appClickOnOrderButton();
+        obj.appSelectMenuCategory(driver);
+        obj.appSelectMenuItem(driver);
+        obj.appAddToOrder(driver);
+        obj.appClickCheckout(driver);
+        obj.appSelectDelivery();                //Ayushman03
+        obj.appEnterDeliveryLocation(driver);    //Ayushman03
+        obj.appEnterApartmentNo(driver);        //Ayushman03   
+        obj.appSelectDeliveryLT(driver);        //Ayushman03
+        obj.appSelectDeliveryTime(driver);        //Ayushman03
+        obj.appEnterFirstName(driver);            //Ayushman03
+        obj.appEnterLastName(driver);            //Ayushman03
+        obj.appEnterContactNumber(driver);        //Ayushman03
+        obj.appEnterEMail(driver);                //Ayushman03
+        obj.appContinueToPayment(driver);
+        obj.appEnterCardNumber(driver);
+        obj.appEnterCVV(driver);
+        obj.appSelectExpirationYear(driver);
+        obj.appEnterNameOnCard(driver);
+        obj.appEnterZipcode(driver);
+        obj.appPlaceOrder(driver);
+    }   
 
 	@AfterMethod
 	public void tearDown() {
