@@ -3269,6 +3269,761 @@ public void isRewardApplied() {
 		}
 
 	}
+	
+	public void appSelectDelivery() {
+        try {
+             clickableWait(Elements.appSelectDelivery);
+             log.info("Delivery button clicked");
+             extTestObj.createNode("Delivery button clicked").pass("PASSED");
+        } catch (Exception e) {
+            log.error("Delivery button click failed");
+            extTestObj.createNode("Delivery button click failed")
+                    .fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
+            log.error(e.getMessage());
+            stopTest();
+
+ 
+
+        }
+    }
+	
+
+public void appEnterDeliveryLocation(AndroidDriver<AndroidElement> androidDriver) throws InterruptedException {
+    String location = excel.getCellData("DeliveryASAP", "Restaurant Address", 2);
+    try {
+        androidDriver.findElementByAndroidUIAutomator(
+                "new UiScrollable(new UiSelector()).scrollIntoView(resourceId(\"autocomplete\"))");
+        explicitWait(Elements.appDeliveryAddress);
+        sendKeysWait(Elements.appDeliveryAddress, location);
+        Thread.sleep(2000);
+
+ 
+
+        seetest.click("NATIVE", "xpath=//*[@text='14534 South Military Trail']", 0, 1);
+        Thread.sleep(2000);
+        log.info("Delivery location entered as " + location);
+        extTestObj.createNode("Delivery location entered as " + location).pass("PASSED");
+    } catch (Exception e) {
+        log.error("Failed to enter Delivery location");
+        log.error(e.getMessage());
+        extTestObj.createNode("Failed to enter Delivery location")
+                .fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
+        stopTest();
+    }
+}
+
+public void appEnterApartmentNo(AndroidDriver<AndroidElement> androidDriver) throws InterruptedException {
+	String aptNo = excel.getCellData("DeliveryASAP", "Apt. no", 2);
+	try {
+		androidDriver.findElementByAndroidUIAutomator(
+				"new UiScrollable(new UiSelector()).scrollIntoView(resourceId(\"suite-no\"))");
+		explicitWait(Elements.appAptNo);
+		clickableWait(Elements.appAptNo);
+		sendKeysWait(Elements.appAptNo, aptNo);
+		log.info("Apartment no. entered as : " + aptNo);
+		extTestObj.createNode("Apartment no. entered as : " + aptNo).pass("PASSED");
+	} catch (Exception e) {
+		log.error("Failed to enter Apartment no.");
+		extTestObj.createNode("Failed to enter Apartment no.")
+				.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
+		log.error(e.getMessage());
+		stopTest();
+	}
+}
+
+
+
+public void appSelectDeliveryAsap(AndroidDriver<AndroidElement> androidDriver) {
+	
+	try {
+		androidDriver.findElementByAndroidUIAutomator(
+				"new UiScrollable(new UiSelector()).scrollIntoView(resourceId(\"delivery-date\"))");
+		 seetest.click("NATIVE", "xpath=//*[@resource-id='delivery-date']", 0, 1);
+	/*	 androidDriver.findElementByAndroidUIAutomator(
+					"new UiScrollable(new UiSelector()).scrollIntoView(text(\"ASAP (~15 min)\"))"); */
+		 seetest.click("NATIVE", "xpath=//*[contains(text(),'ASAP')]", 0, 1);
+		 log.info("Delivery  selected as 'Asap'");
+		 extTestObj.createNode("Delivery  selected as 'Asap'").pass("PASSED");
+	} catch (Exception e) {
+		log.error("Delivery Asap selection failed");
+		extTestObj.createNode("Delivery Asap selection failed")
+				.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
+		log.error(e.getMessage());
+		stopTest();
+
+	}
+}
+
+public void appSelectDeliveryLT(AndroidDriver<AndroidElement> androidDriver) {
+	
+	try {
+		androidDriver.findElementByAndroidUIAutomator(
+				"new UiScrollable(new UiSelector()).scrollIntoView(resourceId(\"delivery-date\"))");
+		 seetest.click("NATIVE", "xpath=//*[@resource-id='delivery-date']", 0, 1);
+		 seetest.click("NATIVE", "xpath=//*[contains(text(),'Later Today')]", 0, 1);
+		 log.info("Delivery  selected as 'Later Today'");
+		 extTestObj.createNode("Delivery  selected as 'Later Today'").pass("PASSED");
+	} catch (Exception e) {
+		log.error("Delivery Later Today selection failed");
+		extTestObj.createNode("Delivery Later Today selection failed")
+				.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
+		log.error(e.getMessage());
+		stopTest();
+
+	}
+}
+
+public void appSelectDeliveryTime(AndroidDriver<AndroidElement> androidDriver) {
+	String delTime=excel.getCellData("Delivery", "Delivery Time", 2);
+	try {
+		androidDriver.findElementByAndroidUIAutomator(
+				"new UiScrollable(new UiSelector()).scrollIntoView(resourceId(\"delivery-time\"))");
+		 seetest.click("NATIVE", "xpath=//*[@resource-id='delivery-time']", 0, 1);
+		 androidDriver.findElementByAndroidUIAutomator(
+					"new UiScrollable(new UiSelector()).scrollIntoView(text("+delTime+"))");
+		 seetest.click("NATIVE", "xpath=//*[@text='"+delTime+"']", 0, 1);
+		 log.info("Delivery time selected as: "+ delTime);
+		 extTestObj.createNode("\"Delivery time selected as: "+ delTime).pass("PASSED");
+	} catch (Exception e) {
+		log.error("Failed to select delivery time");
+		extTestObj.createNode("Failed to select delivery time")
+				.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
+		log.error(e.getMessage());
+		stopTest();
+
+	}
+}
+
+
+public void appEnterFirstName(AndroidDriver<AndroidElement> androidDriver) throws InterruptedException {
+
+	String firstName = excel.getCellData("DeliveryASAP", "First Name", 2);
+	try {
+		androidDriver.findElementByAndroidUIAutomator(
+				"new UiScrollable(new UiSelector()).scrollIntoView(resourceId(\"first-name\"))");
+		explicitWait(Elements.appFirstName);
+		clickableWait(Elements.appFirstName);
+		Thread.sleep(1000);
+		sendKeysWait(Elements.appFirstName, firstName);
+		log.info("First name entered as : " + firstName);
+		extTestObj.createNode("First name entered as : " + firstName).pass("PASSED");
+	} catch (Exception e) {
+		log.error("Failed to enter First name");
+		extTestObj.createNode("Failed to enter First name")
+				.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
+		log.error(e.getMessage());
+		stopTest();
+	}
+}
+
+
+public void appEnterLastName(AndroidDriver<AndroidElement> androidDriver) throws InterruptedException {
+	String lastName = excel.getCellData("DeliveryASAP", "Last Name", 2);
+	try {
+		androidDriver.findElementByAndroidUIAutomator(
+				"new UiScrollable(new UiSelector()).scrollIntoView(resourceId(\"last-name\"))");
+		explicitWait(Elements.appLastName);
+		clickableWait(Elements.appLastName);
+		sendKeysWait(Elements.appLastName, lastName);
+		log.info("Last name entered as : " + lastName);
+		extTestObj.createNode("Last name entered as : " + lastName).pass("PASSED");
+	} catch (Exception e) {
+		log.error("Failed to enter Last name");
+		extTestObj.createNode("Failed to enter Last name")
+				.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
+		log.error(e.getMessage());
+		stopTest();
+	}
+}
+
+
+public void appEnterContactNumber(AndroidDriver<AndroidElement> androidDriver) throws InterruptedException {
+
+	String contactNum = excel.getCellData("DeliveryASAP", "Contact Number", 2);
+	try {
+		androidDriver.findElementByAndroidUIAutomator(
+				"new UiScrollable(new UiSelector()).scrollIntoView(resourceId(\"contact-phone\"))");
+		explicitWait(Elements.appContactNumber);
+		clickableWait(Elements.appContactNumber);
+		sendKeysWait(Elements.appContactNumber, contactNum);
+		log.info("Contact Number entered as : " + contactNum);
+		extTestObj.createNode("Contact Number entered as : " + contactNum).pass("PASSED");
+	} catch (Exception e) {
+		log.error("Failed to enter Contact number");
+		extTestObj.createNode("Failed to enter Contact number")
+				.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
+		log.error(e.getMessage());
+		stopTest();
+	}
+}
+
+
+
+public void appEnterEMail(AndroidDriver<AndroidElement> androidDriver) throws InterruptedException {
+	String email = excel.getCellData("DeliveryASAP", "Email", 2);
+	try {
+		androidDriver.findElementByAndroidUIAutomator(
+				"new UiScrollable(new UiSelector()).scrollIntoView(resourceId(\"email\"))");
+		explicitWait(Elements.appeMail);
+		clickableWait(Elements.appeMail);
+		sendKeysWait(Elements.appeMail, email);
+		log.info("Email address entered as : " + email);
+		extTestObj.createNode("Email address entered as : " + email).pass("PASSED");
+	} catch (Exception e) {
+		log.error("Failed to enter Email id");
+		extTestObj.createNode("Failed to enter Email id")
+				.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
+		log.error(e.getMessage());
+
+		stopTest();
+	}
+}
+
+//To select the particular resturent
+	public void appSelectResturent(AndroidDriver<AndroidElement> androidDriver) {
+		String restaurantLocation = excel.getCellData("Locations", "Location", 2);
+		String str = restaurantLocation.split(",")[0];
+		System.out.println(str);
+		
+		try {
+			
+			clickElement(MobileBy.xpath("//*[@id='search_clear_btn']"));
+			//androidDriver.findElementByAndroidUIAutomator("new UiScrollable(new UiSelector()).scrollIntoView(text("+ str+"))");
+			Thread.sleep(3000);
+			
+		//	explicitWait(MobileBy.xpath("//*[@text='SELECT' and ./parent::*[(./preceding-sibling::* | ./following-sibling::*)[./*[@text='Delray Beach']]]]"));
+		//	clickElement(MobileBy.xpath("//*[@text='SELECT' and ./parent::*[(./preceding-sibling::* | ./following-sibling::*)[./*[@text='"+str+"']]]]"));
+			clickElement(MobileBy.xpath("//*[@text='SELECT' and ./parent::*[(./preceding-sibling::* | ./following-sibling::*)[./*[@text='Delray Beach']]]]"));
+		// seetest.click("NATIVE", "xpath=//*[@text='SELECT' and ./parent::*[(./preceding-sibling::* | ./following-sibling::*)[./*[@text='"+str+"']]]]", 0, 1);
+			log.info("Resturent selected as : " + str);
+			extTestObj.createNode("Resturent selected as : " + str).pass("PASSED");
+		} catch (Exception e) {
+			log.error("Not able to select any resturent");
+			extTestObj.createNode("Not able to select any resturent")
+					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
+			log.error(e.getMessage());
+
+		}
+	}
+
+	//To select a favourite Item 
+	public void appSelectChilisFavourite(AndroidDriver<AndroidElement> androidDriver) {
+
+		String chilisFavItem = excel.getCellData("LoggedInOrder", "Chilis Favourite Items", 2).trim();
+		try {
+
+			List<WebElement> itemNames = driver
+					.findElements(By.xpath("//*[@id='card_home_recent_order_carousel']"));
+			for (int i = 0; i < itemNames.size(); i++) {
+				String name = itemNames.get(i).getText().trim();
+				if (name.equalsIgnoreCase(chilisFavItem)) {
+					
+					androidDriver.findElementByAndroidUIAutomator(
+							"new UiScrollable(new UiSelector()).scrollIntoView(text(" +chilisFavItem +"))");
+					clickableWait(MobileBy.xpath("//*[@text='" + chilisFavItem +"']"));
+					break;
+				}
+			}
+			log.info("Chilis favourite Item " + chilisFavItem + " selected");
+			extTestObj.createNode("Chilis favourite Item " + chilisFavItem + " selected").pass("PASSED");
+		} catch (Exception e) {
+			log.error("Failed to select chilis favourite item");
+			extTestObj.createNode("Failed to select chilis favourite item")
+					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
+			log.error(e.getMessage());
+
+			stopTest();
+		}
+	}
+	
+	//To add fav. Item to cart
+	public void appAddToCart() {
+			
+			try {
+				clickableWait(Elements.appAddToCart);
+				 log.info("Add To Cart button clicked");
+				 extTestObj.createNode("Add To Cart button clicked").pass("PASSED");
+			} catch (Exception e) {
+				log.error("Add To Cart button clicked failed");
+				extTestObj.createNode("Add To Cart button clicked failed")
+						.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
+				log.error(e.getMessage());
+				stopTest();
+	
+			}
+		}
+		
+	//To click on Order button in Home Page
+	public void appClickOnOrderButton() {
+			
+			try {
+				 clickableWait(Elements.appClickOrder);
+				 log.info("Order button clicked");
+				 extTestObj.createNode("Order button clicked").pass("PASSED");
+			} catch (Exception e) {
+				log.error("Order button click failed");
+				extTestObj.createNode("Order button click failed")
+						.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
+				log.error(e.getMessage());
+				stopTest();
+	
+			}
+		}
+	
+	//To select a Menu-category option
+	public void appSelectMenuCategory(AndroidDriver<AndroidElement> androidDriver) {  //new
+		try {
+			String menuCategory= excel.getCellData("Menu", "Category", 2);
+			androidDriver.findElementByAndroidUIAutomator(
+					"new UiScrollable(new UiSelector()).scrollIntoView(text("+menuCategory+"))");
+			clickableWait(MobileBy.xpath("//*[@text='" + menuCategory + "']"));
+			log.info("Menu Category selected with : " +  menuCategory);
+			extTestObj.createNode("Menu Category selected with : " +  menuCategory).pass("PASSED");
+	
+		} catch (Exception e) {
+			log.error("Menu Category selection failed");
+			extTestObj.createNode("Menu Category selection failed")
+					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
+			log.error(e.getMessage());
+	
+		}
+	
+	}
+	
+	//To select a Menu-Item option
+	public void appSelectMenuItem(AndroidDriver<AndroidElement> androidDriver) {  //new
+		try {
+			String menuItem= excel.getCellData("Menu", "Item", 2);
+			androidDriver.findElementByAndroidUIAutomator(
+					"new UiScrollable(new UiSelector()).scrollIntoView(text("+ menuItem+"))");
+			clickableWait(MobileBy.xpath("//*[@text='" + menuItem + "']"));
+			log.info("Menu Item selected with : " +  menuItem);
+			extTestObj.createNode("Menu Item selected with : " +  menuItem).pass("PASSED");
+	
+		} catch (Exception e) {
+			log.error("Menu Item selection failed");
+			extTestObj.createNode("Menu Item selection failed")
+					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
+			log.error(e.getMessage());
+	
+		}
+	
+	}
+	
+	//To add a order Item into Cart 
+	public void appAddToOrder(AndroidDriver<AndroidElement> androidDriver) {
+			
+			try {
+				androidDriver.findElementByAndroidUIAutomator(
+						"new UiScrollable(new UiSelector()).scrollIntoView(text(\"ADD TO ORDER\"))");
+				 clickableWait(Elements.appAddToOrder);
+				 log.info("Add To Order button clicked");
+				 extTestObj.createNode("Add To Order button clicked").pass("PASSED");
+			} catch (Exception e) {
+				log.error("Add To Order button click failed");
+				extTestObj.createNode("Add To Order button click failed")
+						.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
+				log.error(e.getMessage());
+				stopTest();
+	
+			}
+		}
+	
+	
+	//click on checkout
+	public void appClickCheckout(AndroidDriver<AndroidElement> androidDriver) {
+		try {
+			androidDriver.findElementByAndroidUIAutomator(
+					"new UiScrollable(new UiSelector()).scrollIntoView(text(\"CHECKOUT »\"))");
+			 clickableWait(Elements.appClickCheckout);
+			 log.info("Checkout button clicked");
+			 extTestObj.createNode("Checkout button clicked").pass("PASSED");
+		} catch (Exception e) {
+			log.error("Checkout button click failed");
+			extTestObj.createNode("Checkout button click failed")
+					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
+			log.error(e.getMessage());
+			stopTest();
+
+		}
+	}
+	
+	//To select delivery option
+	public void appSelectDelivery() {
+      try {
+           clickableWait(Elements.appSelectDelivery);
+           log.info("Delivery button clicked");
+           extTestObj.createNode("Delivery button clicked").pass("PASSED");
+      } catch (Exception e) {
+          log.error("Delivery button click failed");
+          extTestObj.createNode("Delivery button click failed")
+                  .fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
+          log.error(e.getMessage());
+          stopTest();
+
+
+
+      }
+  }
+	
+	//To select carry-out option
+	public void appSelectCarryout() {
+		try {
+			 clickableWait(Elements.appSelectCarryOut);
+			 log.info("Carryout button clicked");
+			 extTestObj.createNode("Carryout button clicked").pass("PASSED");
+		} catch (Exception e) {
+			log.error("Carryout button click failed");
+			extTestObj.createNode("Carryout button click failed")
+					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
+			log.error(e.getMessage());
+			stopTest();
+
+		}
+	}
+	
+	//To select curbside option
+	public void appSelectCurbside() {
+		try {
+			 clickableWait(Elements.appSelectCurbside);
+			 log.info("Curbside button clicked");
+			 extTestObj.createNode("Curbide button clicked").pass("PASSED");
+		} catch (Exception e) {
+			log.error("Curbside button click failed");
+			extTestObj.createNode("Curbside button click failed")
+					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
+			log.error(e.getMessage());
+			stopTest();
+
+		}
+	}
+	
+	//To pickup a future date
+	public void appSelectPickupFuture(AndroidDriver<AndroidElement> androidDriver) {
+		String futureDate = excel.getCellData("Future Order", "Future Date", 2);
+		try {
+			androidDriver.findElementByAndroidUIAutomator(
+					"new UiScrollable(new UiSelector()).scrollIntoView(resourceId(\"pickup-date\"))");
+			 seetest.click("NATIVE", "xpath=//*[@resource-id='pickup-date']", 0, 1);
+			 //androidDriver.findElementByAndroidUIAutomator("new UiScrollable(new UiSelector()).scrollIntoView(text("+futureDate+"))");
+			 seetest.click("NATIVE", "xpath=//*[contains(text(),'"+futureDate+"')]", 0, 1);
+			log.info("Pickup future time is selected as " + futureDate);
+			extTestObj.createNode("Pickup future time is selected as " + futureDate).pass("PASSED");
+		} catch (Exception e) {
+			log.error("Failed to select pick up future time");
+
+			extTestObj.createNode("Failed to select pick up future time")
+					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
+			log.error(e.getMessage());
+			stopTest();
+		}
+	}
+	
+	//To select a pickup time 'Later Today'
+	public void appSelectPickupLaterToday(AndroidDriver<AndroidElement> androidDriver) {
+		
+		try {
+			androidDriver.findElementByAndroidUIAutomator(
+					"new UiScrollable(new UiSelector()).scrollIntoView(resourceId(\"pickup-date\"))");
+			 seetest.click("NATIVE", "xpath=//*[@resource-id='pickup-date']", 0, 1);
+			 androidDriver.findElementByAndroidUIAutomator(
+						"new UiScrollable(new UiSelector()).scrollIntoView(text(\"Later Today\"))");
+			 seetest.click("NATIVE", "xpath=//*[@text='Later Today']", 0, 1);
+			 log.info("Pickup date selected as 'Later Today'");
+			 extTestObj.createNode("Pickup date selected as 'Later Today'").pass("PASSED");
+		} catch (Exception e) {
+			log.error("Pickup date selection failed");
+			extTestObj.createNode("Pickup date selection failed")
+					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
+			log.error(e.getMessage());
+			stopTest();
+
+		}
+	}
+	
+	//To select a pickup time
+	public void appSelectPickupTime(AndroidDriver<AndroidElement> androidDriver) {
+			String pickTime=excel.getCellData("CarryOut", "Pickup Time", 2);
+			try {
+				androidDriver.findElementByAndroidUIAutomator(
+						"new UiScrollable(new UiSelector()).scrollIntoView(resourceId(\"pickup-time\"))");
+				 seetest.click("NATIVE", "xpath=//*[@resource-id='pickup-time']", 0, 1);
+				 androidDriver.findElementByAndroidUIAutomator(
+							"new UiScrollable(new UiSelector()).scrollIntoView(text("+pickTime+"))");
+				 seetest.click("NATIVE", "xpath=//*[@text='"+pickTime+"']", 0, 1);
+				 log.info("Pickup time selected as: "+ pickTime);
+				 extTestObj.createNode("\"Pickup time selected as: "+ pickTime).pass("PASSED");
+			} catch (Exception e) {
+				log.error("Checkout button click failed");
+				extTestObj.createNode("Checkout button click failed")
+						.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
+				log.error(e.getMessage());
+				stopTest();
+	
+			}
+		}
+	
+	//To select a pickup option 'ASAP'
+	public void appSelectPickupAsap(AndroidDriver<AndroidElement> androidDriver) {
+		
+		try {
+			androidDriver.findElementByAndroidUIAutomator(
+					"new UiScrollable(new UiSelector()).scrollIntoView(resourceId(\"pickup-date\"))");
+			 seetest.click("NATIVE", "xpath=//*[@resource-id='pickup-date']", 0, 1);
+		/*	 androidDriver.findElementByAndroidUIAutomator(
+						"new UiScrollable(new UiSelector()).scrollIntoView(text(\"ASAP (~15 min)\"))"); */
+			 seetest.click("NATIVE", "xpath=//*[contains(text(),'ASAP')]", 0, 1);
+			 log.info("Pickup  selected as 'Asap'");
+			 extTestObj.createNode("Pickup  selected as 'Asap'").pass("PASSED");
+		} catch (Exception e) {
+			log.error("Pickup Asap selection failed");
+			extTestObj.createNode("Pickup Asap selection failed")
+					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
+			log.error(e.getMessage());
+			stopTest();
+
+		}
+	}
+	
+	 //To enter delivery location
+	public void appEnterDeliveryLocation(AndroidDriver<AndroidElement> androidDriver) {
+	    String location = excel.getCellData("DeliveryASAP", "Restaurant Address", 2);
+	    try {
+	        androidDriver.findElementByAndroidUIAutomator(
+	                "new UiScrollable(new UiSelector()).scrollIntoView(resourceId(\"autocomplete\"))");
+	        explicitWait(Elements.deliveryAddress);
+	        sendKeysWait(Elements.deliveryAddress, location);
+	        Thread.sleep(2000);
+	        seetest.click("NATIVE", "xpath=//*[@text='14534 South Military Trail']", 0, 1);
+	        Thread.sleep(2000);
+	        log.info("Delivery location entered as " + location);
+	        extTestObj.createNode("Delivery location entered as " + location).pass("PASSED");
+	    } catch (Exception e) {
+	        log.error("Failed to enter Delivery location");
+	        log.error(e.getMessage());
+	        extTestObj.createNode("Failed to enter Delivery location")
+	                .fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
+	        stopTest();
+	    }
+	}
+	
+	//To select delivery option 'ASAP'
+	public void appSelectDeliveryAsap(AndroidDriver<AndroidElement> androidDriver) {
+	    
+	    try {
+	        androidDriver.findElementByAndroidUIAutomator(
+	                "new UiScrollable(new UiSelector()).scrollIntoView(resourceId(\"delivery-date\"))");
+	         seetest.click("NATIVE", "xpath=//*[@resource-id='delivery-date']", 0, 1);
+	    /*     androidDriver.findElementByAndroidUIAutomator(
+	                    "new UiScrollable(new UiSelector()).scrollIntoView(text(\"ASAP (~15 min)\"))"); */
+	         seetest.click("NATIVE", "xpath=//*[contains(text(),'ASAP')]", 0, 1);
+	         log.info("Delivery  selected as 'Asap'");
+	         extTestObj.createNode("Delivery  selected as 'Asap'").pass("PASSED");
+	    } catch (Exception e) {
+	        log.error("Delivery Asap selection failed");
+	        extTestObj.createNode("Delivery Asap selection failed")
+	                .fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
+	        log.error(e.getMessage());
+	        stopTest();
+
+	 
+
+	    }
+	}
+	
+	//Click on 'Continue To Payment' button
+	public void appContinueToPayment(AndroidDriver<AndroidElement> androidDriver) {
+		try {
+			androidDriver.findElementByAndroidUIAutomator(
+					"new UiScrollable(new UiSelector()).scrollIntoView(text(\"CONTINUE TO PAYMENT\"))");
+			 clickableWait(Elements.appContinuePayment);
+			 log.info("Continue To Payment button clicked");
+			 extTestObj.createNode("Continue To Payment button clicked").pass("PASSED");
+		} catch (Exception e) {
+			log.error("Continue To Payment button click failed");
+			extTestObj.createNode("Continue To Payment button click failed")
+					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
+			log.error(e.getMessage());
+			stopTest();
+
+		}
+	}
+	
+	//Entering the Credit card number
+	public void appEnterCardNumber(AndroidDriver<AndroidElement> androidDriver) {
+		try {
+			
+			String cardNumber = excel.getCellData("LoggedInOrder", "Card Number", 2);
+			androidDriver.findElementByAndroidUIAutomator(
+					"new UiScrollable(new UiSelector()).scrollIntoView(resourceId(\"card-number\"))");
+			sendKeysWait(Elements.appCardNuber, cardNumber);
+			log.info("Card number entered as : " + cardNumber);
+			extTestObj.createNode("Card number entered as : " + cardNumber).pass("PASSED");
+		} catch (Exception e) {
+			log.error("Failed to enter card number");
+			extTestObj.createNode("Failed to card number")
+					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
+			log.error(e.getMessage());
+
+		}
+
+	}
+	
+	//entering CVV number
+	public void appEnterCVV(AndroidDriver<AndroidElement> androidDriver) {
+		try {
+			
+			String cvvNumber = excel.getCellData("LoggedInOrder", "CVV", 2);
+			androidDriver.findElementByAndroidUIAutomator(
+					"new UiScrollable(new UiSelector()).scrollIntoView(resourceId(\"cvv\"))");
+			sendKeysWait(Elements.appCVV, cvvNumber);
+			log.info("Cvv number entered as : " + cvvNumber);
+			extTestObj.createNode("Cvv number entered as : " + cvvNumber).pass("PASSED");
+		} catch (Exception e) {
+			log.error("Failed to enter cvv number");
+			extTestObj.createNode("Failed to cvv number")
+					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
+			log.error(e.getMessage());
+
+		}
+
+	}
+	
+	//Entering the Name on Card
+	public void appEnterNameOnCard(AndroidDriver<AndroidElement> androidDriver) {
+		try {
+			
+			String cardName = excel.getCellData("LoggedInOrder", "Name On Card", 2);
+			androidDriver.findElementByAndroidUIAutomator(
+					"new UiScrollable(new UiSelector()).scrollIntoView(resourceId(\"nameOnCard\"))");
+			sendKeysWait(Elements.appNameOnCard, cardName);
+			log.info("Name on Card entered as : " + cardName);
+			extTestObj.createNode("Name on Card entered as : " + cardName).pass("PASSED");
+		} catch (Exception e) {
+			log.error("Failed to enter card number");
+			extTestObj.createNode("Failed to enter card number")
+					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
+			log.error(e.getMessage());
+
+		}
+
+	}
+	//Entering the Zipcpode
+	public void appEnterZipcode(AndroidDriver<AndroidElement> androidDriver) {
+		try {
+			
+			String zipcode = excel.getCellData("LoggedInOrder", "Zip Code", 2);
+			androidDriver.findElementByAndroidUIAutomator(
+					"new UiScrollable(new UiSelector()).scrollIntoView(resourceId(\"zipcode\"))");
+			sendKeysWait(Elements.appZipcode, zipcode);
+			log.info("Zipcode entered as : " + zipcode);
+			extTestObj.createNode("Zipcode entered as : " + zipcode).pass("PASSED");
+		} catch (Exception e) {
+			log.error("Failed to enter zipcode");
+			extTestObj.createNode("Failed to enter zipcode")
+					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
+			log.error(e.getMessage());
+
+		}
+
+	}
+	
+	//select a expiration month
+/*	public void appSelectExpirationMonth(AndroidDriver<AndroidElement> androidDriver) {
+		String month = excel.getCellData("LoggedInOrder", "Expiration Month", 2);
+		try {
+			androidDriver.findElementByAndroidUIAutomator(
+					"new UiScrollable(new UiSelector()).scrollIntoView(resourceId(\"month-selector\"))");
+			 seetest.click("NATIVE", "xpath=//*[@resource-id='month-selector']", 0, 1);
+			 androidDriver.findElementByAndroidUIAutomator(
+						"new UiScrollable(new UiSelector()).scrollIntoView(text(\"Later Today\"))");
+			 seetest.click("NATIVE", "xpath=//*[@text='Later Today']", 0, 1);
+			log.info("Expiration Month selected as : " + month);
+			extTestObj.createNode("Expiration Month selected as : " + month).pass("PASSED");
+		} catch (Exception e) {
+			log.error("Failed to select Expiration Month");
+			extTestObj.createNode("Failed to select Expiration Month")
+					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
+			log.error(e.getMessage());
+
+			stopTest();
+		}
+	} */
+	
+	//Select a expiration Year
+	public void appSelectExpirationYear(AndroidDriver<AndroidElement> androidDriver) {
+		String year = excel.getCellData("LoggedInOrder", "Expiration Year", 2);
+		try {
+			androidDriver.findElementByAndroidUIAutomator(
+					"new UiScrollable(new UiSelector()).scrollIntoView(resourceId(\"year-selector\"))");
+			 seetest.click("NATIVE", "xpath=//*[@resource-id='year-selector']", 0, 1);
+			 androidDriver.findElementByAndroidUIAutomator(
+						"new UiScrollable(new UiSelector()).scrollIntoView(text("+year+"))");
+			 seetest.click("NATIVE", "xpath=//*[@text='"+year+"']", 0, 1);
+			log.info("Expiration Year selected as : " + year);
+			extTestObj.createNode("Expiration Year selected as : " + year).pass("PASSED");
+		} catch (Exception e) {
+			log.error("Failed to select Expiration Year");
+			extTestObj.createNode("Failed to select Expiration Year")
+					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
+			log.error(e.getMessage());
+
+			stopTest();
+		}
+	}
+	
+/*	public void appGiveTip() {
+		String tip = excel.getCellData("LoggedInOrder", "Tip", 2);
+		try {
+			scrollIntoViewBottom(Elements.tipTextBox);
+			sendKeysWait(Elements.tipTextBox, tip);
+			log.info("Tip given as : " + tip);
+			extTestObj.createNode("Tip has entered").pass("PASSED");
+		} catch (Exception e) {
+			log.error("Failed to enter tip");
+			extTestObj.createNode("Failed to enter tip")
+					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
+			log.error(e.getMessage());
+
+		}
+	}
+	
+	
+	public void appCheckRoundOff() {
+		try {
+			scrollIntoViewBottom(Elements.donationCheckBox);
+			clickableWait(Elements.donationCheckBox);
+			log.info("Donation checked");
+			extTestObj.createNode("Donation checked").pass("PASSED");
+		} catch (Exception e) {
+			log.error("Failed to check donation check box");
+			extTestObj.createNode("Failed to check donation check box")
+					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
+			log.error(e.getMessage());
+		}
+	}
+	  */
+	
+	//click on 'place order' button
+	public void appPlaceOrder(AndroidDriver<AndroidElement> androidDriver) {
+		try {
+			androidDriver.findElementByAndroidUIAutomator(
+					"new UiScrollable(new UiSelector()).scrollIntoView(text(\"PLACE ORDER\"))");
+			clickableWait(Elements.appPlaceOrder);
+			seetest.click("NATIVE", "xpath=//*[@text='No, thanks']", 0, 1);
+			log.info("Place order button clicked");
+			extTestObj.createNode("Place order button clicked").pass("PASSED");
+		} catch (Exception e) {
+			log.error("Failed to click place order button");
+			extTestObj.createNode("Failed to click place order button")
+					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
+			log.error(e.getMessage());
+			stopTest();
+
+		}
+	}
+
+
 		
 
 

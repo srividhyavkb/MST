@@ -250,7 +250,40 @@ public class Elements {
 	
 	//*[@text='Free Chips & Salsa OR Non-Alcoholic Beverage']
 	
+	
+	
+	  public static final By appAddToCart = MobileBy.xpath("//*[@text='ADD TO CART']");
+	    public static final By appAddToOrder = MobileBy.xpath("//*[@text='ADD TO ORDER']");
+	    public static final By appClickOrder = MobileBy.xpath("//*[@text='ORDER']");
+	    public static final By appClickCheckout = MobileBy.xpath("//*[@text='CHECKOUT »']");
+	    public static final By appSelectCarryOut = MobileBy.xpath("//*[@text='Carryout']");
+	    public static final By appSelectCurbside = MobileBy.xpath("//*[@text='Curbside']");
+	    public static final By appSelectDelivery = MobileBy.xpath("//*[@text='Delivery']");
+	    public static final By appContinuePayment = MobileBy.xpath("//*[@text='CONTINUE TO PAYMENT']");
+	    public static final By appCardNuber = MobileBy.xpath("//*[@id='card-number']");
+	    public static final By appCVV = MobileBy.xpath("//*[@id='cvv']");
+	    public static final By appNameOnCard = MobileBy.xpath("//*[@id='nameOnCard']");
+	    public static final By appZipcode = MobileBy.xpath("//*[@id='zipcode']");
+	    public static final By appPlaceOrder = MobileBy.xpath("//*[@text='PLACE ORDER']");
+	    public static final By appDeliveryAddress = MobileBy.xpath("//*[@id='autocomplete']");
+		public static final By appAptNo = MobileBy.xpath("//*[@id='suite-no']");
+		public static final By appDelDate = MobileBy.xpath("//*[@id='delivery-date']");
+		public static final By appFirstName = MobileBy.xpath("//*[@id='first-name']");
+		public static final By appLastName = MobileBy.xpath("//*[@id='last-name']");
+		public static final By appContactNumber = MobileBy.xpath("//*[@id='contact-phone']");
+		public static final By appeMail = MobileBy.xpath("//*[@id='email']");
+		public static final By appCardNo = MobileBy.xpath("//*[@id='card-number']");
+		
+
+		
+		//Delivery
+	 
+
+		
+	
 }
+
+
 
 
 
