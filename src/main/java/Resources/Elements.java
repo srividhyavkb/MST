@@ -133,6 +133,9 @@ public class Elements {
 		public static final By dateInputTom = By.xpath("//*[text()='Tomorrow']");
 		public static final By pickTime = By.xpath("//*[@id='pickup-time']");
 		public static final By placeOrderButton = By.xpath("//*[@id='place-order']");
+		public static final By discountLabel= By.xpath("//div[@class='order-discounts-label']");
+		public static final By discountAmount=By.xpath("//div[@class='cost discount-amount']");
+		public static final By rewardName=By.xpath("(//p[@id='member-reward'])[2]");
 		
 		//Delivery Later Today MCA
 		public static final By LaterToday = By.xpath("//select[@id='pickup-date']/option[contains(text(),'Later')]");
@@ -236,10 +239,11 @@ public class Elements {
 	//Rewards
 	public static final By iosRewardsButtonXpath=MobileBy.xpath("//*[@id='REWARDS']");
 	public static final By iosRewardsHeaderXpath=MobileBy.xpath("//*[@class='UIAImage' and ./parent::*[@text='Chilis.MyRewardsDashboardView']]");
+	public static final By iosDisplayedRewardCount=MobileBy.xpath("(//*[@text='Rewards']/*[@class='UIAStaticText'])[3]");
 	public static final By iosClaimedRewardsXpath=MobileBy.xpath("//*[@text='REWARDS' and @class='UIAStaticText' and ./parent::*[@text='Claimed Rewards']]");
 	public static final By iosrewardsImageXpath=MobileBy.xpath("//*[@class='UIAImage']");
 	public static final By iostapToViewXpath=MobileBy.xpath("//*[@id='Tap to view']");
-	public static final By iosRewardsNameXpath=MobileBy.xpath("//*[@class='UIAStaticText' and @knownSuperClass='UILabel']");
+	public static final By iosRewardsNameXpath=MobileBy.xpath("(//*[@class='UIAStaticText' and @knownSuperClass='UILabel'])[1]");
 	public static final By iosBackButtonXpath=MobileBy.xpath("//*[@id='Back']");
 	//*[@text='1']
 	

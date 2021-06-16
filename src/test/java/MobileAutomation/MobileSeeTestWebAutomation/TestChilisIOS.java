@@ -53,7 +53,7 @@ public class TestChilisIOS extends Base
 		System.out.println(func.validateLogout());
 	}
 
-	@Test(enabled = true)
+	@Test(enabled = false)
 	public void testRewardsFeature() throws InterruptedException {
 		Logger log = LogManager.getLogger("TestRewards");
 		log.info("******TC11_IOS : Starting to validate Rewards details page for logged in user******");
@@ -225,8 +225,8 @@ public class TestChilisIOS extends Base
 		ob.continueToPayment();
 		ob.enterCardNo();
 		ob.enterCVV();
-		ob.selectExpirationMonth();
-		ob.selectExpirationYear();
+		ob.selectExpirationMonthIOS();
+		ob.selectExpirationYearIOS();
 		ob.enterNameOnCard();
 		ob.enterBillingZipCode();
 		ob.giveTip();
@@ -276,6 +276,46 @@ public class TestChilisIOS extends Base
 		String priceAfterPlacingOrder = ob.returnOrderPrice();
 		Assert.assertEquals(priceBeforePlacingOrder, priceAfterPlacingOrder, "Incorrect price displayed");
 	}
+	
+	@Test(enabled=true)
+	public void testMCACarryoutASAP() throws InterruptedException
+	{
+		Logger log = LogManager.getLogger("TestMCACarryoutASAP");
+		log.info("******STARTING TEST MCA CARRY OUT ASAP******");
+		FunctionalComponents ob = new FunctionalComponents(IOSdriver,log);
+		ob.validateQASite();
+		ob.closePopupRewards();
+		ob.clickMenuButton();
+		ob.selectLogin();
+		ob.enterUserName();
+		ob.enterPassword();
+		ob.clickSignin();
+		ob.clickMenuButton();
+		ob.selectLocationsOption();
+		ob.enterRestaurantLocationForLoggedInOrder();
+		ob.clickSearchButtonForLoggedInOrder();
+		ob.orderNow();
+		ob.AddChilisFavouriteToCart();
+		ob.clickViewCart();
+		ob.clickCheckOut();
+		ob.clickOnCarryOut();
+		ob.selectPickupAsapIOS();
+		ob.continueToPayment();
+		ob.enterCardNo();
+		ob.enterCVV();
+		ob.selectExpirationMonthIOS();
+		ob.selectExpirationYearIOS();
+		ob.enterNameOnCard();
+		ob.enterBillingZipCode();
+		ob.giveTip();
+		ob.checkRoundOff();
+		String priceBeforePlacingOrder = ob.OrderTotal();
+		ob.placeOrder();
+		System.out.println(ob.getSuccessMessageforLoggedInOrder());
+		String priceAfterPlacingOrder = ob.returnOrderPrice();
+		Assert.assertEquals(priceBeforePlacingOrder, priceAfterPlacingOrder, "Incorrect price displayed");
+	}
+
 
 	@AfterMethod
 	public void  tearDown() {

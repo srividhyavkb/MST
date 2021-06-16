@@ -108,7 +108,7 @@ public class FunctionalComponents extends Base {
 		Thread.sleep(500);
 	}
 
-	public void scrollIntoViewBottomByElement(AndroidElement element) throws InterruptedException {
+	public void scrollIntoViewBottomByElement(WebElement element) throws InterruptedException {
 		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(false);", element);
 		Thread.sleep(500);
 	}
@@ -171,6 +171,8 @@ public class FunctionalComponents extends Base {
 		extTestObj.createNode("Starting QA site validation").info("INFO");
 		log.info("Starting QA site validation");
 		try {
+			seetest.hybridClearCache();
+			driver.get(prop.getProperty("url"));
 			explicitWait(Elements.popUpCloseButton);
 			log.info("QA site launch is successful, Site Name : " + driver.getCurrentUrl());
 			extTestObj.createNode("QA site launch is successful, Site Name : " + driver.getCurrentUrl()).pass("PASSED");
@@ -787,7 +789,7 @@ public class FunctionalComponents extends Base {
 			extTestObj.log(Status.INFO, "Chillis favourite Items : ");
 			for (WebElement el : items) {
 				log.info(el.findElement(Elements.favouriteItemsTitle).getText());
-				extTestObj.log(Status.INFO, el.findElement(Elements.favouriteItemsTitle).getText());
+				extTestObj.createNode(el.findElement(Elements.favouriteItemsTitle).getText()).info("INFO");
 			}
 			log.info("All chilis favourite items obtained");
 			extTestObj.createNode("All chilis favourite items obtained").pass("PASSED");
@@ -888,18 +890,19 @@ public class FunctionalComponents extends Base {
 	public void selectChilisLocationIOS() throws Exception {
 		String locFromDropDown = excel.getCellData("AddMyVisit", "Chilis Location from DropDown", 2);
 		try {
+			scrollIntoViewBottom(Elements.chillisLocDropDown);
+			explicitWait(Elements.chillisLocDropDown);
 			clickableWait(Elements.chillisLocDropDown);
-			try {
-//			seetest.elementSendText("WEB","xpath=//*[@id='store-number']", 0,locFromDropDown);
-				seetest.setPickerValues("WEB", "xpath=//*[@id='store-number']", 0, 0, locFromDropDown);
-			} catch (Exception e) {
-				seetest.elementListSelect("xpath=//*[@id='store-number']", "text=" + locFromDropDown, 0, true);
-			}
-//			seetest.elementSetProperty("WEB","xpath=//*[@id='store-number']",0,"text", locFromDropDown);
-//			clickElement(By.xpath("//*[text()='" + locFromDropDown + "']"));
-//			
-			seetest.click("NATIVE", "xpath=//*[@id='Done']", 0, 1);
-//			clickableWait(By.xpath("//*[@id='Done']"));
+		Select s= new Select(driver.findElement(Elements.chillisLocDropDown));
+			WebElement deff=s.getFirstSelectedOption();
+			if(deff.isSelected())
+		     {
+				seetest.setPickerValues("WEB", "xpath=//*[@id='store-number']", 0, 0,locFromDropDown);
+				Thread.sleep(1000);
+				seetest.click("NATIVE", "xpath=//*[@id='Done']", 0, 1);
+				seetest.setPickerValues("WEB", "xpath=//*[@id='store-number']", 0, 0,locFromDropDown);			    
+		} 
+		
 			log.info("Chilis location selected as : " + locFromDropDown);
 			extTestObj.createNode("Chilis location selected as : " + locFromDropDown).pass("PASSED");
 			Thread.sleep(3000);
@@ -909,7 +912,6 @@ public class FunctionalComponents extends Base {
 			extTestObj.createNode("Chillis location selection failed")
 					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
 			log.error(e.getMessage());
-
 			stopTest();
 		}
 
@@ -937,10 +939,17 @@ public class FunctionalComponents extends Base {
 		String visitMonth = excel.getCellData("AddMyVisit", "Visit Month", 2);
 		try {
 			scrollIntoViewBottom(Elements.visitMonthDropDown);
+			explicitWait(Elements.visitMonthDropDown);
 			clickableWait(Elements.visitMonthDropDown);
-			seetest.elementSetProperty("WEB", "xpath=//*[@id='visit-month']", 0, "text", visitMonth);
-//			seetest.setPickerValues("WEB", "xpath=//*[@id='visit-month']", 0, 1,visitMonth);
-			seetest.click("NATIVE", "xpath=//*[@id='Done']", 0, 1);
+			Select s= new Select(driver.findElement(Elements.visitMonthDropDown));
+			WebElement deff=s.getFirstSelectedOption();
+			if(deff.isSelected())
+		     {
+				seetest.setPickerValues("WEB", "xpath=//*[@id='visit-month']", 0, 0,visitMonth);
+				Thread.sleep(1000);
+				seetest.click("NATIVE", "xpath=//*[@id='Done']", 0, 1);
+				seetest.setPickerValues("WEB", "xpath=//*[@id='visit-month']", 0, 0,visitMonth);			    
+		} 
 			log.info("Visit month selected as :" + visitMonth);
 			extTestObj.createNode("Visit month selected as :" + visitMonth).pass("PASSED");
 		} catch (Exception e) {
@@ -976,10 +985,18 @@ public class FunctionalComponents extends Base {
 		String visitDay = excel.getCellData("AddMyVisit", "Visit Day", 2);
 		try {
 			scrollIntoViewBottom(Elements.visitDayDropDown);
+			explicitWait(Elements.visitDayDropDown);
 			clickableWait(Elements.visitDayDropDown);
-			seetest.elementSetProperty("WEB", "xpath=//*[@id='visit-day']", 0, "text", visitDay);
-//			seetest.setPickerValues("WEB", "xpath=//*[@id='visit-day']", 0, 1,visitDay);
-			seetest.click("NATIVE", "xpath=//*[@id='Done']", 0, 1);
+			Select s= new Select(driver.findElement(Elements.visitDayDropDown));
+			WebElement deff=s.getFirstSelectedOption();
+			if(deff.isSelected())
+		     {
+				seetest.setPickerValues("WEB", "xpath=//*[@id='visit-day']", 0, 0,visitDay);
+				Thread.sleep(1000);
+				seetest.click("NATIVE", "xpath=//*[@id='Done']", 0, 1);
+				seetest.setPickerValues("WEB", "xpath=//*[@id='visit-day']", 0, 0,visitDay);			    
+		} 
+			
 			log.info("Visit day selected as : " + visitDay);
 			extTestObj.createNode("Visit day selected as : " + visitDay).pass("PASSED");
 		} catch (Exception e) {
@@ -987,7 +1004,6 @@ public class FunctionalComponents extends Base {
 			extTestObj.createNode("Visit day selection failed")
 					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
 			log.error(e.getMessage());
-
 			stopTest();
 		}
 	}
@@ -1014,13 +1030,21 @@ public class FunctionalComponents extends Base {
 		String visitYear = excel.getCellData("AddMyVisit", "Visit Year", 2);
 		try {
 			scrollIntoViewBottom(Elements.visitYearDropDown);
+			explicitWait(Elements.visitYearDropDown);
 			clickableWait(Elements.visitYearDropDown);
-			seetest.elementSetProperty("WEB", "xpath=//*[@id='visit-year']", 0, "text", visitYear);
-//			seetest.setPickerValues("WEB", "xpath=//*[@id='visit-year']", 0, 1,visitYear);
-			seetest.click("NATIVE", "xpath=//*[@id='Done']", 0, 1);
+			Select s= new Select(driver.findElement(Elements.visitDayDropDown));
+			WebElement deff=s.getFirstSelectedOption();
+			if(deff.isSelected())
+		     {
+				seetest.setPickerValues("WEB", "xpath=//*[@id='visit-year']", 0, 0,visitYear);
+				Thread.sleep(1000);
+				seetest.click("NATIVE", "xpath=//*[@id='Done']", 0, 1);
+				seetest.setPickerValues("WEB", "xpath=//*[@id='visit-year']", 0, 0,visitYear);			    
+		} 
 			log.info("Visit year selected as : " + visitYear);
 			extTestObj.createNode("Visit year selected as : " + visitYear).pass("PASSED");
-		} catch (Exception e) {
+		} 
+		catch (Exception e) {
 			log.error("Visit year selection failed");
 			extTestObj.createNode("Visit year selection failed")
 					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
@@ -1169,7 +1193,7 @@ public class FunctionalComponents extends Base {
 			for (int i = 0; i < itemNames.size(); i++) {
 				String name = itemNames.get(i).getText().trim();
 				if (name.equalsIgnoreCase(chilisFavItem)) {
-					AndroidElement ele = (AndroidElement) driver
+					WebElement ele =  driver
 							.findElements(By.xpath("//div[@class='favorite-action']/button")).get(i);
 					scrollIntoViewBottomByElement(ele);
 					ele.click();
@@ -1328,6 +1352,33 @@ public class FunctionalComponents extends Base {
 			stopTest();
 		}
 	}
+	
+	public void selectExpirationMonthIOS() {
+		String month = excel.getCellData("LoggedInOrder", "Expiration Month", 2);
+		try {
+			scrollIntoViewBottom(Elements.expirationMonth);
+			explicitWait(Elements.expirationMonth);
+			clickableWait(Elements.expirationMonth);
+			Select s= new Select(driver.findElement(Elements.expirationMonth));
+			WebElement deff=s.getFirstSelectedOption();
+			if(deff.isSelected())
+			{
+				seetest.setPickerValues("WEB", "xpath=//*[@id='month-selector']", 0, 0,month);
+				Thread.sleep(1000);
+				seetest.click("NATIVE", "xpath=//*[@id='Done']", 0, 1);
+				seetest.setPickerValues("WEB", "xpath=//*[@id='month-selector']", 0, 0,month);
+			}
+			log.info("Expiration Month selected as : " + month);
+			extTestObj.createNode("Expiration Month selected as : " + month).pass("PASSED");
+		} catch (Exception e) {
+			log.error("Failed to select Expiration Month");
+			extTestObj.createNode("Failed to select Expiration Month")
+					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
+			log.error(e.getMessage());
+
+			stopTest();
+		}
+	}
 
 	public void selectExpirationYear() {
 		String year = excel.getCellData("LoggedInOrder", "Expiration Year", 2);
@@ -1347,6 +1398,32 @@ public class FunctionalComponents extends Base {
 		}
 	}
 
+	public void selectExpirationYearIOS() {
+		String year = excel.getCellData("LoggedInOrder", "Expiration Year", 2);
+		try {
+			scrollIntoViewBottom(Elements.expirationYear);
+			explicitWait(Elements.expirationYear);
+			clickableWait(Elements.expirationYear);
+			Select s= new Select(driver.findElement(Elements.expirationYear));
+			WebElement deff=s.getFirstSelectedOption();
+			if(deff.isSelected())
+			{
+				seetest.setPickerValues("WEB", "xpath=//*[@id='year-selector']", 0, 0,year);
+				Thread.sleep(1000);
+				seetest.click("NATIVE", "xpath=//*[@id='Done']", 0, 1);
+				seetest.setPickerValues("WEB", "xpath=//*[@id='year-selector']", 0, 0,year);
+			}
+			log.info("Expiration Year selected as : " + year);
+			extTestObj.createNode("Expiration Year selected as : " + year).pass("PASSED");
+		} catch (Exception e) {
+			log.error("Failed to select Expiration Year");
+			extTestObj.createNode("Failed to select Expiration Year")
+					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
+			log.error(e.getMessage());
+
+			stopTest();
+		}
+	}
 	public void enterNameOnCard() throws InterruptedException {
 
 		String nameOnCard = excel.getCellData("LoggedInOrder", "Name On Card", 2);
@@ -1439,7 +1516,10 @@ public class FunctionalComponents extends Base {
 		try {
 			scrollIntoViewBottom(Elements.placeOrder);
 			clickableWait(Elements.placeOrder);
+			try {
 			seetest.click("NATIVE", "xpath=//*[@text='No, thanks']", 0, 1);
+			}
+			catch(Exception exp) {}
 			log.info("Place order button clicked");
 			extTestObj.createNode("Place order button clicked").pass("PASSED");
 		} catch (Exception e) {
@@ -1548,6 +1628,32 @@ public class FunctionalComponents extends Base {
 			scrollIntoViewBottom(Elements.quantity);
 			scrollIntoViewBottom(By.xpath("//*[text()='" + quantity + "']"));
 			clickElement(By.xpath("//*[text()='" + quantity + "']"));
+			log.info("Quantity changed");
+			extTestObj.createNode("Quantity changed").pass("PASSED");
+		} catch (Exception e) {
+			log.error("Failed to select and change quantity");
+			log.error(e.getMessage());
+			extTestObj.createNode("Failed to select and change quantity")
+					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
+			stopTest();
+		}
+	}
+	
+	public void changeQuantityIOS() {
+		String quantity = excel.getCellData("ReOrder", "Quantity", 2);
+		try {
+			scrollIntoViewBottom(Elements.quantity);
+			explicitWait(Elements.quantity);
+			clickableWait(Elements.quantity);
+			Select s= new Select(driver.findElement(Elements.quantity));
+			WebElement deff=s.getFirstSelectedOption();
+			if(deff.isSelected())
+			{
+				seetest.setPickerValues("WEB", "xpath=//*[@id='items0.quantity']", 0, 0,quantity);
+				Thread.sleep(1000);
+				seetest.click("NATIVE", "xpath=//*[@id='Done']", 0, 1);
+				seetest.setPickerValues("WEB", "xpath=//*[@id='items0.quantity']", 0, 0,quantity);
+			}
 			log.info("Quantity changed");
 			extTestObj.createNode("Quantity changed").pass("PASSED");
 		} catch (Exception e) {
@@ -1911,6 +2017,32 @@ public class FunctionalComponents extends Base {
 			stopTest();
 		}
 	}
+	
+	public void selectPickupTimeIOS() {
+		String timeInput = excel.getCellData("CarryOut", "Pickup Time", 2);
+		try {
+			scrollIntoViewBottom(Elements.pickTime);
+			explicitWait(Elements.pickTime);
+			clickableWait(Elements.pickTime);
+			Select s= new Select(driver.findElement(Elements.pickTime));
+			WebElement deff=s.getFirstSelectedOption();
+			if(deff.isSelected())
+			{
+				seetest.setPickerValues("WEB", "xpath=//*[@id='pickup-time']", 0, 0,timeInput);
+				Thread.sleep(1000);
+				seetest.click("NATIVE", "xpath=//*[@id='Done']", 0, 1);
+				seetest.setPickerValues("WEB", "xpath=//*[@id='pickup-time']", 0, 0,timeInput);
+			}
+			log.info("Pickup time selected as " + timeInput);
+			extTestObj.createNode("Pickup time selected as " + timeInput).pass("PASSED");
+		} catch (Exception e) {
+			log.error("Failed to select Pickup time");
+			extTestObj.createNode("Failed to select Pickup time")
+					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
+			log.error(e.getMessage());
+			stopTest();
+		}
+	}
 
 	public void enterVehicleMake() throws InterruptedException {
 
@@ -2004,6 +2136,31 @@ public class FunctionalComponents extends Base {
 			stopTest();
 		}
 	}
+	
+	public void selectPickupAsapIOS() {
+		try {
+			scrollIntoViewBottom(Elements.pickDate);
+			explicitWait(Elements.pickDate);
+			clickableWait(Elements.pickDate);
+			Select s= new Select(driver.findElement(Elements.pickDate));
+			WebElement deff=s.getFirstSelectedOption();
+			if(deff.isSelected())
+			{
+				seetest.setPickerValues("WEB", "xpath=//*[@id='pickup-date']", 0, 0,"ASAP");
+				Thread.sleep(1000);
+				seetest.click("NATIVE", "xpath=//*[@id='Done']", 0, 1);
+				seetest.setPickerValues("WEB", "xpath=//*[@id='pickup-date']", 0, 0,"ASAP");
+			}
+			log.info("'ASAP' pickup time is selected");
+			extTestObj.createNode("'ASAP' pickup time is selected").pass("PASSED");
+		} catch (Exception e) {
+			log.error("Failed to select pickup time 'ASAP'");
+			extTestObj.createNode("Failed to select pickup time 'ASAP'")
+					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
+			log.error(e.getMessage());
+			stopTest();
+		}
+	}
 
 	/*
 	 * Validate user is able to place Carryout-future date-favorite items order. For
@@ -2056,10 +2213,37 @@ public class FunctionalComponents extends Base {
 			stopTest();
 		}
 	}
+	
+	public void selectPickupLaterTodayIOS() {
+		try {
+			scrollIntoViewBottom(Elements.pickDate);
+			explicitWait(Elements.pickDate);
+			clickableWait(Elements.pickDate);
+			Select s= new Select(driver.findElement(Elements.pickDate));
+			WebElement deff=s.getFirstSelectedOption();
+			if(deff.isSelected())
+			{
+				seetest.setPickerValues("WEB", "xpath=//*[@id='pickup-date']", 0, 0,"Later Today");
+				Thread.sleep(1000);
+				seetest.click("NATIVE", "xpath=//*[@id='Done']", 0, 1);
+				seetest.setPickerValues("WEB", "xpath=//*[@id='pickup-date']", 0, 0,"Later Today");
+			}
+			log.info("Later Today pickup time is selected");
+			extTestObj.createNode("Later Today pickup time is selected").pass("PASSED");
+		} catch (Exception e) {
+			log.error("Failed to select Later Today");
+			extTestObj.createNode("Failed to select Later Today")
+					.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
+			log.error(e.getMessage());
+			stopTest();
+		}
+	}
 
 	/* Validate user is able to place order with Rewards. For sign in user */
 	public void addReward() {
 		try {
+			explicitWait(Elements.addRewards);
+			scrollIntoViewBottom(Elements.addRewards);
 			clickableWait(Elements.addRewards);
 			log.info("Reward added");
 			extTestObj.createNode("Reward added").pass("PASSED");
@@ -2072,34 +2256,49 @@ public class FunctionalComponents extends Base {
 		}
 	}
 
-	/*
-	 * public void addRewardItem()
-	 * 
-	 * { String rewarditem = excel.getCellData(sheetName, colName, rowNum) try {
-	 * clickableWait(By.xpath("//*[contains(text(),'"+rewarditem+"')]"));
-	 * clickableWait(Elements.addThisItem);
-	 * log.info("Reward item "+rewarditem+" added");
-	 * extTestObj.createNode("Reward item "+ rewarditem +" added").pass("PASSED"); }
-	 * catch(Exception e) { log.error("Failed to add reward item");
-	 * extTestObj.createNode("Failed to add reward item").
-	 * fail("Method Name : "+Thread.currentThread().getStackTrace()[1].getMethodName
-	 * ()+"()").error(e); log.error(e.getMessage()); stopTest(); } }
-	 */
+	
+	 public void addRewardItem()
+	  
+	 { String rewarditem = excel.getCellData("OrderWithRewards","Reward Item", 2);
+	 try {
+	  clickableWait(By.xpath("//*[contains(text(),'"+rewarditem+"')]"));
+	  explicitWait(Elements.addThisItem);
+	  scrollIntoViewBottom(Elements.addThisItem);
+	  clickableWait(Elements.addThisItem);
+	  log.info("Reward item "+rewarditem+" added");
+	  extTestObj.createNode("Reward item "+ rewarditem +" added").pass("PASSED"); }
+	  catch(Exception e) { 
+	 log.error("Failed to add reward item");
+	 extTestObj.createNode("Failed to add reward item").
+	  fail("Method Name : "+Thread.currentThread().getStackTrace()[1].getMethodName
+	  ()+"()").error(e); log.error(e.getMessage()); stopTest(); } }
+	 
 
-	/*
-	 * public void isRewardApplied() {
-	 * 
-	 * try { driver.findElement(Elements.discount).isDisplayed();
-	 * log.info("Discount is applied");
-	 * extTestObj.createNode("Discount is applied").pass("PASSED"); } catch
-	 * (Exception e) { log.error("Failed to apply discount");
-	 * extTestObj.createNode("Failed to apply discount").fail("Method Name : "
-	 * +Thread.currentThread().getStackTrace()[1].getMethodName()+"()").error(e);
-	 * log.error(e.getMessage()); stopTest(); }
-	 * 
-	 * 
-	 * }
-	 */
+	
+public void isRewardApplied() {
+
+	try {
+		scrollIntoViewBottom(Elements.paymentButton);
+		explicitWait(Elements.rewardName);
+		if (driver.findElement(Elements.rewardName).isDisplayed()
+				&& driver.findElement(Elements.discountLabel).isDisplayed()
+				&& driver.findElement(Elements.discountAmount).isDisplayed()) {
+			log.info("Reward " + driver.findElement(Elements.rewardName).getText() + " applied");
+			log.info("Discount amount :" + driver.findElement(Elements.discountAmount).getText());
+			extTestObj.createNode("Reward " + driver.findElement(Elements.rewardName).getText() + " applied")
+					.pass("PASSED");
+			extTestObj.createNode("Discount amount :" + driver.findElement(Elements.discountAmount).getText())
+					.info("INFO");
+		}
+	} catch (Exception e) {
+		log.error("Failed to apply discount");
+		extTestObj.createNode("Failed to apply discount")
+				.fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
+		log.error(e.getMessage());
+		stopTest();
+	}
+}
+	 
 
 	/*
 	 * Validate user is able to place Carry Out-Future order -item customization.
@@ -2981,7 +3180,7 @@ public class FunctionalComponents extends Base {
 		try {
 			clickableWait(Elements.iosRestaurantSearchTextBoxXpath);
 			sendKeysWait(Elements.iosRestaurantAutocompleteTextBoxXpath, restaurantLocation);
-			clickElement(MobileBy.xpath("//*[@name='"+str[1]+", "+str[2]+"' and @class='UIAStaticText']"));
+			clickElement(MobileBy.xpath("(//*[@name='"+str[0]+"' and @class='UIAStaticText'])[1]"));
 			String displayedAddress = driver.findElement(Elements.iosRestaurantSearchTextBoxXpath).getAttribute("text");
 			if (restaurantLocation.equalsIgnoreCase(displayedAddress)) {
 				log.info("Restaurant location entered as : " + restaurantLocation);

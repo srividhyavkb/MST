@@ -44,22 +44,6 @@ public class Listeners extends TestListenerAdapter implements ITestListener {
 
 	public void onTestStart(ITestResult result) {
 // TODO Auto-generated method stub
-		if(prop.getProperty("Android_Browser").equals("true"))
-			{
-			extent = ExtentReporterNG.getReportObjectAndroidBrowser();
-			}
-		else if(prop.getProperty("IOS_Browser").equals("true")) 
-		{
-			extent = ExtentReporterNG.getReportObjectIOSBrowser();
-		}
-		else if(prop.getProperty("Android_App").equals("true"))
-		{
-			extent = ExtentReporterNG.getReportObjectAndroidApp();
-		}
-		else if(prop.getProperty("IOS_App").equals("true"))
-		{
-			extent = ExtentReporterNG.getReportObjectIOSApp();
-		}
 		test = extent.createTest(result.getMethod().getMethodName());
 	
 		FunctionalComponents.getExtentTest(test);
@@ -102,6 +86,23 @@ public class Listeners extends TestListenerAdapter implements ITestListener {
 	}
 
 	public void onStart(ITestContext context) {
+		
+		if(prop.getProperty("Android_Browser").equals("true"))
+		{
+		extent = ExtentReporterNG.getReportObjectAndroidBrowser();
+		}
+	else if(prop.getProperty("IOS_Browser").equals("true")) 
+	{
+		extent = ExtentReporterNG.getReportObjectIOSBrowser();
+	}
+	else if(prop.getProperty("Android_App").equals("true"))
+	{
+		extent = ExtentReporterNG.getReportObjectAndroidApp();
+	}
+	else if(prop.getProperty("IOS_App").equals("true"))
+	{
+		extent = ExtentReporterNG.getReportObjectIOSApp();
+	}
 		// TODO Auto-generated method stub
 	}
 

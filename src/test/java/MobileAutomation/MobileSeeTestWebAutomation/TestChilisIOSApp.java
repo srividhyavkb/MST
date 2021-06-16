@@ -40,7 +40,7 @@ public class TestChilisIOSApp extends Base {
 		editProperties(prop, "IOS_App", "true");
 	}
 	
-	@Test(enabled=true)
+	@Test(enabled=false)
 	public void iosLoginLogout() {
 		Logger log = LogManager.getLogger("IOSAppTestLoginLogout");
 		log.info("******Starting to login logout functionality in IOS Chilis App******");
@@ -54,7 +54,7 @@ public class TestChilisIOSApp extends Base {
 		obj.appClickLogoutButtonIOS();
 	}
 	
-	@Test(enabled=false)
+	@Test(enabled=true)
 	public void iosappLocationSearch() throws InterruptedException
 	{
 		Logger log = LogManager.getLogger("IOSAppTestLocationSearch");

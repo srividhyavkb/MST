@@ -1,0 +1,5 @@
+22:06:02.282 [main] INFO  TestMCACarryoutASAP - ******STARTING TEST MCA CARRY OUT ASAP******
+22:06:03.844 [main] INFO  TestMCACarryoutASAP - Starting QA site validation
+22:06:47.401 [main] INFO  TestMCACarryoutASAP - QA site launch is successful, Site Name : https://qa4.chilis.com/
+22:07:30.261 [main] ERROR TestMCACarryoutASAP - Pop up close failed
+22:07:30.268 [main] ERROR TestMCACarryoutASAP - Expected condition failed: waiting for presence of element located by: By.xpath: //*[text()='Feed Your Whole Family With'] (tried for 25 second(s) with 500 milliseconds interval)

@@ -2,22 +2,22 @@
 <testng-results skipped="0" failed="1" ignored="0" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="282673" started-at="2021-06-14T13:32:52Z" finished-at="2021-06-14T13:37:34Z">
+  <suite name="Suite" duration-ms="194825" started-at="2021-06-15T16:34:26Z" finished-at="2021-06-15T16:37:41Z">
     <groups>
     </groups>
-    <test name="Test Chilis WebApp" duration-ms="282673" started-at="2021-06-14T13:32:52Z" finished-at="2021-06-14T13:37:34Z">
-      <class name="MobileAutomation.MobileSeeTestWebAutomation.TestChilisIOSApp">
-        <test-method status="PASS" signature="initialize()[pri:0, instance:MobileAutomation.MobileSeeTestWebAutomation.TestChilisIOSApp@17d677df]" name="initialize" is-config="true" duration-ms="73906" started-at="2021-06-14T19:02:52Z" finished-at="2021-06-14T19:04:06Z">
+    <test name="Test Chilis WebApp" duration-ms="194825" started-at="2021-06-15T16:34:26Z" finished-at="2021-06-15T16:37:41Z">
+      <class name="MobileAutomation.MobileSeeTestWebAutomation.TestMCACarryOutLaterToday">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:MobileAutomation.MobileSeeTestWebAutomation.TestMCACarryOutLaterToday@17d677df]" name="initialize" is-config="true" duration-ms="93964" started-at="2021-06-15T22:04:27Z" finished-at="2021-06-15T22:06:01Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="FAIL" signature="iosLoginLogout()[pri:0, instance:MobileAutomation.MobileSeeTestWebAutomation.TestChilisIOSApp@17d677df]" name="iosLoginLogout" duration-ms="169251" started-at="2021-06-14T19:04:06Z" finished-at="2021-06-14T19:06:55Z">
+        <test-method status="FAIL" signature="testMCACarryoutASAP()[pri:0, instance:MobileAutomation.MobileSeeTestWebAutomation.TestMCACarryOutLaterToday@17d677df]" name="testMCACarryoutASAP" duration-ms="89109" started-at="2021-06-15T22:06:01Z" finished-at="2021-06-15T22:07:30Z">
           <exception class="java.lang.NullPointerException">
             <full-stacktrace>
               <![CDATA[java.lang.NullPointerException
 	at Resources.Base.stopTest(Base.java:144)
-	at Resources.FunctionalComponents.appClickLogoutButtonIOS(FunctionalComponents.java:2957)
-	at MobileAutomation.MobileSeeTestWebAutomation.TestChilisIOSApp.iosLoginLogout(TestChilisIOSApp.java:54)
+	at Resources.FunctionalComponents.closePopupRewards(FunctionalComponents.java:203)
+	at MobileAutomation.MobileSeeTestWebAutomation.TestMCACarryOutLaterToday.testMCACarryoutASAP(TestMCACarryOutLaterToday.java:47)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -48,12 +48,12 @@
           </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- iosLoginLogout -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:MobileAutomation.MobileSeeTestWebAutomation.TestChilisIOSApp@17d677df]" name="tearDown" is-config="true" duration-ms="39471" started-at="2021-06-14T19:06:55Z" finished-at="2021-06-14T19:07:34Z">
+        </test-method> <!-- testMCACarryoutASAP -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:MobileAutomation.MobileSeeTestWebAutomation.TestMCACarryOutLaterToday@17d677df]" name="tearDown" is-config="true" duration-ms="11342" started-at="2021-06-15T22:07:30Z" finished-at="2021-06-15T22:07:41Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- MobileAutomation.MobileSeeTestWebAutomation.TestChilisIOSApp -->
+      </class> <!-- MobileAutomation.MobileSeeTestWebAutomation.TestMCACarryOutLaterToday -->
     </test> <!-- Test Chilis WebApp -->
   </suite> <!-- Suite -->
 </testng-results>
