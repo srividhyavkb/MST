@@ -133,6 +133,176 @@ public class TestChilisApp extends Base{
 		obj.appValidateUpdate(driver);
 		
 	}
+	
+	public void testMcaCarryoutFutureOrder() {
+		Logger log = LogManager.getLogger("AppTestMcaCarryoutFuture");
+		log.info("******Starting to validate user is able to place Carryout-Future order as Mca user******");
+		FunctionalComponents obj = new FunctionalComponents(driver, log);
+		obj.androidAppClosePopUp();
+		obj.appClickLoginButton();
+		obj.appEnterUserName();
+		obj.appEnterPassword();
+		obj.appClickSignIn();
+		obj.appClickFindRestaurant();
+		obj.appEnterRestaurantLocation();
+		obj.appSelectResturent(driver);
+		obj.appSelectChilisFavouriteToCart(driver);
+		obj.appAddToCart();
+		obj.appClickCheckout(driver);
+		obj.appSelectCarryout();
+		obj.appSelectPickupFuture(driver);
+		obj.appSelectPickupTime(driver);
+		obj.appPlaceOrder(driver);
+		
+	}
+	
+	
+	//@Test(enabled=true)
+	public void testMcaCarryoutLaterToday() {
+		Logger log = LogManager.getLogger("AppTestMcaCarryoutLater-Today");
+		log.info("******Starting to validate user is able to place Carryout-LT order as Mca user******");
+		FunctionalComponents obj = new FunctionalComponents(driver, log);
+		obj.androidAppClosePopUp();
+		obj.appClickLoginButton();
+		obj.appEnterUserName();
+		obj.appEnterPassword();
+		obj.appClickSignIn();
+		obj.appClickFindRestaurant();
+		obj.appEnterRestaurantLocation();
+		obj.appSelectResturent(driver);
+		obj.appClickOnOrderButton();
+		obj.appSelectMenuCategory(driver);
+		obj.appSelectMenuItem(driver);
+		obj.appAddToOrder(driver);
+		obj.appClickCheckout(driver);
+		obj.appSelectCarryout();
+		obj.appSelectPickupLaterToday(driver);
+		obj.appSelectPickupTime(driver);
+		obj.appContinueToPayment(driver);
+		obj.appEnterCardNumber(driver);
+		obj.appEnterCVV(driver);
+		obj.appSelectExpirationYear(driver);
+		obj.appEnterNameOnCard(driver);
+		obj.appEnterZipcode(driver);
+		obj.appPlaceOrder(driver);
+	}
+	
+	//@Test(enabled=true)
+		public void testMcaDeliveryAsap() {
+			Logger log = LogManager.getLogger("AppTestMcaDeliveryAsap");
+			log.info("******Starting to validate user is able to place Delivery-Asap order as Mca user******");
+			FunctionalComponents obj = new FunctionalComponents(driver, log);
+			obj.androidAppClosePopUp();
+			obj.appClickLoginButton();
+			obj.appEnterUserName();
+			obj.appEnterPassword();
+			obj.appClickSignIn();
+			obj.appClickFindRestaurant();
+			obj.appEnterRestaurantLocation();
+			obj.appSelectResturent(driver);
+			obj.appClickOnOrderButton();
+			obj.appSelectMenuCategory(driver);
+			obj.appSelectMenuItem(driver);
+			obj.appAddToOrder(driver);
+			obj.appClickCheckout(driver);
+			obj.appSelectDelivery() ;
+			obj.appEnterDeliveryLocation(driver);
+			obj.appSelectDeliveryAsap(driver);
+			obj.appContinueToPayment(driver);
+			obj.appEnterCardNumber(driver);
+			obj.appEnterCVV(driver);
+			obj.appSelectExpirationYear(driver);
+			obj.appEnterNameOnCard(driver);
+			obj.appEnterZipcode(driver);
+			obj.appPlaceOrder(driver);
+		}
+	
+	//@Test(enabled=true)
+	public void testMcaCarryoutAsap() {
+		Logger log = LogManager.getLogger("AppTestMcaCarryoutAsap");
+		log.info("******Starting to validate user is able to place Carryout-Asap order as Mca user******");
+		FunctionalComponents obj = new FunctionalComponents(driver, log);
+		obj.androidAppClosePopUp();
+		obj.appClickLoginButton();
+		obj.appEnterUserName();
+		obj.appEnterPassword();
+		obj.appClickSignIn();
+		obj.appClickFindRestaurant();
+		obj.appEnterRestaurantLocation();
+		obj.appSelectResturent(driver);
+		obj.appClickOnOrderButton();
+		obj.appSelectMenuCategory(driver);
+		obj.appSelectMenuItem(driver);
+		obj.appAddToOrder(driver);
+		obj.appClickCheckout(driver);
+		obj.appSelectCarryout();
+		obj.appSelectPickupAsap(driver);
+		obj.appContinueToPayment(driver);
+		obj.appEnterCardNumber(driver);
+		obj.appEnterCVV(driver);
+		obj.appSelectExpirationYear(driver);
+		obj.appEnterNameOnCard(driver);
+		obj.appEnterZipcode(driver);
+		obj.appPlaceOrder(driver);
+	}
+	
+	public void testMcaCurbsideAsap() {
+		Logger log = LogManager.getLogger("AppTestMcaCurbsideAsap");
+		log.info("******Starting to validate user is able to place Curbside-Asap order as Mca user******");
+		FunctionalComponents obj = new FunctionalComponents(driver, log);
+		obj.androidAppClosePopUp();
+		obj.appClickLoginButton();
+		obj.appEnterUserName();
+		obj.appEnterPassword();
+		obj.appClickSignIn();
+		obj.appClickFindRestaurant();
+		obj.appEnterRestaurantLocation();
+		obj.appSelectResturent(driver);
+		obj.appClickOnOrderButton();
+		obj.appSelectMenuCategory(driver);
+		obj.appSelectMenuItem(driver);
+		obj.appAddToOrder(driver);
+		obj.appClickCheckout(driver);
+		obj.appSelectCurbside();
+		obj.appSelectPickupAsap(driver);
+		obj.appContinueToPayment(driver);
+		obj.appEnterCardNumber(driver);
+		obj.appEnterCVV(driver);
+		obj.appSelectExpirationYear(driver);
+		obj.appEnterNameOnCard(driver);
+		obj.appEnterZipcode(driver);
+		obj.appPlaceOrder(driver);
+	}
+	
+	public void testMcaCurbsideLaterToday() {
+		Logger log = LogManager.getLogger("AppTestMcaCurbsideLaterToday");
+		log.info("******Starting to validate user is able to place Curbside-LT order as Mca user******");
+		FunctionalComponents obj = new FunctionalComponents(driver, log);
+		obj.androidAppClosePopUp();
+		obj.appClickLoginButton();
+		obj.appEnterUserName();
+		obj.appEnterPassword();
+		obj.appClickSignIn();
+		obj.appClickFindRestaurant();
+		obj.appEnterRestaurantLocation();
+		obj.appSelectResturent(driver);
+		obj.appClickOnOrderButton();
+		obj.appSelectMenuCategory(driver);
+		obj.appSelectMenuItem(driver);
+		obj.appAddToOrder(driver);
+		obj.appClickCheckout(driver);
+		obj.appSelectCurbside();
+		obj.appSelectPickupAsap(driver);
+		obj.appContinueToPayment(driver);
+		obj.appEnterCardNumber(driver);
+		obj.appEnterCVV(driver);
+		obj.appSelectExpirationYear(driver);
+		obj.appEnterNameOnCard(driver);
+		obj.appEnterZipcode(driver);
+		obj.appPlaceOrder(driver);
+	}
+
+
 	@AfterMethod
 	public void tearDown() {
 		System.out.println("Report URL: " + driver.getCapabilities().getCapability("reportUrl"));
