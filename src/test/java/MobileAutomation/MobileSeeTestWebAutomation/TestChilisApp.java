@@ -364,10 +364,45 @@ public class TestChilisApp extends Base{
         obj.appEnterZipcode(driver);
         obj.appPlaceOrder(driver);
     }   
+    
+    
+   @Test
+    public void testMcaCurbsideCustomAsap() {​​​​​​​
+        Logger log = LogManager.getLogger("AppTestMcaCurbsideCustomAsap");
+        log.info("******Starting to validate user is able to place Curbside-Asap order with customization as Mca user******");
+        FunctionalComponents obj = new FunctionalComponents(driver, log);
+        obj.androidAppClosePopUp();
+        obj.appClickLoginButton();
+        obj.appEnterUserName();
+        obj.appEnterPassword();
+        obj.appClickSignIn();
+        obj.appClickFindRestaurant();
+        obj.appEnterRestaurantLocation();
+        obj.appSelectResturent(driver);
+        obj.appClickOnOrderButton();
+        obj.appSelectMenuCategory(driver);
+        obj.appSelectMenuItem(driver);
+        obj.appClickCustomizeItem();            //xyz
+        obj.appSelectCustomization();             //xyz
+        obj.appAddToOrder(driver);
+       
+        obj.appClickCheckout(driver);
+        obj.appSelectCurbside();
+        obj.appSelectPickupAsap(driver);
+        obj.appContinueToPayment(driver);
+        obj.appEnterCardNumber(driver);
+        obj.appEnterCVV(driver);
+        obj.appSelectExpirationYear(driver);
+        obj.appEnterNameOnCard(driver);
+        obj.appEnterZipcode(driver);
+        obj.appPlaceOrder(driver);
+    }​​​​​​​
+
 
 	@AfterMethod
 	public void tearDown() {
 		System.out.println("Report URL: " + driver.getCapabilities().getCapability("reportUrl"));
+		seetest.applicationClearData("com.brinker.chilis/.features.LaunchActivity");
 		driver.quit();
 		
 	}

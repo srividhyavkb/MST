@@ -3972,7 +3972,7 @@ public void appEnterEMail(AndroidDriver<AndroidElement> androidDriver) throws In
 		}
 	}
 	
-/*	public void appGiveTip() {
+	public void appGiveTip() {
 		String tip = excel.getCellData("LoggedInOrder", "Tip", 2);
 		try {
 			scrollIntoViewBottom(Elements.tipTextBox);
@@ -4002,7 +4002,7 @@ public void appEnterEMail(AndroidDriver<AndroidElement> androidDriver) throws In
 			log.error(e.getMessage());
 		}
 	}
-	  */
+	  
 	
 	//click on 'place order' button
 	public void appPlaceOrder(AndroidDriver<AndroidElement> androidDriver) {
@@ -4022,6 +4022,90 @@ public void appEnterEMail(AndroidDriver<AndroidElement> androidDriver) throws In
 
 		}
 	}
+	
+	public void appClickCustomizeItem() {
+	    
+	    try {
+	        clickableWait(Elements.appCustomizeItem);
+	         log.info("Customization button clicked");
+	         extTestObj.createNode("Add To Cart button clicked").pass("PASSED");
+	    } catch (Exception e) {
+	        log.error("Add To Cart button clicked failed");
+	        extTestObj.createNode("Add To Cart button clicked failed")
+	                .fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
+	        log.error(e.getMessage());
+	        stopTest();
+
+	 
+
+	    }
+	}
+	
+	public void appSelectCustomization() {
+        String custItem = excel.getCellData("Order Customization", "Custom Item", 2);
+        try {
+            seetest.swipeWhileNotFound("Down", 450, 200, "NATIVE", "xpath=//*[@name='customizeItems[0]']", 0, 1000, 5, true);
+            seetest.click("NATIVE", "xpath=//*[@text='"+custItem+"']", 0, 1);
+            Thread.sleep(1000);
+            clickableWait(Elements.appSelectExtra);
+            log.info("Customization selected");
+            extTestObj.createNode("Customization selected").pass("PASSED");
+        } catch (Exception e) {
+            log.error("Add To Cart button clicked failed");
+            extTestObj.createNode("Add To Cart button clicked failed")
+                    .fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
+            log.error(e.getMessage());
+            stopTest();
+
+ 
+
+        }
+    }
+public void appSelectDeliveryLT(AndroidDriver<AndroidElement> androidDriver) {
+        
+        try {
+            androidDriver.findElementByAndroidUIAutomator(
+                    "new UiScrollable(new UiSelector()).scrollIntoView(resourceId(\"delivery-date\"))");
+             seetest.click("NATIVE", "xpath=//*[@resource-id='delivery-date']", 0, 1);
+             seetest.click("NATIVE", "xpath=//*[contains(text(),'Later Today')]", 0, 1);
+             log.info("Delivery  selected as 'Later Today'");
+             extTestObj.createNode("Delivery  selected as 'Later Today'").pass("PASSED");
+        } catch (Exception e) {
+            log.error("Delivery Later Today selection failed");
+            extTestObj.createNode("Delivery Later Today selection failed")
+                    .fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
+            log.error(e.getMessage());
+            stopTest();
+
+ 
+
+     
+
+ 
+
+        }
+    }
+    
+    public void appSelectDeliveryTime(AndroidDriver<AndroidElement> androidDriver) {
+        String delTime=excel.getCellData("Delivery", "Delivery Time", 2);
+        try {
+            androidDriver.findElementByAndroidUIAutomator(
+                    "new UiScrollable(new UiSelector()).scrollIntoView(resourceId(\"delivery-time\"))");
+             seetest.click("NATIVE", "xpath=//*[@resource-id='delivery-time']", 0, 1);
+             androidDriver.findElementByAndroidUIAutomator(
+                        "new UiScrollable(new UiSelector()).scrollIntoView(text(\""+delTime+"\"))");
+             seetest.click("NATIVE", "xpath=//*[@text='"+delTime+"']", 0, 1);
+             log.info("Delivery time selected as: "+ delTime);
+             extTestObj.createNode("\"Delivery time selected as: "+ delTime).pass("PASSED");
+        } catch (Exception e) {
+            log.error("Failed to select delivery time");
+            extTestObj.createNode("Failed to select delivery time")
+                    .fail("Method Name : " + Thread.currentThread().getStackTrace()[1].getMethodName() + "()").error(e);
+            log.error(e.getMessage());
+            stopTest();
+
+        }
+    }
 
 
 		
