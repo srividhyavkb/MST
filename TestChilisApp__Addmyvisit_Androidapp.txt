@@ -1,0 +1,26 @@
+/*****************************************************************************************************************/
+	
+//	Android - app Verify user is able to submit Add my visit form for login member 
+
+@Test
+public void testAddMyVisit() throws Exception {
+	Logger log = LogManager.getLogger("TestAddMyVisit");
+	log.info("******ANDROID : Starting to verify user is able to submit Add my visit form for login member******");
+	FunctionalComponents obj = new FunctionalComponents(driver, log);
+	obj.androidAppClosePopUp();
+	obj.appClickLoginButton();
+	obj.appEnterUserName();
+	obj.appEnterPassword();
+	obj.appClickSignIn();
+	obj.appClickRewardsButton();
+	obj.appclickAddVisit();
+	obj.appenterZipcode();
+	obj.appselectChilisLocation();
+	obj.appselectDateofvisit();
+	obj.appenterReceiptCheckNumber();
+	obj.enterCheckTotal();
+	obj.clickSubmit();
+	System.out.println(obj.retrieveSuccessMessage());
+}
+
+/*****************************************************************************************************************/

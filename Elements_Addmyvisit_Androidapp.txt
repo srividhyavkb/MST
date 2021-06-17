@@ -1,0 +1,17 @@
+/*****************************************************************************************************************/
+	
+//	Android - app Verify user is able to submit Add my visit form for login member 
+
+
+public static final By appaddMyVisitButtonXpath = MobileBy.xpath("//*[@text='ADD MY VISIT']");	
+public static final By appenterZipcodeXpath = MobileBy.xpath("//android.widget.EditText[@id='favorite_chilis_edittext']");	
+public static final By appselectchilislocXpath = MobileBy.xpath("//android.widget.CheckedTextView[@id='text1']");
+public static final By appDateofvisitXpath = MobileBy.xpath("//android.widget.EditText[@id='visitdate_edittext']");	
+public static final By appreceiptcheckNumberTextBox = MobileBy.xpath("//android.widget.EditText[@id='receipt_check_number_edittext']");
+public static final By appsubTotalTextBox = MobileBy.xpath("//android.widget.EditText[@id='subtotal_edittext']");
+public static final By appvisitSubmitButton = MobileBy.xpath("//android.widget.Button[@id='submit_button']");
+public static final By appgetSuccessMessageforAddMyVisit = MobileBy.xpath("//android.widget.TextView[@id='message]");
+
+
+
+/*****************************************************************************************************************/
